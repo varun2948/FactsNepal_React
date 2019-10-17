@@ -1,0 +1,31 @@
+.footer-top {
+    padding-top: rem(80);
+    background:#f5efef;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+
+    & a {
+        margin-bottom: rem(8);
+    }
+}
+
+.linkHolder img {
+    height: 50px;
+}
+
+.linkHolder a:first-of-type {
+    margin-right: 15px;
+}
+
+.footer-top {
+    padding-bottom: 50px;
+}
+
+@media screen and(max-width:768px) {
+    .footer-top .col-md-3:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+}

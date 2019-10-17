@@ -1,0 +1,84 @@
+.factsod {
+    position: relative;
+    background: #fff;
+    padding: 35px 15px 15px 15px;
+
+    box-shadow: 0px 3px 15px rgba(214, 24, 24, 0.16);
+
+    &__header {
+        background: $primary;
+        color: #fff;
+        display: inline-block;
+        padding: 10px 30px;
+        position: absolute;
+        z-index: 100;
+        left: -10px;
+        top: -30px;
+    }
+
+    &__header:before {
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: #88b7d5;
+        border-width: 31px;
+        margin-left: -31px;
+
+    }
+
+    &__detail {
+        padding: rem(15);
+
+    }
+}
+
+.viewall {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.badge {
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-right: 15px;
+}
+
+.education {
+    background: #E67E22;
+    background: #E67E22;
+
+
+}
+
+.factsod__facts-share {
+    margin-left: auto;
+    min-width: 72px;
+}
+
+.factsod__facts-share i {
+    color: #333;
+    font-size: 20px;
+}
+
+.factsod__counts span {
+    display: inline-block;
+}
+
+.time {
+    margin-right: 15px;
+}
+
+.cholder {
+    display: flex;
+}
+
+@media screen and (max-width:768px) {
+    .factsod {
+        margin-bottom: rem(70);
+    }
+
+}

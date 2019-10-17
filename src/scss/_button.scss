@@ -1,0 +1,17 @@
+.button {
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  font-size: rem(18);
+}
+.button-primary {
+  background: $primary;
+  border: 1px solid darken($primary, 5%);
+}
+.button-large {
+  padding: rem(30) rem(60);
+}
+

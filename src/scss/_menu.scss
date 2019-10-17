@@ -1,0 +1,19 @@
+// menu css
+.menu {
+    font-size: rem(16);
+    font-weight: 700;
+    color: $hover;
+    &__item {
+      color: $primary;
+      padding: 0 rem(25);
+
+     
+      &:hover {
+        color: darken($primary, 10%);
+        transition: all 0.3s linear;
+      }
+      &--active {
+        font-weight: bold;
+      }
+    }
+  }

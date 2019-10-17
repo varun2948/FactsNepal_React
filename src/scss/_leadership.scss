@@ -1,0 +1,15 @@
+.hover-overlay{transition:all 0.3s cubic-bezier(0.94, 0.04, 0.29, 0.99);transform:translateY(100%) scale(0.8); transform-origin:bottom left }
+.leadership__items {overflow: hidden;
+&:hover .hover-overlay{
+
+    transform:translateY(0%) scale(1)
+}
+
+}
+.columnf > h4,.columnf >p{
+    color:#fff;
+    transform: translateY(50px);
+    transition:all 0.5s cubic-bezier(0,-0.06, 0, 1.75);
+    transition-delay: 0.2s;
+}
+.leadership__items:hover  .columnf > h4, .leadership__items:hover  .columnf >p{transform: translateY(20px)}

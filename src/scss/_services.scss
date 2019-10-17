@@ -1,0 +1,53 @@
+.services {
+    background: $primary;
+}
+
+.service-item {
+    transition: all 0.3s linear;
+    &__iconholder {
+        border-radius: 50%;
+        height: 140px;
+        width: 140px;
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    &:hover {
+        background: rgba(255, 255, 255, 0.09)
+    }
+}
+
+
+
+
+
+.services .section-padding-y {
+    padding: rem(50) 0
+}
+
+@media screen and (max-width:768px) {
+    .services .section-padding-y {
+        padding: rem(15) 0;
+    }
+
+    .outservices {
+        padding-top: 0;
+        margin-top: 0 !important;
+    }
+
+    .service-item__iconholder {
+        width: rem(80);
+        height: rem(80);
+    }
+
+    .service-item__iconholder img {
+        width: 50%;
+    }
+
+    .services {
+        padding-bottom: rem(30);
+        padding-top: rem(30);
+    }
+}

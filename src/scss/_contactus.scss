@@ -1,0 +1,110 @@
+iframe{ width:100%; height:rem(450)}
+.location:before{
+font: normal normal normal 28px/1 LineAwesome;
+content: "\f27d";
+color: lightgray;
+position: absolute;
+top: 0px;
+left: 0px;
+ }
+ .phone:before{
+    font: normal normal normal 24px/1 LineAwesome;
+    content: "\f2b3";
+    color: lightgray;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+     }
+     .email:before{
+        font: normal normal normal 24px/1 LineAwesome;
+        content: "\f1c7";
+        color: lightgray;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+         }
+
+ 
+  .contact-form{
+      background: #fafafa;
+      &__items{
+          padding-left: rem(50);
+          margin-bottom:rem(25);
+      }
+      &__socialshare i{
+          font-size: 24px;
+          margin-right:10px;
+      }
+      &__socialshare{
+          margin-top:rem(60)
+      }
+      &__inner{
+        position: relative;
+        top: -150px;
+      }
+   
+  }
+  .contact-form__left{
+      h4{
+          margin-bottom:rem(60)
+      }
+  }
+  .rbg{background:$primary;}
+  .contact-form__left{padding:rem(50)}
+  .textcontact{color:#fff;}
+  .form-holder{background:#fff;}
+  .rbg{display:flex;align-items: center;justify-content: center;}
+  .contact-form__right{padding:50px;}
+.cr >div {margin-right: 30px;}
+
+  [type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #b43046;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.radio-holder span{margin-right:15px;display:inline-block;}

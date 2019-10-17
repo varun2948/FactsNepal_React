@@ -1,0 +1,67 @@
+.aboutTop__left {
+  width: 60%;
+  padding: rem(80);
+  background: #c13e54;
+  min-height: 600px;
+}
+.aboutTop__wrapper {
+  display: flex;
+}
+
+.about-tab {
+  height: 100px;
+  background: $primary;
+  color: #fff;
+}
+.about-tab .active {
+  background: #fff;
+  color: #333;
+}
+.mission__dateHolder {
+  font-size: 60px;
+  font-weight: bold;
+  color: #585858;
+}
+.mission__row {
+  margin-top: rem(100);
+}
+.aboutTop__left h3 {
+  color: rgba(255, 255, 255, 0.7);
+}
+.aboutTop__left h3.dark {
+  color: rgba(0, 0, 0, 0.7);
+}
+.about-tab > div {
+  transition: all 0.3s linear;
+}
+.about-tab > div:hover {
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+}
+.aboutTop__right {
+  background: url(../static/img/strategy.png);
+  background-size: cover;
+  width: 40%;
+  min-height: 100%;
+}
+.aboutus__imgholder {
+  min-height: 100%;
+}
+@media screen and (max-width: 890px) {
+  .aboutTop__left {
+    width: 100%;
+  }
+  .aboutTop__right {
+    display: none;
+  }
+  .help {
+    flex-direction: column;
+  }
+  .help button {
+    margin-top: 30px;
+  }
+  .leadership__items {
+    margin-bottom: 30px;
+  }
+}
