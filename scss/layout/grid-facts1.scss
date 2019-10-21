@@ -1,0 +1,73 @@
+.page{
+    .grid-facts1{
+        margin-top: 40px;
+        .wrap{
+            display: flex;
+            justify-content: space-between;
+        //    margin-right: 0;
+        //    margin-left: 0;
+            .grid-col{
+                flex: 1;
+                max-width: 25% !important;
+                // margin-right: 40px;
+            //    padding-right: 0;
+            //    padding-left: 0;
+                @include border-radius-circle(5px);
+                box-shadow: 0px 1px 3px $color-box-shadow;
+                &:nth-child(1){
+                    box-shadow: 0px 15px 20px $color-box-shadow;
+                }
+                &:nth-child(2){
+                    margin: 0 20px;
+                }
+                .facts1-img{
+                    img{
+                        // width:362px;
+                        // height: 250px;
+                    }
+                }
+                .content-wrap{
+                    margin: 25px 0px 40px;
+                    padding-left: 40px;
+                    .title{
+                        @include typo($font-family, 400, 1.5);
+                        color: $color-limegreen;
+                        padding-bottom: 10px;
+                    }
+                    .h4-title{
+                        @include typo($font-family, 400, 1.5);
+                        color: $color-primary;
+                        padding-bottom:5px;
+                    }
+                    .title-date{
+                        @include typo($font-family, 400, 1.5);
+                        font-size: 1rem;
+                        color: $color-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .tech-bg{
+        background: $color-lightgrey;
+    }
+}
+
+/* less than 575px; */
+@media only screen and (max-width: $mb-sm){}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: $mb-lg){}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $md-tab) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $lg-tab) {}
+
+/* 1024px */
+@media only screen and (min-width: $ls-tab) {}
+
+/* 1440px and up */
+@media only screen and (min-width: $md-desktop) {}

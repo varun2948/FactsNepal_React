@@ -1,0 +1,193 @@
+
+@mixin clear {
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+@mixin typo($font-family, $font-weight, $line-height){
+    font-family: $font-family;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;  
+}
+@mixin flexjust {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@mixin flex_start {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+@mixin flex_end {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content:flex-end;
+    flex-wrap: wrap;
+}
+@mixin flexcenter{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+
+// @mixin col{
+//     width:100%;
+//     min-height: 1;
+//     position: relative;
+//     padding:0 15px;
+// }
+
+@mixin col-4{
+    -ms-flex:0 0 33.333336%;
+    flex:0 0 33.333336%;
+    max-width:33.333336%;
+    padding:0px 15px;
+    flex-wrap: wrap;
+}
+
+@mixin col-5{
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    padding: 0px 15px;
+    flex-wrap: wrap;
+}
+
+@mixin col-6{
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0px 15px;
+    flex-wrap: wrap;
+}
+
+@mixin col-7{
+    -ms-flex:0 0 58.333333%;
+    flex:0 0 58.333333%;
+    max-width: 58.333333%;
+    padding: 0px 15px;
+    flex-wrap: wrap;
+}
+
+@mixin col-8{
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    padding: 0px 15px;
+    flex-wrap: wrap;
+}
+
+@mixin flex-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@mixin animate {
+    -webkit-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+}
+
+
+@mixin translatey {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin translatex{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left:0;
+    right:0;
+    margin:0 auto;
+}
+
+@mixin translatexy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin linear-gradient($direction, $color-stop1, $color-stop2) {
+    background: linear-gradient($direction, $color-stop1,$color-stop2);
+    
+}
+
+@mixin border-bottom($width, $style, $color){
+    border-bottom-width : $width;
+    border-bottom-style: $style;
+    border-bottom-color: $color;
+}
+
+@mixin border($width, $style, $color){
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+@mixin button($color, $background) {
+    color: $color;
+    background: $background;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    @include animate;
+    &:hover {
+        background: darken($background, 5%);
+    }
+}
+
+@mixin border-radius-circle($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+/* @mixin box-shadow{
+
+} */
+
+@mixin linear-gradient-footer($direction, $color-formlabel, $color-darkred) {
+    background: linear-gradient($direction, $color-formlabel,$color-darkred);
+}
