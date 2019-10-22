@@ -1,5 +1,5 @@
 import React from "react";
-// import NavBarLink from "./NavBarLink";
+import NavBarLink from "./NavBarLink";
 
 
 
@@ -31,6 +31,7 @@ const NavBar = () => (
                 <li className="menu-items"><a href="">Contact</a></li>
               </ul>
             </nav>
+            {/* <NavBarLink /> */}
             <div className="toggle-button">
               <span></span>
               <span></span>

@@ -5,12 +5,18 @@ import Particles from "react-particles-js";
 
 const ParticleJsImg = () => (
 
-    <div style={{ height: "100%" }}>
+    <div style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%"
+    }}>
         <Particles
             params={{
                 particles: {
                     number: {
-                        value: 8,
+                        value: 5,
                         density: {
                             enable: true,
                             value_area: 1000
@@ -23,8 +29,9 @@ const ParticleJsImg = () => (
                         speed: 3,
                         out_mode: "out"
                     },
+
                     shape: {
-                        type: ["images", "circle"],
+                        type: ["images"],
                         images: [
                             {
                                 src: "/img/i1.png",
@@ -67,6 +74,7 @@ const ParticleJsImg = () => (
                         }
                     }
                 },
+
                 retina_detect: false
             }}
         />

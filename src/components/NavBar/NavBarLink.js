@@ -2,15 +2,14 @@ import React from "react";
 import LinkItem from "./LinkItem";
 
 const NavBarLink = () => (
-  <nav className="menu flex ml-a">
-    <LinkItem path="/" text="Home" />
-    <LinkItem path="/about" text="About" />
-    <LinkItem path="/service" text="Services" />
-    <LinkItem path="/works" text="Works" />
-    <LinkItem path="/contact" text="Contact" />
-    <div className="nav__hamburger none">
-      <i className="la la-bars" />
-    </div>
+  <nav className="navitems" id="nav-links">
+    <ul className="menu-lists">
+      <LinkItem path="/services" text="Services" id="dropdown" />
+      <LinkItem path="/projects" text="Projects" />
+      <LinkItem path="/facts" text="Facts" />
+      <LinkItem path="/about" text="About" />
+      <LinkItem path="/contact" text="Contact" />
+    </ul>
   </nav>
 );
 

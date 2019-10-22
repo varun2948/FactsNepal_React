@@ -1,0 +1,194 @@
+.page{
+    .geographical-coverage-details{
+        background: $color-stop1;
+        .geographical-details-wrap{
+            
+            .details-left{
+                h3{
+                    @include typo($font-family, 300, 1.5);
+                    // font-size: 2.813rem;
+                    color: $color-primary;
+                    // margin-bottom: 30px;
+                }
+                p{
+                    @include typo($font-family, 300, 1.5);
+                    color: $color-darkgrey;
+                }
+            }
+            .details-right{
+                @include flex;
+                align-items: center;
+                min-height: 100%;
+                .details-right-content{
+                    
+                    button{
+                        // margin-right: 80px;
+                        // padding: 10px 20px;
+                        @include typo($font-family, 400, 1.5);
+                        // font-size: 1rem;
+                        @include button($color-white, $color-red);
+                        @include animate;
+                        @include border-radius-circle(5px);
+                        @include border(1px, solid, $color-red);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* less than 575px; */
+@media only screen and (max-width: $mb-sm){
+    .geographical-coverage-details{
+        padding: 0px 50px;
+        .geographical-details-wrap{
+            .details-left{
+                text-align: center;
+                h3{
+                    margin-bottom: 15px;
+                }
+            }
+            .details-right{
+                justify-content: center;
+                .details-right-content{  
+                    button{
+                        font-size: 0.75rem;
+                        margin-right: 0px;
+                        padding: 6px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: $mb-lg){
+    .geographical-coverage-details{
+        padding: 0px 50px;
+        .geographical-details-wrap{
+            .details-left{
+                text-align: center;
+                h3{
+                    margin-bottom: 15px;
+                }
+            }
+            .details-right{
+                justify-content: center;
+                .details-right-content{  
+                    button{
+                        font-size: 0.75rem;
+                        margin-right: 0px;
+                        padding: 6px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $md-tab) {
+    .geographical-coverage-details{
+        padding: 0px 80px;
+        .geographical-details-wrap{
+            .details-left{
+                text-align: left;
+                h3{
+                    margin-bottom: 20px;
+                }
+            }
+            .details-right{
+                justify-content: flex-end;
+                .details-right-content{  
+                    button{
+                        font-size: 0.875rem;
+                        margin-right: 0px;
+                        padding: 8px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $lg-tab) {
+     /* geographical-info */
+     .geographical-coverage-details{
+        padding: 0px 80px;
+        .geographical-details-wrap{
+            .details-left{
+                text-align: center;
+                h3{
+                    // font-size: 2.188rem;
+                    margin-bottom: 20px;
+                }
+            }
+            .details-right{
+                justify-content: flex-end;
+                .details-right-content{  
+                    button{
+                        font-size: 1rem;
+                        margin-right: 50px;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 1024px */
+@media only screen and (min-width: $ls-tab) {
+     /* geographical-info */
+     .geographical-coverage-details{
+        padding: 0px 80px;
+        .geographical-details-wrap{
+            .details-left{
+                text-align: left;
+                h3{
+                    // font-size: 2.5rem;
+                    margin-bottom: 30px;
+                }
+            }
+            .details-right{
+                justify-content: flex-end;
+                .details-right-content{  
+                    button{
+                        font-size: 1rem;
+                        margin-right: 50px;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 1440px and up */
+@media only screen and (min-width: $md-desktop) {
+     /* geographical-info */
+     .geographical-coverage-details{
+        padding: 0px;
+        .geographical-details-wrap{
+            .details-left{
+                text-align: left;
+                h3{
+                    // font-size: 2.813rem;
+                    margin-bottom: 30px;
+                }
+            }
+            .details-right{
+                .details-right-content{  
+                    button{
+                        font-size: 1rem;
+                        margin-right: 80px;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

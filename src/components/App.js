@@ -34,12 +34,12 @@ class App extends Component {
           <Router>
             <Navbar />
             <Switch>
-              {/* <Route exact path="/" component={HomePage} />
-            <Route path="/allfacts" component={AllFactsPage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/service" component={ServicePage} />
-            <Route path="/works" component={WorksPage} />
-            <Route path="/contact" component={ContactPage} /> */}
+              <Route exact path="/" component={HomePage} />
+              {/* <Route path="/allfacts" component={AllFactsPage} /> */}
+              {/* <Route path="/about" component={AboutPage} /> */}
+              {/* <Route path="/service" component={ServicePage} /> */}
+              {/* <Route path="/works" component={WorksPage} /> */}
+              {/* <Route path="/contact" component={ContactPage} /> */}
             </Switch>
             {/* <Footer /> */}
           </Router>
