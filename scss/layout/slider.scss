@@ -10,17 +10,25 @@
             margin-top: 42px;
             .slider-image-container{
                 .slider-img-item{
+                   /*  &:nth-child(4){
+                        figure{
+                            img{
+                                max-width: 90px !important;
+                                background: red;
+                            }
+                        }
+                    } */
                 figure{
                     // background: red;
-                    // max-width: 100px;
-                    // height: 50px;
+                    max-width: 100px;
+                    height: 100px;
                     @include flex;
                     justify-content: center;
                     align-items: center;
                     img{
                     //    background: green;
                         }
-                     }
+                    }
                 }
             }
         }

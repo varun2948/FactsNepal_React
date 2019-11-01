@@ -1,29 +1,15 @@
-.pdb-30{
-    padding-bottom: 1.875rem !important;
-}
+
 .pdb-62{
     padding-bottom: 3.25rem !important;
 }
-.pdb-72{
-    padding-bottom: 4.5rem !important;
+.pdb-80{
+    padding-bottom: 5rem !important;
 }
 .pdb-25{
     padding-bottom: 1.563rem !important;
 }
-.pdb-20{
-    padding-bottom: 1.25rem !important;
-}
-.pdt-60{
-    padding-top: 3.75rem !important;
-}
-.pdb-60{
-    padding-bottom: 3.75rem !important;
-}
-.pdb-40{
-    padding-bottom: 2.5rem !important;
-}
-.pdt-90{
-    padding-top: 5.625rem !important;
+.pdt-40{
+    padding-top: 2.5rem !important;
 }
 .pdb-90{
     padding-bottom: 5.625rem !important;
@@ -31,42 +17,12 @@
 .pdt-100{
     padding-top: 6.25rem !important;
 }
-.pdb-100{
-    padding-bottom: 6.25rem !important;
-}
 .pdt-110{
     padding-top: 6.875rem !important;
 } 
 .pdb-110{
     padding-bottom: 6.875rem !important;
-}      
-.pdt-115{
-    padding-top: 7.188rem !important;
-}
-.pdb-115{
-    padding-bottom: 7.188rem !important;
-}
-.pdt-120{
-    padding-top: 7.5rem !important;
-}
-.pdb-120{
-    padding-bottom: 7.5rem !important;
-}
-.pdt-130{
-    padding-top: 8.125rem !important;
-}
-.pdb-130{
-    padding-bottom: 8.125rem !important;
-}
-.pdb-150{
-    padding-bottom: 9.375rem !important;
-}
-.pdt-150{
-    padding-top: 9.375rem !important;
-}
-.pdb-130{
-    padding-bottom: 8.125rem !important;
-}
+} 
 
 h1,h3,h4{
      line-height: 1.25 !important;
@@ -89,6 +45,9 @@ h1,h3,h4{
 .span-18{
     font-size: 1.125rem !important;
 }
+.span-20{
+    font-size: 1.25rem !important;
+}
 
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
@@ -105,6 +64,12 @@ h1,h3,h4{
     .factsNepal-title{
         font-size: 1.25rem !important;
     }
+    .h3-title{
+        font-size: 1.5rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.375rem;
+    }
 
     /* h4 */
     .factsNepal-subtitle{
@@ -116,15 +81,18 @@ h1,h3,h4{
         font-size: 0.875rem !important;
     }
     .span-12{
-        font-size: 0.75rem !important;
+        font-size: 0.625rem !important;
     }
     .span-14{
-        font-size: 0.875rem !important;
+        font-size: 0.75rem !important;
     }
     .span-16{
         font-size: 1rem !important;
     }
     .span-18{
+        font-size: 1.125rem !important;
+    }
+    .span-22{
         font-size: 1.125rem !important;
     }
     
@@ -144,6 +112,12 @@ h1,h3,h4{
     .factsNepal-title{
         font-size: 1.25rem !important;
     }
+    .h3-title{
+        font-size: 1.5rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.375rem;
+    }
 
     /* h4 */
     .factsNepal-subtitle{
@@ -155,15 +129,18 @@ h1,h3,h4{
         font-size: 0.875rem !important;
     }
     .span-12{
-        font-size: 0.75rem !important;
+        font-size: 0.625rem !important;
     }
     .span-14{
-        font-size: 0.875rem !important;
+        font-size: 0.75rem !important;
     }
     .span-16{
         font-size: 1rem !important;
     }
     .span-18{
+        font-size: 1.125rem !important;
+    }
+    .span-22{
         font-size: 1.125rem !important;
     }
     
@@ -182,6 +159,12 @@ h1,h3,h4{
      /* h3 */
     .factsNepal-title{
         font-size: 1.75rem !important;
+    }
+    .h3-title{
+        font-size: 1.625rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.625rem;
     }
 
     /* h4 */
@@ -205,6 +188,9 @@ h1,h3,h4{
     .span-18{
         font-size: 1.125rem !important;
     }
+    .span-22{
+        font-size: 1.125rem !important;
+    }
     
 }
 
@@ -221,7 +207,12 @@ h1,h3,h4{
     .factsNepal-title{
         font-size: 1.75rem !important; 
     }
-
+    .h3-title{
+        font-size: 1.75rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.75rem;
+    }
     /* h4 */
     .factsNepal-subtitle{
         font-size: 1.125rem !important; 
@@ -243,6 +234,9 @@ h1,h3,h4{
     .span-18{
         font-size: 1.125rem !important;
     }
+    .span-22{
+        font-size: 1.375rem !important;
+    }
     
 }
 
@@ -259,6 +253,12 @@ h1,h3,h4{
     .factsNepal-title{
         font-size: 1.75rem !important; 
     }
+    .h3-title{
+        font-size: 1.875rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.875rem;
+    }
 
     /* h4 */
     .factsNepal-subtitle{
@@ -270,16 +270,19 @@ h1,h3,h4{
         font-size: 1rem !important;
     }
     .span-12{
-        font-size: 0.75rem !important;
-    }
-    .span-14{
         font-size: 0.875rem !important;
     }
-    .span-16{
+    .span-14{
         font-size: 1rem !important;
     }
-    .span-18{
+    .span-16{
         font-size: 1.125rem !important;
+    }
+    .span-18{
+        font-size: 1.25rem !important;
+    }
+    .span-22{
+        font-size: 1.5rem !important;
     }
 }    
 
@@ -296,7 +299,12 @@ h1,h3,h4{
     .factsNepal-title{
         font-size: 2.125rem !important; 
     }
-
+    .h3-title{
+        font-size: 1.875rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.875rem;
+    }
 
     /* h4 */
     .factsNepal-subtitle{
@@ -308,16 +316,19 @@ h1,h3,h4{
         font-size: 1.125rem !important;
     }
     .span-12{
-        font-size: 0.75rem !important;
-    }
-    .span-14{
         font-size: 0.875rem !important;
     }
-    .span-16{
+    .span-14{
         font-size: 1rem !important;
     }
-    .span-18{
+    .span-16{
         font-size: 1.125rem !important;
+    }
+    .span-18{
+        font-size: 1.25rem !important;
+    }
+    .span-22{
+        font-size: 1.5rem !important;
     }
     
 }
@@ -341,6 +352,42 @@ h1,h3,h4{
     .pdb-40{
         padding-bottom: 2rem !important;
     }
+    .pdb-50{
+        padding-bottom: 3.125rem !important;
+    }
+    .pdt-60{
+        padding-top: 3.75rem !important;
+    }
+    .pdb-60{
+        padding-bottom: 3.75rem !important;
+    }
+    .pdt-90{
+        padding-top: 5rem !important;
+    }
+    .pdt-115{
+        padding-top: 4.375rem !important;
+    }
+    .pdb-115{
+        padding-bottom: 4.375rem !important;
+    }
+    .pdt-120{
+        padding-top: 5.25rem !important;
+    }
+    .pdb-120{
+        padding-bottom: 5.25rem !important;
+    }
+    .pdt-130{
+        padding-top: 5rem !important;
+    }
+    .pdb-130{
+        padding-bottom: 5rem !important;
+    }
+    .pdt-150{
+        padding-top: 6.25rem !important;
+    }
+    .pdb-150{
+        padding-bottom: 6.25rem !important;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
@@ -360,7 +407,42 @@ h1,h3,h4{
     .pdb-40{
         padding-bottom: 2rem !important;
     }
-
+    .pdb-50{
+        padding-bottom: 3.125rem !important;
+    }
+    .pdt-60{
+        padding-top: 3.75rem !important;
+    }
+    .pdb-60{
+        padding-bottom: 3.75rem !important;
+    }
+    .pdt-90{
+        padding-top: 5.625rem !important;
+    }
+    .pdt-115{
+        padding-top: 5rem !important;
+    }
+    .pdb-115{
+        padding-bottom: 5rem !important;
+    }
+    .pdt-120{
+        padding-top: 5.875rem !important;
+    }
+    .pdb-120{
+        padding-bottom: 5.875rem !important;
+    }
+    .pdt-130{
+        padding-top: 6rem !important;
+    }
+    .pdb-130{
+        padding-bottom: 6rem !important;
+    }
+    .pdt-150{
+        padding-top: 6.875rem !important;
+    }
+    .pdb-150{
+        padding-bottom: 6.875rem !important;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -380,6 +462,43 @@ h1,h3,h4{
     .pdb-40{
         padding-bottom: 2.5rem !important;
     }
+    .pdb-50{
+        padding-bottom: 3.125rem !important;
+    }
+    .pdt-60{
+        padding-top: 3.75rem !important;
+    }
+    .pdb-60{
+        padding-bottom: 3.75rem !important;
+    }
+    .pdt-90{
+        padding-top: 5.625rem !important;
+    }
+    .pdt-115{
+        padding-top: 5.625rem !important;
+    }
+    .pdb-115{
+        padding-bottom: 5.625rem !important;
+    }
+    .pdt-120{
+        padding-top: 6.25rem !important;
+    }
+    .pdb-120{
+        padding-bottom: 6.25rem !important;
+    }
+    .pdt-130{
+        padding-top: 6.875rem !important;
+    }
+    .pdb-130{
+        padding-bottom: 6.875rem !important;
+    }
+    .pdt-150{
+        padding-top: 7.25rem !important;
+    }
+    .pdb-150{
+        padding-bottom: 7.25rem !important;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -399,6 +518,43 @@ h1,h3,h4{
     .pdb-40{
         padding-bottom: 2.5rem !important;
     }
+    .pdb-50{
+        padding-bottom: 3.125rem !important;
+    }
+    .pdt-60{
+        padding-top: 3.75rem !important;
+    }
+    .pdb-60{
+        padding-bottom: 3.75rem !important;
+    }
+    .pdt-90{
+        padding-top: 5.625rem !important;
+    }
+    .pdt-115{
+        padding-top: 7.188rem !important;
+    }
+    .pdb-115{
+        padding-bottom: 7.188rem !important;
+    }
+    .pdt-120{
+        padding-top: 7.5rem !important;
+    }
+    .pdb-120{
+        padding-bottom: 7.5rem !important;
+    }
+    .pdt-130{
+        padding-top: 8.125rem !important;
+    }
+    .pdb-130{
+        padding-bottom: 8.125rem !important;
+    }
+    .pdt-150{
+        padding-top: 9.375rem !important;
+    }
+    .pdb-150{
+        padding-bottom: 9.375rem !important;
+    }
+
 }
 
 
@@ -419,6 +575,43 @@ h1,h3,h4{
     .pdb-40{
         padding-bottom: 2.5rem !important;
     }
+    .pdb-50{
+        padding-bottom: 3.125rem !important;
+    }
+    .pdt-60{
+        padding-top: 3.75rem !important;
+    }
+    .pdb-60{
+        padding-bottom: 3.75rem !important;
+    }
+    .pdt-90{
+        padding-top: 5.625rem !important;
+    }
+    .pdt-115{
+        padding-top: 7.188rem !important;
+    }
+    .pdb-115{
+        padding-bottom: 7.188rem !important;
+    }
+    .pdt-120{
+        padding-top: 7.5rem !important;
+    }
+    .pdb-120{
+        padding-bottom: 7.5rem !important;
+    }
+    .pdt-130{
+        padding-top: 8.125rem !important;
+    }
+    .pdb-130{
+        padding-top: 8.125rem !important;
+    }
+    .pdt-150{
+        padding-top: 9.375rem !important;
+    }
+    .pdb-150{
+        padding-bottom: 9.375rem !important;
+    }
+
     
 }
 
@@ -439,4 +632,38 @@ h1,h3,h4{
     .pdb-40{
         padding-bottom: 2.5rem !important;
     }
+    .pdb-50{
+        padding-bottom: 3.125rem !important;
+    }
+    .pdt-60{
+        padding-top: 3.75rem !important;
+    }
+    .pdb-60{
+        padding-bottom: 3.75rem !important;
+    }
+    .pdt-90{
+        padding-top: 5.625rem !important;
+    }
+    .pdt-115{
+        padding-top: 7.188rem !important;
+    }
+    .pdb-115{
+        padding-bottom: 7.188rem !important;
+    }
+    .pdt-120{
+        padding-top: 7.5rem !important;
+    }
+    .pdb-120{
+        padding-bottom: 7.5rem !important;
+    }
+    .pdt-130{
+        padding-top: 8.125rem !important;
+    }
+    .pdt-150{
+        padding-top: 9.375rem !important;
+    }
+    .pdb-150{
+        padding-bottom: 9.375rem !important;
+    }
+
 }

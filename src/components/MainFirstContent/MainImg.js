@@ -2,7 +2,7 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 
-const HeaderImg = () => (
+const MainImg = () => (
   <div className="col-md-7  d-none d-md-block rtpanel">
     <div className="relative">
       <Fade bottom duration={1300} distance={"20px"}>
@@ -18,4 +18,4 @@ const HeaderImg = () => (
   </div>
 );
 
-export default HeaderImg;
+export default MainImg;

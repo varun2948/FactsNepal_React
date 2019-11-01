@@ -47,10 +47,7 @@ html, body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #bdbdbd;
-  }
-  .slick-dots li:active{
-    background: black;
+    background: rgb(167, 129, 129);
   }
   .slick-prev:before, .slick-next:before{
     font-size: 20px;

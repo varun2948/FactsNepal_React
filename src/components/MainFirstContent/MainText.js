@@ -1,7 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 
-const HeaderText = () => (
+const MainText = () => (
   <div className="col-md-5">
     <Fade bottom duration={1000} distance={"20px"}>
       <h1 className="heroleft__header">FACTS</h1>
@@ -26,4 +26,4 @@ const HeaderText = () => (
   </div>
 );
 
-export default HeaderText;
+export default MainText;

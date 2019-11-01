@@ -24,18 +24,70 @@
                                 @include flex;
                                 transform: translate(10px, 4px);
                                 .menu-items{
+                                    margin-left: 10px;
                                     padding-right: 20px;
+                                    &:nth-child(1){
+                                        margin-left: 0px;
+                                    }
                                     &:nth-child(5){
                                         padding-right: 0px;
                                     }
                                     a{
-                                        @include typo($font-family, 400, 1.5);
+                                        @include typo($font-family, 400, 1.25);
                                         font-size: 0.875rem;
                                         padding: 5px 10px;
                                         &:hover{
                                             border-radius: 2px
                                         }
                                     }  
+                                }
+                                /*-- dropdown --*/
+                                .dropdown-grid{
+                                    position: relative;
+                                    &:hover{
+                                        .grid-content{
+                                            display: block;
+                                        }
+                                    }
+                                    .drpbtn{
+                                        &:hover{
+                                            background: lighten($color-stop1, 5%);
+                                        }
+                                        &::after{
+                                            content: "\f107";
+                                            font-family: 'FontAwesome';
+                                            position: relative;
+                                            right: -2px;
+                                            color: $color-red;
+                                        }
+                                    }
+                                    .grid-content{
+                                        display: none;
+                                        position: absolute;
+                                        min-width: 700px;
+                                        left: -300px;
+                                        z-index: 1;
+                                        @include border-radius-circle(10px);
+                                        box-shadow: 0px 15px 20px $color-box-shadow;
+                                        .grid-container{
+                                            .grid-col{
+                                                text-align: center;
+                                                padding: 20px 0px;
+                                                border-right: 1px solid $color-stop1;
+                                                background: $color-white;
+                                                figure{
+                                                    img{
+                                                        max-width: 90px;
+                                                    }
+                                                }
+                                                .grid-span{
+                                                    @include typo($font-family, 400, 1.5);
+                                                    color: $color-primary;
+                                                }
+                                                
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -124,107 +176,120 @@
             }
         }
         .banner-content{
-            
             .top-content-wrap{
-                padding-left: 100px;
-                margin-bottom: 25px;
-                .title{
-                    @include typo($font-family, 400, 1.5);
-                    color: $color-limegreen;
-                    letter-spacing: 2px;
+                @include flexcenter;
+                .top-wrapper{
+                    width: 600px;
+                    .title{
+                        @include typo($font-family, 400, 1.5);
+                        color: $color-limegreen;
+                        letter-spacing: 2px;
+                    }
+                    .h3-title{
+                        @include typo($font-family, 300, 1.5);
+                        color: black;
+                        padding: 8px 0px;
+                    }
+                    .title-date{
+                        @include typo($font-family, 400, 1.5);
+                        color: $color-grey;
+                    }
                 }
-                .h4-title{
-                    @include typo($font-family, 300, 1.5);
-                    color: black;
-                    padding: 10px 0px 6px;
-                }
-                .title-date{
-                    @include typo($font-family, 400, 1.5);
-                    color: $color-grey;
-                }
-               
             }
 
             .mid-content-wrap{
-                .slider{
-                    .prev-anchor{
-                        left: -62px;
-                        span{
-                            // background: #310505d9 no-repeat center center;
+               .slider-carousel{
+                   .slider-for{
+                       margin: 0px 0px 40px;
+                    }
+                    .slider-nav{
+                        max-width: 700px;
+                        margin:0 auto;
+                        .image-content{
+                            cursor: pointer;
+                            &:focus{
+                                outline: none !important;
+                            }
                         }
                     }
-                    .next-anchor{
-                        right: -62px;
-                        span{
-                            // background: #310505d9 no-repeat center center;
-                        }
-                    }
-                }
+               }
             }
+
             .bottom-content-wrap{
-                padding-left: 100px;
-                
-               .span-18{
-                   display: block;
-                   color: $logo-bg;
-                    @include typo($font-family,400,1.5);
-                }
-                .img-wrap{
-                    padding:30px 0px 35px;
-                    @include flex;
-                    img{
-                        width: 130px;
-                        // height: 75px;
-                        &:nth-child(2){
-                            width: 100px;
-                            height: 50px;
-                            position: relative;
-                            bottom: -17px;
-                        }
-                        &:nth-child(3){
-                            width: 90px;
-                            // height: 70px;
-                            margin-left: 10px;
-                        }
-                        &:nth-child(4){
-                            width: 90px;
-                            // height: 70px;
-                            margin-left: 10px;
-                        }
-                    }
-                }
-                .factsNepal-para{
-                    padding-bottom: 45px;
-                    max-width: 754px; 
-                    @include typo($font-family, 300, 1.5);
-                }
-                .social-icon{
-                    span{
+                @include flexcenter;
+                @include border-bottom(1px, solid, $color-borderbtm);
+                .bottom-wrapper{
+                    max-width: 600px; 
+                    .span-18{
+                    display: block;
+                    color: $logo-bg;
                         @include typo($font-family,400,1.5);
-                        font-size: 0.75rem; 
-                        display: block;
-                        padding-bottom: 20px;
-                        color: $color-grey;
                     }
-                    .social-icon-wrap{
+                    .img-wrap{
+                        padding:30px 0px 35px;
                         @include flex;
-                        a{
-                            @include flex;
-                            justify-content: center;
-                            align-items: center;
-                            background: $logo-bg;
-                            width: 30px;
-                            height: 30px;
-                            @include border-radius-circle(50%);
+                        figure{
+                            margin-right: 5px;
+                            &:nth-child(4){
+                                margin-right: 0px;
+                            }
+                            img{
+                                max-width: 100px;
+                            }
+                        }
+                        .active{
+                            @include border-radius-circle(5px);
+                            @include border(1px, solid, $color-yellow);
                             box-shadow: 0px 10px 40px $color-box-shadow;
-                            margin-right: 15px;
+                        }      
+                    }
+                    .factsNepal-para{
+                        padding-bottom: 45px;
+                        @include typo($font-family, 300, 1.5);
+                    }
+                    .social-icon{
+                        span{
+                            @include typo($font-family,400,1.5);
+                            font-size: 0.75rem; 
+                            display: block;
+                            padding-bottom: 20px;
+                            color: $color-grey;
+                        }
+                        .social-icon-wrap{
+                            @include flex;
+                            a{
+                                cursor: pointer !important;
+                                margin-right: 15px;
                                 &:nth-child(3){
                                     margin-right: 0;
                                 }
-                            img{
-                                height: 15px;
-                                // width: 15px;
-                                
+                                &:nth-child(1){
+                                    figure{
+                                        img{
+                                            width: 7px;
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    figure{
+                                        background: darken($logo-bg, 5%);
+                                        // @include animate;
+                                    }
+                                }
+                                figure{
+                                    @include flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background: $logo-bg;
+                                    width: 30px;
+                                    height: 30px;
+                                    @include border-radius-circle(50%);
+                                    box-shadow: 0px 10px 40px $color-box-shadow;
+                                    img{
+                                        width: 15px;
+                                    }
+                                  
+                                }
                             }
                         }
                     }
@@ -263,21 +328,57 @@
                                     transform: translate(0px, 0px);
                                     flex-direction: column;
                                     align-items: flex-start;
-                                    background: $color-darkgrey;
+                                    background: $color-dropdown;
                                     margin-top: 20px;
                                     .menu-items{
+                                        margin-left: 0px;
                                         padding: 10px 0px;
                                         width: 100%;
+                                        &:nth-child(1){
+                                            margin-left: 0px;
+                                        }
+                                        &:hover{
+                                            background: lighten($color-stop1, 5%);
+                                        }
+                                        a{
+                                            margin-left: 40px;
+                                            font-size: 1rem;
+                                            &:hover{
+                                                background: none;
+                                            }
+                                        }
+                                        
+                                    }
+                                     /*-- dropdown --*/
+                                     .dropdown-grid{
+                                        position: relative;
+                                        &:hover{
+                                            .grid-content{
+                                                display: block;
+                                            }
+                                        }
+                                        .drpbtn{
                                             &:hover{
                                                 background: lighten($color-stop1, 5%);
                                             }
-                                            a{
-                                                font-size: 1.15rem;
-                                                &:hover{
-                                                    background: none;
+                                        }
+                                        .grid-content{
+                                            min-width: 0px;
+                                            left: 0px;
+                                            .grid-container{
+                                                .grid-col{
+                                                    border-left: 0px solid $color-stop1;
+                                                    border-bottom: 1px solid $color-stop1;
+                                                    text-align: center;
+                                                    padding: 20px 0px;
+                                                    figure{
+                                                        img{
+                                                            max-width: 90px;
+                                                        }
+                                                    }
                                                 }
                                             }
-                                        
+                                        }
                                     }
                                 }
                             }
@@ -289,7 +390,7 @@
                 padding: 0px 50px;
                 .banner-wrap{
                     img {
-                        max-width: 400px;
+                        max-width: 100%;
                     }
                     .title-block{
                         .title-wrap{
@@ -300,6 +401,82 @@
             }
             .banner-content{
                 padding: 0px 50px;
+                .top-content-wrap{
+                    .top-wrapper{
+                        width: 300px;
+                        .h3-title{
+                            padding: 8px 0px;
+                        }
+                    }
+                }
+    
+                .mid-content-wrap{
+                    .slider-carousel{
+                        .slider-for{
+                            margin: 0px 0px 10px;
+                        }
+                        .slider-nav{
+                            max-width: 700px;
+                            margin:0 auto;
+                            .image-content{
+                                figure{
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .bottom-content-wrap{
+                    .bottom-wrapper{
+                        max-width: 348px; 
+                        .img-wrap{
+                            padding:30px 0px 35px;
+                            figure{
+                                margin-right: 5px;
+                                &:nth-child(4){
+                                    margin-right: 0px;
+                                }
+                                img{
+                                    max-width: 60px;
+                                }
+                            }
+                            .active{
+                                @include border-radius-circle(5px);
+                            }      
+                        }
+                        .factsNepal-para{
+                            padding-bottom: 25px;
+                        }
+                        .social-icon{
+                            span{
+                                padding-bottom: 20px;
+                            }
+                            .social-icon-wrap{
+                                a{
+                                    margin-right: 5px;
+                                    &:nth-child(3){
+                                        margin-right: 0;
+                                    }
+                                    &:nth-child(1){
+                                        figure{
+                                            img{
+                                                width: 6px;
+                                            }
+                                        }
+                                    }
+                                    figure{
+                                        width: 26px;
+                                        height: 26px;
+                                        img{
+                                            width: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
            
         }
@@ -335,21 +512,57 @@
                                     transform: translate(0px, 0px);
                                     flex-direction: column;
                                     align-items: flex-start;
-                                    background: $color-darkgrey;
+                                    background: $color-dropdown;
                                     margin-top: 20px;
                                     .menu-items{
+                                        margin-left: 0px;
                                         padding: 10px 0px;
                                         width: 100%;
+                                        &:nth-child(1){
+                                            margin-left: 0px;
+                                        }
                                             &:hover{
                                                 background: lighten($color-stop1, 5%);
                                             }
                                             a{
-                                                font-size: 1.15rem;
+                                                margin-left: 40px;
+                                                font-size: 1rem;
                                                 &:hover{
                                                     background: none;
                                                 }
                                             }
                                         
+                                    }
+                                    /*-- dropdown --*/
+                                    .dropdown-grid{
+                                        position: relative;
+                                        &:hover{
+                                            .grid-content{
+                                                display: block;
+                                            }
+                                        }
+                                        .drpbtn{
+                                            &:hover{
+                                                background: lighten($color-stop1, 5%);
+                                            }
+                                        }
+                                        .grid-content{
+                                            min-width: 0px;
+                                            left: 0px;
+                                            .grid-container{
+                                                .grid-col{
+                                                    border-left: 0px solid $color-stop1;
+                                                    border-bottom: 1px solid $color-stop1;
+                                                    text-align: center;
+                                                    padding: 20px 0px;
+                                                    figure{
+                                                        img{
+                                                            max-width: 90px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -375,6 +588,82 @@
             }
             .banner-content{
                 padding: 0px 50px;
+                .top-content-wrap{
+                    .top-wrapper{
+                        width: 300px;
+                        .h3-title{
+                            padding: 8px 0px;
+                        }
+                    }
+                }
+    
+                .mid-content-wrap{
+                    .slider-carousel{
+                        .slider-for{
+                            margin: 0px 0px 10px;
+                        }
+                        .slider-nav{
+                            max-width: 700px;
+                            margin:0 auto;
+                            .image-content{
+                                figure{
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .bottom-content-wrap{
+                    .bottom-wrapper{
+                        max-width: 348px; 
+                        .img-wrap{
+                            padding:30px 0px 35px;
+                            figure{
+                                margin-right: 5px;
+                                &:nth-child(4){
+                                    margin-right: 0px;
+                                }
+                                img{
+                                    max-width: 60px;
+                                }
+                            }
+                            .active{
+                                @include border-radius-circle(5px);
+                            }      
+                        }
+                        .factsNepal-para{
+                            padding-bottom: 25px;
+                        }
+                        .social-icon{
+                            span{
+                                padding-bottom: 20px;
+                            }
+                            .social-icon-wrap{
+                                a{
+                                    margin-right: 5px;
+                                    &:nth-child(3){
+                                        margin-right: 0;
+                                    }
+                                    &:nth-child(1){
+                                        figure{
+                                            img{
+                                                width: 6px;
+                                            }
+                                        }
+                                    }
+                                    figure{
+                                        width: 26px;
+                                        height: 26px;
+                                        img{
+                                            width: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -411,19 +700,52 @@
                                     flex-direction: row;
                                     align-items: center;
                                     background: none;
-                                        margin-top: 0px;
-                                        .menu-items{
-                                            padding: 0px;
+                                    margin-top: 0px;
+                                    .menu-items{
+                                        margin-left: 5px;
+                                        padding: 0px;
+                                        &:hover{
+                                            background: none;
+                                        }
+                                        a{
+                                            margin-left: 0px;
+                                            font-size: 0.625rem;
                                             &:hover{
-                                                background: none;
+                                                background: lighten($color-stop1, 5%);
                                             }
-                                            a{
-                                                font-size: 0.625rem;
-                                                &:hover{
-                                                    background: lighten($color-stop1, 5%);
+                                        }
+                                    }
+                                    /*-- dropdown --*/
+                                    .dropdown-grid{
+                                        position: relative;
+                                        &:hover{
+                                            .grid-content{
+                                                display: block;
+                                            }
+                                        }
+                                        .drpbtn{
+                                            &:hover{
+                                                background: lighten($color-stop1, 5%);
+                                            }
+                                        }
+                                        .grid-content{
+                                            min-width: 455px;
+                                            left: -150px;
+                                            .grid-container{
+                                                .grid-col{
+                                                    border-left: 1px solid $color-stop1;
+                                                    border-bottom: 0px solid $color-stop1;
+                                                    text-align: center;
+                                                    padding: 10px 0px;
+                                                    figure{
+                                                        img{
+                                                            max-width: 80px;
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
+                                    }
                                 }
                             }
                             .toggle-button{
@@ -448,6 +770,83 @@
             }
             .banner-content{
                 padding: 0px 80px;
+                .top-content-wrap{
+                    .top-wrapper{
+                        width: 440px;
+                        .h3-title{
+                            padding: 8px 0px;
+                        }
+                    }
+                }
+                
+                .mid-content-wrap{
+                    .slider-carousel{
+                        .slider-for{
+                            margin: 0px 0px 30px;
+                        }
+                        .slider-nav{
+                            max-width: 700px;
+                            margin:0 auto;
+                            .image-content{
+                                figure{
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bottom-content-wrap{
+                    .bottom-wrapper{
+                        max-width: 480px; 
+                        .img-wrap{
+                            padding:30px 0px 35px;
+                            figure{
+                                margin-right: 5px;
+                                &:nth-child(4){
+                                    margin-right: 0px;
+                                }
+                                img{
+                                    max-width: 80px;
+                                }
+                            }
+                            .active{
+                                @include border-radius-circle(5px);
+                            }      
+                        }
+                        .factsNepal-para{
+                            padding-bottom: 35px;
+                        }
+                        .social-icon{
+                            span{
+                                padding-bottom: 20px;
+                            }
+                            .social-icon-wrap{
+                                a{
+                                    margin-right: 10px;
+                                    &:nth-child(3){
+                                        margin-right: 0;
+                                    }
+                                    
+                                    &:nth-child(1){
+                                        figure{
+                                            img{
+                                                width: 6px;
+                                            }
+                                        }
+                                    }
+                                    figure{
+                                        width: 26px;
+                                        height: 26px;
+                                        img{
+                                            width: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -485,19 +884,51 @@
                                     flex-direction: row;
                                     align-items: center;
                                     background: none;
-                                        margin-top: 0px;
-                                        .menu-items{
-                                            padding: 0px;
+                                    margin-top: 0px;
+                                    .menu-items{
+                                        margin-left: 10px;
+                                        padding: 0px;
+                                        &:hover{
+                                            background: none;
+                                        }
+                                        a{
+                                            font-size: 0.75rem;
                                             &:hover{
-                                                background: none;
+                                                background: lighten($color-stop1, 5%);
                                             }
-                                            a{
-                                                font-size: 0.625rem;
-                                                &:hover{
-                                                    background: lighten($color-stop1, 5%);
+                                        }
+                                    }
+                                    /*-- dropdown --*/
+                                    .dropdown-grid{
+                                        position: relative;
+                                        &:hover{
+                                            .grid-content{
+                                                display: block;
+                                            }
+                                        }
+                                        .drpbtn{
+                                            &:hover{
+                                                background: lighten($color-stop1, 5%);
+                                            }
+                                        }
+                                        .grid-content{
+                                            min-width: 640px;
+                                            left: -280px;
+                                            .grid-container{
+                                                .grid-col{
+                                                    border-left: 1px solid $color-stop1;
+                                                    border-bottom: 0px solid $color-stop1;
+                                                    text-align: center;
+                                                    padding: 20px 0px;
+                                                    figure{
+                                                        img{
+                                                            max-width: 90px;
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
+                                    }
                                 }
                             }
                             .toggle-button{
@@ -526,6 +957,82 @@
             }
             .banner-content{
                 padding: 0px 80px;
+                .top-content-wrap{
+                    .top-wrapper{
+                        width: 500px;
+                        .h3-title{
+                            padding: 8px 0px;
+                        }
+                    }
+                }
+    
+                  .mid-content-wrap{
+                    .slider-carousel{
+                        .slider-for{
+                            margin: 0px 0px 40px;
+                        }
+                        .slider-nav{
+                            max-width: 700px;
+                            margin:0 auto;
+                            .image-content{
+                                figure{
+                                    margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .bottom-content-wrap{
+                    .bottom-wrapper{
+                        max-width: 600px; 
+                        .img-wrap{
+                            padding:30px 0px 35px;
+                            figure{
+                                margin-right: 5px;
+                                &:nth-child(4){
+                                    margin-right: 0px;
+                                }
+                                img{
+                                    max-width: 100px;
+                                }
+                            }
+                            .active{
+                                @include border-radius-circle(5px);
+                            }      
+                        }
+                        .factsNepal-para{
+                            padding-bottom: 45px;
+                        }
+                        .social-icon{
+                            span{
+                                padding-bottom: 20px;
+                            }
+                            .social-icon-wrap{
+                                a{
+                                    margin-right: 15px;
+                                    &:nth-child(3){
+                                        margin-right: 0;
+                                    }
+                                    &:nth-child(1){
+                                        figure{
+                                            img{
+                                                width: 7px;
+                                            }
+                                        }
+                                    }
+                                    figure{
+                                        width: 30px;
+                                        height: 30px;
+                                        img{
+                                            width: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -563,14 +1070,48 @@
                                     background: none;
                                     margin-top: 0px;
                                     .menu-items{
+                                        margin-left: 10px;
                                         padding: 0px;
                                         &:hover{
                                             background: none;
                                         }
                                         a{
-                                            font-size: 1.15rem;
+                                            font-size: 0.875rem;
                                             &:hover{
+                                                @include border-radius-circle(5px);
                                                 background: lighten($color-stop1, 5%);
+                                            }
+                                        }
+                                    }
+                                    /*-- dropdown --*/
+                                    .dropdown-grid{
+                                        position: relative;
+                                        &:hover{
+                                            .grid-content{
+                                                display: block;
+                                            }
+                                        }
+                                        .drpbtn{
+                                            &:hover{
+                                                @include border-radius-circle(5px);
+                                                background: lighten($color-stop1, 5%);
+                                            }
+                                        }
+                                        .grid-content{
+                                            min-width: 700px;
+                                            left: -300px;
+                                            .grid-container{
+                                                .grid-col{
+                                                    text-align: center;
+                                                    padding: 20px 0px;
+                                                    border-left: 1px solid $color-stop1;
+                                                    border-bottom: 0px solid $color-stop1;
+                                                    figure{
+                                                        img{
+                                                            max-width: 90px;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -602,8 +1143,83 @@
 
             .banner-content{
                 padding: 0px 80px;
+                .top-content-wrap{
+                    .top-wrapper{
+                        width: 600px;
+                        .h3-title{
+                            padding: 8px 0px;
+                        }
+                    }
+                }
+    
+                .mid-content-wrap{
+                    .slider-carousel{
+                        .slider-for{
+                            margin: 0px 0px 40px;
+                        }
+                        .slider-nav{
+                            max-width: 700px;
+                            margin:0 auto;
+                            .image-content{
+                                figure{
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .bottom-content-wrap{
+                    .bottom-wrapper{
+                        max-width: 600px; 
+                        .img-wrap{
+                            padding:30px 0px 35px;
+                            figure{
+                                margin-right: 5px;
+                                &:nth-child(4){
+                                    margin-right: 0px;
+                                }
+                                img{
+                                    max-width: 100px;
+                                }
+                            }
+                            .active{
+                                @include border-radius-circle(5px);
+                            }      
+                        }
+                        .factsNepal-para{
+                            padding-bottom: 45px;
+                        }
+                        .social-icon{
+                            span{
+                                padding-bottom: 20px;
+                            }
+                            .social-icon-wrap{
+                                a{
+                                    margin-right: 15px;
+                                    &:nth-child(3){
+                                        margin-right: 0;
+                                    }
+                                    &:nth-child(1){
+                                        figure{
+                                            img{
+                                                width: 8px;
+                                            }
+                                        }
+                                    }
+                                    figure{
+                                        width: 35px;
+                                        height: 35px;
+                                        img{
+                                            width: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-
         }
     }
 }
@@ -627,7 +1243,7 @@
                                 .logo-img{
                                     img{
                                         margin-left: 0;
-                                        max-width: 98px;
+                                        max-width: 85px;
                                     }
                                 }
                             }
@@ -640,14 +1256,46 @@
                                     margin-top: 0px;
                                     transform: translate(10px, 4px);
                                     .menu-items{
+                                        margin-left: 15px;
                                         padding: 0px;
                                         &:hover{
                                             background: none;
                                         }
                                         a{
-                                            font-size: 1.15rem;
+                                            font-size: 1rem;
                                             &:hover{
                                                 background: lighten($color-stop1, 5%);
+                                            }
+                                        }
+                                    }
+                                    /*-- dropdown --*/
+                                    .dropdown-grid{
+                                        position: relative;
+                                        &:hover{
+                                            .grid-content{
+                                                display: block;
+                                            }
+                                        }
+                                        .drpbtn{
+                                            &:hover{
+                                                background: lighten($color-stop1, 5%);
+                                            }
+                                        }
+                                        .grid-content{
+                                            min-width: 780px;
+                                            left: -330px;
+                                            .grid-container{
+                                                .grid-col{
+                                                    text-align: center;
+                                                    padding: 20px 0px;
+                                                    border-right: 1px solid $color-stop1;
+                                                    border-bottom: 0px solid $color-stop1;
+                                                    figure{
+                                                        img{
+                                                            max-width: 90px;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -679,6 +1327,82 @@
 
             .banner-content{
                 padding: 0px;
+                .top-content-wrap{
+                    .top-wrapper{
+                        width: 600px;
+                        .h3-title{
+                            padding: 8px 0px;
+                        }
+                    }
+                }
+    
+                .mid-content-wrap{
+                    .slider-carousel{
+                        .slider-for{
+                            margin: 0px 0px 40px;
+                        }
+                        .slider-nav{
+                            max-width: 700px;
+                            margin:0 auto;
+                            .image-content{
+                                figure{
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .bottom-content-wrap{
+                    .bottom-wrapper{
+                        max-width: 600px; 
+                        .img-wrap{
+                            padding:30px 0px 35px;
+                            figure{
+                                margin-right: 5px;
+                                &:nth-child(4){
+                                    margin-right: 0px;
+                                }
+                                img{
+                                    max-width: 100px;
+                                }
+                            }
+                            .active{
+                                @include border-radius-circle(5px);
+                            }      
+                        }
+                        .factsNepal-para{
+                            padding-bottom: 45px;
+                        }
+                        .social-icon{
+                            span{
+                                padding-bottom: 20px;
+                            }
+                            .social-icon-wrap{
+                                a{
+                                    margin-right: 15px;
+                                    &:nth-child(3){
+                                        margin-right: 0;
+                                    }
+                                    &:nth-child(1){
+                                        figure{
+                                            img{
+                                                width: 8px;
+                                            }
+                                        }
+                                    }
+                                    figure{
+                                        width: 35px;
+                                        height: 35px;
+                                        img{
+                                            width: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

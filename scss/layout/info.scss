@@ -17,14 +17,14 @@
                 }
             }
             .fact-info{
-                background: #f7f7f7;
+                background: $color-white;
                 // min-height: 340px;
                 @include border-radius-circle(10px);
                 .fact-info-img{
                     figure{
                         @include flex;
                         align-items: center;
-                        // min-height: 178px;
+                        min-height: 178px;
                         justify-content: center;
                     }
                 }
@@ -55,7 +55,7 @@
             } 
 
             .public-poll-info{
-                background: #f7f7f7;
+                background: $color-white;
                 @include border-radius-circle(10px);
                 // @include flex;
                 // align-items: center;
@@ -76,11 +76,10 @@
                         display: block;
                     }
                     .btn-vote{
+                        color: $color-red;
+                        background: $color-white;
                         @include typo($font-family, 400, 1.5);
-                      
-                        @include button($color-red, $color-white);
                         @include border(1px, solid, $color-red);
-                        @include animate;
                         @include border-radius-circle(18px);
                     }
                 }
@@ -127,10 +126,9 @@
                         }
                         .date-time{
                             font-size: 0.75rem;
+                            margin-bottom: 24px;
                         }
                         .btn-vote{
-                            padding: 5px 24px;
-                            margin-top: 24px;
                             font-size: 0.75rem;
                         }
                     }
@@ -152,11 +150,11 @@
                         margin-bottom: 0rem;
                     }
                     .btn-vote{
-                        padding: 5px 24px;
-                        margin-top: 24px;
+                        padding: 4px 18px;
                         font-size: 0.75rem;
                     }
                     .date-time{
+                        margin-bottom: 24px;
                         font-size: 0.75rem;
                     }
                 }
@@ -226,10 +224,10 @@
                     }
                     .date-time{
                         font-size: 0.75rem;
+                        margin-bottom: 24px;
                     }
                     .btn-vote{
-                        padding: 5px 24px;
-                        margin-top: 24px;
+                        padding: 4px 18px;
                         font-size: 0.75rem;
                     }
                 }
@@ -300,10 +298,10 @@
                     }
                     .date-time{
                         font-size: 0.625rem;
+                        margin-bottom: 24px;
                     }
                     .btn-vote{
-                        padding: 5px 24px;
-                        margin-top: 24px;
+                        padding: 4px 18px;
                         font-size: 0.625rem;
                     }
                 }
@@ -374,10 +372,10 @@
                     }
                     .date-time{
                         font-size: 0.625rem;
+                        margin-bottom: 24px;
                     }
                     .btn-vote{
-                        padding: 5px 24px;
-                        margin-top: 24px;
+                        padding: 5px 25px;
                         font-size: 0.625rem;
                     }
                 }
@@ -435,7 +433,7 @@
     
                 .public-poll-info{
                     text-align: left;
-                    padding: 63px 40px;
+                    padding: 50px 40px;
                     @include border-radius-circle(10px);
                     align-items: flex-start;
                     .public-poll-flexcenter{
@@ -450,10 +448,10 @@
                         }
                         .date-time{
                             font-size: 0.75rem;
+                            margin-bottom: 24px;
                         }
                         .btn-vote{
-                            padding: 5px 24px;
-                            margin-top: 24px;
+                            padding: 5px 25px;
                             font-size: 0.75rem;
                         }
                     }
@@ -510,7 +508,7 @@
 
             .public-poll-info{
                 text-align: left;
-                padding: 41px 40px;
+                padding: 50px 40px;
                 @include border-radius-circle(10px);
                 align-items: flex-start;
                 .public-poll-flexcenter{
@@ -525,10 +523,10 @@
                     }
                     .date-time{ 
                         font-size: 0.938rem;
+                        margin-bottom: 34px;
                     }
                     .btn-vote{
-                        padding: 7px 27px;
-                        margin-top: 34px;
+                        padding: 5px 25px;
                         font-size: 0.937rem;
                     }
                 }

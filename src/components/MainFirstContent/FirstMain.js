@@ -6,7 +6,7 @@ import ParticleJsText from "./ParticleJsText";
 
 const FirstMain = () => (
 
-  <section class="banner ">
+  <section className="banner ">
     <ParticleJsImg />
     <div className="container">
       <ParticleJsText />
@@ -14,6 +14,7 @@ const FirstMain = () => (
         <HeaderImg /> */}
     </div>
   </section >
+
 );
 
 export default FirstMain;

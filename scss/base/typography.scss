@@ -72,6 +72,10 @@ Version:
      color: $color-primary;
      text-decoration: none;
  }
+ .active{
+    @include border(1px, solid, $color-yellow);
+    box-shadow: $color-box-shadow 0px 3px 10px;
+ }
  img{
      max-width: 100%;
      height: auto;

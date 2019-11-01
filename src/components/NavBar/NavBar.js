@@ -22,16 +22,8 @@ const NavBar = () => (
                 <img src="./img/logo.svg" alt="Facts Nepal" className="logo-icon" />
               </div>
             </div>
-            <nav className="navitems" id="nav-links">
-              <ul className="menu-lists">
-                <li className="menu-items" id="dropdown"><a href="">Services</a></li>
-                <li className="menu-items"><a href="">Projects</a></li>
-                <li className="menu-items"><a href="">Facts</a></li>
-                <li className="menu-items"><a href="">About</a></li>
-                <li className="menu-items"><a href="">Contact</a></li>
-              </ul>
-            </nav>
-            {/* <NavBarLink /> */}
+
+            <NavBarLink />
             <div className="toggle-button">
               <span></span>
               <span></span>

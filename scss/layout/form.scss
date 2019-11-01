@@ -41,8 +41,7 @@
                     }
                 }
                 .btn{
-                    color: $color-white;
-                    background: transparent;
+                    @include button($color-white, $color-formred);
                     margin-top: 66px;
                     @include border(1px, solid, $color-white);
                     @include typo($font-family, 400, 1.5);
@@ -50,9 +49,11 @@
                     @include border-radius-circle(5px);
                     padding: 14px 70px;
                     margin-bottom: 94px;
-                    &:hover{
-                        background: $color-darkred;
-                    }
+                   /*  &:hover {
+                        background: $color-darkred !important;
+                        box-shadow: 0px 1px 4px $color-darkred!important;
+                    } */
+                    
                 }
                
             }
@@ -137,16 +138,40 @@
                    
                 }
             }
-            .form-social-media-wrap{
-                margin-bottom: 50px;
+            .social-icon-wrap{
+                @include flex;
                 a{
-                    padding: 8px 10px;
-                    background: $color-red;  
-                    box-shadow: 0px 10px 40px #00000029;
-                    margin-right: 10px;
-                    border-radius: 50%;
-                    img{
-                        max-width: 18px;
+                    cursor: pointer !important;
+                    margin-right: 15px;
+                    &:nth-child(5){
+                        margin-right: 0;
+                    }
+                    &:nth-child(1){
+                        figure{
+                            img{
+                                width: 7px;
+                            }
+                        }
+                    }
+                    &:hover{
+                        figure{
+                            background: darken($logo-bg, 5%);
+                            // @include animate;
+                        }
+                    }
+                    figure{
+                        @include flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: $logo-bg;
+                        width: 30px;
+                        height: 30px;
+                        @include border-radius-circle(50%);
+                        box-shadow: 0px 10px 40px $color-box-shadow;
+                        img{
+                            width: 15px;
+                        }
+                      
                     }
                 }
             }

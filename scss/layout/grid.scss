@@ -1,4 +1,4 @@
-.grid-section-whole{
+    .grid-section-whole{
     .grid-section{
         .grid-title-wrap{
             .section-span{
@@ -17,6 +17,7 @@
         .grid-content{
             .grid-container{
                 .grid-col{
+                    margin-bottom: 40px;
                     figure{
                         img{
                         }
@@ -53,10 +54,9 @@
                 .grid-container{
                     .grid-col{
                         text-align: center;
-                     
                         figure{
                             img{
-                                max-width: 150px;
+                                max-width: 130px;
                             }
                         }
                         h4{
@@ -115,6 +115,7 @@
             .grid-content{
                 .grid-container{
                     .grid-col{
+                        margin-bottom: 0;
                         text-align: left;
                         figure{
                             img{
@@ -146,6 +147,7 @@
            .grid-content{
                .grid-container{
                    .grid-col{
+                         margin-bottom: 0;   
                        text-align: left;
                        figure{
                         img{
@@ -177,6 +179,7 @@
             .grid-content{
                 .grid-container{
                     .grid-col{
+                        margin-bottom: 0;
                         text-align: left;
                         figure{
                             img{
@@ -207,6 +210,7 @@
             .grid-content{
                 .grid-container{
                     .grid-col{
+                        margin-bottom: 0;
                         text-align: left;
                         figure{
                             img{

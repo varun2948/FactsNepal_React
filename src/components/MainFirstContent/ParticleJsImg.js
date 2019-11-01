@@ -7,10 +7,12 @@ const ParticleJsImg = () => (
 
     <div style={{
         position: "absolute",
+        // top: "70px",
         top: 0,
         left: 0,
         width: "100%",
-        height: "100%"
+        height: "100%",
+        zIndex: -1,
     }}>
         <Particles
             params={{

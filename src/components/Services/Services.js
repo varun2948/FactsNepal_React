@@ -10,19 +10,19 @@ class Services extends Component {
   };
 
   componentDidMount() {
-    axios
-      .get(`${process.env.API_URL}/api/servicesapi`)
-      .then(res => {
-        console.log("res", res);
-        this.setState({ services: res.data[0].services });
-      })
-      .catch(err => console.log("Services Err", err));
+    // axios
+    //   .get(`${process.env.API_URL}/api/servicesapi`)
+    //   .then(res => {
+    //     console.log("res", res);
+    //     this.setState({ services: res.data[0].services });
+    //   })
+    //   .catch(err => console.log("Services Err", err));
   }
 
   render() {
     const { services } = this.state;
     return (
-      <section className="services ">
+      <section className="services " >
         <Particles
           params={{
             particles: {
@@ -43,7 +43,7 @@ class Services extends Component {
             }
           }}
         />
-        <div className="serviceInner">
+        {/* <div className="serviceInner">
           <div className="container">
             <div className="row">
               <div className="col-md-3">
@@ -66,7 +66,7 @@ class Services extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     );
   }
