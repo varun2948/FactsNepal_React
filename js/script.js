@@ -86,18 +86,46 @@ $(document).ready(function () {
         // autoplay: true,
     });
 
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true
+    });
+
+    $(":radio").click(function() {
+      // $(this).closest("div.inputform").css({top: 200, left: 200, position:'absolute'});
+      $(this).closest("div.inputform").addClass("active").
+      siblings("div.inputform.active").removeClass("active");
+    });
+
+    $(".image-content").hover(function(){
+      $(figure).css("background-color", "yellow");
+    });
+
+    /* equal height js for general-info div( 2 divs) */
     function minHeight (){
-      var programmeHeight = $('.fact-info').innerHeight();
-      $('.public-poll-info').css({'min-height': programmeHeight});
+      var programmeHeight = $('.fact-info-wrap').innerHeight();
+      $('.public-poll-info-wrap').css({'min-height': programmeHeight});
       var winWidth = $( window ).width();
       if(winWidth <= 767){
-        $('.public-poll-info').css({'min-height': 'auto'});
+        $('.public-poll-info-wrap').css({'min-height': 'auto'});
       }
      
     }
    minHeight();
 
-   function minHeight (){
+  /* equal height js for grid-fact1 div( 3 divs) */
+  function minHeight (){
     var programmeHeight = $('.grid-mid').innerHeight();
     $('.grid-lr').css({'min-height': programmeHeight});
     var winWidth = $( window ).width();
@@ -106,6 +134,20 @@ $(document).ready(function () {
     }
    
   }
- minHeight();
+  minHeight();
+
+  /* equal height js for general-info div( 3 divs) */
+  function minHeight (){
+    var programmeHeight = $('.resources-grid-rght').innerHeight();
+    $('.resouces-grid-mid').css({'min-height': programmeHeight});
+    $('.resouces-grid-lft').css({'min-height': programmeHeight});
+    var winWidth = $( window ).width();
+    if(winWidth <= 767){
+      $('.resources-grid-mid').css({'min-height': 'auto'});
+      $('.resources-grid-lft').css({'min-height': 'auto'});
+    }
+   
+  }
+  minHeight();
 
 })

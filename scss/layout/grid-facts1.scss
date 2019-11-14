@@ -1,40 +1,48 @@
 .page{
     .grid-facts1{
         .wrap{
-            .grid-col{
-            // margin-bottom: 60px;
-                @include border-radius-circle(5px);
-                box-shadow: 0px 1px 3px $color-box-shadow;
-                &:hover{
-                    box-shadow: 0px 15px 20px $color-box-shadow
-                }
-                facts1-img{
-                    img{
-                        // width:362px;
-                        // height: 250px;
+            .grid-col-link{
+                display: block;
+                height: 100%;
+                width: 100%;
+                .grid-col{
+                // margin-bottom: 60px;
+                    @include border-radius-circle(5px);
+                    box-shadow: 0px 1px 3px $color-box-shadow;
+                    &:hover{
+                        box-shadow: 0px 15px 20px $color-box-shadow;
                     }
-                }
-                .content-wrap{
-                    // padding: 15px 0px 20px;
-                    // padding-left: 30px;
-                    .title{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-limegreen;
-                        // padding-bottom: 15px;
+                    &:focus{
+                        box-shadow: 0px 15px 20px $color-box-shadow;
                     }
-                    .span-color{
-                        color: $color-blue !important;
+                    facts1-img{
+                        img{
+                            // width:362px;
+                            // height: 250px;
+                        }
                     }
-                    .gridcol-title{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-primary;
-                        // padding-bottom: 20px;
-                        display: block;
-                    }
-                    .title-date{
-                        @include typo($font-family, 400, 1.5);
-                        font-size: 1rem;
-                        color: $color-grey;
+                    .content-wrap{
+                        // padding: 15px 0px 20px;
+                        // padding-left: 30px;
+                        .title{
+                            @include typo($font-family, 400, 1.5);
+                            color: $color-limegreen;
+                            // padding-bottom: 15px;
+                        }
+                        .span-color{
+                            color: $color-blue !important;
+                        }
+                        .gridcol-title{
+                            @include typo($font-family, 400, 1.5);
+                            color: $color-primary;
+                            // padding-bottom: 20px;
+                            display: block;
+                        }
+                        .title-date{
+                            @include typo($font-family, 400, 1.5);
+                            font-size: 1rem;
+                            color: $color-grey;
+                        }
                     }
                 }
             }

@@ -205,10 +205,28 @@
                     .slider-nav{
                         max-width: 700px;
                         margin:0 auto;
+                        
                         .image-content{
                             cursor: pointer;
                             &:focus{
                                 outline: none !important;
+                            }
+                            .active{
+                                @include border-radius-circle(5px);
+                                @include border(1px, solid, $color-yellow);
+                                box-shadow: 0px 5px 15px $form-shadow;
+                            }
+                            figure{
+                                margin-top: 10px;
+                               /*  &:hover{
+                                    @include border-radius-circle(5px);
+                                    @include border(1px, solid, $color-yellow);
+                                } */
+                                &:active{
+                                    @include border-radius-circle(5px);
+                                    @include border(1px, solid, $color-yellow);
+                                    box-shadow: 0px 5px 15px $form-shadow;
+                                }
                             }
                         }
                     }
@@ -420,7 +438,7 @@
                             margin:0 auto;
                             .image-content{
                                 figure{
-                                    margin-right: 5px;
+                                    // margin-right: 5px;
                                 }
                             }
                         }
@@ -607,7 +625,7 @@
                             margin:0 auto;
                             .image-content{
                                 figure{
-                                    margin-right: 5px;
+                                    // margin-right: 5px;
                                 }
                             }
                         }
@@ -789,7 +807,7 @@
                             margin:0 auto;
                             .image-content{
                                 figure{
-                                    margin-right: 5px;
+                                    // margin-right: 5px;
                                 }
                             }
                         }
@@ -976,7 +994,7 @@
                             margin:0 auto;
                             .image-content{
                                 figure{
-                                    margin-right: 0px;
+                                    // margin-right: 0px;
                                 }
                             }
                         }
@@ -1162,7 +1180,7 @@
                             margin:0 auto;
                             .image-content{
                                 figure{
-                                    margin-right: 5px;
+                                    // margin-right: 5px;
                                 }
                             }
                         }
@@ -1346,7 +1364,7 @@
                             margin:0 auto;
                             .image-content{
                                 figure{
-                                    margin-right: 5px;
+                                    // margin-right: 5px;
                                 }
                             }
                         }

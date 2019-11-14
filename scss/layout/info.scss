@@ -406,13 +406,19 @@
                         text-align: left;
                     }
                 }
+                .poll-link{
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    &:hover{
+                        box-shadow: 0px 5px 15px $color-box-shadow;
+                    }
+                }
                 .fact-info{
                     padding: 50px 40px;
                     .fact-info-img{
                         padding-bottom: 0px;
-                      
                     }
-
                     .fact-info-content{
                         text-align: left;
                         .fact-info-content-wrap{

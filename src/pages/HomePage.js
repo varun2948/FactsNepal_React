@@ -8,20 +8,24 @@ import FirstMain from "../components/MainFirstContent/FirstMain";
 import Trusted from "../components/Trusted/Trusted";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
+import Navbar from "../components/NavBar/NavBar";
 
 class HomePage extends Component {
   state = {};
   render() {
     return (
+
       <div className="Scrollreveal">
+        {/* <div className="background-wrap"> */}
         <FirstMain />
+        {/* </div> */}
         <Trusted />
         <Services />
-        {/* <FactsPoll />
-        <Services />
-        <Initiatives />
+        {/* <FactsPoll /> */}
+        {/* <Initiatives />
         <HappyClients />
         <Footer /> */}
+
       </div>
     );
   }
