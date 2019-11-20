@@ -22,7 +22,7 @@ class Services extends Component {
   render() {
     const { services } = this.state;
     return (
-      <section className="services">
+      // <section className="services">
       <div className="grid-section-whole pdb-120 pdt-115">
         <div className="container">
           <div className="grid-section">

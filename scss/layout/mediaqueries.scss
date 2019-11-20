@@ -1,10 +1,12 @@
+
+
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
     .page{
         /* -- slider -- */
         .slider-section{
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
             span{
                 text-align: center;
                 display: block;
@@ -15,8 +17,9 @@
                 .slider-image-container{
                     .slider-img-item{
                         figure{
-                            max-width: 70px;
-                            height: 70px;
+                            img{
+                                width: 70px;
+                            }
                         }
                     }
                 }
@@ -33,7 +36,7 @@
                         margin-bottom: 10px;
                     }
                     span{
-                    font-size: 1rem;
+                    font-size: 0.75rem;
                     }
                 }
                 .form-wrap{
@@ -43,17 +46,6 @@
                         margin-bottom: 27px;
                         &:nth-child(4){
                             margin-bottom: 0;
-                        }
-                        .form-control{
-                            padding: 6px 0px;
-                            font-size: 1rem;
-                            &::placeholder{
-                                font-size: 1rem;
-                            }
-                            &:focus{
-                                box-shadow: none;
-                            }
-                            padding: 0px;
                         }
                     }
                     .btn{
@@ -86,8 +78,8 @@
                                 }
                             }
                             span{
-                                font-size: 0.875rem;
-                                padding-bottom: 14px;
+                                font-size: 0.75rem;
+                                padding-bottom: 10px;
                                 &:nth-child(2){
                                     margin-left: 10px;
                                 }
@@ -99,13 +91,13 @@
                         }
                     }
                     a{
-                        font-size: 1rem;
+                        font-size: 0.75rem;
                     }   
                 }
                 .form-btn-wrap{
                     padding-top: 40px;
                     span{
-                        font-size: 1rem;
+                        font-size: 0.75rem;
                     }
                     .btn-content{
                         margin-bottom: 30px;
@@ -133,7 +125,7 @@
                 .social-icon-wrap{
                     @include flex;
                     a{
-                        cursor: pointer !important;
+                        height: 26px;
                         margin-right: 15px;
                         &:nth-child(5){
                             margin-right: 0;
@@ -147,17 +139,13 @@
                         }
                         figure{
                             @include flex;
-                            justify-content: center;
-                            align-items: center;
-                            background: $logo-bg;
                             width: 26px;
                             height: 26px;
                             @include border-radius-circle(50%);
-                            box-shadow: 0px 10px 40px $color-box-shadow;
+                            // box-shadow: 0px 10px 40px $color-box-shadow;
                             img{
                                 width: 12px;
                             }
-                          
                         }
                     }
                 }
@@ -165,6 +153,184 @@
              // footer
             .footer{
                 margin-top: 40px;
+                flex-direction: column;
+                .footer-left{
+                    .copyright{
+                        font-size: 0.75rem;
+                        .subtitle{
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                }
+
+                .footer-right{
+                    margin-top: 10px;
+                    .site-design-title{
+                        font-size: 0.75rem;
+                        .site-design{
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* less than 376px; */
+@media only screen and (max-width: $mb-xs){
+    .page{
+
+        /* -- slider -- */
+        .slider-section{
+            padding-left: 30px;
+            padding-right: 30px;
+            span{
+                text-align: center;
+                display: block;
+                font-size: 0.75rem;
+            }
+            .slider{
+                margin-top: 42px;
+                .slider-image-container{
+                    .slider-img-item{
+                        figure{
+                            img{
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* form */
+        .form-section{
+            padding: 0px 30px;
+            .form-left{
+                .form-left-title{
+                    h3{
+                    // font-size: 1.563rem;
+                        margin-bottom: 5px;
+                    }
+                    span{
+                    font-size: 0.75rem;
+                    }
+                }
+                .form-wrap{
+                    margin-top: 20px;
+                    .form-group{
+                        width: 100%;
+                        margin-bottom: 22px;
+                        &:nth-child(4){
+                            margin-bottom: 0;
+                        }
+                    }
+                    .btn{
+                        margin-top: 36px;
+                        padding: 5px 30px;
+                        margin-bottom: 20px;
+                        font-size: 0.625rem; 
+                    }
+                }
+            }
+            .form-right{
+                margin-left: 0px;
+                .form-right-title{
+                    h3{
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .form-address{
+                    margin-top: 14px;
+                    .addr-list{
+                        .addr{
+                            &:nth-child(1){
+                                span{
+                                    img{
+                                        max-width: 20px;
+                                        // height: 20px;
+                                    }
+                                }
+                            }
+                            span{
+                                font-size: 0.75rem;
+                                padding-bottom: 10px;
+                                &:nth-child(2){
+                                    margin-left: 10px;
+                                }
+                                img{
+                                    max-width: 20px;
+                                    // height: 20px;
+                                }
+                            }
+                        }
+                    }
+                    a{
+                        font-size: 0.75rem;
+                    }   
+                }
+                .form-btn-wrap{
+                    padding-top: 40px;
+                    span{
+                        font-size: 0.75rem;
+                    }
+                    .btn-content{
+                        margin-bottom: 30px;
+                        padding-top: 5px;
+                        a{
+                            cursor: pointer;
+                            &:nth-child(1){
+                                img{
+                                    max-width: 70px;
+                                    // height: 30px;
+                                }
+                                margin-right: 0px;
+                            }
+                            &:nth-child(2){
+                                img{
+                                    max-width: 90px;
+                                    // height: 30px;
+                                }
+                                margin-right: 0px;
+                            }
+                        }
+                        
+                    }
+                }
+                .social-icon-wrap{
+                    @include flex;
+                    a{
+                        height: 26px;
+                        margin-right: 15px;
+                        &:nth-child(5){
+                            margin-right: 0;
+                        }
+                        &:nth-child(1){
+                            figure{
+                                img{
+                                    width: 6px;
+                                }
+                            }
+                        }
+                        figure{
+                            @include flex;
+                            width: 26px;
+                            height: 26px;
+                            @include border-radius-circle(50%);
+                            // box-shadow: 0px 10px 40px $color-box-shadow;
+                            img{
+                                width: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+             // footer
+            .footer{
+                margin-top: 40px;
+                flex-direction: column;
                 .footer-left{
                     .copyright{
                         font-size: 0.75rem;
@@ -188,6 +354,7 @@
     }
 }
 
+
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
     
@@ -207,8 +374,9 @@
                 .slider-image-container{
                     .slider-img-item{
                         figure{
-                            max-width: 70px;
-                            height: 70px;
+                            img{
+                                width: 75px;
+                            }
                         }
                     }
                 }
@@ -235,16 +403,6 @@
                         margin-bottom: 27px;
                         &:nth-child(4){
                             margin-bottom: 0;
-                        }
-                        .form-control{
-                            font-size: 1rem;
-                            &::placeholder{
-                                font-size: 1rem;
-                            }
-                            &:focus{
-                                box-shadow: none;
-                            }
-                            padding: 0px;
                         }
                     }
                     .btn{
@@ -324,7 +482,7 @@
                 .social-icon-wrap{
                     @include flex;
                     a{
-                        cursor: pointer !important;
+                        height: 26px;
                         margin-right: 15px;
                         &:nth-child(5){
                             margin-right: 0;
@@ -338,17 +496,13 @@
                         }
                         figure{
                             @include flex;
-                            justify-content: center;
-                            align-items: center;
-                            background: $logo-bg;
                             width: 26px;
                             height: 26px;
                             @include border-radius-circle(50%);
-                            box-shadow: 0px 10px 40px $color-box-shadow;
+                            // box-shadow: 0px 10px 40px $color-box-shadow;
                             img{
                                 width: 12px;
                             }
-                          
                         }
                     }
                 }
@@ -394,8 +548,9 @@
                 .slider-image-container{
                     .slider-img-item{
                         figure{
-                            max-width: 80px;
-                            height: 80px;
+                            img{
+                                width: 85px;
+                            }
                         }
                     }
                 }
@@ -419,26 +574,16 @@
                     margin-top: 35px;
                     .form-group{
                         width: 100%;
-                        margin-bottom: 17px;
+                        margin-bottom: 20px;
                         &:nth-child(4){
                             margin-bottom: 0;
-                        }
-                        .form-control{
-                            padding: 6px 0px;
-                            font-size: 0.875rem;
-                            &::placeholder{
-                                font-size: 0.875rem;
-                            }
-                            &:focus{
-                                box-shadow: none;
-                            }
                         }
                     }
                      .btn{
                         margin-top: 46px;
-                        padding: 8px 40px;
+                        padding: 5px 30px;
                         margin-bottom: 20px;
-                        font-size: 0.625rem;
+                        font-size: 0.75rem;
                     }
                 }
             }
@@ -511,13 +656,14 @@
                 .social-icon-wrap{
                     @include flex;
                     a{
-                        cursor: pointer !important;
+                        height: 26px;
                         margin-right: 15px;
                         &:nth-child(5){
                             margin-right: 0;
                         }
                         &:nth-child(1){
                             figure{
+
                                 img{
                                     width: 6px;
                                 }
@@ -525,13 +671,10 @@
                         }
                         figure{
                             @include flex;
-                            justify-content: center;
-                            align-items: center;
-                            background: $logo-bg;
                             width: 26px;
                             height: 26px;
                             @include border-radius-circle(50%);
-                            box-shadow: 0px 10px 40px $color-box-shadow;
+                            // box-shadow: 0px 10px 40px $color-box-shadow;
                             img{
                                 width: 12px;
                             }
@@ -584,8 +727,9 @@
                 .slider-image-container{
                     .slider-img-item{
                         figure{
-                            max-width: 80px;
-                            height: 80px;
+                            img{
+                                width: 90px;
+                            }
                         }
                     }
                 }
@@ -612,16 +756,6 @@
                         margin-bottom: 20px;
                         &:nth-child(4){
                             margin-bottom: 0;
-                        }
-                        .form-control{
-                            padding: 8px 0px;
-                            font-size: 1rem;
-                            &::placeholder{
-                                font-size: 1rem;
-                            }
-                            &:focus{
-                                box-shadow: none;
-                            }
                         }
                     }
                     .btn{
@@ -701,7 +835,7 @@
                 .social-icon-wrap{
                     @include flex;
                     a{
-                        cursor: pointer !important;
+                        height: 30px;
                         margin-right: 15px;
                         &:nth-child(5){
                             margin-right: 0;
@@ -715,17 +849,13 @@
                         }
                         figure{
                             @include flex;
-                            justify-content: center;
-                            align-items: center;
-                            background: $logo-bg;
                             width: 30px;
                             height: 30px;
                             @include border-radius-circle(50%);
-                            box-shadow: 0px 10px 40px $color-box-shadow;
+                            // box-shadow: 0px 10px 40px $color-box-shadow;
                             img{
                                 width: 15px;
                             }
-                          
                         }
                     }
                 }
@@ -774,8 +904,9 @@
                 .slider-image-container{
                     .slider-img-item{
                         figure{
-                            max-width: 100px;
-                            height: 100px;
+                            img{
+                                width: 110px;
+                            }
                         }
                     }
                 }
@@ -802,16 +933,6 @@
                         margin-bottom: 30px;
                         &:nth-child(4){
                             margin-bottom: 0;
-                        }
-                        .form-control{
-                            padding: 8px 0px;
-                            font-size: 1rem;
-                            &::placeholder{
-                                font-size: 1rem;
-                            }
-                            &:focus{
-                                box-shadow: none;
-                            }
                         }
                     }
                     .btn{
@@ -891,7 +1012,7 @@
                 .social-icon-wrap{
                     @include flex;
                     a{
-                        cursor: pointer !important;
+                        height: 35px;
                         margin-right: 15px;
                         &:nth-child(5){
                             margin-right: 0;
@@ -901,21 +1022,17 @@
                                 img{
                                     width: 8px;
                                 }
-                            }
+                            } 
                         }
                         figure{
                             @include flex;
-                            justify-content: center;
-                            align-items: center;
-                            background: $logo-bg;
                             width: 35px;
                             height: 35px;
                             @include border-radius-circle(50%);
-                            box-shadow: 0px 10px 40px $color-box-shadow;
+                            // box-shadow: 0px 10px 40px $color-box-shadow;
                             img{
                                 width: 16px;
                             }
-                          
                         }
                     }
                 }
@@ -961,8 +1078,9 @@
                 .slider-image-container{
                     .slider-img-item{
                         figure{
-                            max-width: 100px;
-                            height: 100px;
+                            img{
+                                width: 110px;
+                            }
                         }
                     }
                 }
@@ -989,16 +1107,6 @@
                         margin-bottom: 30px;
                         &:nth-child(4){
                             margin-bottom: 0;
-                        }
-                        .form-control{
-                            padding: 8px 0px;
-                            font-size: 1.25rem;
-                            &::placeholder{
-                                font-size: 1.25rem;
-                            }
-                            &:focus{
-                                box-shadow: none;
-                            }
                         }
                     }
                     .btn{
@@ -1078,7 +1186,7 @@
                 .social-icon-wrap{
                     @include flex;
                     a{
-                        cursor: pointer !important;
+                        height: 35px;
                         margin-right: 15px;
                         &:nth-child(5){
                             margin-right: 0;
@@ -1092,17 +1200,13 @@
                         }
                         figure{
                             @include flex;
-                            justify-content: center;
-                            align-items: center;
-                            background: $logo-bg;
                             width: 35px;
                             height: 35px;
                             @include border-radius-circle(50%);
-                            box-shadow: 0px 10px 40px $color-box-shadow;
+                            // box-shadow: 0px 10px 40px $color-box-shadow;
                             img{
                                 width: 16px;
                             }
-                          
                         }
                     }
                 }

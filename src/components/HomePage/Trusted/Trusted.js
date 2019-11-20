@@ -7,8 +7,10 @@ export default class Trusted extends Component {
         var settings = {
             dots: true,
             infinite: true,
-            speed: 500,
-            slidesToShow: 4,
+            autoplay: true,
+            speed: 2000,
+            autoplaySpeed: 2000,
+            slidesToShow: 5,
             slidesToScroll: 1,
             initialSlide: 0,
             responsive: [
@@ -39,23 +41,35 @@ export default class Trusted extends Component {
             ]
         };
         return (
-            <div className="slider-section pdt-115">
+            <section className="slider-section pdt-115">
                 <div className="container">
                     <span>Trusted by the best</span>
                     <div className="slider pdb-115">
                         <div className="slider-image-container">
                             <Slider {...settings}>
-                                <div className="slider-img-item"><figure><img src="./img/1client-ekantipur.png" alt="" /></figure></div>
-                                <div className="slider-img-item"><figure><img src="./img/2client-restless.png" alt="" /></figure></div>
-                                <div className="slider-img-item"><figure><img src="./img/4client-wwf.png" alt="" /></figure></div>
-                                <div className="slider-img-item"><figure><img src="./img/5client-bajekosekwa.png" alt="" /></figure></div>
-                                <div className="slider-img-item"><figure><img src="./img/6client-philips.png" alt="" /></figure></div>
-                                <div className="slider-img-item"><figure><img src="./img/7client-cocacola.png" alt="" /></figure></div>
+                                <div className="slider-img-item img-scale00">
+                                    <figure><img src="./img/1client-ekantipur.png" alt="" /></figure>
+                                </div>
+                                <div className="slider-img-item">
+                                    <figure><img src="./img/2client-restless.png" alt="" /></figure>
+                                </div>
+                                <div className="slider-img-item img-scale02">
+                                    <figure><img src="./img/4client-wwf.png" alt="" /></figure>
+                                </div>
+                                <div className="slider-img-item img-scale03">
+                                    <figure><img src="./img/5client-bajekosekwa.png" alt="" /></figure>
+                                </div>
+                                <div className="slider-img-item">
+                                    <figure><img src="./img/6client-philips.png" alt="" /></figure>
+                                </div>
+                                <div className="slider-img-item">
+                                    <figure><img src="./img/7client-cocacola.png" alt="" /></figure>
+                                </div>
                             </Slider>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }

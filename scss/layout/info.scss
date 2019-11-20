@@ -16,6 +16,11 @@
                     color: $color-primary;
                 }
             }
+            .poll-link{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
             .fact-info{
                 background: $color-white;
                 // min-height: 340px;
@@ -104,7 +109,7 @@
                 padding-left: 0px;
                 h3{
                     text-align: center;
-                    padding-bottom: 20px;
+                    padding-bottom: 0px;
                 }
             }
             .fact-info{
@@ -168,7 +173,7 @@
 @media only screen and (min-width: $mb-lg){
       /* General-Info start */
       .general-info{
-        padding: 0px 50px;
+        padding: 0px 30px;
         .general-info-wrap{
             .fact-info-wrap{
                 margin-bottom: 60px;

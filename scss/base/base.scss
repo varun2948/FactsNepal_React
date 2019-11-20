@@ -1,4 +1,6 @@
-
+.show{
+    display: block;
+}
 .pdb-62{
     padding-bottom: 3.25rem !important;
 }
@@ -49,6 +51,54 @@ h1,h3,h4{
     font-size: 1.25rem !important;
 }
 
+/* less than 376px; */
+@media only screen and (max-width: $mb-xs){
+    /* h1 */
+   .banner-title{
+    font-size: 1.5rem !important;
+    }
+    .banner-content{
+        font-size: 0.875rem !important;
+    }
+
+    /* h3 */
+    .factsNepal-title{
+        font-size: 1.125rem !important;
+    }
+    .h3-title{
+        font-size: 1.25rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.25rem;
+    }
+
+    /* h4 */
+    .factsNepal-subtitle{
+        font-size: 1.125rem !important;
+    }
+
+    /* para */
+    .factsNepal-para{
+        font-size: 1rem !important;
+    }
+    .span-12{
+        font-size: 0.475rem !important;
+    }
+    .span-14{
+        font-size: 0.625rem !important;
+    }
+    .span-16{
+        font-size: 0.75rem !important;
+    }
+    .span-18{
+        font-size: 0.875rem !important;
+    }
+    .span-22{
+        font-size: 1rem !important;
+    }
+    
+}
+
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
 
@@ -84,19 +134,68 @@ h1,h3,h4{
         font-size: 0.625rem !important;
     }
     .span-14{
-        font-size: 0.75rem !important;
+        font-size: 0.625rem !important;
     }
     .span-16{
-        font-size: 1rem !important;
+        font-size: 0.75rem !important;
     }
     .span-18{
-        font-size: 1.125rem !important;
+        font-size: 0.875rem !important;
     }
     .span-22{
         font-size: 1.125rem !important;
     }
     
 }
+
+/* less than 376px; */
+@media only screen and (max-width: $mb-xs){
+
+    /* h1 */
+    .banner-title{
+     font-size: 1.25rem !important;
+     }
+     .banner-content{
+         font-size: 0.875rem !important;
+     }
+ 
+     /* h3 */
+     .factsNepal-title{
+         font-size: 1.325rem !important;
+     }
+     .h3-title{
+         font-size: 1.25rem !important;
+     }
+     .publicpoll-title{
+         font-size: 1.125rem;
+     }
+ 
+     /* h4 */
+     .factsNepal-subtitle{
+         font-size: 1.125rem !important;
+     }
+ 
+     /* para */
+     .factsNepal-para{
+         font-size: 0.75rem !important;
+     }
+     .span-12{
+         font-size: 0.625rem !important;
+     }
+     .span-14{
+         font-size: 0.75rem !important;
+     }
+     .span-16{
+         font-size: 0.875rem !important;
+     }
+     .span-18{
+         font-size: 1rem !important;
+     }
+     .span-22{
+         font-size: 1rem !important;
+     }
+     
+ }
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
@@ -105,12 +204,12 @@ h1,h3,h4{
         font-size: 1.75rem !important;
     }
     .banner-content{
-        font-size: 1rem !important;
+        font-size: 1.125rem !important;
     }
 
      /* h3 */
     .factsNepal-title{
-        font-size: 1.25rem !important;
+        font-size: 1.5rem !important;
     }
     .h3-title{
         font-size: 1.5rem !important;
@@ -135,10 +234,10 @@ h1,h3,h4{
         font-size: 0.75rem !important;
     }
     .span-16{
-        font-size: 1rem !important;
+        font-size: 0.875rem !important;
     }
     .span-18{
-        font-size: 1.125rem !important;
+        font-size: 1rem !important;
     }
     .span-22{
         font-size: 1.125rem !important;
@@ -153,7 +252,7 @@ h1,h3,h4{
         font-size: 1.5rem !important;
     }
     .banner-content{
-        font-size: 0.875rem !important;
+        font-size: 1.125rem !important;
     }
 
      /* h3 */
@@ -174,7 +273,7 @@ h1,h3,h4{
 
     /* para */
     .factsNepal-para{
-        font-size: 0.75rem !important;
+        font-size: 0.875rem !important;
     }
     .span-12{
         font-size: 0.75rem !important;
@@ -198,14 +297,14 @@ h1,h3,h4{
 @media only screen and (min-width: $lg-tab) {
     /* h1 */
     .banner-title{
-        font-size: 2rem !important;
+        font-size: 2.5rem !important;
     }
     .banner-content{
-        font-size: 0.875rem !important;
+        font-size: 1.25rem !important;
     }
     /* h3 */
     .factsNepal-title{
-        font-size: 1.75rem !important; 
+        font-size: 2rem !important; 
     }
     .h3-title{
         font-size: 1.75rem !important;
@@ -251,7 +350,7 @@ h1,h3,h4{
     }
     /* h3 */
     .factsNepal-title{
-        font-size: 1.75rem !important; 
+        font-size: 2.125rem !important; 
     }
     .h3-title{
         font-size: 1.875rem !important;
@@ -335,10 +434,17 @@ h1,h3,h4{
 
 
 /* ************************************ */
-/* mediaqueries for padding */
+
+
 @media only screen and (max-width: $mb-sm){
+    .pdb-25{
+        padding-bottom: 0.625rem !important;
+    }
     .pdb-20{
-        padding-bottom: 1.25rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    .pdt-100{
+        padding-top: 3.25rem !important;
     }
     .pdb-100{
         padding-bottom: 4.25rem !important;
@@ -359,7 +465,7 @@ h1,h3,h4{
         padding-top: 3.75rem !important;
     }
     .pdb-60{
-        padding-bottom: 3.75rem !important;
+        padding-bottom: 0rem !important;
     }
     .pdt-90{
         padding-top: 5rem !important;
@@ -390,13 +496,80 @@ h1,h3,h4{
     }
 }
 
+/* mediaqueries for padding */
+@media only screen and (max-width: $mb-xs){
+    .pdb-25{
+        padding-bottom: 0.625rem !important;
+    }
+    .pdb-20{
+        padding-bottom: 0.5rem !important;
+    }
+    .pdb-100{
+        padding-bottom: 4.125rem !important;
+    }
+    .pdt-100{
+        padding-top: 3.25rem !important;
+    }
+    .pdb-72{
+        padding-bottom: 2.25rem !important;
+    }
+    .pdb-30{
+        padding-bottom: 1.25rem !important;
+    }
+    .pdb-40{
+        padding-bottom: 1.75rem !important;
+    }
+    .pdb-50{
+        padding-bottom: 2.125rem !important;
+    }
+    .pdt-60{
+        padding-top: 2.75rem !important;
+    }
+    .pdb-60{
+        padding-bottom: 0rem !important;
+    }
+    .pdt-90{
+        padding-top: 3rem !important;
+    }
+    .pdt-115{
+        padding-top: 3.375rem !important;
+    }
+    .pdb-115{
+        padding-bottom: 3.375rem !important;
+    }
+    .pdt-120{
+        padding-top: 4rem !important;
+    }
+    .pdb-120{
+        padding-bottom: 4rem !important;
+    }
+    .pdt-130{
+        padding-top: 5.25rem !important;
+    }
+    .pdb-130{
+        padding-bottom: 5.25rem !important;
+    }
+    .pdt-150{
+        padding-top: 6rem !important;
+    }
+    .pdb-150{
+        padding-bottom: 6rem !important;
+    }
+}
+
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
+    .pdb-25{
+        padding-bottom: 1rem !important;
+    }
     .pdb-20{
-        padding-bottom: 1.25rem !important;
+        padding-bottom: 0.5rem !important;
     }
     .pdb-100{
         padding-bottom: 4.25rem !important;
+    }
+    .pdt-100{
+        padding-top: 4.25rem !important;
     }
     .pdb-72{
         padding-bottom: 2.5rem !important;
@@ -405,16 +578,16 @@ h1,h3,h4{
         padding-bottom: 1.5rem !important;
     }
     .pdb-40{
-        padding-bottom: 2rem !important;
+        padding-bottom: 2.125rem !important;
     }
     .pdb-50{
-        padding-bottom: 3.125rem !important;
+        padding-bottom: 2.5rem !important;
     }
     .pdt-60{
-        padding-top: 3.75rem !important;
+        padding-top: 3rem !important;
     }
     .pdb-60{
-        padding-bottom: 3.75rem !important;
+        padding-bottom: 3rem !important;
     }
     .pdt-90{
         padding-top: 5.625rem !important;
@@ -447,11 +620,17 @@ h1,h3,h4{
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: $md-tab) {
+    .pdb-25{
+        padding-bottom: 0.5rem !important;
+    }
     .pdb-20{
-        padding-bottom: 1.25rem !important;
+        padding-bottom: 1rem !important;
     }
     .pdb-100{
         padding-bottom: 4.5rem !important;
+    }
+    .pdt-100{
+        padding-top: 4.25rem !important;
     }
     .pdb-72{
         padding-bottom: 3.5rem !important;
@@ -472,7 +651,7 @@ h1,h3,h4{
         padding-bottom: 3.75rem !important;
     }
     .pdt-90{
-        padding-top: 5.625rem !important;
+        padding-top: 2.625rem !important;
     }
     .pdt-115{
         padding-top: 5.625rem !important;
@@ -481,7 +660,7 @@ h1,h3,h4{
         padding-bottom: 5.625rem !important;
     }
     .pdt-120{
-        padding-top: 6.25rem !important;
+        padding-top: 5.25rem !important;
     }
     .pdb-120{
         padding-bottom: 6.25rem !important;
@@ -503,11 +682,17 @@ h1,h3,h4{
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: $lg-tab) {
+    .pdb-25{
+        padding-bottom: 1.563rem !important;
+    }
     .pdb-20{
         padding-bottom: 1.25rem !important;
     }
     .pdb-100{
         padding-bottom: 4.5rem !important;
+    }
+    .pdt-100{
+        padding-top: 6.25rem !important;
     }
     .pdb-72{
         padding-bottom: 4.5rem !important;
@@ -560,11 +745,17 @@ h1,h3,h4{
 
 /* 1024px */
 @media only screen and (min-width: $ls-tab) {
+    .pdb-25{
+        padding-bottom: 1.563rem !important;
+    }
     .pdb-20{
         padding-bottom: 1.25rem !important;
     }
     .pdb-100{
         padding-bottom: 5.25rem !important;
+    }
+    .pdt-100{
+        padding-top: 6.25rem !important;
     }
     .pdb-72{
         padding-bottom: 4.5rem !important;
@@ -617,11 +808,17 @@ h1,h3,h4{
 
 /* 1440px and up */
 @media only screen and (min-width: $md-desktop) {
+    .pdb-25{
+        padding-bottom: 1.563rem !important;
+    }
     .pdb-20{
         padding-bottom: 1.25rem !important;
     }
     .pdb-100{
         padding-bottom: 6.25rem !important;
+    }
+    .pdt-100{
+        padding-top: 6.25rem !important;
     }
     .pdb-72{
         padding-bottom: 4.5rem !important;

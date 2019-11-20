@@ -2,12 +2,15 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import PublicPoll from "./PublicPoll";
+import Moment from 'react-moment';
 
-import Fact from "../Fact/Fact";
-import Question from "../Poll/Question";
-import FactList from '../FactLists/FactList';
-import Answer from "../Poll/Answer";
-import FactsoftheDay from "./FactsoftheDay";
+
+// import Fact from "../Fact/Fact";
+// import Question from "../Poll/Question";
+// import FactList from '../FactLists/FactList';
+// import Answer from "../Poll/Answer";
+// import FactsoftheDay from "./FactsoftheDay";
 
 const headerData = {
     headers: {
@@ -17,9 +20,10 @@ const headerData = {
     }
 };
 
-class FactsPoll extends Component {
+class FactsPublicPoll extends Component {
     state = {
         facts: [],
+        factoftheday: [],
         publicPoll: [],
         pollResultApi: [],
         likeUpdated: false,
@@ -27,27 +31,30 @@ class FactsPoll extends Component {
     };
 
     componentDidMount() {
-        // Promise.all([
-        //   axios.get(`${process.env.API_URL}/api/factapi`),
-        //   axios.get(`${process.env.API_URL}/api/publicpoll`),
-        //   axios.get(`${process.env.API_URL}/api/pollresultapi`)
-        // ]).then(response => {
-        //   const newFacts = response[0].data[0].home.map(fact => ({
-        //     ...fact,
-        //     likeUpdated: false
-        //   }));
+        Promise.all([
+            axios.get(`${process.env.API_URL}/api/factapi`),
+            axios.get(`${process.env.API_URL}/api/publicpoll`),
+            // axios.get(`${process.env.API_URL}/api/pollresultapi`)
+        ]).then(response => {
+            const newFacts = response[0].data[0].home.map(fact => ({
+                ...fact,
+                // ...factoftheday,
+                likeUpdated: false
+            }));
 
-        //   response[0].data[0].home = newFacts;
+            response[0].data[0].home = newFacts;
+            // response[0].data[0].home = newFacts;
 
-        //   this.setState({
-        //     facts: response[0].data,
-        //     publicPoll: response[1].data,
-        //     pollResultApi: response[2].data
-        //   });
-
-        // });
+            this.setState({
+                facts: response[0].data,
+                factoftheday: response[0].data[0].home[0],
+                publicPoll: response[1].data[0],
+                // pollResultApi: response[2].data
+            });
+        });
 
     }
+    
 
     // pollOptionClick = (questionId, optionId) => {
     //   if (!this.state.pollUpdated) {
@@ -130,6 +137,10 @@ class FactsPoll extends Component {
     // };
 
     render() {
+        const {
+            state: { facts, factoftheday, publicPoll },
+
+        } = this;
         // const {
         //   state: { facts, publicPoll, pollResultApi, likeUpdated, pollUpdated },
         //   handleLike,
@@ -161,7 +172,7 @@ class FactsPoll extends Component {
         // } else {
         //   question = <h2 style={{ color: "#b43046" }}>Loading...</h2>;
         // }
-
+        console.log(facts, 'facts');
         return (
             //     <section className="section-padding-y fact-poll">
             //     <div className="container-fluid">
@@ -196,38 +207,50 @@ class FactsPoll extends Component {
                 <div className="container">
                     <div className="general-info-wrap">
                         <div className="row">
-                            <div className="col-12 col-md-7">
+                            <div className="col-12 col-md-7" id="fact-info-div">
                                 <div className="fact-info-wrap">
                                     <h3 className="factsNepal-title">Fact of the day</h3>
-                                    <FactsoftheDay
-                                    // fact={fact}
-                                    // handleLike={handleLike}
-                                    // likeUpdated={likeUpdated}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="col-12 col-md-5">
-                                <div className="public-poll-info-wrap">
-                                    <h3 className="factsNepal-title">Public Poll</h3>
-                                    <Link to="/publicpoll">
-                                        <div className="public-poll-info">
-                                            <div className="public-poll-flexcenter">
-                                                <span className="title">PRODUCT</span>
-                                                <h6>Which brand of toothpaste do you use?</h6>
-                                                <span className="date-time">1 day ago</span>
-                                                <span className="btn-vote">8 votes</span>
+                                    <Link className="poll-link" to={{
+                                        pathname: `/facts/${factoftheday.id}`,
+                                        facts_data: factoftheday
+                                    }}  >
+                                        <div className="fact-info">
+                                            <div className="row">
+                                                <div className="col-12 col-md-4">
+                                                    <div className="fact-info-img">
+                                                        <figure>
+                                                            <img src={factoftheday.image} alt="fact-img" />
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                                <div className="col-12 col-md-8">
+                                                    <div className="fact-info-content">
+                                                        <div className="fact-info-content-wrap">
+                                                            <div className="center">
+                                                                <span className="title">{factoftheday.category_title}</span>
+                                                                <p className="factsNepal-para">{factoftheday.description}</p>
+                                                                <span className="date-time">
+                                                                    {/* <Moment date={factoftheday.public_date}
+                                                                        durationFromNow
+                                                                    /> */}
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </Link>
                                 </div>
                             </div>
+
+                            <PublicPoll publicPoll={publicPoll} Link={Link} />
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         );
     }
 }
 
-export default FactsPoll;
+export default FactsPublicPoll;

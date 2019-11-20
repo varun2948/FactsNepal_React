@@ -53,6 +53,18 @@
     display: flex;
     justify-content: center;
 }
+@mixin flexvr{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
 
 // @mixin col{
 //     width:100%;
@@ -112,13 +124,26 @@
     margin-right: -15px;
     margin-left: -15px;
 }
+@mixin boxshadow ($boxshadow){
+    -webkit-box-shadow: $boxshadow;
+    -ms-box-shadow: $boxshadow;
+    -o-box-shadow: $boxshadow;
+    box-shadow: $boxshadow;
+}
+
+@mixin transition ($transition){
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+  }
 
 @mixin animate {
-    -webkit-transition: all 300ms ease-in;
-    -ms-transition: all 300ms ease-in;
-    -moz-transition: all 300ms ease-in;
-    -o-transition: all 300ms ease-in;
-    transition: all 300ms ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
 }
 
 @mixin translate{
@@ -181,7 +206,16 @@
     @include animate;
     &:hover {
         background: darken($background, 5%);
-        box-shadow: 0px 1px 5px darken($background, 5%) ;
+        box-shadow: 1px 2px 8px darken($background, 5%) ;
+    }
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &:active{
+        @include transition( $transition: all 0.8s ease-in);
+        background: darken($background, 5%);
+        box-shadow: 0px 1px 4px darken($background,50%) ; 
     }
 }
 

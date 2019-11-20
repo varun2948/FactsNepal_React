@@ -65,61 +65,44 @@ html, body {
       content: ' ';
   }
 
-  .slick-prev, .slick-next{
-    /* background: #fbd6d6;
-    border-radius: 50%; */
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-
-  }
-
 
   /* .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
     background: #fdeded;
   } */
 
   @media only screen and (max-width: 575px){
-    .slick-prev, .slick-next{ width: 15px; height: 15px; }
-    .slick-prev:before, .slick-next:before{ font-size: 12px;  }
     .slick-dots li{width: 4px; height: 4px; margin: 0 3px;}
-    .slick-dots{bottom: -45px;}
- 
+    .slick-dots{bottom: -30px;}
+  }
+
+  @media only screen and (max-width: 376px){
+    .slick-dots li{width: 4px; height: 4px; margin: 0 2px;}
+    .slick-dots{bottom: -30px;}
   }
 
   @media only screen and (min-width: 576px){
-    .slick-prev, .slick-next{ width: 15px; height: 15px;}
-    .slick-prev:before, .slick-next:before{ font-size: 12px;  }
     .slick-dots li{width: 5px; height: 5px; margin: 0px 5px;}
     .slick-dots{bottom: -45px;}
   }
 
   @media only screen and (min-width: 768px) {
-    .slick-prev, .slick-next{ width: 20px; height: 20px; }
-    .slick-prev:before, .slick-next:before{ font-size: 16px;  }
     .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
     .slick-dots{bottom: -50px;}
  
   }
 
   @media only screen and (min-width: 992px) {
-    .slick-prev, .slick-next{ width: 20px; height: 20px;}
-    .slick-prev:before, .slick-next:before{ font-size: 16px;  }
     .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
     .slick-dots{bottom: -50px;}
   
   }
 
   @media only screen and (min-width: 1200px) {
-    .slick-prev, .slick-next{ width: 26px; height: 26px; }
-    .slick-prev:before, .slick-next:before{ font-size: 20px;  }
     .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
     .slick-dots{bottom: -55px;}
   }
 
   @media only screen and (min-width: 1440px) {
-    .slick-prev, .slick-next{ width: 26px; height: 26px; }
-    .slick-prev:before, .slick-next:before{ font-size: 20px;  }
     .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
     .slick-dots{bottom: -55px;}
 }

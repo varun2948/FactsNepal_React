@@ -13,6 +13,7 @@ const NavBar = () => (
   < React.Fragment >
 
     {/* {console.log(this.state.btnclick)} */}
+
     <header className="site-header pdb-100">
       <div className="wrap">
         <div className="container full-width-container">
@@ -34,6 +35,7 @@ const NavBar = () => (
         </div>
       </div>
     </header>
+
 
 
     {/* <button className=" btn btn-success  btn-lg heroleft__btn ploll-btn" >

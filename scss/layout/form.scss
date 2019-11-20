@@ -17,45 +17,66 @@
             }
             .form-wrap{
                 margin-top: 61px;
-                .form-group{
-                    width: 100%;
-                    margin-bottom: 37px;
-                    &:nth-child(4){
-                        margin-bottom: 0;
-                    }
-                    .form-control{
-                        &::placeholder{
-                            @include typo($font-family, 400, 1.5);
-                            font-size: 1.5rem;
+                form{
+                    .form-group{
+                        position: relative;
+                        width: 100%;
+                        &:nth-child(4){
+                            margin-bottom: 0;
+                        }
+                        .form-control{
+                            position: relative;
+                            cursor: pointer;
                             color: $color-formlabel;
+                            padding: 2px 0px;
+                            background-color: transparent;
+                            outline: none;
+                            border: none;
+                            @include border-bottom(1px, solid, $color-formlabel);
+                            @include border-radius-circle(0px);
+                            ~label{
+                                @include typo($font-family, 400, 1.5);
+                                @include transition($transition: all 0.4s ease-in);
+                                // font-size: 1rem;
+                                color: $color-formlabel;
+                                position: absolute; 
+                                left: 0;
+                                top: 0px; 
+                            }
+                            ~.border-span{
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0;
+                                height: 1px;
+                                background-color: $color-white;
+                                transition:all 0.5s linear;
+                            }
+                            &:focus,
+                            &:valid{
+                                color: $color-white;
+                                box-shadow: none;
+                                outline: none;
+                                ~label{
+                                    top: -10px; 
+                                    color: $color-white; 
+                                    transform: translate(-20%, -40%) scale(0.6);
+                                }
+                                ~.border-span{
+                                    width: 100%;
+                                }
+                            }
                         }
-                        color: $color-formlabel;
-                        &:focus{
-                            box-shadow: none;
-                        }
-                        padding: 8px 0px;
-                        background: none;
-                        border: none;
-                        @include border-bottom(1px, solid, $color-formlabel);
-                        @include border-radius-circle(0px);
+                    }
+                     
+                    .btn{
+                        @include button($color-white, $color-formred);
+                        // margin-top: 66px;
+                        @include border(1px, solid, $color-white);
+                        @include typo($font-family, 400, 1.5);
+                        @include border-radius-circle(5px);
                     }
                 }
-                .btn{
-                    @include button($color-white, $color-formred);
-                    margin-top: 66px;
-                    @include border(1px, solid, $color-white);
-                    @include typo($font-family, 400, 1.5);
-                    font-size: 1rem;
-                    @include border-radius-circle(5px);
-                    padding: 14px 70px;
-                    margin-bottom: 94px;
-                   /*  &:hover {
-                        background: $color-darkred !important;
-                        box-shadow: 0px 1px 4px $color-darkred!important;
-                    } */
-                    
-                }
-               
             }
         }
         .form-right{
@@ -141,7 +162,6 @@
             .social-icon-wrap{
                 @include flex;
                 a{
-                    cursor: pointer !important;
                     margin-right: 15px;
                     &:nth-child(5){
                         margin-right: 0;
@@ -153,13 +173,8 @@
                             }
                         }
                     }
-                    &:hover{
-                        figure{
-                            background: darken($logo-bg, 5%);
-                            // @include animate;
-                        }
-                    }
                     figure{
+                        cursor: pointer !important;
                         @include flex;
                         justify-content: center;
                         align-items: center;
@@ -168,14 +183,49 @@
                         height: 30px;
                         @include border-radius-circle(50%);
                         box-shadow: 0px 10px 40px $color-box-shadow;
+                        position: relative;
+                        display: inline-block;
+                        transition: all 0.4s ease-in;
+                        outline: none;
                         img{
+                            position: relative;
                             width: 15px;
                         }
-                      
+                        //start click effect
+                        &:before {
+                            content: '';
+                            background-color: lighten($color-red, 5%);
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            transform: scale(0.001, 0.001);
+                        }
+                        &:active{
+                            outline: none !important;
+                            &:before {
+                                animation: click_effect 0.8s ease-out;
+                            }
+                        }
+                    }
+                    @keyframes click_effect {
+                        50% {
+                          transform: scale(1.8, 1.8);
+                          opacity: 0;
+                        }
+                        99% {
+                          transform: scale(0.001, 0.001);
+                          opacity: 0;
+                        }
+                        100% {
+                          transform: scale(0.001, 0.001);
+                          opacity: 1;
+                        }
                     }
                 }
             }
-         
         }
 
         // footer
@@ -193,7 +243,6 @@
                         color: $color-pink;
                     }
                 }
-
             }
 
             .footer-right{
@@ -212,4 +261,41 @@
 
     }
 }
+@media only screen and (max-width: $md-tab){
+    /* form */
+    .form-section{
+        .form-left{
+            .form-wrap{
+                .form-group{
+                    .form-control{
+                        font-size: 0.875rem;
+                        ~label{
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+/* less than 575px; */
+@media only screen and (max-width: $mb-sm){
+    /* form */
+    .form-section{
+        .form-left{
+            .form-wrap{
+                .form-group{
+                    .form-control{
+                        font-size: 0.75rem;
+                        ~label{
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
 

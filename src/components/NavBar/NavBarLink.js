@@ -13,38 +13,37 @@ const NavBarLink = () => (
   // </nav>
   <nav className="navitems" id="nav-links">
     <ul className="menu-lists">
-      <li className="menu-items dropdown-grid" id="dropdown" >
+      <li className="menu-items dropdown-grid" id="dropdown">
 
-        <LinkItem path="/services" text="Services" className="drpbtn" />
-        <div className="grid-content">
+        <LinkItem path="/services" text="Services" className="drpbtn" id="toggle-link" />
+        <div id="myGridcontent" className="grid-content">
           <div className="grid-container">
             <div className="row no-gutters">
-
-              <div className="col-md-4">
-                <div className="grid-col">
+              <div className="col-sm-7 col-8 col-md-4">
+                <a className="grid-col" href="R&D.html">
                   <figure className="fig">
                     <img className="grid-img" src="./img/Services-icon-1.svg" alt="visual data" />
                   </figure>
                   <span className="grid-span span-12">Research & <br /> Data Analysis</span>
-                </div>
+                </a>
               </div>
 
-              <div className="col-md-4">
-                <div className="grid-col">
+              <div className="col-sm-7 col-8 col-md-4">
+                <a className="grid-col" href="R&D1.html">
                   <figure className="fig">
                     <img className="grid-img" src="./img/Services-icon-2.svg" alt="file searcrhing" />
                   </figure>
                   <span className="grid-span span-12">Strategy & <br /> Content Development</span>
-                </div>
+                </a>
               </div>
 
-              <div className="col-md-4">
-                <div className="grid-col">
+              <div className="col-sm-7 col-8 col-md-4">
+                <a className="grid-col" href="R&D2.html">
                   <figure className="fig">
                     <img className="grid-img" src="./img/Services-icon-3.svg" alt="file searcrhing" />
                   </figure>
                   <span className="grid-span span-12">Infographics <br /> Design</span>
-                </div>
+                </a>
               </div>
 
             </div>

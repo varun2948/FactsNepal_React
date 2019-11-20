@@ -11,7 +11,8 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Navbar from "../components/NavBar/NavBar";
 // pages
 import HomePage from "../pages/HomePage";
-import AllFactsPage from "../pages/AllFactsPage";
+import PublicPoll from "../pages/PublicPoll";
+import FactsPage from "../pages/FactsPage";
 import AboutPage from "../pages/AboutPage";
 import ServicePage from "../pages/ServicePage";
 import WorksPage from "../pages/WorksPage";
@@ -30,20 +31,19 @@ class App extends Component {
   render() {
     return (
       <div className="page">
-        <div className="background-wrap">
-          <Router>
-            <Navbar />
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              {/* <Route path="/allfacts" component={AllFactsPage} /> */}
-              {/* <Route path="/about" component={AboutPage} /> */}
-              {/* <Route path="/service" component={ServicePage} /> */}
-              {/* <Route path="/works" component={WorksPage} /> */}
-              {/* <Route path="/contact" component={ContactPage} /> */}
-            </Switch>
-            {/* <Footer /> */}
-          </Router>
-        </div>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/publicpoll" component={PublicPoll} />
+            <Route path="/facts/:number" component={FactsPage} />
+            {/* <Route path="/service" component={ServicePage} /> */}
+            {/* <Route path="/works" component={WorksPage} /> */}
+            {/* <Route path="/contact" component={ContactPage} /> */}
+          </Switch>
+          {/* <Footer /> */}
+        </Router>
+
       </div>
     );
   }

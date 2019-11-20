@@ -63,13 +63,13 @@
         background: $color-lightgrey;
     }
      .tech-section{
-        padding: 0px 50px;
+        padding: 0px 30px;
         .tech-section-wrap{
             .tech-section-left{
                 text-align: center;
                 .img-center{
                     img{
-                        max-width: 100%;
+                        max-width: 300px;
                     }
                 }
             }
@@ -81,7 +81,7 @@
                     }
                     .btn-wrap{
                         span{
-                           font-size: 1rem;
+                           font-size: 0.75rem;
                         }
                         .btn-content{
                             padding-top: 10px;
@@ -89,14 +89,14 @@
                                cursor: pointer;
                                 &:nth-child(1){
                                     img{
-                                        max-width: 100px;
+                                        width: 100px;
                                         // height: 40px;
                                     }
                                     // margin-right: 10px;
                                 }
                                 &:nth-child(2){
                                     img{
-                                        max-width: 120px;
+                                        width: 107px;
                                         // height: 40px;
                                     }
                                     // margin-right: 0px;
@@ -110,6 +110,61 @@
     }
 }
 
+/* less than 381px; */
+@media only screen and (max-width: $mb-xs){
+    /* tech-section */
+    .tech-section-bg{
+        background: $color-lightgrey;
+    }
+     .tech-section{
+        padding: 0px 30px;
+        .tech-section-wrap{
+            .tech-section-left{
+                text-align: center;
+                .img-center{
+                    img{
+                        max-width: 250px;
+                    }
+                }
+            }
+            .tech-section-right{
+                text-align: center;
+                .tech-section-right-content{
+                    h3{
+                        padding-bottom: 10px;
+                    }
+                    .btn-wrap{
+                        span{
+                           font-size: 0.75rem;
+                        }
+                        .btn-content{
+                            padding-top: 10px;
+                            a{
+                               cursor: pointer;
+                                &:nth-child(1){
+                                    img{
+                                        width: 80px;
+                                        // height: 40px;
+                                    }
+                                    // margin-right: 10px;
+                                }
+                                &:nth-child(2){
+                                    img{
+                                        width: 90px;
+                                        // height: 40px;
+                                    }
+                                    // margin-right: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
       /* tech-section */
@@ -117,7 +172,7 @@
         background: $color-lightgrey;
     }
      .tech-section{
-        padding: 0px 50px;
+        padding: 0px 30px;
         .tech-section-wrap{
             .tech-section-left{
                 text-align: center;

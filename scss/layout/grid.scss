@@ -41,7 +41,7 @@
 @media only screen and (max-width: $mb-sm){
      /* grid-section */
      .grid-section-whole{
-        padding: 0px 50px;
+        padding: 0px 30px;
         .grid-section{
             .grid-title-wrap{
                 text-align: center;
@@ -55,11 +55,10 @@
                     .grid-col{
                         text-align: center;
                         figure{
+                            margin-bottom: 0 !important;
                             img{
-                                max-width: 130px;
+                               width: 130px;
                             }
-                        }
-                        h4{
                         }
                     }
                 }
@@ -67,6 +66,37 @@
         }
     }
 }
+
+/* less than 376px; */
+@media only screen and (max-width: $mb-xs){
+    /* grid-section */
+    .grid-section-whole{
+       padding: 0px 30px;
+       .grid-section{
+           .grid-title-wrap{
+               text-align: center;
+               .section-span{
+                   font-size: 0.875rem;
+               }
+           }
+
+           .grid-content{
+               .grid-container{
+                   .grid-col{
+                       text-align: center;
+                       figure{
+                           margin-bottom: 0 !important;
+                           img{
+                              width: 110px;
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
+}
+
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
