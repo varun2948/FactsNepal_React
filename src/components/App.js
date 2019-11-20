@@ -1,39 +1,22 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
-import "../static/css/line-awesome.min.css";
-import "pace-js";
-import "pace-js/themes/red/pace-theme-minimal.css";
-import "../scss/style.scss";
+// import "bootstrap/dist/css/bootstrap.css";
+// import "../static/css/line-awesome.min.css";
+// import "pace-js";
+// import "pace-js/themes/red/pace-theme-minimal.css";
+// import "./scss/style.scss";
+// import "../../scss/style.scss";
 
 // components
 import Navbar from "../components/NavBar/NavBar";
-
 // pages
 import HomePage from "../pages/HomePage";
-import AllFactsPage from "../pages/AllFactsPage";
+import PublicPoll from "../pages/PublicPoll";
+import FactsPage from "../pages/FactsPage";
 import AboutPage from "../pages/AboutPage";
 import ServicePage from "../pages/ServicePage";
 import WorksPage from "../pages/WorksPage";
 import ContactPage from "../pages/ContactPage";
-
-// const MainLayout = ({ component: Component, ...rest }) => {
-//   return (
-//     <Route
-//       {...rest}
-//       render={matchProps => {
-//         return rest.path === "/allfacts" ? (
-//           <Component {...matchProps} />
-//         ) : (
-//           <React.Fragment>
-//             <Navbar />
-//             <Component {...matchProps} />
-//           </React.Fragment>
-//         );
-//       }}
-//     />
-//   );
-// };
 
 
 const Footer = () => (<h1> FOOTER </h1>);
@@ -47,19 +30,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App Fade">
+      <div className="page">
         <Router>
-         <Navbar />
+          <Navbar />
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/allfacts" component={AllFactsPage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/service" component={ServicePage} />
-            <Route path="/works" component={WorksPage} />
-            <Route path="/contact" component={ContactPage} />
+            <Route path="/publicpoll" component={PublicPoll} />
+            <Route path="/facts/:number" component={FactsPage} />
+            {/* <Route path="/service" component={ServicePage} /> */}
+            {/* <Route path="/works" component={WorksPage} /> */}
+            {/* <Route path="/contact" component={ContactPage} /> */}
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
+
       </div>
     );
   }

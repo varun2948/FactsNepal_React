@@ -1,0 +1,208 @@
+.page{
+    .form-section{
+        @include linear-gradient-footer(180deg,$color-formlabel,$color-darkred);
+        .form-left{
+            .form-left-title{
+                h3{
+                    @include typo($font-family, 300, 1.5);
+                    // font-size: 2.813rem;
+                    color: $color-white;
+                    margin-bottom: 20px;
+                }
+                span{
+                    @include typo($font-family, 400, 1.5);
+                    font-size: 1.125rem;
+                    color: $color-white;
+                }
+            }
+            .form-wrap{
+                margin-top: 61px;
+                .form-group{
+                    width: 100%;
+                    margin-bottom: 37px;
+                    &:nth-child(4){
+                        margin-bottom: 0;
+                    }
+                    .form-control{
+                        &::placeholder{
+                            @include typo($font-family, 400, 1.5);
+                            font-size: 1.5rem;
+                            color: $color-formlabel;
+                        }
+                        color: $color-formlabel;
+                        &:focus{
+                            box-shadow: none;
+                        }
+                        padding: 8px 0px;
+                        background: none;
+                        border: none;
+                        @include border-bottom(1px, solid, $color-formlabel);
+                        @include border-radius-circle(0px);
+                    }
+                }
+                .btn{
+                    color: $color-white;
+                    background: transparent;
+                    margin-top: 66px;
+                    @include border(1px, solid, $color-white);
+                    @include typo($font-family, 400, 1.5);
+                    font-size: 1rem;
+                    @include border-radius-circle(5px);
+                    padding: 14px 70px;
+                    margin-bottom: 94px;
+                    &:hover{
+                        background: $color-darkred;
+                    }
+                }
+               
+            }
+        }
+        .form-right{
+            margin-left: 80px;
+            .form-right-title{
+                h3{
+                    @include typo($font-family, 300, 1.5);
+                    // font-size: 2.813rem;
+                    color: $color-white;
+                    margin-bottom: 20px;
+                }
+            }
+            .form-address{
+                margin-top: 24px;
+                .addr-list{
+                    .addr{
+                        @include flex;
+                        &:nth-child(1){
+                            span{
+                                img{
+                                    // width: 60px;
+                                    // height: 30px;
+                                }
+                            }
+                        }
+
+                        span{
+                            @include typo($font-family, 400, 1.5);
+                            font-size: 1.125rem;
+                            color: $color-white;
+                            display: block;
+                            padding-bottom: 18px;
+                            &:nth-child(2){
+                                margin-left: 15px;
+                            }
+                            img{
+                                // width: 30px;
+                                // height: 30px;
+                            }
+                        }
+                    }
+                }
+            
+                a{
+                    @include typo($font-family, 400, 1.5);
+                    font-size: 1.125rem;
+                    color: $color-white;
+                    &:hover{
+                        color: darken($color-white, 20%);
+                    }
+                }   
+            }
+            .form-btn-wrap{
+                padding-top: 80px;
+                span{
+                    @include typo($font-family, 400, 1.5);
+                    font-size: 1.125em;
+                    color: $color-pink;
+                }
+                .btn-content{
+                    margin-bottom: 85px;
+                    padding-top: 28px;
+                    a{
+                        cursor: pointer;
+                        &:nth-child(1){
+                            img{
+                                // width: 127px;
+                                // height: 44px;
+                            }
+                            margin-right: 16px;
+                        }
+                        &:nth-child(2){
+                            img{
+                                // width: 151px;
+                                // height: 44px;
+                            }
+                            margin-right: 0px;
+                        }
+                    }
+                   
+                }
+            }
+            .social-icon-wrap{
+                @include flex;
+                a{
+                    cursor: pointer !important;
+                    margin-right: 15px;
+                    &:nth-child(5){
+                        margin-right: 0;
+                    }
+                    &:nth-child(1){
+                        figure{
+                            img{
+                                width: 7px;
+                            }
+                        }
+                    }
+                    figure{
+                        @include flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: $logo-bg;
+                        width: 30px;
+                        height: 30px;
+                        @include border-radius-circle(50%);
+                        box-shadow: 0px 10px 40px $color-box-shadow;
+                        img{
+                            width: 15px;
+                        }
+                      
+                    }
+                }
+            }
+         
+        }
+
+        // footer
+        .footer{
+            @include flex;
+            justify-content: space-between;
+            .footer-left{
+                .copyright{
+                    @include typo($font-family, 300, 1.5);
+                    font-size: 0.938rem;
+                    color: $color-formlabel;
+                    .subtitle{
+                        @include typo($font-family, 300, 1.5);
+                        font-size: 0.938rem;
+                        color: $color-pink;
+                    }
+                }
+
+            }
+
+            .footer-right{
+                .site-design-title{
+                    @include typo($font-family, 300, 1.5);
+                    font-size: 0.938rem;
+                    color: $color-formlabel;
+                    .site-design{
+                        @include typo($font-family, 300, 1.5);
+                        font-size: 0.938rem;
+                        color: $color-pink;
+                    }
+                }
+            }
+        }
+
+    }
+}
+

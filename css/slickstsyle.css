@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .slider {
+      /* width: 50%; */
+      /* margin: 100px auto; */
+  }
+
+  .slick-slide {
+    /* margin: 0px 20px; */
+  }
+
+  .slick-slide img {
+    /* width: 100%; */
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: #984646;
+  }
+
+
+  .slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: 1;
+  }
+  
+  .slick-active {
+    opacity: .8;
+  }
+
+  .slick-current {
+    opacity: 2;
+  }
+  .slick-dots{
+      bottom: -55px;
+  }
+  
+  .slick-dots li{
+    margin-top: 20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #bdbdbd;
+  }
+  .slick-dots li:active{
+    background: black;
+  }
+  .slick-prev:before, .slick-next:before{
+    font-size: 20px;
+    line-height: 1;
+    opacity: .5;
+    font-family: 'Poppins', sans-serif;
+    content: ' ';
+    cursor: pointer;
+  }
+
+  .slick-dots li button:before{
+      content: ' ';
+  }
+
+
+  /* .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+    background: #fdeded;
+  } */
+
+  @media only screen and (max-width: 575px){
+    .slick-dots li{width: 4px; height: 4px; margin: 0 3px;}
+    .slick-dots{bottom: -30px;}
+  }
+
+  @media only screen and (max-width: 376px){
+    .slick-dots li{width: 4px; height: 4px; margin: 0 2px;}
+    .slick-dots{bottom: -30px;}
+  }
+
+  @media only screen and (min-width: 576px){
+    .slick-dots li{width: 5px; height: 5px; margin: 0px 5px;}
+    .slick-dots{bottom: -45px;}
+  }
+
+  @media only screen and (min-width: 768px) {
+    .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
+    .slick-dots{bottom: -50px;}
+ 
+  }
+
+  @media only screen and (min-width: 992px) {
+    .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
+    .slick-dots{bottom: -50px;}
+  
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
+    .slick-dots{bottom: -55px;}
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .slick-dots li{width: 8px; height: 8px; margin: 0px 5px;}
+    .slick-dots{bottom: -55px;}
+}
