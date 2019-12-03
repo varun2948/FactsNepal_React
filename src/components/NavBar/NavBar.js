@@ -1,5 +1,6 @@
 import React from "react";
 import NavBarLink from "./NavBarLink";
+import { Link } from "react-router-dom";
 
 
 
@@ -19,9 +20,13 @@ const NavBar = () => (
         <div className="container full-width-container">
           <div className="header-top">
             <div className="logo">
-              <div className="logo-img">
-                <img src="./img/logo.svg" alt="Facts Nepal" className="logo-icon" />
-              </div>
+              <Link className="poll-link" to={{
+                pathname: `/`
+              }}  >
+                <div className="logo-img">
+                  <img src="./img/logo.svg" alt="Facts Nepal" className="logo-icon" />
+                </div>
+              </Link>
             </div>
 
             <NavBarLink />

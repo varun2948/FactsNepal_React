@@ -4560,6 +4560,11 @@ mixin-deep@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -5767,6 +5772,19 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-alice-carousel@^1.16.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-1.17.0.tgz#9dfe05aa6d069e34dfce7b21bfdd4e02c02f607c"
+  integrity sha512-FC5Oiid8VHqMjAaizm1+V63wI1lOus7zi2v1n23wkwlQFofjjNEjH8OB4NU+0ZCNpJKCtwbHA8t+lB6wAInedw==
+  dependencies:
+    prop-types "^15.5.10"
+    vanilla-swipe "^1.0.0"
+
+react-content-loader@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-4.3.2.tgz#2f6546c883707d399a2abc2efd00edcb8f584618"
+  integrity sha512-Af2RW2G57+mFRXsiSXROtgvz3KmPz0lATRHNUpJ57DyVw6SRzDRNRXo04I2xhcwmwVnXsfx4s2hsHrU+Lq5jRw==
+
 react-dom@^0.14.0:
   version "0.14.9"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.14.9.tgz#05064a3dcf0fb1880a3b2bfc9d58c55d8d9f6293"
@@ -5782,6 +5800,18 @@ react-dom@^16.5.2:
     prop-types "^15.6.2"
     scheduler "^0.17.0"
 
+react-easy-swipe@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/react-easy-swipe/-/react-easy-swipe-0.0.16.tgz#5a3d949a8f975d05be92a818254315d1318a81ea"
+  integrity sha1-Wj2Umo+XXQW+kqgYJUMV0TGKgeo=
+  dependencies:
+    prop-types "^15.5.8"
+
+react-image-carousel@^2.0.18:
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/react-image-carousel/-/react-image-carousel-2.0.18.tgz#5868ea09bd9cca09c4467d3d02695cd4e7792f28"
+  integrity sha512-W8LQX/ssVgbJ4vwgHbmINx3yS79vH0EQ4cIrQIwkJzn1f+uv0gHj8vZoZwY9tKxgbpIjNoZVdiloqgQmQmU/VQ==
+
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.11.0.tgz#b85dfecd48ad1ce469ff558a882ca8e8313928fa"
@@ -5791,6 +5821,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-moment@^0.9.6:
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.9.6.tgz#6b359a48205a52196408303e30bc982cd46d0bee"
+  integrity sha512-GAnd5NRIpGjDqLoGahJCkiCEQS1d8+dIZbIfPuy/eQ0O5Rio43fEkj5G+qrKbZCQY55fiNafpHpuirVIHqPoSg==
 
 react-particles-js@^2.6.0:
   version "2.7.0"
@@ -5808,6 +5843,15 @@ react-resize-detector@^2.3.0:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
     resize-observer-polyfill "^1.5.0"
+
+react-responsive-carousel@^3.1.51:
+  version "3.1.51"
+  resolved "https://registry.yarnpkg.com/react-responsive-carousel/-/react-responsive-carousel-3.1.51.tgz#f1913530b32e8fe7b484c77051571800b4ab535f"
+  integrity sha512-hb74s8Cj9g3ppNxQeDwsIekTp2EOFO2MdmYXKIqjFS3oMHQE9Fg1lKn4j5tiIhAQAKQlNgy6hfqeS2aIO/Sicg==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+    react-easy-swipe "^0.0.16"
 
 react-reveal@^1.2.2:
   version "1.2.2"
@@ -6477,6 +6521,11 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
   integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
+
+slick-carousel@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
+  integrity sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -7295,6 +7344,11 @@ value-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
   integrity sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==
+
+vanilla-swipe@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vanilla-swipe/-/vanilla-swipe-1.0.0.tgz#242542adbf188ee3b732efc1d295bf311109ac61"
+  integrity sha512-x0T8zyxSGCloEz2jeXXoUL99AQAfKM3f2neCkb+cDn5zXFcH7wPgEgJJJCY6mtpo7pO/Tfd5N3VMFzAqqAvUWA==
 
 vary@~1.1.2:
   version "1.1.2"

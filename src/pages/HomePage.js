@@ -30,7 +30,7 @@ class HomePage extends Component {
         <ResourcesBooks />
         <Testimonials />
         <MobileAppDownloads />
-        <Footer />
+        {/* <Footer /> */}
         {/* <Initiatives />
         <HappyClients />
         <Footer /> */}

@@ -11,7 +11,7 @@ const ParticleJsText = () => (
                     <h1 className="banner-title pdb-25">Offering total research solutions for your business requirements.</h1>
                 </Fade>
                 <Fade bottom duration={1600} distance={"20px"}>
-                    <p className="banner-content">Collecting, processing and analysing data</p>
+                    <p className="banner-header">Collecting, processing and analysing data</p>
                 </Fade>
             </div>
         </div>
