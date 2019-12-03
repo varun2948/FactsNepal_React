@@ -1,5 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Slider from "react-slick";
+import { Helmet } from "react-helmet";
+import MobileAppDownloads from "../components/HomePage/MobileAppDownloads/MobileAppDownloads";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  GooglePlusShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from 'react-share';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
@@ -88,7 +97,8 @@ export default class FactsPage extends Component {
   };
 
   render() {
-
+    const shareUrl = 'http://github.com';
+    const title = 'GitHub';
     const facts = localStorage.getItem('facts') && JSON.parse(localStorage.getItem('facts'));
     // console.log(facts);
     return (
@@ -111,172 +121,195 @@ export default class FactsPage extends Component {
       //     </div>
       //   ))}
       // </div>
-      <div>
-        <div className="banner-content">
-          <div className="container">
-            <div className="top-content-wrap pdb-25">
-              <div className="top-wrapper">
-                <span className="title span-16">AGRICULTURE</span>
-                <h3 className="h3-title">Crops Production</h3>
-                <span className="title-date span-14">8h ago</span>
-              </div>
-            </div>
-
-            <div className="mid-content-wrap pdb-25">
-              <div className="slider-carousel">
-
-                <div className="slider slider-for">
-                  <Slider
-                    asNavFor={this.state.nav3}
-                    ref={slider => (this.slider1 = slider)}
-                  >
-
-                    {
-                      facts && facts.multiple_images &&
-                      facts.multiple_images.map((data, key) => {
-                        return (<li key={key} className="image-content" >
-                          <figure className="portrait-fix">
-                            <img src={data.thumbnailImageUrl} alt="cereal-crop1" />
-                          </figure>
-                        </li>)
-                      })
-
-                    }
-
-                  </Slider>
+      <Fragment>
+        <div>
+          <div className="banner-content">
+            <div className="container">
+              <div className="top-content-wrap pdb-25">
+                <div className="top-wrapper">
+                  <span className="title span-16">AGRICULTURE</span>
+                  <h3 className="h3-title">Crops Production</h3>
+                  <span className="title-date span-14">8h ago</span>
                 </div>
+              </div>
 
+              <div className="mid-content-wrap pdb-25">
+                <div className="slider-carousel">
 
-                <div className="slider slider-nav">
-                  <Slider
-                    asNavFor={this.state.nav1}
-                    ref={slider => (this.slider2 = slider)}
-                    slidesToShow={2}
-                    swipeToSlide={true}
-                    focusOnSelect={true}
+                  <div className="slider slider-for">
+                    <Slider
+                      asNavFor={this.state.nav3}
+                      ref={slider => (this.slider1 = slider)}
+                    >
 
-                  >
-                    {
-                      facts && facts.multiple_images &&
-                      facts.multiple_images.map((data, key) => {
-                        return (
-                          <div key={key} className="image-content">
-                            <figure>
+                      {
+                        facts && facts.multiple_images &&
+                        facts.multiple_images.map((data, key) => {
+                          return (<li key={key} className="image-content" >
+                            <figure className="portrait-fix">
                               <img src={data.thumbnailImageUrl} alt="cereal-crop1" />
                             </figure>
-                          </div>)
-                      })
+                          </li>)
+                        })
 
-                    }
+                      }
 
-                  </Slider>
-                </div>
+                    </Slider>
+                  </div>
 
 
-                <div className="slider slider-for slider-content pdt-40">
-                  <Slider
-                    asNavFor={this.state.nav1}
-                    ref={slider => (this.slider3 = slider)}
-                    slidesToShow={1}
-                    swipeToSlide={true}
-                    focusOnSelect={true}
-                    arrows={false}
-                  >
-                    {
-                      facts && facts.multiple_images &&
-                      facts.multiple_images.map((data, key) => {
-                        return (
-                          <div key={key} className="image-content">
-                            <p className="factsNepal-para">{data.thumbnailImageDesc}</p>
-                          </div>)
-                      })
+                  <div className="slider slider-nav">
+                    <Slider
+                      asNavFor={this.state.nav1}
+                      ref={slider => (this.slider2 = slider)}
+                      slidesToShow={2}
+                      swipeToSlide={true}
+                      focusOnSelect={true}
 
-                    }
-                  </Slider>
+                    >
+                      {
+                        facts && facts.multiple_images &&
+                        facts.multiple_images.map((data, key) => {
+                          return (
+                            <div key={key} className="image-content">
+                              <figure>
+                                <img src={data.thumbnailImageUrl} alt="cereal-crop1" />
+                              </figure>
+                            </div>)
+                        })
+
+                      }
+
+                    </Slider>
+                  </div>
+
+
+                  <div className="slider slider-for slider-content pdt-40">
+                    <Slider
+                      asNavFor={this.state.nav1}
+                      ref={slider => (this.slider3 = slider)}
+                      slidesToShow={1}
+                      swipeToSlide={true}
+                      focusOnSelect={true}
+                      arrows={false}
+                    >
+                      {
+                        facts && facts.multiple_images &&
+                        facts.multiple_images.map((data, key) => {
+                          return (
+                            <div key={key} className="image-content">
+                              <p className="factsNepal-para">{data.thumbnailImageDesc}</p>
+                            </div>)
+                        })
+
+                      }
+                    </Slider>
+                  </div>
+
                 </div>
 
               </div>
 
-            </div>
-
-            <div className="bottom-content-wrap pdt-100 pdb-80">
-              <div className="social-icon">
-                <span className="span-14">Share</span>
-                <div className="social-icon-wrap">
-                  <a href="#"><figure><img src="./img/facebook-letter-logo.svg" alt="facebook-letter-logo" /></figure></a>
-                  <a href="#"><figure><img src="./img/008-twitter.svg" alt="twitter" /></figure></a>
-                  <a href="#"><figure><img src="./img/linkedin-logo.svg" alt="linkedin-logo" /></figure></a>
+              <div className="bottom-content-wrap pdt-100 pdb-80">
+                <div className="social-icon">
+                  <span className="span-14">Shares</span>
+                  <div className="social-icon-wrap">
+                    {/* <Helmet>
+                      <meta charSet="utf-8" />
+                      <title>My Title</title>
+                      <link rel="canonical" href="http://139.59.67.104:3000/" />
+                      <meta property="og:type" content="article" />
+                      <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+                      <meta property="og:description" content="How much does culture influence creative thinking?" />
+                      <meta property="og:image"
+                        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+                    </Helmet>
+                    <FacebookShareButton
+                      url={shareUrl}
+                      quote={title}
+                      className="Demo__some-network__share-button">
+                      <FacebookIcon
+                        size={32}
+                        round />
+                    </FacebookShareButton> */}
+                    <a><div className="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true">
+                      Share</div></a>
+                    <a href=""><figure><img src="./img/facebook-letter-logo.svg" alt="facebook-letter-logo" /></figure></a>
+                    <a href="#"><figure><img src="./img/008-twitter.svg" alt="twitter" /></figure></a>
+                    <a href="#"><figure><img src="./img/linkedin-logo.svg" alt="linkedin-logo" /></figure></a>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
 
-        </div>
 
+          <div className="grid-section-whole pdt-40 pdb-115">
+            <div className="container">
 
-        <div className="grid-section-whole pdt-40 pdb-115">
-          <div className="container">
+              <div className="grid-section">
 
-            <div className="grid-section">
+                <div className="grid-title-wrap">
+                  <h4 className="factsNepal-subtitle">Next facts</h4>
+                </div>
 
-              <div className="grid-title-wrap">
-                <h4 className="factsNepal-subtitle">Next facts</h4>
-              </div>
-
-              <div className="grid-facts1 pdt-40">
-                <div className="wrap">
-                  <div className="row">
-                    <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                      <a href="#" className="grid-col-link">
-                        <div className="grid-col" id="left">
-                          <figure className="facts1-img">
-                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                          </figure>
-                          <div className="content-wrap">
-                            <span className="title span-12">Agriculture</span>
-                            <span className="gridcol-title span-22">Crops Production</span>
-                            <span className="title-date span-14">8h ago</span>
+                <div className="grid-facts1 pdt-40">
+                  <div className="wrap">
+                    <div className="row">
+                      <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                        <a href="#" className="grid-col-link">
+                          <div className="grid-col" id="left">
+                            <figure className="facts1-img">
+                              <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
+                            </figure>
+                            <div className="content-wrap">
+                              <span className="title span-12">Agriculture</span>
+                              <span className="gridcol-title span-22">Crops Production</span>
+                              <span className="title-date span-14">8h ago</span>
+                            </div>
                           </div>
-                        </div>
-                      </a>
-                    </div>
+                        </a>
+                      </div>
 
-                    <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                      <a href="#" className="grid-col-link">
-                        <div className="grid-col" id="mid">
-                          <figure className="facts1-img">
-                            <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
-                          </figure>
-                          <div className="content-wrap">
-                            <span className="title span-12 span-color">Communication</span>
-                            <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
-                            <span className="title-date span-14">2d ago</span>
+                      <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                        <a href="#" className="grid-col-link">
+                          <div className="grid-col" id="mid">
+                            <figure className="facts1-img">
+                              <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
+                            </figure>
+                            <div className="content-wrap">
+                              <span className="title span-12 span-color">Communication</span>
+                              <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
+                              <span className="title-date span-14">2d ago</span>
+                            </div>
                           </div>
-                        </div>
-                      </a>
-                    </div>
+                        </a>
+                      </div>
 
-                    <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                      <a href="#" className="grid-col-link">
-                        <div className="grid-col" id="right">
-                          <figure className="facts1-img">
-                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                          </figure>
-                          <div className="content-wrap">
-                            <span className="title span-12">Agriculture</span>
-                            <span className="gridcol-title span-22">Crops Production</span>
-                            <span className="title-date span-14">8h ago</span>
+                      <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                        <a href="#" className="grid-col-link">
+                          <div className="grid-col" id="right">
+                            <figure className="facts1-img">
+                              <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
+                            </figure>
+                            <div className="content-wrap">
+                              <span className="title span-12">Agriculture</span>
+                              <span className="gridcol-title span-22">Crops Production</span>
+                              <span className="title-date span-14">8h ago</span>
+                            </div>
                           </div>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div >
+        </div >
+        <MobileAppDownloads techBg={true} />
+      </Fragment >
     );
   }
 }

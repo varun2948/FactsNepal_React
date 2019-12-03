@@ -9,15 +9,22 @@
   <meta name="csrf-token" id="_tokens" content="TuJoRzMGXIzBhy3OH8JJXFmoegsooPSCB5dnw5q4" />
   <base href="/" />
   <!-- title -->
+  <meta property="og:url"
+    content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+  <meta property="og:description" content="How much does culture influence creative thinking?" />
+  <meta property="og:image"
+    content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
   <title>Facts Nepal</title>
 
   <!-- stylesheet start -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css"
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/slick.css">
-  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-  <link rel="stylesheet" href="./css/slickstsyle.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/slick-theme.css"> -->
+  <!-- <link rel="stylesheet" href="./css/slickstsyle.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="indexII.html"> -->
   <!-- <link rel="stylesheet" href="../css/style.css"> -->
 
@@ -26,8 +33,19 @@
 <body>
   <div id="app"></div>
 
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
   <script src="./js/vendor/jquery-3.4.1.min.js"></script>
   <script src="./js/vendor/bootstrap.min.js"></script>
+
   <!-- <script src="./js/vendor/slick.min.js"></script> -->
 
 </body>

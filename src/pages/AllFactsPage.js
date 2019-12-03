@@ -56,7 +56,7 @@ class AllFactsPage extends Component {
                             <div className="title-block">
                                 <div className="title-wrap">
                                     <h1 className="banner-title pdb-25">Get the Facts.</h1>
-                                    <p className="banner-content">Discover reliable, contextual and actionable information &
+                                    <p className="banner-header banner-height">Discover reliable, contextual and actionable information &
                                 insights</p>
                                 </div>
                             </div>
