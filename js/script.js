@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+  $(document).ready(function(){
+    $(".link-toggle").click(function(){
+      $("#collapse-div").toggle();
+    });
+  });
+
     /* toggle-button & menu dropdown */
     $('.toggle-button').on('click', function() {
         // console.log("hehre");
@@ -186,7 +192,9 @@ $(document).ready(function () {
       slidesToScroll: 1,
       arrows: false,
       fade: true,
-      autoplay: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      adaptiveHeight: true,
       asNavFor: '.slider-nav'
     });
     $('.slider-nav').slick({
@@ -195,8 +203,11 @@ $(document).ready(function () {
       asNavFor: '.slider-for',
       dots: false,
       centerMode: true,
-      focusOnSelect: true,
-      autoplay: true
+      focusOnSelect: false,
+      autoplay: false,
+      adaptiveHeight: true,
+      // arrows: false,
+      autoplaySpeed: 4000
     });
     /* ---***---***---***---***---*** */
 

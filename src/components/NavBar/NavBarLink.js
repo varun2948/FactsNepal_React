@@ -1,6 +1,6 @@
 import React from "react";
 import LinkItem from "./LinkItem";
-
+import { Link } from 'react-router-dom';
 const NavBarLink = () => (
   // <nav className="navitems" id="nav-links">
   //   <ul className="menu-lists">
@@ -15,35 +15,43 @@ const NavBarLink = () => (
     <ul className="menu-lists">
       <li className="menu-items dropdown-grid" id="dropdown">
 
-        <LinkItem path="/services" text="Services" className="drpbtn" id="toggle-link" />
+        <LinkItem path="#" text="Services" className="drpbtn" id="toggle-link" />
         <div id="myGridcontent" className="grid-content">
           <div className="grid-container">
             <div className="row no-gutters">
               <div className="col-sm-7 col-8 col-md-4">
-                <a className="grid-col" href="R&D.html">
+
+                <Link className="grid-col" to={{
+                  pathname: `/researchdata`,
+                }}>
                   <figure className="fig">
                     <img className="grid-img" src="./img/Services-icon-1.svg" alt="visual data" />
                   </figure>
                   <span className="grid-span span-12">Research & <br /> Data Analysis</span>
-                </a>
+                </Link>
               </div>
 
               <div className="col-sm-7 col-8 col-md-4">
-                <a className="grid-col" href="R&D1.html">
+
+                <Link className="grid-col" to={{
+                  pathname: `/strategycontent`,
+                }}>
                   <figure className="fig">
                     <img className="grid-img" src="./img/Services-icon-2.svg" alt="file searcrhing" />
                   </figure>
                   <span className="grid-span span-12">Strategy & <br /> Content Development</span>
-                </a>
+                </Link>
               </div>
 
               <div className="col-sm-7 col-8 col-md-4">
-                <a className="grid-col" href="R&D2.html">
+                <Link className="grid-col" to={{
+                  pathname: `/infographics`,
+                }}>
                   <figure className="fig">
                     <img className="grid-img" src="./img/Services-icon-3.svg" alt="file searcrhing" />
                   </figure>
                   <span className="grid-span span-12">Infographics <br /> Design</span>
-                </a>
+                </Link>
               </div>
 
             </div>
@@ -54,7 +62,7 @@ const NavBarLink = () => (
         <LinkItem path="/projects" text="Projects" />
       </li>
       <li className="menu-items">
-        <LinkItem path="/facts" text="Facts" />
+        <LinkItem path="/allfacts" text="Facts" />
       </li>
       <li className="menu-items">
         <LinkItem path="/about" text="About" />

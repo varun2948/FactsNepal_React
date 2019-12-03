@@ -4,7 +4,7 @@
         box-shadow: $color-box-shadow 0px 3px 10px;
     }
     .banner-content{
-        // height: 100vh;
+        min-height:calc(100vh - 54px);
         .publicpoll-wrap{
             @include flex;
             align-items: center;
@@ -112,7 +112,7 @@
                                                 // box-shadow: 0 0 0 3px orange;
                                             }
                                             &::after {
-                                                background-image: url('.././img/24px (check-circle).svg');
+                                                // background-image: url('.././img/24px (check-circle).svg');
                                                 background-size: 120% 120%;
                                             }
                                         }
@@ -236,8 +236,6 @@
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
     .publicpoll-wrap{
-        min-height: auto;
-        margin-top: 100px;
         .wrap-center{
             max-width: 350px;
             .title-wrap{
@@ -327,8 +325,6 @@
 /* less than 376px; */
 @media only screen and (max-width: $mb-xs){
     .publicpoll-wrap{
-        min-height: auto;
-        margin-top: 100px;
         .wrap-center{
             max-width: 250px;
         }
@@ -338,8 +334,6 @@
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
     .publicpoll-wrap{
-        min-height: auto;
-        margin-top: 100px;
         .wrap-center{
             max-width: 350px;
             .title-wrap{
@@ -433,8 +427,6 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: $md-tab) {
     .publicpoll-wrap{
-        height: calc(100vh - 24px);
-        margin-top: 0;
         .wrap-center{
             max-width: 450px;
             .title-wrap{
@@ -527,8 +519,6 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: $lg-tab) {
     .publicpoll-wrap{
-        height: calc(100vh - 24px);
-        margin-top: 0px;
         .wrap-center{
             max-width: 480px;
             .title-wrap{
@@ -623,8 +613,6 @@
 /* 1024px */
 @media only screen and (min-width: $ls-tab) {
     .publicpoll-wrap{
-        margin-top: 0px;
-        height: calc(100vh - 24px);
         .wrap-center{
             max-width: 500px;
             .title-wrap{
@@ -719,8 +707,6 @@
 /* 1440px and up */
 @media only screen and (min-width: $md-desktop) {
     .publicpoll-wrap{
-        height: calc(100vh - 24px);
-        margin-top: 0px;
         .wrap-center{
             max-width: 520px;
             .title-wrap{

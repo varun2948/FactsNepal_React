@@ -12,9 +12,9 @@ let PUBLIC_PATH;
 module.exports = env => {
   const { PLATFORM, VERSION, API_URL } = env;
 
-  PLATFORM === "local"
-    ? (PUBLIC_PATH = "http://localhost:8080/assets/")
-    : (PUBLIC_PATH = "http://localhost:3000/assets/");
+  // PLATFORM === "local"
+  // ? (PUBLIC_PATH = "http://localhost:8080/dist/")
+  // : (PUBLIC_PATH = "http://localhost:3000/dist/");
 
   return merge([
     {

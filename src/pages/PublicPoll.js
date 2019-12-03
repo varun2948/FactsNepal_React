@@ -7,7 +7,7 @@ class PublicPoll extends Component {
     }
     render() {
         return (
-            <div className="banner-content">
+            <div className="banner-content banner-height">
 
                 <div className="container">
 

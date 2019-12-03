@@ -135,7 +135,7 @@ export default class FactsPage extends Component {
                       facts && facts.multiple_images &&
                       facts.multiple_images.map((data, key) => {
                         return (<li key={key} className="image-content" >
-                          <figure>
+                          <figure className="portrait-fix">
                             <img src={data.thumbnailImageUrl} alt="cereal-crop1" />
                           </figure>
                         </li>)

@@ -7,7 +7,7 @@ class MobileAppDownloads extends Component {
     }
     render() {
         return (
-            <div className="tech-section pdt-130 pdb-120">
+            <div className={`tech-section pdt-130 pdb-120 ${this.props.techBg ? "tech-bg" : ""}`}>
                 <div className="container">
                     <div className="tech-section-wrap">
                         <div className="row">

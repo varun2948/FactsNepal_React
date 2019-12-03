@@ -47,6 +47,23 @@
                 }
             }
         }
+        #collapse-div{
+            display: none;
+        }
+        .click-more{
+            margin-bottom: 50px;
+            @include typo($font-family, 400, 1.5);
+            display: block;
+            text-align: center;
+            color: $color-yellow;
+            &::after{
+                content: "\f061";
+                font-family: 'FontAwesome';
+                position: relative;
+                right: -2px;
+                color: $color-yellow;
+            }
+        }
     }
 
     .tech-bg{

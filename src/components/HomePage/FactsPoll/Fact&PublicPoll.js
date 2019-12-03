@@ -32,8 +32,8 @@ class FactsPublicPoll extends Component {
 
     componentDidMount() {
         Promise.all([
-            axios.get(`${process.env.API_URL}/api/factapi`),
-            axios.get(`${process.env.API_URL}/api/publicpoll`),
+            axios.get(`${process.env.API_URL}api/factapi`),
+            axios.get(`${process.env.API_URL}api/publicpoll_web`),
             // axios.get(`${process.env.API_URL}/api/pollresultapi`)
         ]).then(response => {
             const newFacts = response[0].data[0].home.map(fact => ({
@@ -48,13 +48,13 @@ class FactsPublicPoll extends Component {
             this.setState({
                 facts: response[0].data,
                 factoftheday: response[0].data[0].home[0],
-                publicPoll: response[1].data[0],
+                publicPoll: response[1].data.publicpoll,
                 // pollResultApi: response[2].data
             });
         });
 
     }
-    
+
 
     // pollOptionClick = (questionId, optionId) => {
     //   if (!this.state.pollUpdated) {
@@ -172,7 +172,7 @@ class FactsPublicPoll extends Component {
         // } else {
         //   question = <h2 style={{ color: "#b43046" }}>Loading...</h2>;
         // }
-        console.log(facts, 'facts');
+        console.log(publicPoll, 'publicPoll');
         return (
             //     <section className="section-padding-y fact-poll">
             //     <div className="container-fluid">
