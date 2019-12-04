@@ -214,16 +214,16 @@ export default class FactsPage extends Component {
                 <div className="social-icon">
                   <span className="span-14">Shares</span>
                   <div className="social-icon-wrap">
-                    <Helmet >
+                    <Helmet>
                       {/* <link rel="canonical" href={window.location.href} /> */}
-                      <title>Test React Helmetp</title>
+                      {/* <title>Test React Helmetp</title>
                       <meta property="og:url" content="http://139.59.67.104:3000/facts/3" data-react-helmet="true" />
                       <meta property="og:type" content="article" data-react-helmet="true" />
                       <meta property="og:title" content="Varun Title Helmet" data-react-helmet="true" />
                       <meta property="og:description" content="Varun Description Helmet" data-react-helmet="true" />
                       <meta property="og:image"
                         content="https://images.unsplash.com/photo-1575305422825-77afccb6c73d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-                        data-react-helmet="true" />
+                        data-react-helmet="true" /> */}
 
                       {/* <meta name="image" content={facts.image} /> */}
                     </Helmet>
