@@ -97,10 +97,10 @@ export default class FactsPage extends Component {
   };
 
   render() {
-    const shareUrl = 'http://github.com';
-    const title = 'GitHub';
+    const shareUrl = window.location.href;
+    // const title = 'GitHub';
     const facts = localStorage.getItem('facts') && JSON.parse(localStorage.getItem('facts'));
-    // console.log(facts);
+    // console.log(facts.image);
     return (
       // <div className="col-md-8 offset-md-2 relative allfacts">
       //   {facts.map((fact, index) => (
@@ -214,29 +214,27 @@ export default class FactsPage extends Component {
                 <div className="social-icon">
                   <span className="span-14">Shares</span>
                   <div className="social-icon-wrap">
-                    {/* <Helmet>
-                      <meta charSet="utf-8" />
-                      <title>My Title</title>
-                      <link rel="canonical" href="http://139.59.67.104:3000/" />
+                    <Helmet>
+                      <link rel="canonical" href={window.location.href} />
                       <meta property="og:type" content="article" />
-                      <meta property="og:title" content="When Great Minds Don’t Think Alike" />
-                      <meta property="og:description" content="How much does culture influence creative thinking?" />
+                      <meta property="og:title" content="Varun Test" />
+                      <meta property="og:description" content="Varun Test Description" />
+
                       <meta property="og:image"
-                        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+                        content={facts.image} />
                     </Helmet>
                     <FacebookShareButton
-                      url={shareUrl}
-                      quote={title}
+                      url={window.location.href}
+                      quote={"Varun Quote"}
                       className="Demo__some-network__share-button">
                       <FacebookIcon
                         size={32}
                         round />
-                    </FacebookShareButton> */}
-                    <a><div className="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true">
-                      Share</div></a>
-                    <a href=""><figure><img src="./img/facebook-letter-logo.svg" alt="facebook-letter-logo" /></figure></a>
+                    </FacebookShareButton>
+                    <div className="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                    {/* <a href=""><figure><img src="./img/facebook-letter-logo.svg" alt="facebook-letter-logo" /></figure></a>
                     <a href="#"><figure><img src="./img/008-twitter.svg" alt="twitter" /></figure></a>
-                    <a href="#"><figure><img src="./img/linkedin-logo.svg" alt="linkedin-logo" /></figure></a>
+                    <a href="#"><figure><img src="./img/linkedin-logo.svg" alt="linkedin-logo" /></figure></a> */}
                   </div>
                 </div>
               </div>
