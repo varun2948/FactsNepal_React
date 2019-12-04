@@ -218,9 +218,9 @@ export default class FactsPage extends Component {
                       {/* <link rel="canonical" href={window.location.href} /> */}
                       <title>js-tutorials app</title>
                       <meta name="type" content="Varun Test Type" />
-                      <meta name="title" cpntent="Varun Test TITLE" />
-                      <meta name="description" cpntent="Varun Test Description" />
-                      <meta name="image" cpntent={facts.image} />
+                      <meta name="title" content="Varun Test TITLE" />
+                      <meta name="description" content="Varun Test Description" />
+                      <meta name="image" content={facts.image} />
                     </Helmet>
                     <FacebookShareButton
                       url={window.location.href}
