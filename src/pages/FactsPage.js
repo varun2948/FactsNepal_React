@@ -214,7 +214,7 @@ export default class FactsPage extends Component {
                 <div className="social-icon">
                   <span className="span-14">Shares</span>
                   <div className="social-icon-wrap">
-                    <Helmet>
+                    <Helmet >
                       {/* <link rel="canonical" href={window.location.href} /> */}
                       <title>Test React Helmetp</title>
                       <meta property="og:url" content="http://139.59.67.104:3000/facts/3" data-react-helmet="true" />
@@ -236,7 +236,7 @@ export default class FactsPage extends Component {
                         round />
                     </FacebookShareButton>
                     <div className="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                    <div class="fb-share-button" data-href={window.location.href} data-layout="button_count" data-size="small"><a target="_blank" href={"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&t=" + document.title} class="fb-xfbml-parse-ignore">Share</a></div>
+                    <div className="fb-share-button" data-href={window.location.href} data-layout="button_count" data-size="small"><a target="_blank" href={"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&t=" + document.title} className="fb-xfbml-parse-ignore">Share</a></div>
                     {/* <a href=""><figure><img src="./img/facebook-letter-logo.svg" alt="facebook-letter-logo" /></figure></a>
                     <a href="#"><figure><img src="./img/008-twitter.svg" alt="twitter" /></figure></a>
                     <a href="#"><figure><img src="./img/linkedin-logo.svg" alt="linkedin-logo" /></figure></a> */}
