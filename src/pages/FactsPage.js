@@ -220,7 +220,7 @@ export default class FactsPage extends Component {
                       <meta name="type" content="Varun Test Type" />
                       <meta name="title" content="Varun Test TITLE" />
                       <meta name="description" content="Varun Test Description" />
-                      <meta name="image" content={facts.image} />
+                      {/* <meta name="image" content={facts.image} /> */}
                     </Helmet>
                     <FacebookShareButton
                       url={window.location.href}
