@@ -217,13 +217,13 @@ export default class FactsPage extends Component {
                     <Helmet>
                       {/* <link rel="canonical" href={window.location.href} /> */}
                       <title>Test React Helmetp</title>
-                      <meta property="og:url"
-                        content="https://medium.com/@yavengy/getting-started-with-laravel-on-docker-cc280dae5e49" />
-                      <meta property="og:type" content="article" />
-                      <meta property="og:title" content="Test Mode On" />
-                      <meta property="og:description" content="Test Mode On Description" />
+                      <meta property="og:url" content="http://139.59.67.104:3000/facts/3" data-react-helmet="true" />
+                      <meta property="og:type" content="article" data-react-helmet="true" />
+                      <meta property="og:title" content="Varun Title Helmet" data-react-helmet="true" />
+                      <meta property="og:description" content="Varun Description Helmet" data-react-helmet="true" />
                       <meta property="og:image"
-                        content="https://image.shutterstock.com/image-photo/autumn-forest-nature-vivid-morning-450w-766886038.jpg" />
+                        content="https://images.unsplash.com/photo-1575305422825-77afccb6c73d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                        data-react-helmet="true" />
 
                       {/* <meta name="image" content={facts.image} /> */}
                     </Helmet>
