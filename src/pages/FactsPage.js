@@ -225,7 +225,7 @@ export default class FactsPage extends Component {
                       <meta property="og:image"
                         content="https://image.shutterstock.com/image-photo/autumn-forest-nature-vivid-morning-450w-766886038.jpg" />
 
-                      <meta name="image" content={facts.image} />
+                      {/* <meta name="image" content={facts.image} /> */}
                     </Helmet>
                     <FacebookShareButton
                       url={window.location.href}
