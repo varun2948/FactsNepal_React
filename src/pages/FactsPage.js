@@ -217,7 +217,7 @@ export default class FactsPage extends Component {
                     <Helmet>
                       {/* <link rel="canonical" href={window.location.href} /> */}
                       <title>Test React Helmetp</title>
-                      <meta name="type" content="Varun Test Type" />
+                      <meta name="type" content="Varun Test Types" />
                       <meta name="title" content="Varun Test TITLE" />
                       <meta name="description" content="Varun Test Description" />
                       {/* <meta name="image" content={facts.image} /> */}
