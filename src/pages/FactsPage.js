@@ -215,13 +215,12 @@ export default class FactsPage extends Component {
                   <span className="span-14">Shares</span>
                   <div className="social-icon-wrap">
                     <Helmet>
-                      <link rel="canonical" href={window.location.href} />
-                      <meta property="og:type" content="article" />
-                      <meta property="og:title" content="Varun Test" />
-                      <meta property="og:description" content="Varun Test Description" />
-
-                      <meta property="og:image"
-                        content={facts.image} />
+                      {/* <link rel="canonical" href={window.location.href} /> */}
+                      <title>js-tutorials app</title>
+                      <meta name="type" content="Varun Test Type" />
+                      <meta name="title" cpntent="Varun Test TITLE" />
+                      <meta name="description" cpntent="Varun Test Description" />
+                      <meta name="image" cpntent={facts.image} />
                     </Helmet>
                     <FacebookShareButton
                       url={window.location.href}
