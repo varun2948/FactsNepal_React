@@ -216,7 +216,7 @@ export default class FactsPage extends Component {
                   <div className="social-icon-wrap">
                     <Helmet>
                       {/* <link rel="canonical" href={window.location.href} /> */}
-                      <title>js-tutorials app</title>
+                      <title>Test React Helmetp</title>
                       <meta name="type" content="Varun Test Type" />
                       <meta name="title" content="Varun Test TITLE" />
                       <meta name="description" content="Varun Test Description" />
