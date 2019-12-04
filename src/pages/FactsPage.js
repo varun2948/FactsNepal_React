@@ -217,9 +217,14 @@ export default class FactsPage extends Component {
                     <Helmet>
                       {/* <link rel="canonical" href={window.location.href} /> */}
                       <title>Test React Helmetp</title>
-                      <meta name="type" content="Varun Test Types" />
-                      <meta name="title" content="Varun Test TITLE" />
-                      <meta name="description" content="Varun Test Description" />
+                      <meta property="og:url"
+                        content="https://medium.com/@yavengy/getting-started-with-laravel-on-docker-cc280dae5e49" />
+                      <meta property="og:type" content="article" />
+                      <meta property="og:title" content="Test Mode On" />
+                      <meta property="og:description" content="Test Mode On Description" />
+                      <meta property="og:image"
+                        content="https://image.shutterstock.com/image-photo/autumn-forest-nature-vivid-morning-450w-766886038.jpg" />
+
                       <meta name="image" content={facts.image} />
                     </Helmet>
                     <FacebookShareButton
