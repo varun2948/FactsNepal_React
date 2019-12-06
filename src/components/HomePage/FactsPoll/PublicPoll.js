@@ -23,12 +23,30 @@ const PublicPoll = ({ publicPoll }) => {
                                     <TimeAgo date={publicPoll[0].publishedDate} /></span>
                                 {/* <span className="date-time">1 day ago</span> */}
                                 <span className="btn-vote">{publicPoll[0].totalVotes} Votes</span>
+                                <div className="grid-button" style={{
+                                    lineHeight: "1.5",
+                                    color: "#ffffff",
+                                    background: "#9F2F35",
+                                    display: "inline-block",
+                                    cursor: "pointer",
+                                    textAlign: "center",
+                                    borderRadius: "5px",
+                                    borderWidth: "1px",
+                                    borderStyle: "solid",
+                                    borderColor: "#9F2F35",
+                                    marginLeft: "27px"
+                                }}>
+                                    <div className="btn-wrap">
+                                        <button className="btn-primary"><span>Vote</span></button>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </Link>
                 </div>
             }
-        </div>
+        </div >
 
 
     )

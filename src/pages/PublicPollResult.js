@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import NavBar from '../components/NavBar/NavBar';
 import axios from 'axios';
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    GooglePlusShareButton,
+    LinkedinShareButton,
+    TwitterShareButton,
+} from 'react-share';
 import TimeAgo from 'react-timeago'
+import { Link } from "react-router-dom";
+
 class PublicPollResult extends Component {
     constructor(props) {
         super(props);
@@ -146,6 +155,7 @@ class PublicPollResult extends Component {
                                                             </div>
                                                         </div>
                                                         <span className="input-status span-16">{votes_percent}%</span>
+
                                                     </div>
                                                 );
                                             })}
@@ -191,6 +201,13 @@ class PublicPollResult extends Component {
     
                                             </div> */}
                                         </form>
+                                        <div class="wrapper" style={{ textAlign: "center" }}>
+                                            <Link className="poll-link" to={{
+                                                pathname: `/`,
+
+                                            }} ><button style={{ height: "54px" }} class="btn-danger">Go To Home Page</button>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -199,21 +216,27 @@ class PublicPollResult extends Component {
                                 <div className="row-wrap">
                                     <div className="row">
                                         <div className="col-md-7">
+
                                             <div className="col-wrap-banner">
                                                 <figure><img src="./img/24px (check-circle).svg" alt="" /></figure>
                                                 <span className="smbanner-span span-16">You voted <span className="colored-span">{selectedpoll[0].question}</span> on this poll.</span>
                                             </div>
                                         </div>
+
                                         <div className="col-md-5">
                                             <div className="col-wrap-link">
                                                 <span className="social-media-span span-12">Share</span>
                                                 <ul>
                                                     <li>
-                                                        <figure><img src="./img/Share-social-icon (1).svg" alt="" /></figure>
-                                                        <a href="#"><span className="span-link span-12">Share on Facebook</span></a>
+
+
+
+                                                        <div className="fb-share-button" data-href={window.location.href} data-layout="button_count" data-size="small"><a target="_blank" href={"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&t=" + document.title} className="fb-xfbml-parse-ignore"><FacebookIcon
+                                                            size={32}
+                                                            round /><span className="span-link span-12 fb-share-button">Share on Facebook</span></a></div>
                                                     </li>
 
-                                                    <li>
+                                                    {/* <li>
                                                         <figure><img src="./img/Share-social-icon (3).svg" alt="" /></figure>
                                                         <a href="#"><span className="span-link span-12">Share on Twitter</span></a>
                                                     </li>
@@ -226,7 +249,7 @@ class PublicPollResult extends Component {
                                                     <li>
                                                         <figure><img src="./img/Share-social-icon (4).svg" alt="" /></figure>
                                                         <a href="#"><span className="span-link span-12">Copy Link</span></a>
-                                                    </li>
+                                                    </li> */}
                                                 </ul>
                                             </div>
                                         </div>

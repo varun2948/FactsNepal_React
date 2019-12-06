@@ -24,7 +24,7 @@ class PublicPoll extends Component {
             // console.log()
         }
         var daypoll = localStorage.getItem('publicpoll') && JSON.parse(localStorage.getItem('publicpoll'));
-        console.log(this.state.polloftheday);
+
         this.setState({ polloftheday: daypoll });
     }
 
@@ -42,7 +42,7 @@ class PublicPoll extends Component {
         axios
             .post(`${process.env.API_URL}/api/publicpollstore`, pollsubmit)
             .then(response => {
-                alert('Sucessfully Voted');
+
                 this.props.history.push({
                     pathname: `/publicpollresult/${this.state.radio_value}`,
                     data: response.data.result_data[0] // your data array of objects
@@ -71,7 +71,7 @@ class PublicPoll extends Component {
                             <div className="publicpoll-wrap mrt-100">
                                 <div className="wrap-center">
                                     <div className="title-wrap">
-                                        <span className="title-span span-14">Product</span>
+                                        <span className="title-span span-14">Sports</span>
                                         <h3 className="publicpoll-title">{polloftheday.question}</h3>
                                         <div className="btn-wrap">
                                             <button>{polloftheday.totalVotes} Votes</button>

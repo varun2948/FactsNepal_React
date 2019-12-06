@@ -41,13 +41,7 @@ export default class FactsPage extends Component {
       nav3: this.slider3
     });
     const { number } = this.props.match.params
-    const { facts_data } = this.props.location
-    // console.log(facts_data);
 
-    if (facts_data) {
-      window.localStorage.setItem('facts', JSON.stringify(facts_data));
-
-    }
 
     // console.log(facts);
     // axios.get(`${process.env.API_URL}/api/factapi`).then(response => {
@@ -100,6 +94,13 @@ export default class FactsPage extends Component {
 
   render() {
     const shareUrl = window.location.href;
+    const { facts_data } = this.props.location
+    // console.log(facts_data);
+
+    if (facts_data) {
+      window.localStorage.setItem('facts', JSON.stringify(facts_data));
+
+    }
     // const title = 'GitHub';
     const facts = localStorage.getItem('facts') && JSON.parse(localStorage.getItem('facts'));
     console.log(facts, 'facts');
