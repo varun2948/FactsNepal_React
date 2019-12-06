@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import MobileAppDownloads from "../components/HomePage/MobileAppDownloads/MobileAppDownloads";
 import Slider from "react-slick";
+import NavBar from '../components/NavBar/NavBar';
+
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
@@ -50,6 +52,7 @@ class AllFactsPage extends Component {
         };
         return (
             <Fragment>
+                <NavBar />
                 <section className="banner">
                     <div className="container">
                         <div className="banner-wrap pdt-40">

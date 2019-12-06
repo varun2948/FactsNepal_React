@@ -12,30 +12,33 @@ import Trusted from "../components/HomePage/Trusted/Trusted";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import Navbar from "../components/NavBar/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 
 class HomePage extends Component {
   state = {};
   render() {
     return (
-
-      <div className="Scrollreveal">
-        {/* <div className="background-wrap"> */}
-        <FirstMain />
-        {/* </div> */}
-        <Trusted />
-        <Services />
-        <FactsPublicPoll />
-        <CaseStudy />
-        <GeographicalCoverage />
-        <ResourcesBooks />
-        <Testimonials />
-        <MobileAppDownloads />
-        {/* <Footer /> */}
-        {/* <Initiatives />
+      <React.Fragment>
+        <NavBar />
+        <div className="Scrollreveal">
+          {/* <div className="background-wrap"> */}
+          <FirstMain />
+          {/* </div> */}
+          <Trusted />
+          <Services />
+          <FactsPublicPoll />
+          <CaseStudy />
+          <GeographicalCoverage />
+          <ResourcesBooks />
+          <Testimonials />
+          <MobileAppDownloads />
+          {/* <Footer /> */}
+          {/* <Initiatives />
         <HappyClients />
         <Footer /> */}
 
-      </div>
+        </div>
+      </React.Fragment>
     );
   }
 }

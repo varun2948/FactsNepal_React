@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import Fact from "../components/HomePage/Fact/Fact";
+import NavBar from "../components/NavBar/NavBar";
 
 const headerData = {
   headers: {
@@ -60,9 +61,9 @@ export default class FactsPage extends Component {
     // });
   }
 
-  componentWillUnmount() {
-    localStorage.clear();
-  }
+  // componentWillUnmount() {
+  //   localStorage.clear();
+  // }
 
   handleLike = id => {
     // const fact = this.state.facts.find(fact => fact.id === id);
@@ -122,6 +123,7 @@ export default class FactsPage extends Component {
       //   ))}
       // </div>
       <Fragment>
+        <NavBar noBg={true} />
         <div>
           <div className="banner-content">
             <div className="container">
@@ -228,8 +230,8 @@ export default class FactsPage extends Component {
                       {/* <meta name="image" content={facts.image} /> */}
                     </Helmet>
                     <div className="fb-share-button" data-href={window.location.href} data-layout="button_count" data-size="small"><a target="_blank" href={"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&t=" + document.title} className="fb-xfbml-parse-ignore"><FacebookIcon
-                        size={32}
-                        round /></a></div>
+                      size={32}
+                      round /></a></div>
                     {/* <a href=""><figure><img src="./img/facebook-letter-logo.svg" alt="facebook-letter-logo" /></figure></a>
                     <a href="#"><figure><img src="./img/008-twitter.svg" alt="twitter" /></figure></a>
                     <a href="#"><figure><img src="./img/linkedin-logo.svg" alt="linkedin-logo" /></figure></a> */}

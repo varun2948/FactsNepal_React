@@ -22,6 +22,7 @@ import ServicePage from "../pages/ServicePage";
 import AllFactsPage from "../pages/AllFactsPage";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/HomePage/Footer/Footer";
+import PublicPollResult from "../pages/PublicPollResult";
 
 
 
@@ -39,7 +40,7 @@ class App extends Component {
       <div className="page">
         <Router>
           <ScrollToTop />
-          <Navbar />
+          {/* <Navbar noBg={true} /> */}
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/publicpoll" component={PublicPoll} />
@@ -48,10 +49,11 @@ class App extends Component {
             <Route path="/strategycontent" component={StrategyContent} />
             <Route path="/infographics" component={InfographicsDesign} />
             <Route path="/allfacts" component={AllFactsPage} />
+            <Route path="/publicpollresult/:id" component={PublicPollResult} />
             {/* <Route path="/works" component={WorksPage} /> */}
             {/* <Route path="/contact" component={ContactPage} /> */}
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
 
       </div>

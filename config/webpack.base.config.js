@@ -62,6 +62,10 @@ module.exports = env => {
             use: ["url-loader?limit=10000"]
           },
           {
+            test: /\.svg(2)?(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+            use: ["url-loader?limit=10000"]
+          },
+          {
             test: /\.(ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
             use: ["file-loader"]
           }
