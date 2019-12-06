@@ -1,0 +1,29 @@
+.page{
+    .slider-section{
+        @include linear-gradient(180deg, $color-stop1, $color-stop2);
+        span{
+            @include typo($font-family, 400, 1.5);
+            color: $color-grey;
+        }
+        .slider{
+            @include border-bottom(1px, solid, $color-borderbtm);
+            margin-top: 42px;
+            .slider-image-container{
+                .slider-img-item{
+                figure{
+                    // background: red;
+                    // max-width: 100px;
+                    // height: 50px;
+                    @include flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                    //    background: green;
+                        }
+                     }
+                }
+            }
+        }
+    }
+}
+

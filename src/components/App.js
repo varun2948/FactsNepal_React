@@ -23,6 +23,9 @@ import AllFactsPage from "../pages/AllFactsPage";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/HomePage/Footer/Footer";
 import PublicPollResult from "../pages/PublicPollResult";
+import Projects from "../pages/Projects";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
 
 
 
@@ -50,6 +53,9 @@ class App extends Component {
             <Route path="/infographics" component={InfographicsDesign} />
             <Route path="/allfacts" component={AllFactsPage} />
             <Route path="/publicpollresult/:id" component={PublicPollResult} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
             {/* <Route path="/works" component={WorksPage} /> */}
             {/* <Route path="/contact" component={ContactPage} /> */}
           </Switch>

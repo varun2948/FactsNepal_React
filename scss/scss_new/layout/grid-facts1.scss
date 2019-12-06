@@ -1,69 +1,42 @@
 .page{
     .grid-facts1{
-        padding-left: 5px;
-        padding-right: 5px;
         .wrap{
-            .grid-col-link{
-                display: block;
-                height: 100%;
-                width: 100%;
-                .grid-col{
-                // margin-bottom: 60px;
-                    @include border-radius-circle(5px);
-                    box-shadow: 0px 1px 3px $color-box-shadow;
-                    &:hover{
-                        box-shadow: 0px 15px 20px $color-box-shadow;
-                    }
-                    &:focus{
-                        box-shadow: 0px 15px 20px $color-box-shadow;
-                    }
-                    facts1-img{
-                        img{
-                            // width:362px;
-                            // height: 250px;
-                        }
-                    }
-                    .content-wrap{
-                        // padding: 15px 0px 20px;
-                        // padding-left: 30px;
-                        .title{
-                            @include typo($font-family, 400, 1.5);
-                            color: $color-limegreen;
-                            // padding-bottom: 15px;
-                        }
-                        .span-color{
-                            color: $color-blue !important;
-                        }
-                        .gridcol-title{
-                            @include typo($font-family, 400, 1.5);
-                            color: $color-primary;
-                            // padding-bottom: 20px;
-                            display: block;
-                        }
-                        .title-date{
-                            @include typo($font-family, 400, 1.5);
-                            font-size: 1rem;
-                            color: $color-grey;
-                        }
+            .active{
+                box-shadow: 0px 15px 20px $color-box-shadow !important; 
+            }
+            .grid-col{
+            margin-bottom: 60px;
+                @include border-radius-circle(5px);
+                box-shadow: 0px 1px 3px $color-box-shadow;
+                facts1-img{
+                    img{
+                        // width:362px;
+                        // height: 250px;
                     }
                 }
-            }
-        }
-        #collapse-div{
-            display: none;
-        }
-        .click-more{
-            margin: 50px 0;
-            @include typo($font-family, 400, 1.5);
-            display: block;
-            text-align: center;
-            color: $color-yellow;
-            &::after{
-                content: "\f061";
-                font-family: 'FontAwesome';
-                position: relative;
-                right: -2px;
-                color: $color-yellow;
+                .content-wrap{
+                    // padding: 15px 0px 20px;
+                    // padding-left: 30px;
+                    .title{
+                        @include typo($font-family, 400, 1.5);
+                        color: $color-limegreen;
+                        // padding-bottom: 15px;
+                    }
+                    .span-color{
+                        color: $color-blue !important;
+                    }
+                    .gridcol-title{
+                        @include typo($font-family, 400, 1.5);
+                        color: $color-primary;
+                        // padding-bottom: 20px;
+                        display: block;
+                    }
+                    .title-date{
+                        @include typo($font-family, 400, 1.5);
+                        font-size: 1rem;
+                        color: $color-grey;
+                    }
+                }
             }
         }
     }
@@ -90,26 +63,19 @@
                 }
                 .content-wrap{
                     padding: 10px 0px 20px;
-                    text-align: center;
+                    padding-left: 30px;
                     .title{
                         padding-bottom: 8px;
                     }
                     .gridcol-title{
-                        padding-bottom: 5px;
+                        padding-bottom: 10px;
                     }
                 }
             }
         }
     }
 }
-/* less than 376px; */
-@media only screen and (max-width: $mb-xs){
-    .grid-facts1{
-        .wrap{
-            margin-left: -10%;
-        }
-    }
-}
+
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
     .grid-facts1{
@@ -127,7 +93,7 @@
                 }
                 .content-wrap{
                     padding: 10px 0px 20px;
-                    text-align: center;
+                    padding-left: 30px;
                     .title{
                         padding-bottom: 8px;
                     }
@@ -155,7 +121,6 @@
                 .content-wrap{
                     padding: 5px 0px 10px;
                     padding-left: 10px;
-                    text-align: start;
                     .title{
                         padding-bottom: 10px;
                     }
@@ -184,7 +149,6 @@
                     padding: 10px 0px 15px;
                     padding-left: 20px;
                     .title{
-                        text-transform: capitalize;
                         padding-bottom: 15px;
                     }
                     .gridcol-title{

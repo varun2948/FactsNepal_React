@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Testimonials from "../components/HomePage/Testimonials/Testimonials";
+import NavBar from '../components/NavBar/NavBar';
 
 class ResearchData extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class ResearchData extends Component {
     render() {
         return (
             <Fragment>
+                <NavBar noBg={false} />
                 <section className="banner pdt-40">
                     <div className="container">
                         <div className="banner-content-wrap">

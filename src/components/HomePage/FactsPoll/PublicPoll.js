@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import Moment from 'react-moment';
+import TimeAgo from 'react-timeago';
 
 import Fade from "react-reveal/Fade";
 
@@ -20,9 +20,7 @@ const PublicPoll = ({ publicPoll }) => {
                                 <span className="title">PRODUCT</span>
                                 <h6>{publicPoll[0].question}</h6>
                                 <span className="date-time">
-                                    <Moment date={publicPoll[0].poll_date}
-                                        durationFromNow
-                                    /></span>
+                                    <TimeAgo date={publicPoll[0].publishedDate} /></span>
                                 {/* <span className="date-time">1 day ago</span> */}
                                 <span className="btn-vote">{publicPoll[0].totalVotes} Votes</span>
                             </div>

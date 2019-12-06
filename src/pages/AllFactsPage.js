@@ -2,6 +2,10 @@ import React, { Component, Fragment } from 'react';
 import MobileAppDownloads from "../components/HomePage/MobileAppDownloads/MobileAppDownloads";
 import Slider from "react-slick";
 import NavBar from '../components/NavBar/NavBar';
+import axios from 'axios';
+import { Link } from "react-router-dom";
+import TimeAgo from 'react-timeago';
+
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -9,9 +13,33 @@ import NavBar from '../components/NavBar/NavBar';
 class AllFactsPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            facts: []
+        }
     }
+    componentDidMount() {
+        Promise.all([
+            axios.get(`${process.env.API_URL}api/factapi`),
+            // axios.get(`${process.env.API_URL}/api/pollresultapi`)
+        ]).then(response => {
+            const newFacts = response[0].data[0].home.map(fact => ({
+                ...fact,
+                // ...factoftheday,
 
+            }));
+
+            response[0].data[0].home = newFacts;
+            // response[0].data[0].home = newFacts;
+
+            this.setState({
+                facts: response[0].data,
+
+                // pollResultApi: response[2].data
+            });
+            console.log(this.state.facts);
+        });
+
+    }
     render() {
         var settings = {
             dots: false,
@@ -50,6 +78,7 @@ class AllFactsPage extends Component {
                 }
             ]
         };
+        const { facts } = this.state;
         return (
             <Fragment>
                 <NavBar />
@@ -59,322 +88,186 @@ class AllFactsPage extends Component {
                             <div className="title-block">
                                 <div className="title-wrap">
                                     <h1 className="banner-title pdb-25">Get the Facts.</h1>
-                                    <p className="banner-header banner-height">Discover reliable, contextual and actionable information &
-                                insights</p>
+                                    <p className="banner-content">Discover reliable, contextual and actionable information & insights</p>
                                 </div>
                             </div>
-
                         </div>
-                        <div className="slider pdt-100 pdb-20">
-                            {/* <div className="slider-container"> */}
-                            <Slider {...settings} >
-                                {/* <div >
-                                    <figure><img src="./img/all.svg" alt="" /></figure><span>All</span>
-                                </div>
-                                <div >
-                                    <figure><img src="./img/all.svg" alt="" /></figure><span>fgsdf</span>
-                                </div>
-                                <div >
-                                    <figure><img src="./img/all.svg" alt="" /></figure><span>gfsdf</span>
-                                </div>
-                                <div >
-                                    <figure><img src="./img/all.svg" alt="" /></figure><span>dfg</span>
-                                </div>  */}
-                                <div className="slider-img-item red-bg">
-                                    <figure><img src="./img/all.svg" alt="" /></figure><span>All</span>
-                                </div>
-                                <div className="slider-img-item green-bg">
-                                    <figure><img src="./img/agriculture.svg" alt="" /></figure><span>Agriculture</span>
-                                </div>
-                                <div className="slider-img-item blue-bg">
-                                    <figure><img src="./img/communication.svg" alt="" /></figure><span>Communication</span>
-                                </div>
-                                <div className="slider-img-item orange-bg">
-                                    <figure><img src="./img/crime.svg" alt="" /></figure><span>Crime</span>
-                                </div>
-                                <div className="slider-img-item blue-bg">
-                                    <figure><img src="./img/economy.svg" alt="" /></figure><span>Economy</span>
-                                </div>
-                                <div className="slider-img-item red-bg">
-                                    <figure><img src="./img/all.svg" alt="" /></figure><span>New</span>
-                                </div>
-                            </Slider>
-                        </div>
-                        {/* </div> */}
                     </div>
                 </section>
+                {/* <div className="slider pdt-100 pdb-20">
+                    <Slider {...settings} >
+
+                        <div className="slider-img-item red-bg">
+                            <figure><img src="./img/all.svg" alt="" /></figure><span>All</span>
+                        </div>
+                        <div className="slider-img-item green-bg">
+                            <figure><img src="./img/agriculture.svg" alt="" /></figure><span>Agriculture</span>
+                        </div>
+                        <div className="slider-img-item blue-bg">
+                            <figure><img src="./img/communication.svg" alt="" /></figure><span>Communication</span>
+                        </div>
+                        <div className="slider-img-item orange-bg">
+                            <figure><img src="./img/crime.svg" alt="" /></figure><span>Crime</span>
+                        </div>
+                        <div className="slider-img-item blue-bg">
+                            <figure><img src="./img/economy.svg" alt="" /></figure><span>Economy</span>
+                        </div>
+                        <div className="slider-img-item red-bg">
+                            <figure><img src="./img/all.svg" alt="" /></figure><span>New</span>
+                        </div>
+                    </Slider>
+                </div> */}
 
 
-                <div className="grid-section-whole pdt-40 pdb-115">
+
+                <section className="slider-facts">
                     <div className="container">
+                        <div className="slider pdt-100 pdb-20">
+                            {/* <div className="slider-facts-container slider-facts-nav"> */}
+                            <Slider {...settings} >
+                                <div className="slider-img-item red-bg"><figure><img src="./img/all.svg" alt="" /></figure><span>All</span></div>
+                                <div className="slider-img-item green-bg"><figure><img src="./img/agriculture.svg" alt="" /></figure><span>Agriculture</span></div>
+                                <div className="slider-img-item blue-bg"><figure><img src="./img/communication.svg" alt="" /></figure><span>Communication</span></div>
+                                <div className="slider-img-item orange-bg"><figure><img src="./img/crime.svg" alt="" /></figure><span>Crime</span></div>
+                                <div className="slider-img-item blue-bg"><figure><img src="./img/economy.svg" alt="" /></figure><span>Economy</span></div>
+                                <div className="slider-img-item green-bg"><figure><img src="./img/agriculture.svg" alt="" /></figure><span>Agriculture</span></div>
+                            </Slider>
+                        </div>
 
-                        <div className="grid-section">
-                            <div className="grid-title-wrap">
-                                <h4 className="factsNepal-subtitle">Next facts</h4>
-                            </div>
 
-                            <div className="grid-facts1 pdt-40">
-                                <div className="wrap pdb-60">
-                                    <div className="row">
-                                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                            <a href="#" className="grid-col-link">
-                                                <div className="grid-col" id="left">
-                                                    <figure className="facts1-img">
-                                                        <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                    </figure>
-                                                    <div className="content-wrap">
-                                                        <span className="title span-12">Agriculture</span>
-                                                        <span className="gridcol-title span-22">Crops Production</span>
-                                                        <span className="title-date span-14">8h ago</span>
-                                                    </div>
+                        <div className="grid-section pdt-90">
+                            <div className="slider-facts-container slider-facts-for">
+
+                                <div className="slider-img-item">
+                                    <div className="grid-facts1">
+                                        <div className="wrap">
+                                            <div className="row">
+                                                {facts && facts[0] && facts[0].home.map((data, key) => {
+                                                    return (
+                                                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4" style={{ marginBottom: "30px" }}>
+                                                            <Link className="grid-col-link" to={{
+                                                                pathname: `/facts/${data.id}`,
+                                                                facts_data: data
+                                                            }}  >
+                                                                <div className="grid-col" id={`left ${key}`}>
+                                                                    <figure className="facts1-img">
+                                                                        <img className="grid-img" src={data.image} alt="crops-production" />
+                                                                    </figure>
+                                                                    <div className="content-wrap">
+                                                                        <span className="title span-12">{data.category_title}</span>
+                                                                        <span className="gridcol-title span-22">{data.title}</span>
+                                                                        <span className="title-date span-14"><TimeAgo date={data.public_date} /></span>
+                                                                    </div>
+                                                                </div>
+                                                            </Link>
+                                                        </div>
+
+                                                    )
+                                                }
+
+                                                )}
+
+
+
+                                                {/* <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                                                    <a href="#" className="grid-col-link">
+                                                        <div className="grid-col" id="mid">
+                                                            <figure className="facts1-img">
+                                                                <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
+                                                            </figure>
+                                                            <div className="content-wrap">
+                                                                <span className="title span-12 span-color">Communication</span>
+                                                                <span className="gridcol-title span-22">Internet Usage <br />Statistics
+                                                            </span>
+                                                                <span className="title-date span-14">2d ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
+
+                                                <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                                                    <a href="#" className="grid-col-link">
+                                                        <div className="grid-col" id="right">
+                                                            <figure className="facts1-img">
+                                                                <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
+                                                            </figure>
+                                                            <div className="content-wrap">
+                                                                <span className="title span-12">Agriculture</span>
+                                                                <span className="gridcol-title span-22">Crops Production</span>
+                                                                <span className="title-date span-14">8h ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div> */}
+                                            </div>
                                         </div>
 
-                                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                            <a href="#" className="grid-col-link">
-                                                <div className="grid-col" id="mid">
-                                                    <figure className="facts1-img">
-                                                        <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
-                                                    </figure>
-                                                    <div className="content-wrap">
-                                                        <span className="title span-12 span-color">Communication</span>
-                                                        <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
-                                                        <span className="title-date span-14">2d ago</span>
-                                                    </div>
+                                        {/* <div className="wrap">
+                                            <div className="row">
+                                                <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                                                    <a href="#" className="grid-col-link">
+                                                        <div className="grid-col" id="left-l">
+                                                            <figure className="facts1-img">
+                                                                <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
+                                                            </figure>
+                                                            <div className="content-wrap">
+                                                                <span className="title span-12">Agriculture</span>
+                                                                <span className="gridcol-title span-22">Crops Production</span>
+                                                                <span className="title-date span-14">8h ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
-                                        </div>
 
-                                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                            <a href="#" className="grid-col-link">
-                                                <div className="grid-col" id="right">
-                                                    <figure className="facts1-img">
-                                                        <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                    </figure>
-                                                    <div className="content-wrap">
-                                                        <span className="title span-12">Agriculture</span>
-                                                        <span className="gridcol-title span-22">Crops Production</span>
-                                                        <span className="title-date span-14">8h ago</span>
-                                                    </div>
+                                                <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                                                    <a href="#" className="grid-col-link">
+                                                        <div className="grid-col" id="mid-m">
+                                                            <figure className="facts1-img">
+                                                                <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
+                                                            </figure>
+                                                            <div className="content-wrap">
+                                                                <span className="title span-12 span-color">Communication</span>
+                                                                <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
+                                                                <span className="title-date span-14">2d ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
-                                        </div>
+
+                                                <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                                                    <a href="#" className="grid-col-link">
+                                                        <div className="grid-col" id="right-r">
+                                                            <figure className="facts1-img">
+                                                                <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
+                                                            </figure>
+                                                            <div className="content-wrap">
+                                                                <span className="title span-12">Agriculture</span>
+                                                                <span className="gridcol-title span-22">Crops Production</span>
+                                                                <span className="title-date span-14">8h ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div> */}
+
+                                        {/* <a href="#collapse-div" className="click-more link-toggle span-14">
+                                            See More
+                                    </a> */}
+
                                     </div>
                                 </div>
 
-                                <div className="wrap">
-                                    <div className="row">
 
 
 
 
-                                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                            <a href="#" className="grid-col-link">
-                                                <div className="grid-col" id="left-l">
-                                                    <figure className="facts1-img">
-                                                        <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                    </figure>
-                                                    <div className="content-wrap">
-                                                        <span className="title span-12">Agriculture</span>
-                                                        <span className="gridcol-title span-22">Crops Production</span>
-                                                        <span className="title-date span-14">8h ago</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                            <a href="#" className="grid-col-link">
-                                                <div className="grid-col" id="mid-m">
-                                                    <figure className="facts1-img">
-                                                        <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
-                                                    </figure>
-                                                    <div className="content-wrap">
-                                                        <span className="title span-12 span-color">Communication</span>
-                                                        <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
-                                                        <span className="title-date span-14">2d ago</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                            <a href="#" className="grid-col-link">
-                                                <div className="grid-col" id="right-r">
-                                                    <figure className="facts1-img">
-                                                        <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                    </figure>
-                                                    <div className="content-wrap">
-                                                        <span className="title span-12">Agriculture</span>
-                                                        <span className="gridcol-title span-22">Crops Production</span>
-                                                        <span className="title-date span-14">8h ago</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <a href="#collapse-div" className="click-more link-toggle span-16 pdt-100">
-                                    See More
-                        </a>
-
-                                <div id="collapse-div">
-                                    <div className="wrap pdb-60">
-                                        <div className="row">
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="left-l">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12">Agriculture</span>
-                                                            <span className="gridcol-title span-22">Crops Production</span>
-                                                            <span className="title-date span-14">8h ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="mid-m">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12 span-color">Communication</span>
-                                                            <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
-                                                            <span className="title-date span-14">2d ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="right-r">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12">Agriculture</span>
-                                                            <span className="gridcol-title span-22">Crops Production</span>
-                                                            <span className="title-date span-14">8h ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="wrap pdb-60">
-                                        <div className="row">
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="left-l">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12">Agriculture</span>
-                                                            <span className="gridcol-title span-22">Crops Production</span>
-                                                            <span className="title-date span-14">8h ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="mid-m">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12 span-color">Communication</span>
-                                                            <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
-                                                            <span className="title-date span-14">2d ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="right-r">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12">Agriculture</span>
-                                                            <span className="gridcol-title span-22">Crops Production</span>
-                                                            <span className="title-date span-14">8h ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="wrap pdb-60">
-                                        <div className="row">
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="left-l">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12">Agriculture</span>
-                                                            <span className="gridcol-title span-22">Crops Production</span>
-                                                            <span className="title-date span-14">8h ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="mid-m">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/internet-usage-statistics.png" alt="internet-usuage-statistics" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12 span-color">Communication</span>
-                                                            <span className="gridcol-title span-22">Internet Usage <br />Statistics</span>
-                                                            <span className="title-date span-14">2d ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                                                <a href="#" className="grid-col-link">
-                                                    <div className="grid-col" id="right-r">
-                                                        <figure className="facts1-img">
-                                                            <img className="grid-img" src="./img/crops production.png" alt="crops-production" />
-                                                        </figure>
-                                                        <div className="content-wrap">
-                                                            <span className="title span-12">Agriculture</span>
-                                                            <span className="gridcol-title span-22">Crops Production</span>
-                                                            <span className="title-date span-14">8h ago</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
                         </div>
                     </div>
-                </div>
+                    {/* </div> */}
+                </section>
                 <MobileAppDownloads techBg={true} />
             </Fragment >
         );

@@ -230,9 +230,9 @@ class FactsPublicPoll extends Component {
                                                                 <span className="title">{factoftheday.category_title}</span>
                                                                 <p className="factsNepal-para">{factoftheday.description}</p>
                                                                 <span className="date-time">
-                                                                    {/* <Moment date={factoftheday.public_date}
-                                                                        durationFromNow
-                                                                    /> */}
+                                                                    <Moment date={factoftheday.public_date}
+                                                                        format="Do MMMM YYYY"
+                                                                    />
                                                                 </span>
                                                             </div>
                                                         </div>

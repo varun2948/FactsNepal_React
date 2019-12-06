@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Testimonials from "../components/HomePage/Testimonials/Testimonials";
+import NavBar from '../components/NavBar/NavBar';
 
 export default class StrategyContent extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ export default class StrategyContent extends Component {
     render() {
         return (
             <Fragment>
+                <NavBar noBg={false} />
                 <section className="banner">
                     <div className="container">
                         <div className="banner-content-wrap">
@@ -57,6 +59,7 @@ export default class StrategyContent extends Component {
                         </div>
                     </div>
                 </div>
+
                 <Testimonials />
             </Fragment>);
     }

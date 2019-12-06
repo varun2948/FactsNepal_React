@@ -9,6 +9,7 @@ import {
   LinkedinShareButton,
   TwitterShareButton,
 } from 'react-share';
+import TimeAgo from 'react-timeago';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
@@ -101,7 +102,7 @@ export default class FactsPage extends Component {
     const shareUrl = window.location.href;
     // const title = 'GitHub';
     const facts = localStorage.getItem('facts') && JSON.parse(localStorage.getItem('facts'));
-    // console.log(facts.image);
+    console.log(facts, 'facts');
     return (
       // <div className="col-md-8 offset-md-2 relative allfacts">
       //   {facts.map((fact, index) => (
@@ -129,9 +130,9 @@ export default class FactsPage extends Component {
             <div className="container">
               <div className="top-content-wrap pdb-25">
                 <div className="top-wrapper">
-                  <span className="title span-16">AGRICULTURE</span>
-                  <h3 className="h3-title">Crops Production</h3>
-                  <span className="title-date span-14">8h ago</span>
+                  <span className="title span-16">{facts.category_title}</span>
+                  <h3 className="h3-title">{facts.title}</h3>
+                  <span className="title-date span-14"><TimeAgo date={facts.public_date} /></span>
                 </div>
               </div>
 
@@ -143,7 +144,9 @@ export default class FactsPage extends Component {
                       asNavFor={this.state.nav3}
                       ref={slider => (this.slider1 = slider)}
                     >
-
+                      <figure className="portrait-fix">
+                        <img src={facts.image} alt="cereal-crop1" />
+                      </figure>
                       {
                         facts && facts.multiple_images &&
                         facts.multiple_images.map((data, key) => {
@@ -169,16 +172,24 @@ export default class FactsPage extends Component {
                       focusOnSelect={true}
 
                     >
+                      {/* 
+                      <div className="image-content">
+                        <figure>
+                          <img src={facts.image} alt="cereal-crop1" />
+                        </figure>
+                      </div> */}
                       {
-                        facts && facts.multiple_images &&
-                        facts.multiple_images.map((data, key) => {
-                          return (
-                            <div key={key} className="image-content">
-                              <figure>
-                                <img src={data.thumbnailImageUrl} alt="cereal-crop1" />
-                              </figure>
-                            </div>)
-                        })
+                        facts ?
+                          facts && facts.multiple_images &&
+                          facts.multiple_images.map((data, key) => {
+                            return (
+                              <div key={key} className="image-content">
+                                <figure>
+                                  <img src={data.thumbnailImageUrl} alt="cereal-crop1" />
+                                </figure>
+                              </div>)
+                          }) :
+                          ""
 
                       }
 
