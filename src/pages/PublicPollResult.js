@@ -205,7 +205,10 @@ class PublicPollResult extends Component {
                                             <Link className="poll-link" to={{
                                                 pathname: `/`,
 
-                                            }} ><button style={{ height: "54px" }} class="btn-danger">Go To Home Page</button>
+                                            }} ><button style={{
+                                                height: "37px",
+                                                fontSize: "16px"
+                                            }} class="btn-danger">Go To HomePage</button>
                                             </Link>
                                         </div>
                                     </div>
