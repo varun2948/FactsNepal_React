@@ -4,11 +4,12 @@
         box-shadow: $color-box-shadow 0px 3px 10px;
     }
     .banner-content{
-        min-height:calc(100vh - 54px);
+        // min-height:calc(100vh - 54px);
         .publicpoll-wrap{
             @include flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 4.375rem;
             .wrap-center{
                 // max-width: 300px;
                 .title-wrap{
@@ -53,7 +54,19 @@
                             }
                             &:nth-child(1){
                                 // box-shadow: $form-shadow 0px 3px 10px;
-                                
+                                .span-yellow{
+                                    color: $color-yellow;
+                                }
+                                .progress-status{
+                                    @include flex;
+                                    align-items: center;
+                                    .progress{
+                                        height: 0.5rem;
+                                        .progress-bar{
+                                            background-color: $color-yellow;
+                                        }
+                                    }
+                                }
                             }
                             @include border-radius-circle(2px);
                             background: $color-white;
@@ -103,21 +116,6 @@
                                                 background-image: url('.././img/24px_circlecheck.png');
                                                 background-size: 120% 120%;
                                             }
-                                        }
-                                    }
-                                }
-                            }
-                            &.active{
-                                .span-yellow{
-                                    color: $color-yellow;
-                                }
-                                .progress-status{
-                                    @include flex;
-                                    align-items: center;
-                                    .progress{
-                                        height: 0.5rem;
-                                        .progress-bar{
-                                            background-color: $color-yellow;
                                         }
                                     }
                                 }

@@ -148,10 +148,10 @@ class PublicPollResult extends Component {
                                                 // }
                                                 return (
                                                     <div className={`form-group inputform ${selectedpoll[0].id == data.id ? 'active' : ''} `}>
-                                                        <span className="input-title span-16 span-yellow">{data.question}</span>
+                                                        <span className={`input-title span-16 ${selectedpoll[0].id == data.id ? 'active_text' : ''}`}>{data.question}</span>
                                                         <div className="progress-status">
                                                             <div className="progress">
-                                                                <div className="progress-bar" role="progressbar" style={{ width: `${votes_percent}%` }} aria-valuemin="0" aria-valuemax="100"></div>
+                                                                <div className={`progress-bar ${selectedpoll[0].id == data.id ? 'active_bar' : ''}`} role="progressbar" style={{ width: `${votes_percent}%` }} aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                         <span className="input-status span-16">{votes_percent}%</span>
@@ -201,14 +201,14 @@ class PublicPollResult extends Component {
     
                                             </div> */}
                                         </form>
-                                        <div class="wrapper" style={{ textAlign: "center" }}>
+                                        <div className="wrapper" style={{ textAlign: "center" }}>
                                             <Link className="poll-link" to={{
                                                 pathname: `/`,
 
                                             }} ><button style={{
                                                 height: "37px",
                                                 fontSize: "16px"
-                                            }} class="btn-danger">Go To HomePage</button>
+                                            }} className="btn-danger">Go To HomePage</button>
                                             </Link>
                                         </div>
                                     </div>

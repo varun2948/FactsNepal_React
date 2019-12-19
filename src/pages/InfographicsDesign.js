@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Testimonials from "../components/HomePage/Testimonials/Testimonials";
+import Testimonials from "../components/Testimonials/Testimonials";
 import NavBar from '../components/NavBar/NavBar';
 
 export default class StrategyContent extends Component {

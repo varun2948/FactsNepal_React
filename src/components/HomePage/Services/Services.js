@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import axios from "axios";
-import Service from "./Service";
 import Particles from "react-particles-js";
 
 class Services extends Component {

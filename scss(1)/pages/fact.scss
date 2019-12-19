@@ -1,5 +1,5 @@
 .page{
-    .banner{
+    .slider-facts{
         .slider{
             .slick-slider{
                 .slick-prev, .slick-next{
@@ -21,12 +21,6 @@
                         color: $color-grey;
                     }
                 }
-                // .slick-list{
-                //     margin: 0 -10px;
-                //     .slick-slide{
-                //         margin: 0 10px;
-                //     }
-                // }
                 .slider-img-item{
                     text-align: center;
                     padding: 15px 0px;
@@ -46,12 +40,14 @@
                 .slick-dots{
                     display: none !important;
                 }
-                .slick-current{
-                    span{
-                        color: $color-white;
+                &.slider-facts-nav{
+                    .slick-current{
+                        span{
+                            color: $color-white;
+                        }
+                        background: $color-red !important;
+                        @include boxshadow($boxshadow: 0px 15px 20px #00000033);
                     }
-                    background: $color-red !important;
-                    @include boxshadow($boxshadow: 0px 15px 20px #00000033);
                 }
                 .red-bg{
                     background: rgba($color-red, 0.07);

@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import PublicPoll from "./PublicPoll";
 import Moment from 'react-moment';
-
-
-// import Fact from "../Fact/Fact";
-// import Question from "../Poll/Question";
-// import FactList from '../FactLists/FactList';
-// import Answer from "../Poll/Answer";
-// import FactsoftheDay from "./FactsoftheDay";
+var moment = require('moment');
 
 const headerData = {
     headers: {
@@ -172,7 +166,10 @@ class FactsPublicPoll extends Component {
         // } else {
         //   question = <h2 style={{ color: "#b43046" }}>Loading...</h2>;
         // }
-        console.log(publicPoll, 'publicPoll');
+        console.log(factoftheday.public_date, 'publicPoll');
+
+        const fact_date = (moment(factoftheday.public_date, "YYYY-MM-DD"));
+
         return (
             //     <section className="section-padding-y fact-poll">
             //     <div className="container-fluid">
@@ -206,46 +203,50 @@ class FactsPublicPoll extends Component {
             <section className="general-info pdt-90 pdb-120">
                 <div className="container">
                     <div className="general-info-wrap">
-                        <div className="row">
-                            <div className="col-12 col-md-7" id="fact-info-div">
-                                <div className="fact-info-wrap">
-                                    <h3 className="factsNepal-title">Fact of the day</h3>
-                                    <Link className="poll-link" to={{
-                                        pathname: `/facts/${factoftheday.id}`,
-                                        facts_data: factoftheday
-                                    }}  >
-                                        <div className="fact-info">
-                                            <div className="row">
-                                                <div className="col-12 col-md-4">
-                                                    <div className="fact-info-img">
-                                                        <figure>
-                                                            <img src={factoftheday.image} alt="fact-img" />
-                                                        </figure>
+                        <Fade bottom duration={1100} delay={500} distance={"50px"}>
+                            <div className="row">
+                                <div className="col-12 col-md-7" id="fact-info-div">
+                                    <div className="fact-info-wrap">
+                                        <h3 className="factsNepal-title">Fact of the day</h3>
+                                        <Link className="poll-link" to={{
+                                            pathname: `/facts/${factoftheday.id}`,
+                                            facts_data: factoftheday
+                                        }}  >
+                                            <div className="fact-info">
+                                                <div className="row">
+                                                    <div className="col-12 col-md-4">
+                                                        <div className="fact-info-img">
+                                                            <figure>
+                                                                <img src={factoftheday.image} alt="fact-img" />
+                                                            </figure>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="col-12 col-md-8">
-                                                    <div className="fact-info-content">
-                                                        <div className="fact-info-content-wrap">
-                                                            <div className="center">
-                                                                <span className="title">{factoftheday.category_title}</span>
-                                                                <p className="factsNepal-para">{factoftheday.description}</p>
-                                                                <span className="date-time">
-                                                                    <Moment date={factoftheday.public_date}
-                                                                        format="Do MMMM YYYY"
-                                                                    />
-                                                                </span>
+                                                    <div className="col-12 col-md-8">
+                                                        <div className="fact-info-content">
+                                                            <div className="fact-info-content-wrap">
+                                                                <div className="center">
+                                                                    <span className="title">{factoftheday.category_title}</span>
+                                                                    <p className="factsNepal-para">{factoftheday.description}</p>
+                                                                    <span className="date-time">
+                                                                        {
+                                                                            <Moment date={fact_date}
+                                                                                format="Do MMMM YYYY"
+                                                                            />
+                                                                        }
+
+                                                                    </span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </Link>
+                                        </Link>
+                                    </div>
                                 </div>
+                                <PublicPoll publicPoll={publicPoll} Link={Link} />
                             </div>
-
-                            <PublicPoll publicPoll={publicPoll} Link={Link} />
-                        </div>
+                        </Fade>
                     </div>
                 </div>
             </section >

@@ -1,12 +1,11 @@
-    .grid-section-whole{
+.grid-section-whole{
     .grid-section{
         .grid-title-wrap{
-            .section-span{
-                text-transform: uppercase;
-                @include typo($font-family, 600, 1.5);
-                letter-spacing: 3px;
-                color: $color-red;
+            margin-bottom: 3.75rem;
+            .section-caption{
                 display: block;
+                text-transform: uppercase;
+                padding-bottom: 1.25rem;
             }
             h3{
                 @include typo($font-family, 300, 1.5);
@@ -26,15 +25,34 @@
                         @include typo($font-family, 400, 1.5);
                         color: $color-red;
                     }
-                    p{
-                        color: $color-darkgrey;
-                        @include typo($font-family, 300, 1.5);
+                    .para-center{
+                        margin-top: 1.25rem;
+                        p{
+                            max-width: 260px;
+                        }
                     }
                 }
             }
         }
     }
 }
+/* less than 767px; */
+@media only screen and (max-width: $mb-xl){
+    .grid-section-whole{
+        .grid-section {
+            .grid-content{
+                .grid-container{
+                    .grid-col {
+                        .para-center{
+                            @include flexcenter;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 /* less than 575px; */
@@ -45,9 +63,6 @@
         .grid-section{
             .grid-title-wrap{
                 text-align: center;
-                .section-span{
-                    font-size: 0.875rem;
-                }
             }
 
             .grid-content{
@@ -57,7 +72,7 @@
                         figure{
                             margin-bottom: 0 !important;
                             img{
-                               width: 130px;
+                               width: 110px;
                             }
                         }
                     }
@@ -75,9 +90,6 @@
        .grid-section{
            .grid-title-wrap{
                text-align: center;
-               .section-span{
-                   font-size: 0.875rem;
-               }
            }
 
            .grid-content{
@@ -87,7 +99,7 @@
                        figure{
                            margin-bottom: 0 !important;
                            img{
-                              width: 110px;
+                              width: 100px;
                            }
                        }
                    }
@@ -97,7 +109,6 @@
    }
 }
 
-
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
       /* grid-section */
@@ -106,9 +117,6 @@
         .grid-section{
             .grid-title-wrap{
                 text-align: center;
-                .section-span{
-                    font-size: 0.875rem;
-                }
             }
 
             .grid-content{
@@ -117,7 +125,7 @@
                         text-align: center;
                         figure{
                             img{
-                                max-width: 150px;
+                                max-width: 110px;
                             }
                         }
                     }
@@ -137,9 +145,6 @@
             .grid-title-wrap{
                 max-width: 750px;
                 text-align: left;
-                .section-span{
-                    font-size: 1rem;
-                }
             }
 
             .grid-content{
@@ -149,10 +154,9 @@
                         text-align: left;
                         figure{
                             img{
-                                max-width: 110px;
+                                max-width: 100px;
                             }
                         }
-                        
                     }
                 }
             }
@@ -167,11 +171,8 @@
         padding: 0px 80px;
        .grid-section{
            .grid-title-wrap{
-               max-width: 650px;
+               max-width: 700px;
                text-align: left;
-               .section-span{
-                   font-size: 1rem;
-               }
            }
 
            .grid-content{
@@ -181,7 +182,7 @@
                        text-align: left;
                        figure{
                         img{
-                            max-width: 120px;
+                            max-width: 110px;
                         }
                     }
                        
@@ -200,11 +201,8 @@
         padding: 0px 80px;
         .grid-section{
             .grid-title-wrap{
-                max-width: 600px;
+                max-width: 750px;
                 text-align: left;
-                .section-span{
-                    font-size: 1.125rem;
-                }
             }
             .grid-content{
                 .grid-container{
@@ -213,7 +211,7 @@
                         text-align: left;
                         figure{
                             img{
-                                max-width: 140px;
+                                max-width: 120px;
                             }
                         }
                        
@@ -232,9 +230,6 @@
             .grid-title-wrap{
                 max-width: 750px;
                 text-align: left;
-                .section-span{
-                    font-size: 1.125rem;
-                }
             }
 
             .grid-content{
@@ -244,7 +239,7 @@
                         text-align: left;
                         figure{
                             img{
-                                max-width: 170px;
+                                max-width: 130px;
                             }
                         }
                         

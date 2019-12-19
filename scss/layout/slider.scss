@@ -1,9 +1,9 @@
 .page{
     .slider-section{
         @include linear-gradient(180deg, $color-stop1, $color-stop2);
-        span{
-            @include typo($font-family, 400, 1.5);
-            color: $color-grey;
+        .caption{
+            text-align: left;
+            display: block;
         }
         .slider{
             @include border-bottom(1px, solid, $color-borderbtm);

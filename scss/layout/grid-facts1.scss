@@ -1,7 +1,5 @@
 .page{
     .grid-facts1{
-        padding-left: 5px;
-        padding-right: 5px;
         .wrap{
             .grid-col-link{
                 display: block;
@@ -53,7 +51,7 @@
             display: none;
         }
         .click-more{
-            margin: 50px 0;
+            margin-bottom: 50px;
             @include typo($font-family, 400, 1.5);
             display: block;
             text-align: center;
