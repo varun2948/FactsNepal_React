@@ -1,86 +1,86 @@
 .page {
-  // .slider-facts-nav {
-  .slider {
-    .slick-slider {
-      .slick-prev,
-      .slick-next {
-        background: $color-white !important;
-        @include boxshadow($boxshadow: 0 3px 15px $color-box-shadow);
-        @include border-radius-circle(50%);
-      }
-      .slick-prev {
-        left: -45px;
-        width: 30px;
-        height: 30px;
-        &:before {
-          content: "\f104";
-          font-family: "FontAwesome";
-          color: $color-grey;
+  .slider-facts-nav {
+    .slider {
+      .slick-slider {
+        .slick-prev,
+        .slick-next {
+          background: $color-white !important;
+          @include boxshadow($boxshadow: 0 3px 15px $color-box-shadow);
+          @include border-radius-circle(50%);
         }
-      }
-      .slick-next {
-        right: -55px;
-        width: 30px;
-        height: 30px;
-        &:before {
-          content: "\f105 ";
-          font-family: "FontAwesome";
-          color: $color-grey;
-          margin-left: 8px;
+        .slick-prev {
+          left: -45px;
+          width: 30px;
+          height: 30px;
+          &:before {
+            content: "\f104";
+            font-family: "FontAwesome";
+            color: $color-grey;
+          }
         }
-      }
+        .slick-next {
+          right: -55px;
+          width: 30px;
+          height: 30px;
+          &:before {
+            content: "\f105 ";
+            font-family: "FontAwesome";
+            color: $color-grey;
+            margin-left: 8px;
+          }
+        }
 
-      .slick-slide.slick-active {
-        border-radius: 5px;
-        width: 206px !important;
-        margin-right: 20px;
-      }
-      .slider-img-item {
-        text-align: center;
-        padding: 15px 0px;
-        @include border-radius-circle(5px);
-        // @include border-radius(5px);
-        &:focus {
-          outline: none !important;
+        .slick-slide.slick-active {
+          border-radius: 5px;
+          width: 206px !important;
+          margin-right: 20px;
         }
-        figure {
-          @include flexvr;
+        .slider-img-item {
+          text-align: center;
+          padding: 15px 0px;
+          @include border-radius-circle(5px);
+          // @include border-radius(5px);
+          &:focus {
+            outline: none !important;
+          }
+          figure {
+            @include flexvr;
+          }
+          span {
+            color: $color-grey;
+            @include typo($font-family, 400, 1.25);
+            font-size: 1rem;
+          }
         }
-        span {
-          color: $color-grey;
-          @include typo($font-family, 400, 1.25);
-          font-size: 1rem;
+        .slick-dots {
+          display: none !important;
         }
-      }
-      .slick-dots {
-        display: none !important;
-      }
-      // &.slider-facts-nav {
-      .slick-current {
-        span {
-          color: $color-white;
+        // &.slider-facts-nav {
+        .slick-current {
+          span {
+            color: $color-white;
+          }
+          background: $color-red !important;
+          @include boxshadow($boxshadow: 0px 15px 20px #00000033);
         }
-        background: $color-red !important;
-        @include boxshadow($boxshadow: 0px 15px 20px #00000033);
-      }
-      // }
-      .red-bg {
-        background: rgba($color-red, 0.07);
-      }
-      .green-bg {
-        background: rgba($color-limegreen, 0.09);
-      }
-      .blue-bg {
-        background: rgba($color-blue, 0.09);
-      }
-      .orange-bg {
-        background: rgba($color-orange, 0.09);
-      }
-      .blue-bg {
-        background: rgba($color-blue, 0.09);
+        // }
+        .red-bg {
+          background: rgba($color-red, 0.07);
+        }
+        .green-bg {
+          background: rgba($color-limegreen, 0.09);
+        }
+        .blue-bg {
+          background: rgba($color-blue, 0.09);
+        }
+        .orange-bg {
+          background: rgba($color-orange, 0.09);
+        }
+        .blue-bg {
+          background: rgba($color-blue, 0.09);
+        }
       }
     }
-    // }
   }
 }
 
