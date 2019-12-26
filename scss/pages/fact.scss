@@ -1,4 +1,13 @@
 .page {
+  .grid-col {
+    margin-bottom: 20px;
+    .grid-facts-img {
+      height: 242px;
+      width: 350px;
+      padding: 15px;
+    }
+  }
+
   .slider-facts-nav {
     .slider {
       .slick-slider {
@@ -50,6 +59,10 @@
             color: $color-grey;
             @include typo($font-family, 400, 1.25);
             font-size: 1rem;
+          }
+          img {
+            height: 41px;
+            width: 41px;
           }
         }
         .slick-dots {

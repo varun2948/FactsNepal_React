@@ -36,7 +36,6 @@ class HomePage extends Component {
           {/* <Initiatives />
         <HappyClients />
         <Footer /> */}
-
         </div>
       </React.Fragment>
     );

@@ -1,8 +1,12 @@
 import React from "react";
 
-const SliderItem = ({ classname, url, title }) => {
+const SliderItem = ({ classname, url, title, clickFunction, key }) => {
   return (
-    <div className={`slider-img-item ${classname}`}>
+    <div
+      key={key}
+      className={`slider-img-item ${classname}`}
+      onClick={clickFunction}
+    >
       <figure>
         <img src={url} alt="" />
       </figure>

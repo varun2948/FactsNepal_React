@@ -10,12 +10,22 @@ import SliderItem from "../components/AllFacts/SliderItem";
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
+const headerData = {
+  headers: {
+    "Content-Type": "application/json",
+    "X-CSRF-TOKEN": "TuJoRzMGXIzBhy3OH8JJXFmoegsooPSCB5dnw5q4",
+    "X-Requested-With": "XMLHttpRequest"
+  }
+};
 
 class AllFactsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       facts: [],
+      category: [],
+      page: 1,
+      categoryId: 0,
       nav1: null,
       nav2: null
     };
@@ -23,40 +33,123 @@ class AllFactsPage extends Component {
 
   componentDidMount() {
     Promise.all([
-      axios.get(`${process.env.API_URL}api/factapi`)
-      // axios.get(`${process.env.API_URL}/api/pollresultapi`)
+      axios({
+        method: "POST",
+        url: `${process.env.API_URL}api/factapi?page=${this.state.page}`,
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json"
+        },
+        data: {
+          categories: this.state.categoryId // This is the body part
+        }
+      })
     ]).then(response => {
-      const newFacts = response[0].data[0].home.map(fact => ({
+      console.log(response[0]);
+      const categoryfacts = response[0].data[0].home.data.map(fact => ({
         ...fact
-        // ...factoftheday,
       }));
 
-      response[0].data[0].home = newFacts;
-      // response[0].data[0].home = newFacts;
+      response[0].data[0].home.data = categoryfacts;
 
       this.setState({
-        facts: response[0].data
-
-        // pollResultApi: response[2].data
+        facts: response[0].data[0].home.data,
+        category: response[0].data[0].category
       });
-      console.log(this.state.facts);
+      this.setState(prevState => ({
+        page: prevState.page + 1
+        // categoryId: this.state.categoryId
+      }));
+      // return console.log(this.state.page);
+      console.log(this.state.category);
     });
+
     this.setState({
       nav1: this.slider1,
       nav2: this.slider2
     });
   }
+  categoryClick = category => {
+    console.log(category);
+    const categoryid = category;
+    // this.setState({ categoryId: category });
+    // console.log(this.state.categoryId, "catestate");
+    Promise.all([
+      axios({
+        method: "POST",
+        url: `${process.env.API_URL}api/factapi?page=1`,
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json"
+        },
+        data: {
+          categories: category // This is the body part
+        }
+      })
+    ]).then(response => {
+      console.log(response[0].data[0].home.data);
+      // const categoryfacts = response[0].data[0].home.data.map(fact => ({
+      //   ...fact
+      // }));
+
+      // response[0].data[0].home.data = categoryfacts;
+
+      this.setState({
+        facts: response[0].data[0].home.data,
+        page: 2,
+        categoryId: category
+      });
+
+      console.log(this.state.facts);
+    });
+  };
+
+  loadMore = () => {
+    console.log(this.state);
+    // if (this.state.page != 1) {
+    Promise.all([
+      axios({
+        method: "POST",
+        url: `${process.env.API_URL}api/factapi?page=${this.state.page}`,
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json"
+        },
+        data: {
+          categories: this.state.categoryId // This is the body part
+        }
+      })
+    ]).then(response => {
+      // const categoryfacts = response[0].data[0].home.data.map(fact => {
+      //   return { ...fact };
+      // });
+
+      // response[0].data[0].home.data = categoryfacts;
+
+      // this.setState({
+      //   facts: this.state.facts.concat(response[0].data[0].home.data),
+      //   page :
+      // });
+      this.setState(prevState => ({
+        facts: prevState.facts.concat(response[0].data[0].home.data),
+        page: prevState.page + 1
+      }));
+      console.log(this.state.facts);
+    });
+    // } else {
+    //   alert("no-data");
+    // }
+  };
   render() {
     var settings = {
       dots: false,
-      // className: "slider-container",
       infinite: true,
+      draggable: false,
       focusOnSelect: true,
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
       initialSlide: 0,
-      // variableWidth: "206px",
 
       responsive: [
         {
@@ -85,38 +178,9 @@ class AllFactsPage extends Component {
         }
       ]
     };
-    const { facts } = this.state;
-    const AllSlider =
-      facts &&
-      facts[0] &&
-      facts[0].category.map((data, key) => {
-        <SliderItem classname={"red-bg"} url={"./img/all.svg"} title={"All"} />;
-        // <SliderItem
-        //   classname={"blue-bg"}
-        //   url={"./img/all.svg"}
-        //   title={"Agriculture"}
-        // />
-        // <SliderItem
-        //   classname={"green-bg"}
-        //   url={"./img/all.svg"}
-        //   title={"Communication"}
-        // />
-        // <SliderItem
-        //   classname={"orange-bg"}
-        //   url={"./img/all.svg"}
-        //   title={"Crime"}
-        // />
-        // <SliderItem
-        //   classname={"blue-bg"}
-        //   url={"./img/all.svg"}
-        //   title={"Economy"}
-        // />
-        // <SliderItem
-        //   classname={"green-bg"}
-        //   url={"./img/all.svg"}
-        //   title={"Finance"}
-        // />
-      });
+
+    const { facts, category } = this.state;
+
     return (
       <ErrorBoundary>
         <Fragment>
@@ -139,13 +203,31 @@ class AllFactsPage extends Component {
                   <div className="slider-container">
                     <Slider
                       {...settings}
-                      asNavFor={this.state.nav1}
-                      ref={slider => (this.slider2 = slider)}
+                      // asNavFor={this.state.nav1}
+                      // ref={slider => (this.slider2 = slider)}
                     >
-                      {/* {facts[0].category.length > 0 &&
-                      facts[0].category.map(data => {
-                        return console.log("s");
-                      })} */}
+                      <SliderItem
+                        classname={"red-bg"}
+                        url="./img/all.svg"
+                        title="All"
+                        clickFunction={() => {
+                          this.categoryClick(0);
+                        }}
+                      />
+                      {category &&
+                        category.map(data => {
+                          return (
+                            <SliderItem
+                              classname={"blue-bg"}
+                              url={data.image}
+                              title={data.title}
+                              clickFunction={() => {
+                                this.categoryClick(data.id);
+                              }}
+                              // category={data.id}
+                            />
+                          );
+                        })}
                     </Slider>
                   </div>
                 </div>
@@ -166,167 +248,47 @@ class AllFactsPage extends Component {
                   >
                     <div className="wrap pdb-60">
                       <div className="row">
-                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                          <a href="#" className="grid-col-link">
-                            <div className="grid-col" id="left">
-                              <figure className="facts1-img">
-                                <img
-                                  className="grid-img"
-                                  src="./img/crops production.png"
-                                  alt="crops-production"
-                                />
-                              </figure>
-                              <div className="content-wrap">
-                                <span className="title span-12">
-                                  Agriculture
-                                </span>
-                                <span className="gridcol-title span-22">
-                                  Crops Production
-                                </span>
-                                <span className="title-date span-14">
-                                  8h ago
-                                </span>
+                        {facts &&
+                          facts.map(data => {
+                            return (
+                              <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
+                                <Link
+                                  className="grid-col-link"
+                                  to={{
+                                    pathname: `/facts/${data.id}`
+                                    // factid: data
+                                  }}
+                                >
+                                  <div className="grid-col" id="left">
+                                    <figure className="facts1-img">
+                                      <img
+                                        className="grid-facts-img"
+                                        src={data.image}
+                                        alt="crops-production"
+                                      />
+                                    </figure>
+                                    <div className="content-wrap">
+                                      <span className="title span-12">
+                                        {data.category_title}
+                                      </span>
+                                      <span className="gridcol-title span-22">
+                                        {data.title}
+                                      </span>
+                                      <span className="title-date span-14">
+                                        <TimeAgo date={data.public_date} />
+                                      </span>
+                                    </div>
+                                  </div>
+                                </Link>
                               </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                          <a href="#" className="grid-col-link">
-                            <div className="grid-col" id="mid">
-                              <figure className="facts1-img">
-                                <img
-                                  className="grid-img"
-                                  src="./img/internet-usage-statistics.png"
-                                  alt="internet-usuage-statistics"
-                                />
-                              </figure>
-                              <div className="content-wrap">
-                                <span className="title span-12 span-color">
-                                  Communication
-                                </span>
-                                <span className="gridcol-title span-22">
-                                  Internet Usage <br />
-                                  Statistics
-                                </span>
-                                <span className="title-date span-14">
-                                  2d ago
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                          <a href="#" className="grid-col-link">
-                            <div className="grid-col" id="right">
-                              <figure className="facts1-img">
-                                <img
-                                  className="grid-img"
-                                  src="./img/crops production.png"
-                                  alt="crops-production"
-                                />
-                              </figure>
-                              <div className="content-wrap">
-                                <span className="title span-12">
-                                  Agriculture
-                                </span>
-                                <span className="gridcol-title span-22">
-                                  Crops Production
-                                </span>
-                                <span className="title-date span-14">
-                                  8h ago
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="wrap">
-                      <div className="row">
-                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                          <a href="#" className="grid-col-link">
-                            <div className="grid-col" id="left-l">
-                              <figure className="facts1-img">
-                                <img
-                                  className="grid-img"
-                                  src="./img/crops production.png"
-                                  alt="crops-production"
-                                />
-                              </figure>
-                              <div className="content-wrap">
-                                <span className="title span-12">
-                                  Agriculture
-                                </span>
-                                <span className="gridcol-title span-22">
-                                  Crops Production
-                                </span>
-                                <span className="title-date span-14">
-                                  8h ago
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                          <a href="#" className="grid-col-link">
-                            <div className="grid-col" id="mid-m">
-                              <figure className="facts1-img">
-                                <img
-                                  className="grid-img"
-                                  src="./img/internet-usage-statistics.png"
-                                  alt="internet-usuage-statistics"
-                                />
-                              </figure>
-                              <div className="content-wrap">
-                                <span className="title span-12 span-color">
-                                  Communication
-                                </span>
-                                <span className="gridcol-title span-22">
-                                  Internet Usage <br />
-                                  Statistics
-                                </span>
-                                <span className="title-date span-14">
-                                  2d ago
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <div className="col-7 offset-3 col-sm-8 offset-sm-2 offset-md-0 col-md-4">
-                          <a href="#" className="grid-col-link">
-                            <div className="grid-col" id="right-r">
-                              <figure className="facts1-img">
-                                <img
-                                  className="grid-img"
-                                  src="./img/crops production.png"
-                                  alt="crops-production"
-                                />
-                              </figure>
-                              <div className="content-wrap">
-                                <span className="title span-12">
-                                  Agriculture
-                                </span>
-                                <span className="gridcol-title span-22">
-                                  Crops Production
-                                </span>
-                                <span className="title-date span-14">
-                                  8h ago
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
+                            );
+                          })}
                       </div>
                     </div>
                   </Slider>
-
                   <a
-                    href="#collapse-div"
+                    // href="#collapse-div"
+                    onClick={this.loadMore}
                     className="click-more link-toggle span-16 pdt-100"
                   >
                     See More
