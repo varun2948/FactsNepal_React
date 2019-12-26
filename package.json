@@ -12,6 +12,8 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^16.0.0",
+    "@ckeditor/ckeditor5-react": "^2.0.0",
     "axios": "^0.18.1",
     "bootstrap": "^4.3.1",
     "express": "^4.16.4",

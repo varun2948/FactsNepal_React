@@ -1,98 +1,132 @@
-.page{
-    .case-study{
-        .case-study-wrap{
-            @include flex;
-            &:nth-child(1){
-                // margin-bottom: 130px;
-            }
-            &:nth-child(2){
-                .logo-wrap{
-                    @include flex;
-
-                }
-            }
-           
-            .case-study-image{
-                flex: 1;
-                .figure-case-img{
-                    min-height: 100%;
-                    display: flex;
-                    align-items: center;
-                    img{
-                        // max-width: 500px;
-                    }
-                }
-            }
-            .case-study-content{ 
-                flex: 1;
-                min-height: 100%;
+.case-study{
+    .case-study-wrap{
+        &:nth-child(2){
+            .logo-wrap{
                 @include flex;
+            }
+        }
+        
+        .case-study-image{
+            .figure-case-img{
+                min-height: 100%;
+                @include flexcenter;
                 align-items: center;
-                .case-study-content-wrap{
-                    .date-time{
-                        text-transform: uppercase;
-                        @include typo($font-family, 400, 1.5);
-                        // font-size: 0.563rem;
-                        color: $color-yellow;
+                img{
+                    max-width: 380px;
+                }
+            }
+        }
+        .case-study-content{ 
+            min-height: 100%;
+            @include flexcenter;
+            align-items: center;
+            .case-study-content-wrap{
+                .collab-group{
+                    padding-top: 10px;
+                    .title{
+                        padding-bottom: 15px;
                         display: block;
-                        // margin-bottom: 10px;
-                    }
-                    h3{
+                        font-size: 0.625rem;
+                        color: $subcaption-grey;
                         @include typo($font-family, 300, 1.5);
-                        // font-size: 2.813rem;
-                        color: $color-primary;
-                        // margin-bottom: 10px;
-                    }
-                    p{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-primary;
-                        // margin-bottom: 20px;
-                    }
-                    .sub-span{
-                        @include typo($font-family, 400, 1.5);
-                        // font-size: 0.563rem;
-                        color: $color-grey;
-                        display: block;
-                        // padding-bottom: 5px;
-                    }
-                    .img-wrap{
-                        .sub-span-img{
-                            // max-width: 120px;
-                            // height: 20px;
-                            display: block;
+                    } 
+                    .collab-row{
+                        &:nth-child(2){
+                            margin-bottom: 20px;
                         }
-                    }
-                    .btn-case{
-                        // margin-top: 40px;
-                        // padding: 10px 20px;
-                        @include typo($font-family, 400, 1.5);
-                        // font-size: 0.563rem;
-                        @include button($color-white, $color-red);
-                        @include animate;
-                        @include border-radius-circle(5px);
-                        @include border(1px, solid, $color-red);
-                    }
-                    .logo-wrap{
-                        
-                        .logo-mid{
-                            img{
-                                &:nth-child(1){
-                                // max-width: 45px;
-                                }
-                                &:nth-child(2){
-                                    // max-width: 90px;
-                                    // margin-left: 30px;
+                        &:nth-child(3){
+                            margin-bottom: 30px;
+                        }
+                        .collab-span{
+                            span{
+                                display: block;
+                                @include typo($font-family, 500, 1.5);
+                                color: $color-red;
+                                font-size: 0.75rem;
+                                text-transform: capitalize;
+                                &.collab-org{
+                                    display: block;
+                                    @include typo($font-family, 300, 1.5);
+                                    color: $color-primary;
+                                    font-size: 0.625rem;
+                                    padding-top: 5px;
                                 }
                             }
                         }
                     }
-                  
+                }
+                .date-time{
+                    text-transform: uppercase;
+                    @include typo($font-family, 400, 1.5);
+                    font-size: 0.625em;
+                    color: $color-yellow;
+                    display: block;
+                    letter-spacing: 1.5px;
+                    margin-bottom: 25px;
+                }
+                h3{
+                    max-width: 570px;
+                    @include typo($font-family, 300, 1.5);
+                    color: $color-primary;
+                }
+                p{
+                    max-width: 470px;
+                }
+                .caption{
+                    display: block;
+                }
+                .img-wrap{
+                    .sub-span-img{
+                        width: 140px;
+                        display: block;
+                    }
+                }
+                .btn-case{
+                    width: 130px;
+                    padding: 8px 0;
+                    text-transform: capitalize;
+                    font-size: 0.625rem;
+                    @include typo($font-family, 400, 1.5);
+                    @include btn($color-white, $color-red);
+                    @include border-radius-circle(5px);
+                    @include border(1px, solid, $color-red);
+                    &:hover {
+                        box-shadow: 0px 15px 30px $btn-shadow;
+                    }
+                }
+                .logo-wrap{
+                    .logo-mid{
+                        img{
+                            &:nth-child(1){
+                                width: 50px;
+                            }
+                            &:nth-child(2){
+                                width: 110px;
+                                margin: 0 15px;
+                            }
+                            &:nth-child(3){
+                                width: 170px;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
-}
+}   
 
+/* less than 767px; */
+@media only screen and (max-width: $mb-xl){
+    .case-study{
+       .case-study-wrap {
+            .case-study-content{
+                .case-study-content-wrap{
+                    
+                }
+            }
+       } 
+    }  
+}
 
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
@@ -103,9 +137,8 @@
             display: block !important;
             .case-study-image{
                 .figure-case-img{
-                    justify-content: center;
                     img{
-                        width: 350px;
+                        max-width: 250px;
                     }
                 }
             }
@@ -113,18 +146,16 @@
                 .case-study-content-wrap{
                     text-align: center;
                     .date-time{
-                        font-size: 0.75rem;
                         margin-bottom: 10px;
                     }
                     h3{
-                        // font-size: 1.375rem;
+                        max-width: 100%;
                         margin-bottom: 20px;
                     }
                     p{
                         margin-bottom: 15px;
                     }
-                    .sub-span{
-                        font-size: 0.75rem;
+                    .caption{
                         padding-bottom: 5px;
                     }
                     .img-wrap{
@@ -136,22 +167,47 @@
                     }
                     .btn-case{
                         margin-top: 25px;
-                        font-size: 0.75rem;
-                        padding: 8px 14px;
+                        width: 110px;
+                        padding: 6px 0;
+                        font-size: 0.5rem;
+                    }
+                    
+                    .collab-group{
+                        padding-top: 10px;
+                        .title{
+                            font-size: 0.625rem;
+                        } 
+                        .collab-row{
+                            &:nth-child(2){
+                                margin-bottom: 20px;
+                            }
+                            &:nth-child(3){
+                                margin-bottom: 30px;
+                            }
+                            .collab-span{
+                                span{
+                                    font-size: 0.625rem;
+                                    &.collab-org{
+                                        font-size: 0.575rem;
+                                        padding-top: 5px;
+                                    }
+                                }
+                            }
+                        }
                     }
                     .logo-wrap{
                         @include flexcenter;
                         .logo-mid{
                             img{
                                 &:nth-child(1){
-                                    width: 40px;
+                                max-width: 30px;
                                 }
                                 &:nth-child(2){
-                                    width: 75px;
-                                    margin-left: 20px;
+                                    max-width: 60px;
+                                    margin-left: 30px;
                                 }
-                                &:nth-child(3){
-                                    width: 120px;
+                                &:nth-child(3) {
+                                    width: 100px;
                                 }
                             }
                         }
@@ -166,12 +222,17 @@
 @media only screen and (max-width: $mb-xs){
     .case-study{
         .case-study-wrap{
-          .case-study-content{
+            .case-study-image {
+                .figure-case-img{
+                   img {
+                    //    max-width: 220px;
+                   }
+                } 
+            }
+            .case-study-content{
                .case-study-content-wrap{
                 .btn-case{
                     margin-top: 25px;
-                    font-size: 0.675rem;
-                    padding: 6px 10px;
                 }
                 .logo-wrap{
                     @include flexcenter;
@@ -182,7 +243,7 @@
                             }
                             &:nth-child(2){
                                 width: 60px;
-                                margin-left: 10px;
+                                margin-left: 25px;
                             }
                             &:nth-child(3){
                                width: 90px;
@@ -204,14 +265,17 @@
         .case-study-wrap{
             display: block !important;
             .case-study-image{
-            
-            }
+               .figure-case-img{
+                   img {
+                    max-width: 300px;
+                   }
+                }
+            } 
             .case-study-content{
                 .case-study-content-wrap{
                     text-align: center;
                     .date-time{
-                        font-size: 0.75rem;
-                        margin-bottom: 10px;
+                        margin-bottom: 15px;
                     }
                     h3{
                         margin-bottom: 20px;
@@ -219,35 +283,54 @@
                     p{
                         margin-bottom: 10px;
                     }
-                    .sub-span{
-                        font-size: 0.75rem;
+                    .caption{
                         padding-bottom: 10px;
                     }
                     .img-wrap{
                         @include flexcenter;
                         .sub-span-img{
-                            max-width: 120px;
-                            // height: 20px;
+                            width: 120px;
                         }
                     }
                     .btn-case{
                         margin-top: 30px;
-                        font-size: 0.75rem;
-                        padding: 10px 20px;
+                    }
+                    .collab-group{
+                        padding-top: 10px;
+                        .title{
+                            font-size: 0.625rem;
+                        } 
+                        .collab-row{
+                            &:nth-child(2){
+                                margin-bottom: 20px;
+                            }
+                            &:nth-child(3){
+                                margin-bottom: 30px;
+                            }
+                            .collab-span{
+                                span{
+                                    font-size: 0.625rem;
+                                    &.collab-org{
+                                        font-size: 0.575rem;
+                                        padding-top: 5px;
+                                    }
+                                }
+                            }
+                        }
                     }
                     .logo-wrap{
                         @include flexcenter;
                         .logo-mid{
                             img{
                                 &:nth-child(1){
-                                max-width: 45px;
+                                max-width: 40px;
                                 }
                                 &:nth-child(2){
-                                    max-width: 90px;
-                                    margin-left: 25px;
+                                    max-width: 80px;
+                                    margin-left: 30px;
                                 }
-                                &:nth-child(3){
-                                    max-width: 140px;
+                                &:nth-child(3) {
+                                    width: 120px;
                                 }
                             }
                         }
@@ -265,60 +348,46 @@
         padding: 0px 80px;
         .case-study-wrap{
             display: flex !important;
-            &:nth-child(2){
-                .logo-wrap{
-                   
-                }
-            }
             .case-study-image{
                 .figure-case-img{
                     img{
-                        max-width: 320px;
+                        max-width: 300px;
                     }
                 }
             }
             .case-study-content{
                 .case-study-content-wrap{
                     text-align: left;
-                    .date-time{
-                        font-size: 0.563rem;
-                        margin-bottom: 15px;
-                    }
                     h3{
+                        max-width: 340;
                         // font-size: 1.75rem;
                         margin-bottom: 30px;
                     }
                     p{
                         margin-bottom: 15px;
                     }
-                    .sub-span{
-                        font-size: 0.563rem;
+                    .caption{
                         padding-bottom: 10px;
                     }
                     .img-wrap{
                         @include flex-start;
-                        .sub-span-img{
-                            max-width: 130px;
-                        }
                     }
                     .btn-case{
                         margin-bottom:30px;
-                        font-size: 0.563rem;
-                        padding: 10px 26px;
                     }
                     .logo-wrap{
                         @include flex-start;
                         .logo-mid{
                             img{
                                 &:nth-child(1){
-                                max-width: 38px;
+                                max-width: 35px;
                                 }
                                 &:nth-child(2){
-                                    max-width: 74px;
-                                    margin-left: 10px;
+                                    max-width: 55px;
+                                    margin-left: 15px;
                                 }
                                 &:nth-child(3){
-                                    max-width: 126px;
+                                    max-width: 100px;
                                 }
                             }
                         }
@@ -339,17 +408,14 @@
             .case-study-image{
                 .figure-case-img{
                     img{
-                        max-width: 450px;
+                        max-width: 380px;
                     }
                 }
             }
             .case-study-content{
                 .case-study-content-wrap{
                     text-align: left;
-                    .date-time{
-                        font-size: 0.75rem;
-                        margin-bottom: 15px;
-                    }
+                    
                     h3{
                         // font-size: 2.188rem;
                         margin-bottom: 30px;
@@ -357,34 +423,49 @@
                     p{
                         margin-bottom: 15px;
                     }
-                    .sub-span{
-                        font-size: 0.75rem;
+                    .caption{
                         padding-bottom: 10px;
                     }
                     .img-wrap{
                         @include flex-start;
-                        .sub-span-img{
-                            max-width: 140px;
-                        }
                     }
                     .btn-case{
                         margin-top: 50px;
-                        font-size: 0.75rem;
-                        padding: 10px 26px;
+                    }
+                    
+                    .collab-group{
+                        padding-top: 10px;
+                        .collab-row{
+                            &:nth-child(2){
+                                margin-bottom: 20px;
+                            }
+                            &:nth-child(3){
+                                margin-bottom: 30px;
+                            }
+                            .collab-span{
+                                span{
+                                    font-size: 0.75rem;
+                                    &.collab-org{
+                                        font-size: 0.688rem;
+                                        padding-top: 5px;
+                                    }
+                                }
+                            }
+                        }
                     }
                     .logo-wrap{
                         @include flex-start;
                         .logo-mid{
                             img{
                                 &:nth-child(1){
-                                max-width: 50px;
+                                max-width: 40px;
                                 }
                                 &:nth-child(2){
-                                    max-width: 100px;
+                                    max-width: 70px;
                                     margin-left: 30px;
                                 }
                                 &:nth-child(3){
-                                    max-width: 160px;
+                                    max-width: 120px;
                                 }
                             }
                         }
@@ -400,63 +481,93 @@
      /* case */
      .case-study{
         padding: 0px 80px;
-        .case-study-wrap{
-            display: flex !important;
-            .case-study-image{
-                .figure-case-img{
-                    img{
-                        max-width: 500px;
+        &.case-project-study{
+            .case-study-wrap{
+                .case-study-content{
+                    .case-study-content-wrap{
+                        h3{
+                            max-width: 620px;
+                        }
                     }
                 }
             }
+        }
+        .case-study-wrap{
+            display: flex !important;
+            .case-study-image{
+                .figure-case-img {
+                    img {
+                        max-width: 400px;
+                    }
+                }
+            } 
             .case-study-content{
+                padding-left: 0;
                 .case-study-content-wrap{
                     text-align: left;
-                    .date-time{
-                        font-size: 0.875rem;
-                        margin-bottom: 30px;
-                    }
                     h3{
-                        // font-size: 2.5rem;
-                        margin-bottom: 40px;
+                        max-width: 600px;
+                        margin-bottom: 35px;
                     }
                     p{
-                        margin-bottom: 30px;
+                        margin-bottom: 45px;
                     }
-                    .sub-span{
-                        font-size: 0.875rem;
+                    .caption{
                         padding-bottom: 10px;
                     }
                     .img-wrap{
                         @include flex-start;
-                        .sub-span-img{
-                            max-width: 180px;
-                        }
                     }
                     .btn-case{
-                        margin-top: 50px;
-                        font-size: 0.75rem;
-                        padding: 10px 30px;
+                        margin-top: 70px;
                     }
                     .logo-wrap{
                         @include flex-start;
                         .logo-mid{
                             img{
                                 &:nth-child(1){
-                                max-width: 60px;
+                                    max-width: 50px;
                                 }
                                 &:nth-child(2){
-                                    max-width: 120px;
+                                    max-width: 85px;
                                     margin-left: 30px;
                                 }
                                 &:nth-child(3){
-                                    max-width: 180px;
+                                    max-width: 130px;
                                 }
                             }
                         }
                     }
-                    
                 }
+            }
+        }
+    }
+}
+
+/* 1200px */
+@media only screen and (min-width: $desktop) {
+    .case-study {
+        &.case-project-study{
+            .case-study-wrap {
+                .case-study-image{
+                    .figure-case-img {
+                        img {
+                            max-width: 400px;
+                        }
+                    }  
+                } 
+            }
+        }
+        .case-study-wrap {
+            .case-study-image{
+                .figure-case-img {
+                    img {
+                        max-width: 420px;
+                    }
+                }  
+            } 
+            .case-study-content {
+                padding-left: 20px;
             }
         }
     }
@@ -465,43 +576,15 @@
 /* 1440px and up */
 @media only screen and (min-width: $md-desktop) {
     
-         /* case */
+    /* case */
     .case-study{
         padding: 0px;
         .case-study-wrap{
             display: flex !important;
-            .logo-wrap{
-                @include flex-start;
-                .logo-mid{
-                    img{
-                        &:nth-child(1){
-                        max-width: 60px;
-                        }
-                        &:nth-child(2){
-                            max-width: 120px;
-                            margin-left: 30px;
-                        }
-                        &:nth-child(3){
-                            max-width: 160px;
-                        }
-                    }
-                }
-            }
-        
-            .case-study-image{
-                .figure-case-img{
-                    img{
-                        max-width: 500px;
-                    }
-                }
-            }
+          
             .case-study-content{
                 .case-study-content-wrap{
                     text-align: left;
-                    .date-time{
-                        font-size: 0.938rem;
-                        margin-bottom: 20px;
-                    }
                     h3{
                         // font-size: 2.625rem;
                         margin-bottom: 20px;
@@ -509,21 +592,15 @@
                     p{
                         margin-bottom: 30px;
                     }
-                    .sub-span{
-                        font-size: 1.125rem;
+                    .caption{
                         padding-bottom: 14px;
                     }
                     .img-wrap{
                         @include flex-start;
-                        .sub-span-img{
-                            max-width: 200px;
-                        }
                     }
                     
                     .btn-case{
                         margin-top: 60px;
-                        font-size: 1rem;
-                        padding: 12px 30px;
                     }
                 }
             }
@@ -536,12 +613,9 @@
     .page {
         .case-study{
             .case-study-wrap{
-                &:nth-child(2){
-                    .case-study-image{
-                        order: 2;
-                    }
-                    .case-study-content{
-                        order: 1;
+                .case-study-image{
+                    .figure-case-img{
+                        @include flexcenter;
                     }
                 }
             }

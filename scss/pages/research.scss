@@ -15,10 +15,6 @@
                         padding-bottom: 30px;
                         letter-spacing: 3px;
                     }
-                    .banner-heading{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-primary;
-                    }
                 }
             }
             .image-wrap{
@@ -62,7 +58,8 @@
                     text-decoration: none;
                     // list-style-image: url('.././img/24px (check-circle).svg');
                     .list-item{
-                        background: url('.././img/24px (check-circle).svg') no-repeat;  
+                        background: url('.././img/24px_circlecheck.png') no-repeat;  
+                        background-position: left;
                         padding-left: 40px; 
                         line-height: 30px;   
                         margin-bottom: 15px;
@@ -70,6 +67,9 @@
                         @include typo($font-family, 300, 1.5);
                         color: $color-primary;
                         text-transform: capitalize;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
@@ -83,7 +83,7 @@
                 @include flex;
                 align-items: flex-start;
                 .info-center{
-                    max-width: 350px;
+                    max-width: 400px;
                     .service2-span{
                         padding-bottom: 50px;
                     }
@@ -96,36 +96,33 @@
                 }
             }
             .lists-heading{
-                height: 100%;
-                @include flex;
-                align-items: flex-end;
                 .list-wrap{
                     width: 100%;
                     .list-item{
+                        // padding: 30px 0;
                         @include flex_start;
                         @include border-bottom(1px, solid, $color-borderbtm);
                         &:nth-child(1){
-                            div{
-                                span{
-                                    padding-top: 0px;
-                                }
-                            }
+                            padding-bottom: 30px;
+                        }
+                        &:nth-child(2){
+                            padding: 30px 0;
                         }
                         &:nth-child(3){
+                            padding-top: 30px;
                             @include border-bottom(0px, solid, transparent);
                             div{
                                 span{
                                     max-width: 120px;
-                                    padding-bottom: 0px;
                                 }
                             }
                         }
                         div{
+                            @include flexcenter;
                             span{
                                 color: $color-primary;
                                 @include typo($font-family, 300, 1.5);
                                 font-size: 1.125rem;
-                                padding: 30px 0px;
                                 display: block;
                                 max-width: 165px;
                             }
@@ -133,8 +130,8 @@
                         figure{
                             @include flex;
                             align-items: center;
-                            flex: 0 0 100px;
-                            margin-right: 15%;
+                            flex: 0 0 60px;
+                            margin-right: 5%;
                             margin-bottom: 0px !important;
                         }
                     }
@@ -211,6 +208,7 @@
                     justify-content: center;
                     margin-bottom: 50px;
                     .info-center{
+                        text-align: center;
                         max-width: 100%;
                         .title-info{
                             padding-bottom: 20px;
@@ -222,9 +220,10 @@
                         padding: 55px 40px 50px 70px;
                         .list-item{
                             font-size: 0.875rem;
-                            background-size: 20px 20px;
+                            background-size: 18px 18px;
                             margin-bottom: 15px;
-                            padding-left: 40px;
+                            padding-left: 30px;
+
                         }
                     }
                 }
@@ -235,15 +234,17 @@
                 .lists-heading{
                     .list-wrap {
                         .list-item{
+                            @include flexcenter;
                             div{
+                                @include flex;
+                                align-items: center;
                                 span{
                                     font-size: 0.938rem;
-                                    padding: 15px 0px;
                                 }
                             }
                             figure{
-                                flex: 0 0 70px;
-                                margin-right: 25%;
+                                flex: 0 0 50px;
+                                margin-right: 5%;
                             }
                         }
                     }
@@ -294,7 +295,7 @@
         }
         
         .info-content{
-            padding: 0 50px;
+            padding: 0 30px;
             .content-wrap{
                 .info-heading{
                     justify-content: center;
@@ -311,9 +312,9 @@
                         padding: 45px 20px 40px 40px !important;
                         .list-item{
                             font-size: 0.875rem;
-                            background-size: 20px 20px;
+                            background-size: 18px 18px;
                             margin-bottom: 20px !important;
-                            padding-left: 35px !important;
+                            padding-left: 30px !important;
                         }
                     }
                 }
@@ -327,12 +328,11 @@
                             div{
                                 span{
                                     font-size: 0.938rem;
-                                    padding: 15px 0px;
                                 }
                             }
                             figure{
-                                flex: 0 0 70px;
-                                margin-right: 20%;
+                                flex: 0 0 40px;
+                                margin-right: 3%;
                             }
                         }
                     }
@@ -422,12 +422,11 @@
                             div{
                                 span{
                                     font-size: 0.75rem;
-                                    padding: 15px 0px;
                                 }
                             }
                             figure{
-                                flex: 0 0 50px;
-                                margin-right: 10%;
+                                flex: 0 0 40px;
+                                margin-right: 3%;
                             }
                         }
                     }
@@ -468,12 +467,14 @@
             .content-wrap{
                 .info-lists{
                     .info-list-wrap{
-                        padding: 45px 30px 40px 40px;
+                        padding: 30px 0px 30px 15px;
                         .list-item{
-                            padding-left: 35px;
-                            margin-bottom: 10px;
-                            font-size: 1rem;
-                            background-size: 22px 22px;
+                            padding-left: 30px;
+                            line-height: 15px;
+                            margin-bottom: 20px;
+                            font-size: 0.875rem;
+                            background-size: 15px 15px;
+                            background-position: left;
                         }
                     }
                 }
@@ -484,16 +485,23 @@
                 .lists-heading{
                     .list-wrap {
                         .list-item{
+                            &:nth-child(1){
+                                padding-bottom: 35px;
+                            }
+                            &:nth-child(2){
+                                padding: 35px 0;
+                            }
+                            &:nth-child(3){
+                                padding-top: 35px;
+                            }
+                            figure{
+                                flex: 0 0 50px;
+                            }
                             div{
                                 span{
                                     font-size: 1rem;
-                                    padding: 10px 0px;
                                     max-width: 165px;
                                 }
-                            }
-                            figure{
-                                flex: 0 0 80px;
-                                margin-right: 10%;
                             }
                         }
                     }
@@ -507,17 +515,18 @@
 @media only screen and (min-width: $lg-tab) { 
     .page{
         .info-content{
-            padding: 0 80px;
+            padding: 0 80px; 
             .content-wrap{
                 .info-lists{
                     .info-list-wrap{
-                        padding: 55px 40px 50px 70px;
+                        padding: 55px 0px 50px 40px;
                         .list-item{
-                            padding-left: 40px; 
-                            line-height: 30px;   
-                            margin-bottom: 20px;
-                            font-size: 1.125rem;
-                            background-size: 24px 24px;
+                            padding-left: 30px;
+                            line-height: 25px;
+                            margin-bottom: 15px;
+                            font-size: 1rem;
+                            background-size: 18px 18px;
+                            background-position: left;
                         }
                     }
                 }
@@ -529,18 +538,16 @@
                 .lists-heading{
                     .list-wrap{
                         .list-item{
+                           
                             div{
                                 span{
                                     font-size: 1rem;
-                                    padding: 15px 0px;
                                     max-width: 165px;
                                 }
                             }
                             figure{
                                 @include flex;
                                 align-items: center;
-                                flex: 0 0 100px;
-                                margin-right: 15%;
                                 margin-bottom: 0px !important;
                             }
                         }
@@ -556,20 +563,34 @@
     .page{
         .info-content{
             padding: 0 80px;
-            .content-wrap{
-                .info-lists{
-                    .info-list-wrap{
-                        padding: 55px 40px 50px 70px;
-                        .list-item{
-                            padding-left: 40px; 
-                            line-height: 30px;   
-                            margin-bottom: 20px;
-                            font-size: 1.125rem;
-                            background-size: 24px 24px;
+            &.service-second{
+                .content-wrap{
+                    .lists-heading{
+                        .list-wrap{
+                            .list-item{
+                                &:nth-child(1){
+                                    padding-bottom: 35px;
+                                }
+                                &:nth-child(2){
+                                    padding: 35px 0;
+                                }
+                                &:nth-child(3){
+                                    padding-top: 35px;
+                                }
+                                figure{
+                                    flex: 0 0 60px;
+                                }
+                                div{
+                                    span{
+                                        font-size: 1.125rem;
+                                    }
+                                }
+                            }
                         }
                     }
-                }
+                }     
             }
+            
         }
     }
 }
@@ -596,3 +617,4 @@
         }
     }
 }
+

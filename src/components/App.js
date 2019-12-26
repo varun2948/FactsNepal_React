@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "../static/css/line-awesome.min.css";
-// import "pace-js";
-// import "pace-js/themes/red/pace-theme-minimal.css";
-// import "./scss/style.scss";
 import "../../scss/style.scss";
 
 // components
@@ -26,11 +21,9 @@ import PublicPollResult from "../pages/PublicPollResult";
 import Projects from "../pages/Projects";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-
-
+import SingleCaseStudy from "../pages/SingleCaseStudy";
 
 // const Footer = () => (<h1> FOOTER </h1>);
-
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +40,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/publicpoll" component={PublicPoll} />
-            <Route path="/facts/:number" component={FactsPage} />
+            <Route path="/facts/:id" component={FactsPage} />
             <Route path="/researchdata" component={ResearchData} />
             <Route path="/strategycontent" component={StrategyContent} />
             <Route path="/infographics" component={InfographicsDesign} />
@@ -56,12 +49,12 @@ class App extends Component {
             <Route path="/projects" component={Projects} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/casestudy/:id" component={SingleCaseStudy} />
             {/* <Route path="/works" component={WorksPage} /> */}
             {/* <Route path="/contact" component={ContactPage} /> */}
           </Switch>
           {/* <Footer /> */}
         </Router>
-
       </div>
     );
   }

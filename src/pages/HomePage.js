@@ -4,15 +4,14 @@ import Services from "../components/HomePage/Services/Services";
 import CaseStudy from "../components/HomePage/CaseStudy/CaseStudy";
 import GeographicalCoverage from "../components/HomePage/GeographicalCoverage/GeographicalCoverage";
 import ResourcesBooks from "../components/HomePage/ResourcesBooks/ResourcesBooks";
-import Testimonials from "../components/HomePage/Testimonials/Testimonials";
+import Testimonials from "../components/Testimonials/Testimonials";
 import MobileAppDownloads from "../components/HomePage/MobileAppDownloads/MobileAppDownloads";
-import Footer from "../components/HomePage/Footer/Footer";
 import FirstMain from "../components/HomePage/MainFirstContent/FirstMain";
 import Trusted from "../components/HomePage/Trusted/Trusted";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
-import Navbar from "../components/NavBar/NavBar";
 import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/HomePage/Footer/Footer";
 
 class HomePage extends Component {
   state = {};
@@ -32,11 +31,11 @@ class HomePage extends Component {
           <ResourcesBooks />
           <Testimonials />
           <MobileAppDownloads />
+          <Footer />
           {/* <Footer /> */}
           {/* <Initiatives />
         <HappyClients />
         <Footer /> */}
-
         </div>
       </React.Fragment>
     );
