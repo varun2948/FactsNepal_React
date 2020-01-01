@@ -94,6 +94,10 @@
     @include typo($font-family, 300, 1.5);
     color: $color-primary;
 }
+/* public-poll */
+.pdt-120{
+    padding-top: 7.5rem;
+}
 // header
 .mrt-100{
 margin-top: 6.25rem !important;

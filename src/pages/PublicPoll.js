@@ -66,9 +66,9 @@ class PublicPoll extends Component {
             <React.Fragment>
                 <NavBar noBg={false} bgGrey={true} />
                 {polloftheday &&
-                    <div className="banner-content banner-height bg-grey">
+                    <div className="banner-content banner-height bg-grey pdb-100">
                         <div className="container">
-                            <div className="publicpoll-wrap mrt-100">
+                            <div className="publicpoll-wrap">
                                 <div className="wrap-center">
                                     <div className="title-wrap">
                                         <span className="title-span span-14">Sports</span>
