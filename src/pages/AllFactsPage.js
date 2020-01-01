@@ -187,11 +187,11 @@ class AllFactsPage extends Component {
           <NavBar />
           <section className="banner">
             <div className="container">
-              <div className="banner-wrap pdt-40">
+              <div className="banner-wrap fact-banner-wrap">
                 <div className="title-block">
                   <div className="title-wrap">
-                    <h1 className="banner-title pdb-25">Get the Facts.</h1>
-                    <p className="banner-content">
+                    <h1 className="headline1">Get the Facts.</h1>
+                    <p className="headline5">
                       Discover reliable, contextual and actionable information &
                       insights
                     </p>

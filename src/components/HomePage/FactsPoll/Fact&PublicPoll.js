@@ -197,14 +197,14 @@ class FactsPublicPoll extends Component {
       //       </div>
       //     </div>
       //   </section>
-      <section className="general-info pdt-90 pdb-120">
+      <section className="general-info pdt-81 pdb-104">
         <div className="container">
           <div className="general-info-wrap">
             <Fade bottom duration={1100} delay={500} distance={"50px"}>
               <div className="row">
                 <div className="col-12 col-md-7" id="fact-info-div">
                   <div className="fact-info-wrap">
-                    <h3 className="factsNepal-title">Fact of the day</h3>
+                    <h3 className="headline2">Fact of the day</h3>
                     <Link
                       className="poll-link"
                       to={{
@@ -225,13 +225,13 @@ class FactsPublicPoll extends Component {
                             <div className="fact-info-content">
                               <div className="fact-info-content-wrap">
                                 <div className="center">
-                                  <span className="title">
+                                  <span className="sub-caption">
                                     {factoftheday.category_title}
                                   </span>
-                                  <p className="factsNepal-para">
+                                  <p className="body-para">
                                     {factoftheday.description}
                                   </p>
-                                  <span className="date-time">
+                                  <span className="sm-caption">
                                     {
                                       <Moment
                                         date={fact_date}

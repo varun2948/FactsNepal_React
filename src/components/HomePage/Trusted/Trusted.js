@@ -41,10 +41,10 @@ export default class Trusted extends Component {
       ]
     };
     return (
-      <section className="slider-section pdt-115">
+      <section className="slider-section pdt-88">
         <div className="container">
           <span className="caption">Trusted by the best</span>
-          <div className="slider pdb-115">
+          <div className="slider pdb-88">
             <div className="slider-image-container">
               <Slider {...settings}>
                 <div className="slider-img-item img-scale00">

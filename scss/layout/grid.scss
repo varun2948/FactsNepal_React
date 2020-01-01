@@ -1,15 +1,13 @@
 .grid-section-whole{
     .grid-section{
         .grid-title-wrap{
-            margin-bottom: 3.75rem;
-            .section-caption{
-                display: block;
-                text-transform: uppercase;
-                padding-bottom: 1.25rem;
+            max-width: 750px;
+            h4{
+                margin-bottom: 0 !important;
             }
-            h3{
-                @include typo($font-family, 300, 1.5);
-                color: $color-primary;
+            .sec-caption{
+                display: block;
+                padding-bottom: 1.172rem;
             }
         }
 
@@ -17,16 +15,11 @@
             .grid-container{
                 .grid-col{
                     margin-bottom: 40px;
-                    figure{
-                        img{
-                        }
-                    }
                     h4{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-red;
+                        margin-top: 28px;
                     }
                     .para-center{
-                        margin-top: 1.25rem;
+                        margin-top: .938rem;
                         p{
                             max-width: 260px;
                         }
@@ -36,6 +29,27 @@
         }
     }
 }
+
+/* less than 991px; */
+@media only screen and (max-width: $tab-xl){
+    .grid-section-whole{
+        .grid-section{
+            .grid-content {
+                .grid-container{
+                    .grid-col {
+                        h4{
+                            margin-top: 15px;
+                        }
+                        .para-center {
+                            margin-top: 0.625rem;
+                        }
+                    }
+                } 
+            }
+        } 
+    } 
+}
+
 /* less than 767px; */
 @media only screen and (max-width: $mb-xl){
     .grid-section-whole{
@@ -45,6 +59,7 @@
                     .grid-col {
                         .para-center{
                             @include flexcenter;
+                            margin-top: .75rem;
                         }
                     }
                 }
@@ -53,13 +68,10 @@
     }
 }
 
-
-
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
      /* grid-section */
      .grid-section-whole{
-        padding: 0px 30px;
         .grid-section{
             .grid-title-wrap{
                 text-align: center;
@@ -72,8 +84,11 @@
                         figure{
                             margin-bottom: 0 !important;
                             img{
-                               width: 110px;
+                               width: 90px;
                             }
+                        }
+                        .para-center{
+                            margin-top: .5rem;
                         }
                     }
                 }
@@ -82,11 +97,28 @@
     }
 }
 
+@media only screen and (max-width: $mb-sm){
+    .grid-section-whole{
+        .grid-section{
+            .grid-content{
+                .grid-container {
+                    .grid-col{
+                        .para-center{
+                           p {
+                               max-width: 200px;
+                           }
+                        } 
+                    }
+                }
+            }
+        }
+    }    
+}
+
 /* less than 376px; */
 @media only screen and (max-width: $mb-xs){
     /* grid-section */
     .grid-section-whole{
-       padding: 0px 30px;
        .grid-section{
            .grid-title-wrap{
                text-align: center;
@@ -113,7 +145,6 @@
 @media only screen and (min-width: $mb-lg){
       /* grid-section */
       .grid-section-whole{
-        padding: 0px 50px;
         .grid-section{
             .grid-title-wrap{
                 text-align: center;
@@ -125,7 +156,7 @@
                         text-align: center;
                         figure{
                             img{
-                                max-width: 110px;
+                                width: 100px;
                             }
                         }
                     }
@@ -140,7 +171,6 @@
 @media only screen and (min-width: $md-tab) {
     /* grid-section */
     .grid-section-whole{
-        padding: 0px 80px;
         .grid-section{
             .grid-title-wrap{
                 max-width: 750px;
@@ -152,11 +182,7 @@
                     .grid-col{
                         margin-bottom: 0;
                         text-align: left;
-                        figure{
-                            img{
-                                max-width: 100px;
-                            }
-                        }
+                        
                     }
                 }
             }
@@ -168,7 +194,6 @@
 @media only screen and (min-width: $lg-tab) {
       /* grid-section */
       .grid-section-whole{
-        padding: 0px 80px;
        .grid-section{
            .grid-title-wrap{
                max-width: 700px;
@@ -182,7 +207,7 @@
                        text-align: left;
                        figure{
                         img{
-                            max-width: 110px;
+                            width: 110px;
                         }
                     }
                        
@@ -198,7 +223,6 @@
 @media only screen and (min-width: $ls-tab) {
      /* grid-section */
      .grid-section-whole{
-        padding: 0px 80px;
         .grid-section{
             .grid-title-wrap{
                 max-width: 750px;
@@ -211,7 +235,7 @@
                         text-align: left;
                         figure{
                             img{
-                                max-width: 120px;
+                                width: 120px;
                             }
                         }
                        
@@ -225,7 +249,6 @@
 /* 1440px and up */
 @media only screen and (min-width: $md-desktop) {
     .grid-section-whole{
-        padding: 0px;
         .grid-section{
             .grid-title-wrap{
                 max-width: 750px;
@@ -239,7 +262,7 @@
                         text-align: left;
                         figure{
                             img{
-                                max-width: 130px;
+                                width: 130px;
                             }
                         }
                         

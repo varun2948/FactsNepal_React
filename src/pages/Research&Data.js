@@ -15,19 +15,19 @@ class ResearchData extends Component {
           <div className="container">
             <div className="banner-content-wrap">
               <div className="row">
-                <div className="col-md-5">
+                <div className="col-md-6">
                   <div className="title-wrap">
                     <div className="title-center">
-                      <span className="span-subtitle span-16">
+                      <span className="sec-caption">
                         Research and data analysis
                       </span>
-                      <h3 className="factsNepal-title banner-heading">
+                      <h3 className="headline2">
                         Analyzing Data in quantitative and qualitative research
                       </h3>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-7">
+                <div className="col-md-6">
                   <div className="image-wrap">
                     <img src="./img/Service-illustion1.svg" alt="" />
                   </div>
@@ -37,18 +37,18 @@ class ResearchData extends Component {
           </div>
         </section>
 
-        <div className="info-content pdt-90 pdb-120">
+        <div className="info-content pdt-126 pdb-126">
           <div className="container">
             <div className="content-wrap">
               <div className="row">
                 <div className="col-md-6">
                   <div className="info-heading">
                     <div className="info-center">
-                      <span className="title-info span-22">
+                      <h3 className="headline3">
                         We provide our clients the customised research services
                         that are tailor-made for their requirements.
-                      </span>
-                      <p className="para-title factsNepal-para">
+                      </h3>
+                      <p className="body-para">
                         Using structured and semi-structured questionnaires,
                         in-depth interviews, focus group discussions, key
                         informant interviews, observations, and GIS mapping
@@ -60,7 +60,7 @@ class ResearchData extends Component {
                 </div>
                 <div className="col-md-6">
                   <div className="info-lists">
-                    <ul className="info-list-wrap">
+                    <ul className="info-list-wrap body-para-second">
                       <li className="list-item">Quantitative Research</li>
                       <li className="list-item">Qualitative research</li>
                       <li className="list-item">

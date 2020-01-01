@@ -1,10 +1,9 @@
 .tech-section{
-    padding: 0 80px;
     .tech-section-wrap{
         .tech-section-left{
             .img-center{
                 img{
-                    width: 480px;
+                    width: 436px;
                 }
             }
         }
@@ -14,25 +13,25 @@
             align-items: center;
             .tech-section-right-content{
                 h3{
-                    max-width: 410px;
+                    margin-bottom: 2.813rem;
+                    max-width: 420px;
                 }
                 .btn-wrap{
-                    margin-top: 50px;
                     .btn-content{
-                        padding-top: 15px;
+                        margin-top: .938rem;
                         a{
                             display: inline-block;
                             cursor: pointer;
                             &:nth-child(1){
                                 img{
-                                    width: 115px;
-                                    margin-right: 10px;
+                                    width: 120px;
+                                    margin-right: .938rem;
                                 }
                                 
                             }
                             &:nth-child(2){
                                 img{
-                                    width: 125px;
+                                    width: 135px;
                                 }
                                 
                             }
@@ -47,7 +46,6 @@
 /* less than 991px; */
 @media only screen and (max-width: $tab-xl){
     .tech-section{
-        padding: 0 80px;
         .tech-section-wrap{
             .tech-section-left{
                 .img-center{
@@ -89,7 +87,6 @@
 /* less than 767px; */
 @media only screen and (max-width: $mb-xl){
     .tech-section{
-        padding: 0 50px;
         .tech-section-wrap{
             .tech-section-left{
                 .img-center{
@@ -104,10 +101,12 @@
                 .tech-section-right-content{
                     text-align: center;
                     h3{
-                        max-width: 300px;
+                        margin-bottom: 1.5rem;
+                        max-width: 400px;
                     }
                     .btn-wrap{
                         .btn-content{
+                            margin-top: .675rem;
                             a{
                                 &:nth-child(1){
                                     img{
@@ -131,13 +130,6 @@
     }
 }
 
-/* less than 575px; */
-@media only screen and (max-width: $mb-sm){
-    .tech-section{
-        padding: 0 30px;
-    }
-}
-
 /* less than 376px; */
 @media only screen and (max-width: $mb-xs){
     .tech-section {
@@ -151,11 +143,4 @@
             }
         }
     } 
-}
-
-/* less than 1440px; */
-@media only screen and (min-width: $md-desktop){
-    .tech-section{
-        padding: 0;
-    }
 }

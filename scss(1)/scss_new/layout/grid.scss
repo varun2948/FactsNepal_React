@@ -1,33 +1,28 @@
 .grid-section-whole{
     .grid-section{
         .grid-title-wrap{
-            .section-span{
-                text-transform: uppercase;
-                @include typo($font-family, 600, 1.5);
-                letter-spacing: 3px;
-                color: $color-red;
-                display: block;
+            max-width: 750px;
+            h4{
+                margin-bottom: 0 !important;
             }
-            h3{
-                @include typo($font-family, 300, 1.5);
-                color: $color-primary;
+            .sec-caption{
+                display: block;
+                padding-bottom: 1.172rem;
             }
         }
 
         .grid-content{
             .grid-container{
                 .grid-col{
-                    figure{
-                        img{
-                        }
-                    }
+                    margin-bottom: 40px;
                     h4{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-red;
+                        margin-top: 28px;
                     }
-                    p{
-                        color: $color-darkgrey;
-                        @include typo($font-family, 300, 1.5);
+                    .para-center{
+                        margin-top: .938rem;
+                        p{
+                            max-width: 260px;
+                        }
                     }
                 }
             }
@@ -35,50 +30,124 @@
     }
 }
 
-
-/* less than 575px; */
-@media only screen and (max-width: $mb-sm){
-     /* grid-section */
-     .grid-section-whole{
-        padding: 0px 50px;
+/* less than 991px; */
+@media only screen and (max-width: $tab-xl){
+    .grid-section-whole{
         .grid-section{
-            .grid-title-wrap{
-                text-align: center;
-                .section-span{
-                    font-size: 0.875rem;
-                }
+            .grid-content {
+                .grid-container{
+                    .grid-col {
+                        h4{
+                            margin-top: 15px;
+                        }
+                        .para-center {
+                            margin-top: 0.625rem;
+                        }
+                    }
+                } 
             }
+        } 
+    } 
+}
 
+/* less than 767px; */
+@media only screen and (max-width: $mb-xl){
+    .grid-section-whole{
+        .grid-section {
             .grid-content{
                 .grid-container{
-                    .grid-col{
-                        text-align: center;
-                     
-                        figure{
-                            img{
-                                max-width: 150px;
-                            }
-                        }
-                        h4{
+                    .grid-col {
+                        .para-center{
+                            @include flexcenter;
+                            margin-top: .75rem;
                         }
                     }
                 }
             }
         }
     }
+}
+
+/* less than 575px; */
+@media only screen and (max-width: $mb-sm){
+     /* grid-section */
+     .grid-section-whole{
+        .grid-section{
+            .grid-title-wrap{
+                text-align: center;
+            }
+
+            .grid-content{
+                .grid-container{
+                    .grid-col{
+                        text-align: center;
+                        figure{
+                            margin-bottom: 0 !important;
+                            img{
+                               width: 90px;
+                            }
+                        }
+                        .para-center{
+                            margin-top: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $mb-sm){
+    .grid-section-whole{
+        .grid-section{
+            .grid-content{
+                .grid-container {
+                    .grid-col{
+                        .para-center{
+                           p {
+                               max-width: 200px;
+                           }
+                        } 
+                    }
+                }
+            }
+        }
+    }    
+}
+
+/* less than 376px; */
+@media only screen and (max-width: $mb-xs){
+    /* grid-section */
+    .grid-section-whole{
+       .grid-section{
+           .grid-title-wrap{
+               text-align: center;
+           }
+
+           .grid-content{
+               .grid-container{
+                   .grid-col{
+                       text-align: center;
+                       figure{
+                           margin-bottom: 0 !important;
+                           img{
+                              width: 100px;
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
 }
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media only screen and (min-width: $mb-lg){
       /* grid-section */
       .grid-section-whole{
-        padding: 0px 50px;
         .grid-section{
             .grid-title-wrap{
                 text-align: center;
-                .section-span{
-                    font-size: 0.875rem;
-                }
             }
 
             .grid-content{
@@ -87,7 +156,7 @@
                         text-align: center;
                         figure{
                             img{
-                                max-width: 150px;
+                                width: 100px;
                             }
                         }
                     }
@@ -102,25 +171,17 @@
 @media only screen and (min-width: $md-tab) {
     /* grid-section */
     .grid-section-whole{
-        padding: 0px 80px;
         .grid-section{
             .grid-title-wrap{
                 max-width: 750px;
                 text-align: left;
-                .section-span{
-                    font-size: 1rem;
-                }
             }
 
             .grid-content{
                 .grid-container{
                     .grid-col{
+                        margin-bottom: 0;
                         text-align: left;
-                        figure{
-                            img{
-                                max-width: 110px;
-                            }
-                        }
                         
                     }
                 }
@@ -133,23 +194,20 @@
 @media only screen and (min-width: $lg-tab) {
       /* grid-section */
       .grid-section-whole{
-        padding: 0px 80px;
        .grid-section{
            .grid-title-wrap{
-               max-width: 650px;
+               max-width: 700px;
                text-align: left;
-               .section-span{
-                   font-size: 1rem;
-               }
            }
 
            .grid-content{
                .grid-container{
                    .grid-col{
+                         margin-bottom: 0;   
                        text-align: left;
                        figure{
                         img{
-                            max-width: 120px;
+                            width: 110px;
                         }
                     }
                        
@@ -165,22 +223,19 @@
 @media only screen and (min-width: $ls-tab) {
      /* grid-section */
      .grid-section-whole{
-        padding: 0px 80px;
         .grid-section{
             .grid-title-wrap{
-                max-width: 600px;
+                max-width: 750px;
                 text-align: left;
-                .section-span{
-                    font-size: 1.125rem;
-                }
             }
             .grid-content{
                 .grid-container{
                     .grid-col{
+                        margin-bottom: 0;
                         text-align: left;
                         figure{
                             img{
-                                max-width: 140px;
+                                width: 120px;
                             }
                         }
                        
@@ -194,23 +249,20 @@
 /* 1440px and up */
 @media only screen and (min-width: $md-desktop) {
     .grid-section-whole{
-        padding: 0px;
         .grid-section{
             .grid-title-wrap{
                 max-width: 750px;
                 text-align: left;
-                .section-span{
-                    font-size: 1.125rem;
-                }
             }
 
             .grid-content{
                 .grid-container{
                     .grid-col{
+                        margin-bottom: 0;
                         text-align: left;
                         figure{
                             img{
-                                max-width: 170px;
+                                width: 130px;
                             }
                         }
                         
