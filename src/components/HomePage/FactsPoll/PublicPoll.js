@@ -10,19 +10,19 @@ const PublicPoll = ({ publicPoll }) => {
         <div className="col-12 col-md-5" id="public-poll-info-div">
             {publicPoll && publicPoll[0] &&
                 <div className="public-poll-info-wrap">
-                    <h3 className="factsNepal-title">Public Poll</h3>
+                    <h3 className="headline2">Public Poll</h3>
                     <Link className="poll-link" to={{
                         pathname: `/publicpoll/${publicPoll[0].id}`,
                         poll_data: publicPoll[0]
                     }} >
                         <div className="public-poll-info">
                             <div className="public-poll-flexcenter">
-                                <span className="title">PRODUCT</span>
-                                <h6>{publicPoll[0].question}</h6>
-                                <span className="date-time">
+                                <span className="sub-caption">PRODUCT</span>
+                                <h6 className="headline5">{publicPoll[0].question}</h6>
+                                <span className="sm-caption">
                                     <TimeAgo date={publicPoll[0].publishedDate} /></span>
                                 {/* <span className="date-time">1 day ago</span> */}
-                                <span className="btn-vote">{publicPoll[0].totalVotes} Votes</span>
+                                <button className="btn-vote">{publicPoll[0].totalVotes} Votes</button>
                                 <div className="grid-button" style={{
                                     lineHeight: "1.5",
                                     color: "#ffffff",

@@ -7,7 +7,7 @@
         }
         .slider{
             @include border-bottom(1px, solid, $color-borderbtm);
-            margin-top: 42px;
+            margin-top: 2.531rem;
             .slider-image-container{
                 .slider-img-item{
                     &:focus{

@@ -1,29 +1,55 @@
 .page{
     .slider-section{
         @include linear-gradient(180deg, $color-stop1, $color-stop2);
-        span{
-            @include typo($font-family, 400, 1.5);
-            color: $color-grey;
+        .caption{
+            text-align: left;
+            display: block;
         }
         .slider{
             @include border-bottom(1px, solid, $color-borderbtm);
-            margin-top: 42px;
+            margin-top: 2.531rem;
             .slider-image-container{
                 .slider-img-item{
-                figure{
-                    // background: red;
-                    // max-width: 100px;
-                    // height: 50px;
-                    @include flex;
-                    justify-content: center;
-                    align-items: center;
-                    img{
-                    //    background: green;
+                    &:focus{
+                        outline: none !important;
+                    }
+                    figure{
+                        padding: 10px 0;
+                        @include flexcenter;
+                        align-items: center; 
+                        margin-bottom: 0 !important;
+                        height: 90px;
+                        img{
+                            width: 80px;
                         }
-                     }
+                    }
+                }
+                .img-scale00{
+                    figure{
+                        img{
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+                .img-scale02{
+                    figure{
+                        img{
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+                .img-scale03{
+                    figure{
+                        img{
+                            transform: scale(0.7);
+                        }
+                    }
                 }
             }
         }
     }
 }
+
+
+
 
