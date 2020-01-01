@@ -268,13 +268,13 @@ class AllFactsPage extends Component {
                                       />
                                     </figure>
                                     <div className="content-wrap">
-                                      <span className="title span-12">
+                                      <span className="sm-caption">
                                         {data.category_title}
                                       </span>
-                                      <span className="gridcol-title span-22">
+                                      <span className="headline4">
                                         {data.title}
                                       </span>
-                                      <span className="title-date span-14">
+                                      <span className="caption">
                                         <TimeAgo date={data.public_date} />
                                       </span>
                                     </div>
@@ -286,13 +286,21 @@ class AllFactsPage extends Component {
                       </div>
                     </div>
                   </Slider>
-                  <a
-                    // href="#collapse-div"
-                    onClick={this.loadMore}
-                    className="click-more link-toggle span-16 pdt-100"
-                  >
-                    See More
-                  </a>
+                  <div class="next-link-wrap">
+                    <a>
+                    <a
+                      // href="#collapse-div"
+                      onClick={this.loadMore}
+                      className="click-more link-toggle"
+                    >
+                      See More
+                    </a>
+                      <figure><img src="./img/see-morelink.svg" alt="see more"></img></figure>
+
+                    </a>
+
+                  </div>
+                
                 </div>
               </div>
             </div>

@@ -23,7 +23,7 @@ class Footer extends Component {
     return (
 
       // <Fade bottom duration={1000} delay={600} distance={"0px"}>
-      <div className="form-section pdt-111 pdb-50">
+      <section className="form-section pdt-111 pdb-50">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-6">
@@ -77,12 +77,12 @@ class Footer extends Component {
               <div className="form-right">
                 <Fade bottom duration={800} delay={500} distance={"0px"}>
                   <div className="form-right-title">
-                    <h3 className="factsNepal-title">Contact</h3>
+                    <h3 className="headline2">Contact</h3>
                   </div>
                 </Fade>
                 <Fade bottom duration={900} delay={600} distance={"0px"}>
                   <div className="form-address">
-                    <ul className="addr-list">
+                    <ul className="addr-list caption">
                       <li className="addr">
                         <span><img src="./img/24px (2).svg" alt="map" /></span>
                         <span>8973 NPC 678, 394-Radha Mohan Marga Minbhawan Kharibot, Kathmandu, Nepal</span>
@@ -141,7 +141,7 @@ class Footer extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       // </Fade>
     );
   }
