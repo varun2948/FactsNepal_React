@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Testimonials from "../components/Testimonials/Testimonials";
 import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/HomePage/Footer/Footer";
 
 export default class StrategyContent extends Component {
   constructor(props) {
@@ -97,6 +98,7 @@ export default class StrategyContent extends Component {
           </div>
         </div>
         <Testimonials />
+        <Footer />
       </Fragment>
     );
   }

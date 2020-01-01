@@ -15,6 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import Fact from "../components/HomePage/Fact/Fact";
 import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/HomePage/Footer/Footer";
 
 export default class FactsPage extends Component {
   constructor(props) {
@@ -332,6 +333,7 @@ export default class FactsPage extends Component {
           </div>
         </div>
         <MobileAppDownloads techBg={true} />
+        <Footer />
       </Fragment>
     );
   }

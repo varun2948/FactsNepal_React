@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Testimonials from "../components/Testimonials/Testimonials";
 import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/HomePage/Footer/Footer";
 
 class ResearchData extends Component {
   constructor(props) {
@@ -88,6 +89,7 @@ class ResearchData extends Component {
           </div>
         </div>
         <Testimonials />
+        <Footer />
       </Fragment>
     );
   }
