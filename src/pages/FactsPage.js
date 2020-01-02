@@ -15,7 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import Fact from "../components/HomePage/Fact/Fact";
 import NavBar from "../components/NavBar/NavBar";
-import Footer from "../components/HomePage/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 
 export default class FactsPage extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ export default class FactsPage extends Component {
         }
       })
     ]).then(response => {
-      console.log(response[0].data[0]);
+      console.log(response[0], "response");
       // const categoryfacts = response[0].data[0].home.data.map(fact => ({
       //   ...fact
       // }));
@@ -48,7 +48,7 @@ export default class FactsPage extends Component {
       // response[0].data[0].home.data = categoryfacts;
 
       this.setState({
-        singlefacts: response[0].data[0]
+        singlefacts: response[0].data
       });
     });
     this.setState({
@@ -76,6 +76,7 @@ export default class FactsPage extends Component {
       swipeToSlide: true,
       focusOnSelect: true
     };
+    console.log(singlefacts, "single");
     return (
       <Fragment>
         <NavBar noBg={true} />

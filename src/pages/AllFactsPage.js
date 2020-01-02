@@ -7,7 +7,7 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import { Link } from "react-router-dom";
 import TimeAgo from "react-timeago";
 import SliderItem from "../components/AllFacts/SliderItem";
-import Footer from "../components/HomePage/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -151,6 +151,7 @@ class AllFactsPage extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       initialSlide: 0,
+      afterChange: index => this.categoryClick(index),
 
       responsive: [
         {
