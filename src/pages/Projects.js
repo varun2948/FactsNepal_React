@@ -1,13 +1,37 @@
 import React, { Component } from "react";
+import axios from "axios";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 import Testimonials from "../components/Testimonials/Testimonials";
+import CaseStudyData from "../components/HomePage/CaseStudy/CaseStudyData";
 class Projects extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      casestudy: []
+    };
+  }
+  componentDidMount() {
+    Promise.all([
+      axios({
+        method: "GET",
+        url: `${process.env.API_URL}api/casestudy`,
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json"
+        }
+      })
+    ]).then(response => {
+      console.log(response[0].data.collaborators);
+      const sliced2Collaborators = response[0].data.collaborators.slice(0, 2);
+      this.setState({
+        casestudy: sliced2Collaborators
+      });
+      // console.log(this.state.casestudy, "cs");
+    });
   }
   render() {
+    const { casestudy } = this.state;
     return (
       <React.Fragment>
         <NavBar noBg={false} />
@@ -40,92 +64,7 @@ class Projects extends Component {
 
         <section className="case-study">
           <div className="container">
-            <div className="case-study-wrap pdb-130">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="case-study-image">
-                    <figure className="figure-case-img">
-                      <img
-                        src="./img/bags-best-friends-daylight-1516440.png"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="case-study-content">
-                    <div className="case-study-content-wrap">
-                      <span className="date-time">July 2014</span>
-                      <h3 className="factsNepal-title">
-                        Student Perceptions of Leadership, Accountability, and
-                        Governance of Student Leaders and Unions
-                      </h3>
-                      <p className="factsNepal-para">
-                        The National Youth Policy has recognized that youth are
-                        an invaluable asset to the nation, acknowledging youths’
-                        role as agents of economic, social, and political
-                        change.
-                      </p>
-                      <span className="caption">Funded by</span>
-                      <div className="img-wrap">
-                        <img
-                          className="sub-span-img"
-                          src="./img/SFCG_newlogo-960x170.png"
-                          alt="Search for Common Ground"
-                        />
-                      </div>
-                      <button className="btn-case">
-                        <span>Read Case Study</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="case-study-wrap">
-              <div className="row">
-                <div className="order-2 order-sm-2 order-md-1 col-md-6">
-                  <div className="case-study-content">
-                    <div className="case-study-content-wrap">
-                      <span className="date-time">September 2016</span>
-                      <h3 className="factsNepal-title">
-                        Exploring the nature of VAWG, and its effects among
-                        migrant labour communities in Baglung district, Nepal
-                      </h3>
-                      <p className="factsNepal-para">
-                        This presentation shares the preliminary findings from
-                        the formative research conducted among communities
-                        engaged in migrant labour in Baglung district of Nepal.
-                      </p>
-                      <div className="logo-wrap">
-                        <div className="logo-mid">
-                          <img src="./img/vso.png" alt="vso" />
-                          <img
-                            src="./img/south-african-medical-research-council-samrc-vector-logo.png"
-                            alt="samrc"
-                          />
-                          <img src="./img/sdd_logo.png" alt="sdd" />
-                        </div>
-                      </div>
-                      <button className="btn-case">
-                        <span>Read Case Study</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="order-1 order-sm-1 order-md-2 col-md-6">
-                  <div className="case-study-image">
-                    <figure className="figure-case-img">
-                      <img
-                        src="./img/matteo-vegetti-myanmar-06-monastery-kitchen.png"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <CaseStudyData casestudy={casestudy} />
           </div>
         </section>
         <Testimonials />
