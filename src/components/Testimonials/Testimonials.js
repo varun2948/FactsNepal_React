@@ -45,11 +45,11 @@ class Testimonials extends Component {
       ]
     };
     return (
-      <div className="testimonials-section pdt-120 pdb-120">
+      <div className="testimonials-section pdt-91 pdb-91">
         <div className="container">
           <div className="testimonials-title">
-            <span className="section-caption">TESTIMONIALS</span>
-            <h3 className="factsNepal-title">
+            <span className="sec-caption">TESTIMONIALS</span>
+            <h3 className="headline2">
               Meet a few of our happy partners
             </h3>
           </div>

@@ -1,22 +1,18 @@
 .page{
     .general-info{
-        background: $color-stop1;
+        background: $color-lightpink;
         .general-info-wrap{
             @include flex;
             .fact-info-wrap{
                 h3{
-                    @include typo($font-family, 300, 1.5);
-                    color: $color-primary;
-                    padding-bottom: 40px;
+                    padding-bottom: 2.344rem;
                 }
             }
           
             .public-poll-info-wrap{
                 h3{
-                    @include typo($font-family, 300, 1.5);
-                    color: $color-primary;
-                    padding-bottom: 40px;
-                }
+                    padding-bottom: 2.344rem;
+                }   
             }
             .poll-link{
                 display: block;
@@ -25,8 +21,8 @@
             }
             .fact-info{
                 background: $color-white;
-                // min-height: 340px;
                 @include border-radius-circle(10px);
+                padding: 2.813rem 2.5rem;
                 .fact-info-img{
                     height: 100%;
                     @include flex;
@@ -35,26 +31,23 @@
                     figure{
                         margin-bottom: 0rem !important;
                         img{
-                            width: 140px;
+                            width: 142px;
                         }
                     }
                 }
                 .fact-info-content{
-                    height: 100%; display: flex;
-                    @include flex;
+                    height: 100%; 
+                    display: flex;
+                    @include flexcenter;
                     align-items: center;
                     .fact-info-content-wrap{
                         .center{
-                            .title{
-                                @include typo($font-family, 400, 1.5);
-                                color: $color-yellow;
+                            span{
                                 display: block;
-                                font-size: 0.688rem;
                             }
-                            .date-time{
-                                @include typo($font-family, 300, 1.5);
-                                color: $color-grey;
-                                font-size: 0.688rem;
+                            p{
+                                max-width: 345px;
+                                margin: 1.125rem 0;
                             }
                         }
                     }
@@ -65,23 +58,18 @@
                 background: $color-white;
                 @include border-radius-circle(10px);
                 .public-poll-flexcenter{
-                    .title{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-yellow;
+                    padding: 2.344rem 2.5rem;
+                    span{
                         display: block;
-                        font-size: 0.688rem;
                     }
                     h6{
-                        @include typo($font-family, 400, 1.5);
-                        color: $color-primary;
-                    }
-                    .date-time{
-                        @include typo($font-family, 300, 1.5);
-                        color: $color-grey;
-                        display: block;
-                        font-size: 0.688rem;
+                        max-width: 300px;
+                        margin: .938rem 0;
                     }
                     .btn-vote{
+                        font-size: .688rem;
+                        margin-top: 1.594rem;
+                        padding: .328rem 1.266rem;
                         color: $color-red;
                         background: $color-white;
                         @include typo($font-family, 400, 1.5);
@@ -94,439 +82,125 @@
     }
 }
 
-/* less than 575px; */
-@media only screen and (max-width: $mb-sm){
-     /* General-Info start */
-     .page{
+/* less than 991px */
+@media only screen and (max-width: $tab-xl) {
+    /* General-Info start */
+    .page{
         .general-info{
-            padding: 0px 30px;
-            .general-info-wrap{
+            .general-info-wrap {
                 .fact-info-wrap{
-                    margin-bottom: 60px;
                     h3{
+                        padding-bottom: 1.325rem;
+                    }
+                }
+                .public-poll-info-wrap{
+                    h3 {
+                        padding-bottom: 1.325rem;
+                    }
+                } 
+                .fact-info{
+                    padding: 2rem 1.5rem;
+                    .fact-info-content{
+                        .fact-info-content-wrap{
+                            .center{
+                                p{
+                                    margin: .625rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .public-poll-info {
+                    .public-poll-flexcenter{
+                        h6{
+                            margin: .625rem 0;
+                            max-width: 100%;        
+                        }
+                        .btn-vote {
+                            margin-top: 1.325rem;
+                            padding: .28rem 1.166rem;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* less than 991px */
+@media only screen and (max-width: $mb-xl) {
+    /* General-Info start */
+    .page{
+        .general-info{
+            .general-info-wrap {
+                .fact-info-wrap{
+                    margin-bottom: 4rem;
+                    h3{
+                        padding-bottom: 1.125rem;
                         text-align: center;
                     }
                 }
                 .public-poll-info-wrap{
-                    padding-left: 0px;
-                    h3{
+                    h3 {
                         text-align: center;
-                        padding-bottom: 0px;
+                        padding-bottom: 1.125rem;
+                    }
+                } 
+                .fact-info{
+                    .fact-info-content{
+                        .fact-info-content-wrap{
+                            .center{
+                                margin-top: 1.25rem;
+                                text-align: center;
+                                p{
+                                    margin: .875rem 0;
+                                }
+                            }
+                        }
                     }
                 }
-                .fact-info{
-                    padding: 40px 30px;
-                    .fact-info-img{
-                        padding-bottom: 20px;
+                .public-poll-info {
+                    min-height: auto !important;
+                    .public-poll-flexcenter{
                         text-align: center;
-                        figure{
+                        h6{
+                            margin: .625rem 0;
+                            max-width: 100%;        
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* less than 575px; */
+@media only screen and (max-width: $mb-sm){
+    /* General-Info start */
+    .page{
+        .general-info{
+            .general-info-wrap{
+                .fact-info{
+                    .fact-info-img {
+                        figure {
                             img{
                                 width: 120px;
                             }
                         }
                     }
-                    .fact-info-content{
-                        text-align: center;
-                        .fact-info-content-wrap{
-                            .title{
-                                padding-bottom: 10px;
-                            }
-                            p{
-                                padding-bottom: 10px;
-                                margin-bottom: 0rem;
-                            }
-                            .date-time{
-                                margin-bottom: 24px;
-                            }
-                            .btn-vote{
-                                font-size: 0.75rem;
-                            }
-                        }
-                    }
-                } 
-
-                .public-poll-info{
-                    text-align: center;
-                    padding: 40px 30px;
-                    @include border-radius-circle(10px);
-                        .public-poll-flexcenter{
-                        .title{
-                            font-size: 0.75rem;
-                            padding-bottom: 10px;
-                        }
-                        h6{
-                            font-size: 1.125rem;
-                            padding-bottom: 10px;
-                            margin-bottom: 0rem;
-                        }
-                        .btn-vote{
-                            padding: 4px 18px;
-                            font-size: 0.75rem;
-                        }
-                        .date-time{
-                            margin-bottom: 24px;
-                            font-size: 0.75rem;
-                        }
-                    }
-                } 
-            }
-        }
-    }
-
-}
-
-/* Small devices (portrait tablets and large phones, 576px and up) */
-@media only screen and (min-width: $mb-lg){
-      /* General-Info start */
-    .page{
-        .general-info{
-            padding: 0px 50px;
-            .general-info-wrap{
-                .fact-info-wrap{
-                    margin-bottom: 60px;
-                    .factsNepal-title{
-                        text-align: center;
-                        padding-bottom: 25px;
-                    }
-                }
-                .public-poll-info-wrap{
-                    padding-left: 0px;
-                    .factsNepal-title{
-                        text-align: center;
-                        padding-bottom: 20px;
-                    }
-                }
-                .fact-info{
-                    padding: 40px 30px;
-                    .fact-info-img{
-                        padding-bottom: 20px;
-                        text-align: center;
-                    }
-                    .fact-info-content{
-                        text-align: center;
-                        .fact-info-content-wrap{
-                            .title{
-                                padding-bottom: 10px;
-                            }
-                            p{
-                                padding-bottom: 10px;
-                                margin-bottom: 0rem;
-                            }
-                        }
-                    }
-                } 
-
-                .public-poll-info{
-                    text-align: center;
-                    padding: 40px 30px;
-                    @include border-radius-circle(10px);
-                    .public-poll-flexcenter{
-                        .title{
-                            padding-bottom: 10px;
-                        }
-                        h6{
-                            font-size: 1.125rem;
-                            padding-bottom: 10px;
-                            margin-bottom: 0rem;
-                        }
-                        .date-time{
-                            margin-bottom: 24px;
-                        }
-                        .btn-vote{
-                            padding: 4px 18px;
-                            font-size: 0.75rem;
-                        }
-                    }
-                } 
-            }
-        }
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: $md-tab) {
-     /* General-Info start */
-     .page{
-        .general-info{
-            padding: 0px 80px;
-            .general-info-wrap{
-                .fact-info-wrap{
-                    margin-bottom: 0;
-                    .factsNepal-title{
-                        // font-size: 1.5rem;
-                        padding-bottom: 30px;
-                        text-align: left;
-                    }
-                }
-                .public-poll-info-wrap{
-                    padding-left: 30px;
-                    .factsNepal-title{
-                        padding-bottom: 30px;
-                        text-align: left;
-                    }
-                }
-                .fact-info{
-                    padding: 40px 30px;
-                    .fact-info-img{
-                        padding-bottom: 0px;
-                    }
                     
                     .fact-info-content{
                         .fact-info-content-wrap{
-                            text-align: left;
-                            .title{
-                                padding-bottom: 10px;
-                            }
-                            p{
-                                padding-bottom: 10px;
-                                margin-bottom: 0rem;
+                            .center{
+                                p{
+                                    margin: .625rem 0;
+                                }
                             }
                         }
                     }
-                } 
-
-                .public-poll-info{
-                    text-align: left;
-                    padding: 40px 30px;
-                    @include border-radius-circle(10px);
-                    align-items: flex-start;
-                    .public-poll-flexcenter{
-                        .title{
-                            padding-bottom: 10px;
-                        }
-                        h6{
-                            font-size: 1.125rem;
-                            padding-bottom: 10px;
-                            margin-bottom: 0rem;
-                        }
-                        .date-time{
-                            margin-bottom: 24px;
-                        }
-                        .btn-vote{
-                            padding: 4px 18px;
-                            font-size: 0.625rem;
-                        }
-                    }
-                } 
-            }
+                }
+            }     
         }
-    }
-}
+   }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: $lg-tab) {
-      /* General-Info start */
-    .page{
-        .general-info{
-            padding: 0px 80px;
-            .general-info-wrap{
-                .fact-info-wrap{
-                    margin-bottom: 0;
-                    .factsNepal-title{
-                        // font-size: 1.75rem;
-                        padding-bottom: 50px;
-                        text-align: left;
-                    }
-                }
-                .public-poll-info-wrap{
-                    padding-left: 40px;
-                    .factsNepal-title{
-                        // font-size: 1.75rem;
-                        padding-bottom: 50px;
-                        text-align: left;
-                    }
-                }
-                .fact-info{
-                    padding: 50px 40px;
-                    .fact-info-img{
-                        padding-bottom: 0px;
-                    }
-                    .fact-info-content{
-                        text-align: left;
-                        .fact-info-content-wrap{
-                            .title{
-                                padding-bottom: 10px;
-                            }
-                            p{
-                                padding-bottom: 10px;
-                                margin-bottom: 0rem;
-                            }
-                        }
-                    }
-                } 
-
-                .public-poll-info{
-                    text-align: left;
-                    padding: 50px 40px;
-                    @include border-radius-circle(10px);
-                    align-items: flex-start;
-                    .public-poll-flexcenter{
-                        .title{
-                            padding-bottom: 10px;
-                        }
-                        h6{
-                            font-size: 1.125rem;
-                            padding-bottom: 10px;
-                            margin-bottom: 0rem;
-                        }
-                        .date-time{
-                            margin-bottom: 24px;
-                        }
-                        .btn-vote{
-                            padding: 5px 25px;
-                            font-size: 0.625rem;
-                        }
-                    }
-                } 
-            }
-        }
-    }
-}
-
-/* 1024px */
-@media only screen and (min-width: $ls-tab) {
-    /* General-Info start */
-    .page{
-        .general-info{
-            padding: 0px 80px;
-            .general-info-wrap{
-                .fact-info-wrap{
-                    margin-bottom: 0;
-                    h3{
-                        // font-size: 2rem;
-                        padding-bottom: 50px;
-                        text-align: left;
-                    }
-                }
-                .public-poll-info-wrap{
-                    padding-left: 40px;
-                    h3{
-                        // font-size: 2rem;
-                        padding-bottom: 50px;
-                        text-align: left;
-                    }
-                }
-                .poll-link{
-                    display: block;
-                    height: 100%;
-                    width: 100%;
-                    &:hover{
-                        box-shadow: 0px 5px 15px $color-box-shadow;
-                    }
-                }
-                .fact-info{
-                    padding: 60px 40px;
-                    .fact-info-img{
-                        padding-bottom: 0px;
-                    }
-                    .fact-info-content{
-                        text-align: left;
-                        .fact-info-content-wrap{
-                            .title{
-                                padding-bottom: 15px;
-                            }
-                            p{
-                                padding-bottom: 15px;
-                                margin-bottom: 0rem;
-                            }
-                        }
-                    }
-                } 
-    
-                .public-poll-info{
-                    text-align: left;
-                    padding: 60px 40px;
-                    @include border-radius-circle(10px);
-                    align-items: flex-start;
-                    .public-poll-flexcenter{
-                        .title{
-                            padding-bottom: 10px;
-                        }
-                        h6{
-                            font-size: 1.125rem;
-                            padding-bottom: 10px;
-                            margin-bottom: 0rem;
-                        }
-                        .date-time{
-                            margin-bottom: 24px;
-                        }
-                        .btn-vote{
-                            padding: 5px 25px;
-                            font-size: 0.75rem;
-                        }
-                    }
-                } 
-            }
-        }
-    }
-}
-
-/* 1440px and up */
-@media only screen and (min-width: $md-desktop) {
-      /* General-Info start */
-    .page{
-        .general-info{
-            padding: 0px;
-            .general-info-wrap{
-                .fact-info-wrap{
-                    margin-bottom: 0;
-                    h3{
-                        // font-size: 2.813rem;
-                        padding-bottom: 50px;
-                        text-align: left;
-                    }
-                }
-                .public-poll-info-wrap{
-                    padding-left: 60px;
-                    h3{
-                        // font-size: 2.813rem;
-                        padding-bottom: 50px;
-                        text-align: left;
-                    }
-                }
-                .fact-info{
-                    padding: 60px 40px;
-                    .fact-info-img{
-                        padding-bottom: 0px;
-                    }
-                    .fact-info-content{
-                        text-align: left;
-                        .fact-info-content-wrap{
-                            .title{
-                                padding-bottom: 15px;
-                            }
-                            p{
-                                padding-bottom: 15px;
-                                margin-bottom: 0rem;
-                            }
-                        }
-                    }
-                } 
-
-                .public-poll-info{
-                    text-align: left;
-                    padding: 60px 40px;
-                    @include border-radius-circle(10px);
-                    align-items: flex-start;
-                    .public-poll-flexcenter{
-                        .title{
-                            padding-bottom: 20px;
-                        }
-                        h6{
-                            font-size: 1.125rem;
-                            padding-bottom: 20px;
-                            margin-bottom: 0rem;
-                        }
-                        .date-time{ 
-                            margin-bottom: 34px;
-                        }
-                        .btn-vote{
-                            padding: 5px 25px;
-                            font-size: 0.937rem;
-                        }
-                    }
-                } 
-            }
-        }
-    }
 }

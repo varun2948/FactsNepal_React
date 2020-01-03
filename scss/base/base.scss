@@ -89,7 +89,9 @@
   @include typo($font-family, 500, 1.5);
 }
 
+
 /* less than 991px; */
+<<<<<<< HEAD
 @media only screen and (max-width: $tab-xl) {
   .banner-content {
     font-size: 1rem;
@@ -124,6 +126,32 @@
 @media only screen and (max-width: $mb-xl) {
 }
 
+=======
+@media only screen and (max-width: $tab-xl){
+    .banner-content{
+        font-size: 1rem;
+    } 
+    .factsNepal-title{
+        font-size: 1.325rem;
+    }
+    .factsNepal-subtitle{
+        font-size: 1.125rem;
+    }
+    .factsNepal-sectitle{
+        font-size: 1.125rem;
+    }
+    .factsNepal-para{
+        font-size: 0.75rem;
+    }
+    .factsNepal-secpara{
+        font-size: 0.875rem;
+    }
+    .section-caption{
+        font-size: 0.875rem;
+    }
+}
+
+>>>>>>> 2944be73233fd32e7d507c2b8327b2844759b553
 /* less than 376px; */
 @media only screen and (max-width: $mb-xs) {
   .banner-content {
@@ -134,6 +162,7 @@
 .show {
   display: block;
 }
+<<<<<<< HEAD
 .pdb-62 {
   padding-bottom: 3.25rem !important;
 }
@@ -145,6 +174,10 @@
 }
 .pdt-40 {
   padding-top: 2.5rem !important;
+=======
+.pdt-40{
+    padding-top: 2.5rem !important;
+>>>>>>> 2944be73233fd32e7d507c2b8327b2844759b553
 }
 .pdb-90 {
   padding-bottom: 5.625rem !important;
@@ -152,11 +185,20 @@
 .pdt-100 {
   padding-top: 6.25rem !important;
 }
+<<<<<<< HEAD
 .pdt-110 {
   padding-top: 6.875rem !important;
 }
 .pdb-110 {
   padding-bottom: 6.875rem !important;
+=======
+.pdt-110{
+    padding-top: 6.875rem !important;
+}  
+
+h1,h3,h4{
+     line-height: 1.25 !important;
+>>>>>>> 2944be73233fd32e7d507c2b8327b2844759b553
 }
 
 h1,
@@ -390,6 +432,7 @@ h4 {
 
 /* 1440px and up */
 @media only screen and (min-width: $md-desktop) {
+<<<<<<< HEAD
   /* h1 */
   .banner-title {
     font-size: 2.75rem !important;
@@ -861,3 +904,31 @@ h4 {
     padding-bottom: 9.375rem !important;
   }
 }
+=======
+    /* h1 */
+    .banner-title{
+        font-size: 2.75rem !important;
+    }
+    .h3-title{
+        font-size: 1.875rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.875rem;
+    }
+    .span-12{
+        font-size: 0.875rem !important;
+    }
+    .span-14{
+        font-size: 1rem !important;
+    }
+    .span-16{
+        font-size: 1.125rem !important;
+    }
+    .span-18{
+        font-size: 1.25rem !important;
+    }
+    .span-22{
+        font-size: 1.5rem !important;
+    }
+}
+>>>>>>> 2944be73233fd32e7d507c2b8327b2844759b553

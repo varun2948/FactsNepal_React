@@ -189,11 +189,11 @@ class AllFactsPage extends Component {
           <NavBar />
           <section className="banner">
             <div className="container">
-              <div className="banner-wrap pdt-40">
+              <div className="banner-wrap fact-banner-wrap">
                 <div className="title-block">
                   <div className="title-wrap">
-                    <h1 className="banner-title pdb-25">Get the Facts.</h1>
-                    <p className="banner-content">
+                    <h1 className="headline1">Get the Facts.</h1>
+                    <p className="headline5">
                       Discover reliable, contextual and actionable information &
                       insights
                     </p>
@@ -270,13 +270,13 @@ class AllFactsPage extends Component {
                                       />
                                     </figure>
                                     <div className="content-wrap">
-                                      <span className="title span-12">
+                                      <span className="sm-caption">
                                         {data.category_title}
                                       </span>
-                                      <span className="gridcol-title span-22">
+                                      <span className="headline4">
                                         {data.title}
                                       </span>
-                                      <span className="title-date span-14">
+                                      <span className="caption">
                                         <TimeAgo date={data.public_date} />
                                       </span>
                                     </div>
@@ -288,13 +288,21 @@ class AllFactsPage extends Component {
                       </div>
                     </div>
                   </Slider>
-                  <a
-                    // href="#collapse-div"
-                    onClick={this.loadMore}
-                    className="click-more link-toggle span-16 pdt-100"
-                  >
-                    See More
-                  </a>
+                  <div class="next-link-wrap">
+                    <a>
+                    <a
+                      // href="#collapse-div"
+                      onClick={this.loadMore}
+                      className="click-more link-toggle"
+                    >
+                      See More
+                    </a>
+                      <figure><img src="./img/see-morelink.svg" alt="see more"></img></figure>
+
+                    </a>
+
+                  </div>
+                
                 </div>
               </div>
             </div>
