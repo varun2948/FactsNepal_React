@@ -1,40 +1,42 @@
 // COLOR
-$color-primary:#000;
-$color-white:#ffffff;
-$color-red: #9F2F35;
-$color-darkred: #4D0004;
+$color-primary: #000;
+$color-white: #ffffff;
+$color-red: #9f2f35;
+$color-darkred: #4d0004;
 $color-formred: #6a161a;
-$color-grey:#BDBDBD;
-$subcaption-grey: #B6B6B6;
-$color-darkgrey: #4B4B4D;
-$color-borderbtm: #E2E2E2;
-$color-yellow:#FF9202;
-$color-lightpink: #FDEAEB;
-$color-pink: #F2989D;
-$color-formlabel: #C85B61;
-$color-footer: #F3F3F3;
+$color-grey: #bdbdbd;
+$subcaption-grey: #b6b6b6;
+$color-darkgrey: #4b4b4d;
+$color-borderbtm: #e2e2e2;
+$color-jumbotron: #fff8e1;
+$color-yellow: #ff9202;
+$color-lightpink: #fdeaeb;
+$color-pink: #f2989d;
+$color-formlabel: #c85b61;
+$color-borderpink: #f4ced5;
+$color-footer: #f3f3f3;
 $form-shadow: #00000026;
 //linear-gradient
 $color-stop1: rgba(242, 152, 157, 0.3);
-$color-stop2: #FFFFFF;
-$logo-bg: #9F2F35;
-$color-blue: #29B6F6;
+$color-stop2: #ffffff;
+$logo-bg: #9f2f35;
+$color-blue: #29b6f6;
 $color-dropdown: rgb(251, 224, 225);
 /* fact1 */
-$color-limegreen: #9CCC65;
-$color-orange: #EF5350;
+$color-limegreen: #9ccc65;
+$color-orange: #ef5350;
 $color-box-shadow: #00000029;
 $btn-shadow: #00000033;
-$color-lightgrey: #F3F3F3;
-$color-smbanner: #FFF8E1;
+$color-lightgrey: #f3f3f3;
+$color-smbanner: #fff8e1;
 $color-fb: #475993;
-$color-twitter: #358BF9;
-$color-linkedin: #0077B7;
+$color-twitter: #358bf9;
+$color-linkedin: #0077b7;
 //font-family
-$font-family: 'Poppins', sans-serif;
+$font-family: "Poppins", sans-serif;
 
 //Break point
-$mb-xs: 376px; 
+$mb-xs: 376px;
 $mb-sm: 575px;
 $mb-lg: 576px;
 $mb-xl: 767px;
@@ -42,7 +44,7 @@ $md-tab: 768px;
 $lg-tab: 992px;
 $ls-tab: 1024px;
 $desktop: 1200px;
-$md-desktop:1440px;
+$md-desktop: 1440px;
 
 $tab-xl: 991px;
 $mb-md: 481px;
@@ -50,4 +52,4 @@ $mb-md: 481px;
 /* $mb-sm:376px;
 $mb-md:481px;
 $desktop:1200px;
- */  
+ */

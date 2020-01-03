@@ -15,16 +15,22 @@ const headerData = {
 };
 
 class FactsPublicPoll extends Component {
-  state = {
-    facts: [],
-    factoftheday: [],
-    publicPoll: [],
-    pollResultApi: [],
-    likeUpdated: false,
-    pollUpdated: false
-  };
+  constructor(props) {
+    super(props);
+    this.childRef = React.createRef();
+    this.state = {
+      facts: [],
+      factoftheday: [],
+      publicPoll: [],
+      pollResultApi: [],
+      likeUpdated: false,
+      pollUpdated: false
+    };
+  }
 
   componentDidMount() {
+    console.log(this.factscard.clientHeight, "ref");
+
     Promise.all([
       axios.post(`${process.env.API_URL}api/factapi`),
       axios.get(`${process.env.API_URL}api/publicpoll_web`)
@@ -45,86 +51,6 @@ class FactsPublicPoll extends Component {
       });
     });
   }
-
-  // pollOptionClick = (questionId, optionId) => {
-  //   if (!this.state.pollUpdated) {
-  //     const pollresult = {
-  //       method: "POST",
-  //       name: questionId,
-  //       type: "json",
-  //       data: {
-  //         poll_id: questionId,
-  //         option_id: optionId
-  //       },
-  //       headers: {
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json"
-  //       }
-  //     };
-
-  //     axios
-  //       .post(
-  //         `${process.env.API_URL}/api/publicpollresult`,
-  //         pollresult,
-  //         headerData
-  //       )
-  //       .then(response => {
-  //         const updatedPoll = [...this.state.pollResultApi];
-  //         const filteredItem = updatedPoll.find(item => item.id === optionId);
-  //         filteredItem.uv += 1;
-  //         this.setState({
-  //           pollResultApi: updatedPoll,
-  //           pollUpdated: true
-  //         });
-  //       })
-  //       .catch(error => console.log(error));
-  //   }
-  // };
-
-  // handleLike = (id, sclick) => {
-  //   const fact = this.state.facts[0].home.find(fact => fact.id === id);
-  //   if (!fact.likeUpdated) {
-  //     const postData = {
-  //       method: "POST",
-  //       name: id,
-  //       type: "json",
-  //       data: {
-  //         post_id: id,
-  //         post_like: 1
-  //       },
-  //       headers: {
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json"
-  //       }
-  //     };
-
-  //     axios
-  //       .post(`${process.env.API_URL}/api/POST_like`, postData, headerData)
-  //       .then(response => {
-  //         const updatedFact = [...this.state.facts];
-  //         if (sclick == undefined) {
-
-  //           updatedFact[0].home = [...this.state.facts[0].home];
-  //           updatedFact[0].home[0].like += 1;
-  //           updatedFact[0].home[0].likeUpdated = true;
-  //         }
-  //         else {
-  //           const list_id = [this.state.facts[0].home.findIndex(x => x.id === id)];
-
-  //           updatedFact[0].home = [...this.state.facts[0].home];
-
-  //           updatedFact[0].home[list_id].like += 1
-  //           updatedFact[0].home[list_id].likeUpdated = true;
-
-  //         }
-  //         this.setState({
-  //           facts: updatedFact,
-  //           // likeUpdated: true
-  //         });
-  //       })
-  //       .catch(err => console.log("handleLike err", err));
-  //   }
-  // };
 
   render() {
     const {
@@ -166,7 +92,7 @@ class FactsPublicPoll extends Component {
     console.log(factoftheday.public_date, "publicPoll");
 
     const fact_date = moment(factoftheday.public_date, "YYYY-MM-DD");
-
+    console.log(this.childRef.current, "childref");
     return (
       //     <section className="section-padding-y fact-poll">
       //     <div className="container-fluid">
@@ -203,8 +129,18 @@ class FactsPublicPoll extends Component {
             <Fade bottom duration={1100} delay={500} distance={"50px"}>
               <div className="row">
                 <div className="col-12 col-md-7" id="fact-info-div">
+<<<<<<< HEAD
+                  <div
+                    className="fact-info-wrap"
+                    ref={ref => {
+                      this.factscard = ref;
+                    }}
+                  >
+                    <h3 className="factsNepal-title">Fact of the day</h3>
+=======
                   <div className="fact-info-wrap">
                     <h3 className="headline2">Fact of the day</h3>
+>>>>>>> 2944be73233fd32e7d507c2b8327b2844759b553
                     <Link
                       className="poll-link"
                       to={{
@@ -248,7 +184,11 @@ class FactsPublicPoll extends Component {
                     </Link>
                   </div>
                 </div>
-                <PublicPoll publicPoll={publicPoll} Link={Link} />
+                <PublicPoll
+                  ref={this.childRef}
+                  publicPoll={publicPoll}
+                  Link={Link}
+                />
               </div>
             </Fade>
           </div>

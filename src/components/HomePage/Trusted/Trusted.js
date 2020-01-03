@@ -41,7 +41,11 @@ export default class Trusted extends Component {
       ]
     };
     return (
-      <section className="slider-section pdt-88">
+      <section
+        className={`${
+          this.props.pink == false ? "slider pdt-115" : "slider-section pdt-115"
+        }`}
+      >
         <div className="container">
           <span className="caption">Trusted by the best</span>
           <div className="slider pdb-88">

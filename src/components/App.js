@@ -16,7 +16,7 @@ import AboutPage from "../pages/AboutPage";
 import ServicePage from "../pages/ServicePage";
 import AllFactsPage from "../pages/AllFactsPage";
 import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/HomePage/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import PublicPollResult from "../pages/PublicPollResult";
 import Projects from "../pages/Projects";
 import About from "../pages/About";
