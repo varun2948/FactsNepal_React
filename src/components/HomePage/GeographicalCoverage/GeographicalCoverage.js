@@ -10,6 +10,7 @@ class GeographicalCoverage extends Component {
             <section className="geographical-coverage-details pdt-47 pdb-47">
                 <div className="container">
                     <div className="geographical-details-wrap">
+                        <div class="sphere"></div>
                         <div className="row">
                             <div className="col-md-7">
                                 <div className="details-left">

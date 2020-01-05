@@ -1,7 +1,16 @@
 .geographical-coverage-details{
-    background: $color-lightpink;
+    background: rgba($color-pink, 0.2);
     .geographical-details-wrap{
-        
+        position: relative;
+        .sphere{
+            position: absolute;
+            background-color:rgba($color: $color-red, $alpha: 0.1);
+            height: 67px;
+            width: 67px;
+            top: 23%;
+            left: -4%;
+            @include border-radius-circle(50%);
+        }
         .details-left{
             h3{
                 margin-bottom: 0 !important;
@@ -42,6 +51,12 @@
 @media only screen and (max-width: $tab-xl){
     .geographical-coverage-details {
         .geographical-details-wrap{
+            .sphere{
+                height: 45px;
+                width: 45px;
+                top: 19%;
+                left: -4%;
+            }
             .details-left{
                 .para-center{
                     p{
@@ -89,6 +104,11 @@
 @media only screen and (max-width: $mb-sm){
     .geographical-coverage-details{
         .geographical-details-wrap{
+            .sphere{
+                left: 0%;
+                width: 40px;
+                height: 40px;
+            }
             .details-left{
                 text-align: center;
                 h3{
