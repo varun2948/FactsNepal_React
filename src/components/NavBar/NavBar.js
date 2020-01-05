@@ -1,8 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, ReactDOM } from "react";
 import NavBarLink from "./NavBarLink";
 import { Link } from "react-router-dom";
-
-
 
 // const navbar = {
 //   padding: "0.7894736842rem",
@@ -12,24 +10,49 @@ import { Link } from "react-router-dom";
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.childDiv = React.createRef();
+    this.state = {};
   }
+  componentDidMount = () => this.handleScroll();
+
+  componentDidUpdate = () => this.handleScroll();
+
+  handleScroll = () => {
+    console.log(this._div.current);
+
+    const { index, selected } = this.props;
+    if (index === selected) {
+      setTimeout(() => {
+        this._div.scrollIntoView({ behavior: "instant" });
+      }, 500);
+    }
+  };
   render() {
     return (
-      < React.Fragment >
-
+      <React.Fragment>
         {/* {console.log(this.state.btnclick)} */}
 
-        <header className={`site-header  pdb-100 ${this.props.noBg ? "no-bg" : ""} ${this.props.bgGrey ? "bg-grey" : ""}`}>
-          <div className="wrap">
+        <header
+          className={`site-header  pdb-100 ${this.props.noBg ? "no-bg" : ""} ${
+            this.props.bgGrey ? "bg-grey" : ""
+          }`}
+        >
+          <div ref={ref => (this._div = ref)} className="wrap">
             <div className="container full-width-container">
               <div className="header-top">
                 <div className="logo">
-                  <Link className="poll-link" to={{
-                    pathname: `/`
-                  }}  >
+                  <Link
+                    className="poll-link"
+                    to={{
+                      pathname: `/`
+                    }}
+                  >
                     <div className="logo-img">
-                      <img src="./img/logo.svg" alt="Facts Nepal" className="logo-icon" />
+                      <img
+                        src="./img/logo.svg"
+                        alt="Facts Nepal"
+                        className="logo-icon"
+                      />
                     </div>
                   </Link>
                 </div>
@@ -46,8 +69,6 @@ class NavBar extends Component {
           </div>
         </header>
 
-
-
         {/* <button className=" btn btn-success  btn-lg heroleft__btn ploll-btn" >
       {" "}
       <span className="fom"> Public Poll</span>
@@ -62,9 +83,9 @@ class NavBar extends Component {
       </figure>
       <NavBarLink />
     </header> */}
-      </React.Fragment >
+      </React.Fragment>
     );
   }
-};
+}
 
 export default NavBar;
