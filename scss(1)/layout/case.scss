@@ -4,6 +4,29 @@
             .logo-wrap{
                 @include flex;
             }
+            .case-study-image{
+                .figure-case-img{
+                    .bg-case{
+                        &.orange{
+                            bottom: 5%;
+                            left: -3%;
+                        }
+                        &.pink{
+                            top: -10%;
+                            right: -2%;
+                        }
+                        &.sm-orange{
+                            top: -2%;
+                            right: 15%;
+                        }
+                        &.sm-pink{
+                            bottom: 17%;
+                            left: -4%;
+                        }
+                        
+                    }
+                }
+            }
         }
         
         .case-study-image{
@@ -11,9 +34,35 @@
             @include flexcenter;
             align-items: center;
             .figure-case-img{
+                position: relative;
                 margin-bottom: 0 !important;
                 img{
                     width:  400px;
+                }
+                .bg-case{
+                    position: absolute;
+                    z-index: -1;
+                    &.orange{
+                        bottom: 0%;
+                        left: -5%;
+                        width: 220px;
+                    }
+                    &.pink{
+                        top: -4%;
+                        right: 0;
+                        width: 300px;
+                    }
+                    &.sm-orange{
+                        top: -2%;
+                        right: 15%;
+                        width: 20px;
+                    }
+                    &.sm-pink{
+                        bottom: 12%;
+                        left: 0%;
+                        width: 20px;
+                    }
+                    
                 }
             }
         }
@@ -112,6 +161,22 @@
                     img{
                         width: 320px;
                     }
+                    .bg-case{
+                        &.orange{
+                            width: 180px;
+                        }
+                        &.pink{
+                            width: 250px;
+                        }
+                        &.sm-orange{
+                            right: 18%;
+                            width: 15px;
+                        }
+                        &.sm-pink{
+                            width: 15px;
+                        }
+                        
+                    }
                 }
             }
             .case-study-content {
@@ -177,10 +242,32 @@
 @media only screen and (max-width: $mb-xl){
     .case-study{
        .case-study-wrap {
+            &:nth-child(2){
+                .case-study-image{
+                    .figure-case-img{
+                        .bg-case{
+                            &.sm-pink{
+                                left: -3%;
+                            }
+                        }
+                    }
+                }
+            }
             .case-study-image{
                 .figure-case-img{
                     img{
                         width: 280px;
+                    }
+                    .bg-case{
+                        &.orange{
+                            width: 150px;
+                        }
+                        &.pink{
+                            width: 200px;
+                        }
+                        &.sm-orange{
+                            top: -3%;
+                        }
                     }
                 }
             }
@@ -269,5 +356,67 @@
             }
         }
     }
+}
+
+@media only screen and (max-width: $mb-xs){
+    .case-study{
+        .case-study-wrap {
+            &:nth-child(2){
+                .case-study-image{
+                    .figure-case-img{
+                        .bg-case{
+                            &.pink {
+                                top: -10%;
+                                right: -8%;
+                                width: 170px;
+                            }
+                            &.sm-orange {
+                                top: -7%;
+                                right: 8%;
+                                width: 13px;
+                            }
+                            &.orange {
+                                bottom: 3%;
+                                left: -9%;
+                            }
+                            &.sm-pink{
+                                bottom: 18%;
+                                left: -3%;
+                                width: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            .case-study-image{
+                .figure-case-img{
+                    img{
+                        max-width: 200px;
+                    }
+                    .bg-case{
+                        &.pink {
+                            top: -8%;
+                            right: -12%;
+                            width: 170px;
+                        }
+                        &.sm-orange {
+                            top: -7%;
+                            right: 8%;
+                            width: 13px;
+                        }
+                        &.orange {
+                            bottom: 3%;
+                            left: -9%;
+                        }
+                        &.sm-pink{
+                            bottom: 18%;
+                            left: -3%;
+                            width: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }   
 }
 
