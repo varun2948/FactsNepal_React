@@ -249,7 +249,7 @@ export default class FactsPage extends Component {
             </div>
           </div>
 
-          <div className="grid-section-whole pdt-40 pdb-115">
+          <section className="grid-section-whole pdt-40 pdb-115">
             <div className="container">
               <div className="grid-section">
                 <div className="grid-title-wrap">
@@ -329,7 +329,7 @@ export default class FactsPage extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
         <MobileAppDownloads techBg={true} />
       </Fragment>
