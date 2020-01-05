@@ -24,6 +24,10 @@ class CaseStudy extends Component {
                             <div className="col-md-6">
                                 <div className="case-study-image">
                                     <figure className="figure-case-img">
+                                    <img className="bg-case orange" src="./img/IMAGE-shape2.svg" />
+                                    <img className="bg-case pink" src="./img/IMAGE-shape4.svg" />
+                                    <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg" />
+                                    <img className="bg-case sm-orange" src="./img/IMAGE-shape3.svg" />
                                         <img src="./img/bags-best-friends-daylight-1516440.png" alt="" />
                                     </figure>
                                 </div>
@@ -67,6 +71,10 @@ class CaseStudy extends Component {
                             <div className="order-1 order-sm-1 order-md-2 col-md-6">
                                 <div className="case-study-image">
                                     <figure className="figure-case-img">
+                                        <img className="bg-case orange" src="./img/IMAGE-shape2.svg" />
+                                        <img className="bg-case pink" src="./img/IMAGE-shape4.svg" />
+                                        <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg" />
+                                        <img className="bg-case sm-orange" src="./img/IMAGE-shape3.svg" />
                                         <img src="./img/matteo-vegetti-myanmar-06-monastery-kitchen.png" alt="" />
                                     </figure>
                                 </div>

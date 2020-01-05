@@ -36,7 +36,9 @@ class Services extends Component {
                   <div className="col-md-4">
                     <div className="grid-col">
                       <figure className="fig">
+                        <img className="bg-img bg-lg-img" src="./img/ICON-shape2.svg" />  
                         <img className="grid-img" src="./img/Services-icon-1.svg" alt="visual data" />
+                        <img className="bg-img bg-sm-img" src="./img/ICON-shape1.svg" />
                       </figure>
                       <h4 class="headline4">Research & <br></br> Data Analysis</h4>
                         <div class="para-center">
@@ -46,8 +48,10 @@ class Services extends Component {
                   </div>
                   <div className="col-md-4">
                     <div className="grid-col">
-                      <figure className="fig">
+                      <figure className="fig bg-alter">
+                        <img className="bg-img bg-lg-img" src="./img/ICON-shape2.svg" />
                         <img className="grid-img" src="./img/Services-icon-2.svg" alt="file searcrhing" />
+                        <img className="bg-img bg-sm-img" src="./img/ICON-shape1.svg" />
                       </figure>
                       <h4 class="headline4">Strategy & <br></br> Development</h4>
                       <div class="para-center">
@@ -57,8 +61,10 @@ class Services extends Component {
                   </div>
                   <div className="col-md-4">
                     <div className="grid-col mb-0">
-                      <figure className="fig">
+                      <figure className="fig bg-alter-left">
+                        <img class="bg-img bg-lg-img" src="./img/ICON-shape2.svg" />
                         <img className="grid-img" src="./img/Services-icon-3.svg" alt="file searcrhing" />
+                        <img className="bg-img bg-sm-img" src="./img/ICON-shape1.svg"></img>
                       </figure>
                       <h4 class="headline4">Infographics <br></br> Design</h4>
                       <div class="para-center">

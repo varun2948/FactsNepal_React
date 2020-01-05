@@ -11,7 +11,7 @@ class GeographicalCoverage extends Component {
                 <div className="container">
                     <div className="geographical-details-wrap">
                         <div class="sphere"></div>
-                        <div className="row">
+                        <div className="row">   
                             <div className="col-md-7">
                                 <div className="details-left">
                                     <h3 className="headline2">Geographical coverage</h3>
