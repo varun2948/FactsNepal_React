@@ -39,29 +39,29 @@ class About extends Component {
             </div>
           </div>
         </section>
-        <section class="about-section story-section pdb-95">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="heading-section">
-                  <h3 class="headline3">Our story</h3>
+        <section className="about-section story-section pdb-95">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
+                <div className="heading-section">
+                  <h3 className="headline3">Our story</h3>
                 </div>
               </div>
-              <div class="col-md-9">
-                <div class="content-section">
-                  <p class="body-para-second">
+              <div className="col-md-9">
+                <div className="content-section">
+                  <p className="body-para-second">
                     A lack of proper and timely availability of data in Nepal
                     has always remained a great challenge for all who believe in
                     the power of accurate and contextual data for informed
                     decision-making.
                   </p>
-                  <p class="body-para">
+                  <p className="body-para">
                     In the past, a lot of data in Nepal was considered
                     unattainable, and the available data was often deemed dated,
                     misleading or incomplete, all of which contributed to the
                     escalation of a data-dark situation in Nepal.
                   </p>
-                  <p class="body-para">
+                  <p className="body-para">
                     Back in 2012, a small group of young, enthusiastic and,
                     like-minded individuals got together with an idea to
                     contribute to address the situation by forming a research
@@ -77,11 +77,11 @@ class About extends Component {
                     understandable manner, because they understood that data in
                     its raw form can become overwhelming.
                   </p>
-                  <p class="body-para-second">
+                  <p className="body-para-second">
                     Amalgamating all these thoughts together, FACTS Research &
                     Analytics was born.
                   </p>
-                  <p class="body-para">
+                  <p className="body-para">
                     FACTS Research & Analytics is a private independent research
                     company that prides itself on being precise and serving
                     reliable, contextual and actionable information based on
@@ -90,7 +90,7 @@ class About extends Component {
                     technology, demonstrated academics and a human touch, to
                     collect data that is accurate and appropriate.
                   </p>
-                  <p class="body-para">
+                  <p className="body-para">
                     With our social initiatives, we strive to educate and inform
                     people-both the general mass as well as the decision makers
                     in the high ground of politics-believing that a person that
@@ -99,7 +99,7 @@ class About extends Component {
                     statistics, showcasing our cases in such a way that the
                     figures and the truth will influence the reader’s mind-set.
                   </p>
-                  <p class="body-para">
+                  <p className="body-para">
                     Along with this, we provide research services to our
                     clients, building custom research methodologies based on our
                     clients’ requirements. With a customised approach, we gather
@@ -112,25 +112,25 @@ class About extends Component {
             </div>
           </div>
         </section>
-        <section class="about-section initiatives-section pdt-98 pdb-98">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="heading-section">
-                  <h3 class="headline3">Our initaitives</h3>
+        <section className="about-section initiatives-section pdt-98 pdb-98">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
+                <div className="heading-section">
+                  <h3 className="headline3">Our initaitives</h3>
                 </div>
               </div>
-              <div class="col-md-9">
-                <div class="content-section">
-                  <div class="content-list">
-                    <div class="image">
+              <div className="col-md-9">
+                <div className="content-section">
+                  <div className="content-list">
+                    <div className="image">
                       <figure>
                         <img src="./img/Mask Group 12.svg" alt="appearance" />
                       </figure>
                     </div>
-                    <div class="content">
-                      <p class="body-para-second">Public Awareness</p>
-                      <p class="body-para">
+                    <div className="content">
+                      <p className="body-para-second">Public Awareness</p>
+                      <p className="body-para">
                         Through our social initiatives, we are committed to
                         educating and informing the public with reliable data
                         presented in a visually appealing way.
@@ -138,17 +138,17 @@ class About extends Component {
                     </div>
                   </div>
 
-                  <div class="content-list">
-                    <div class="image">
+                  <div className="content-list">
+                    <div className="image">
                       <figure>
                         <img src="./img/Mask Group 6.svg" alt="" />
                       </figure>
                     </div>
-                    <div class="content">
-                      <p class="body-para-second">
+                    <div className="content">
+                      <p className="body-para-second">
                         Knowledge and Research Partnership
                       </p>
-                      <p class="body-para">
+                      <p className="body-para">
                         FACTS is dedicated in building an established and
                         reliable data culture in Nepal. In the course of this
                         initiative to promote a data-driven culture, we have
@@ -158,15 +158,15 @@ class About extends Component {
                     </div>
                   </div>
 
-                  <div class="content-list">
-                    <div class="image">
+                  <div className="content-list">
+                    <div className="image">
                       <figure>
                         <img src="./img/Mask Group 11.svg" alt="" />
                       </figure>
                     </div>
-                    <div class="content">
-                      <p class="body-para-second">Publication</p>
-                      <p class="body-para">
+                    <div className="content">
+                      <p className="body-para-second">Publication</p>
+                      <p className="body-para">
                         Through our social initiatives, we are committed to
                         educating and informing the public with reliable data
                         presented in a visually appealing way.
@@ -174,15 +174,15 @@ class About extends Component {
                     </div>
                   </div>
 
-                  <div class="content-list">
-                    <div class="image">
+                  <div className="content-list">
+                    <div className="image">
                       <figure>
                         <img src="./img/Mask Group 10.svg" alt="" />
                       </figure>
                     </div>
-                    <div class="content">
-                      <p class="body-para-second">Poll</p>
-                      <p class="body-para">
+                    <div className="content">
+                      <p className="body-para-second">Poll</p>
+                      <p className="body-para">
                         Through our social initiatives, we are committed to
                         educating and informing the public with reliable data
                         presented in a visually appealing way.
@@ -190,15 +190,15 @@ class About extends Component {
                     </div>
                   </div>
 
-                  <div class="content-list">
-                    <div class="image">
+                  <div className="content-list">
+                    <div className="image">
                       <figure>
                         <img src="./img/Mask Group 9.svg" alt="" />
                       </figure>
                     </div>
-                    <div class="content">
-                      <p class="body-para-second">Contest</p>
-                      <p class="body-para">
+                    <div className="content">
+                      <p className="body-para-second">Contest</p>
+                      <p className="body-para">
                         Through our social initiatives, we are committed to
                         educating and informing the public with reliable data
                         presented in a visually appealing way.
@@ -210,17 +210,17 @@ class About extends Component {
             </div>
           </div>
         </section>
-        <section class="about-section team-section pdt-95 pdb-119">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="heading-section">
-                  <h3 class="headline3">Meet our team</h3>
+        <section className="about-section team-section pdt-95 pdb-119">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
+                <div className="heading-section">
+                  <h3 className="headline3">Meet our team</h3>
                 </div>
               </div>
-              <div class="col-md-9">
-                <div class="content-section">
-                  <p class="body-para">
+              <div className="col-md-9">
+                <div className="content-section">
+                  <p className="body-para">
                     The FACTS team is a combination of experienced minds and
                     youthful vigour. Innovative ideas, enthusiasm and persistent
                     effort is the cornerstone of our team that does not hesitate
@@ -232,40 +232,40 @@ class About extends Component {
               </div>
             </div>
 
-            <div class="team-members pdt-68 pdb-68">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="col-wrap">
-                    <div class="figure">
+            <div className="team-members pdt-68 pdb-68">
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="col-wrap">
+                    <div className="figure">
                       <img src="./img/team-Robin.png" alt="" />
                     </div>
-                    <div class="title">
-                      <h5 class="headline5">Robin sitoula</h5>
-                      <p class="body-para">Chairman</p>
+                    <div className="title">
+                      <h5 className="headline5">Robin sitoula</h5>
+                      <p className="body-para">Chairman</p>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-md-4">
-                  <div class="col-wrap">
-                    <div class="figure">
+                <div className="col-md-4">
+                  <div className="col-wrap">
+                    <div className="figure">
                       <img src="./img/team-Manish.png" alt="" />
                     </div>
-                    <div class="title">
-                      <h5 class="headline5">Manish sitoula</h5>
-                      <p class="body-para">Chief Executive Officer</p>
+                    <div className="title">
+                      <h5 className="headline5">Manish sitoula</h5>
+                      <p className="body-para">Chief Executive Officer</p>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-md-4">
-                  <div class="col-wrap">
-                    <div class="figure">
+                <div className="col-md-4">
+                  <div className="col-wrap">
+                    <div className="figure">
                       <img src="./img/team-Prabodh.png" alt="" />
                     </div>
-                    <div class="title">
-                      <h5 class="headline5">Prabodh acharya</h5>
-                      <p class="body-para">
+                    <div className="title">
+                      <h5 className="headline5">Prabodh acharya</h5>
+                      <p className="body-para">
                         Director - Strategic Communications & Operations
                       </p>
                     </div>
@@ -274,23 +274,23 @@ class About extends Component {
               </div>
             </div>
 
-            <div class="jumbotron info-jumbotron">
-              <h5 class="headline5">Join our team</h5>
-              <p class="body-para">
+            <div className="jumbotron info-jumbotron">
+              <h5 className="headline5">Join our team</h5>
+              <p className="body-para">
                 As we’re growing, we’re always on the lookout for new talent to
                 join our team. If you’re inspired by our story, then join us on
                 the journey. We’d love to hear from you! Email us your resume at{" "}
-                <a href="#" class="facts-link">
+                <a href="#" className="facts-link">
                   career@factsnepal.com
                 </a>
                 .
               </p>
             </div>
 
-            <section class="slider-section about-slider no-bg pdt-117">
-              <div class="slider-heading">
-                <h3 class="headline3">Our partners</h3>
-                <p class="body-para">
+            <section className="slider-section about-slider no-bg pdt-117">
+              <div className="slider-heading">
+                <h3 className="headline3">Our partners</h3>
+                <p className="body-para">
                   We are trusted by some of the most influential partners.
                 </p>
               </div>

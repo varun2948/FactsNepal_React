@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import axios from "axios";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 import Testimonials from "../components/Testimonials/Testimonials";
 import CaseStudyData from "../components/HomePage/CaseStudy/CaseStudyData";
+import axios from "axios";
+
 class Projects extends Component {
   constructor(props) {
     super(props);
@@ -30,6 +31,26 @@ class Projects extends Component {
       // console.log(this.state.casestudy, "cs");
     });
   }
+  componentDidMount() {
+    Promise.all([
+      axios({
+        method: "GET",
+        url: `${process.env.API_URL}api/casestudy`,
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json"
+        }
+      })
+    ]).then(response => {
+      console.log(response[0].data.collaborators);
+      const sliced2Collaborators = response[0].data.collaborators.slice(0, 2);
+      this.setState({
+        casestudy: sliced2Collaborators
+      });
+      // console.log(this.state.casestudy, "cs");
+    });
+  }
+
   render() {
     const { casestudy } = this.state;
     return (
