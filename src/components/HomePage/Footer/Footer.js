@@ -29,6 +29,7 @@ class Footer extends Component {
             <div className="col-12 col-md-6">
               <div className="form-left">
                 <Fade bottom duration={600} delay={400} distance={"0px"}>
+                <div className="circle sphere-gradient1 form-sphere"></div>
                   <div className="form-left-title">
                     <h3 className="headline2">Ready to get the Facts?</h3>
                     <span className="caption">Fill in this form or send us an e-mail.</span>
@@ -77,6 +78,7 @@ class Footer extends Component {
               <div className="form-right">
                 <Fade bottom duration={800} delay={500} distance={"0px"}>
                   <div className="form-right-title">
+                  <div className="circle sphere-gradient2 form-circle"></div>
                     <h3 className="headline2">Contact</h3>
                   </div>
                 </Fade>
@@ -108,6 +110,7 @@ class Footer extends Component {
 
                   <div className="form-btn-wrap">
                     <span className="caption">Available for your smartphone</span>
+                    <div class="circle sphere-gradient3 form-sphere"></div>
                     <div className="btn-content">
                       <a><img src="./img/appstore.png" alt="appstore" /></a>
                       <a><img src="./img/googleplay.png" alt="googleplay" /></a>
@@ -130,6 +133,7 @@ class Footer extends Component {
             <div class="row">
                 <div class="col-12 col-md-6">
                   <div className="footer-left">
+                  <div class="circle orange-gradient form-sphere"></div>
                     <span className="copyright sm-caption">© 2019<span className="subtitle"> FACTS Research & Analytics.</span></span>
                   </div>
                 </div>
