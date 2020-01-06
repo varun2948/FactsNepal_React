@@ -13,7 +13,7 @@ class CaseStudyData extends Component {
             return (
               // <React.Fragment>
               key % 2 != 0 ? (
-                <div className="case-study-wrap pdb-130">
+                <div className="case-study-wrap">
                   <div className="row">
                     <div className="col-md-6">
                       <div className="case-study-image">
@@ -25,14 +25,14 @@ class CaseStudyData extends Component {
                     <div className="col-md-6">
                       <div className="case-study-content">
                         <div className="case-study-content-wrap">
-                          <span className="date-time">
+                          <span className="sub-caption">
                             <Moment
                               date={data.issued_date}
                               format="Do MMMM YYYY"
                             />
                           </span>
-                          <h3 className="factsNepal-title">{data.title}</h3>
-                          <p className="factsNepal-para">{data.description}</p>
+                          <h3 className="headline2">{data.title}</h3>
+                          <p className="body-para">{data.description}</p>
                           {/* <span className="caption">Funded by</span> */}
                           <div className="img-wrap">
                             {data &&
@@ -48,12 +48,13 @@ class CaseStudyData extends Component {
                               })}
                           </div>
                           <Link
-                            className="btn-case"
                             to={{
                               pathname: `/casestudy/${data.id}`
                             }}
                           >
-                            <span>Read Case Study</span>
+                            <button className="btn-case">
+                              Read Case Study
+                            </button>
                           </Link>
                         </div>
                       </div>
@@ -61,19 +62,19 @@ class CaseStudyData extends Component {
                   </div>
                 </div>
               ) : (
-                <div className="case-study-wrap">
+                <div className="case-study-wrap pdt-117">
                   <div className="row">
                     <div className="order-2 order-sm-2 order-md-1 col-md-6">
                       <div className="case-study-content">
                         <div className="case-study-content-wrap">
-                          <span className="date-time">
+                          <span className="sub-caption">
                             <Moment
                               date={data.issued_date}
                               format="Do MMMM YYYY"
                             />
                           </span>
-                          <h3 className="factsNepal-title">{data.title}</h3>
-                          <p className="factsNepal-para">{data.description}</p>
+                          <h3 className="headline2">{data.title}</h3>
+                          <p className="body-para">{data.description}</p>
                           <div className="logo-wrap">
                             <div className="logo-mid">
                               {data &&
@@ -89,13 +90,14 @@ class CaseStudyData extends Component {
                             </div>
                           </div>
                           <Link
-                            className="btn-case"
                             to={{
                               pathname: `/casestudy/${data.id}`
                               // factid: data
                             }}
                           >
-                            <span>Read Case Study</span>
+                            <button className="btn-case">
+                              Read Case Study
+                            </button>
                           </Link>
                           {/* <button className="btn-case">
                               <span>Read Case Study</span>

@@ -4,8 +4,19 @@
     padding-left: 122px;
     padding-right: 92px;
 }
+.sphere-gradient1{
+    opacity: 0.15;
+    background: linear-gradient(180deg , $color-pink 0%, $color-lgpinkgrad 53%, $trans-white 100%);
+}
+.sphere-gradient2{
+    background: rgba($color: $color-red, $alpha: 0.4);
+}
+.sphere-gradient3{
+    background: rgba($color: $color-formlabel, $alpha: 0.12);
+}
+
 .form-section{
-    @include linear-gradient-footer(180deg,$color-formlabel,$color-darkred);
+    @include linear-gradient-footer(180deg, $color-formlabel,$color-darkred);
     &.contact-form{
         background: none !important;
         .form-left{
@@ -52,8 +63,16 @@
             }
             .form-address {
                 .addr-list {
+                    &:first-child{
+                        .addr{
+                            span{
+                                max-width: 360px;
+                            }
+                        }
+                    }
                     .addr{
                         span{
+                            max-width: 360px;
                             color: $color-primary !important;
                         }
                     }
@@ -98,9 +117,15 @@
             }
         } 
     }
-
     .form-left{
         .form-left-title{
+            position: relative;
+            .form-sphere{
+                width: 105px;
+                height: 105px;
+                left: -13%;
+                top: -48%;
+            }
             h3{
                 color: $color-white !important;
                 margin-bottom: 20px;
@@ -115,7 +140,6 @@
                 .form-group{
                     position: relative;
                     width: 100%;
-                    
                     margin-bottom: 25px;
                     &:nth-child(4){
                         margin-bottom: 0;
@@ -188,6 +212,13 @@
     }
     .form-right{
         .form-right-title{
+            position: relative;
+            .form-circle{
+                width: 18px;
+                height: 18px;
+                top: -85%;
+                left: 40%;
+            }
             h3{
                 color: $color-white !important;
                 margin-bottom: 20px;
@@ -197,12 +228,19 @@
             margin-top: 24px;
             .addr-list{
                 .addr{
+                    &:first-child{
+                        span{
+                            &:last-child{
+                                max-width: 360px;
+                            }
+                        }
+                    }
                     @include flex;
                     margin-bottom: 10px;
                     &:nth-child(1){
                         span{
                             img{
-                                padding-top: 4px;
+                                padding-top: 2px;
                             }
                         }
                     }
@@ -230,6 +268,13 @@
         }
         .form-btn-wrap{
             padding-top: 50px;
+            position: relative;
+            .form-sphere{
+                width: 67px;
+                height: 67px;
+                right: 9%;
+                top: 44%;
+            }
             span{
                 color: $color-pink !important;
             }
@@ -297,6 +342,13 @@
     .footer{
         margin-top: 50px;   
         .footer-left{
+            position: relative;
+            .form-sphere{
+                width: 23px;
+                height: 23px;
+                left: -14%;
+                bottom: -92%;
+            }
             .copyright{
                 color: $color-formlabel;
                 .subtitle{
@@ -317,6 +369,46 @@
     }
 
 }
+/* less than 1024px; */
+@media only screen and (max-width: $ls-tab){
+    .form-section{
+        .form-left {
+            .form-left-title{
+                .form-sphere{
+                    width: 80px;
+                    height: 80px;
+                    left: -13%;
+                    top: -2%;
+                }
+            }
+        }
+        .form-right{
+            .form-right-title{
+                .form-circle {
+                    top: -104%;
+                    left: 53%;
+                }
+            }
+            .form-btn-wrap{
+                .form-sphere{
+                    width: 50px;
+                    height: 50px;
+                    right: -14%;
+                    top: 75%;
+                }
+            } 
+        }  
+        .footer {
+           .footer-left {
+               .form-sphere {
+                    width: 18px;
+                    height: 18px;
+                    bottom: -80%;
+                } 
+            }
+        }
+    }  
+}
 
 /* less than 991px; */
 @media only screen and (max-width: $tab-xl){ /* form */
@@ -335,6 +427,10 @@
             .form-left-title {
                 h3 {
                     margin-bottom: 10px;
+                }
+                .form-sphere{
+                    left: -16%;
+                    top: -62%;
                 }
             }
             .form-wrap{
@@ -361,6 +457,10 @@
                 h3 {
                     margin-bottom: 10px;
                 }
+                .form-circle {
+                    top: -142%;
+                    left: 70%;
+                }
             } 
             .form-btn-wrap {
                 padding-top: 40px;
@@ -380,6 +480,12 @@
                             }
                         }
                     }
+                }
+                .form-sphere {
+                    width: 40px;
+                    height: 40px;
+                    right: -25%;
+                    top: 70%;
                 }
             }
             .social-icon-wrap {
@@ -420,6 +526,10 @@
             .form-left-title {
                 h3{
                     margin-bottom: 10px;
+                }
+                .form-sphere {
+                    left: -10%;
+                    top: -62%;
                 }
             }
             .form-wrap{
@@ -488,6 +598,10 @@
                         }
                     }
                 }
+                .form-sphere {
+                    right: -3%;
+                    top: 62%;
+                }
             }
             .social-icon-wrap {
                 a{
@@ -515,6 +629,12 @@
             .footer-right {
                 padding-left: 0;
             }
+            .footer-left {
+                .form-sphere {
+                    bottom: -126%;
+                    left: -9%;
+                }
+            }
         }
     } 
 }
@@ -524,6 +644,14 @@
     /* form */
     .form-section{
         .form-left{
+            .form-left-title {
+                .form-sphere {
+                    width: 70px;
+                    height: 70px;
+                    left: -3%;
+                    top: -43%;
+                }
+            }       
             .form-wrap{
                 form{
                     .btn{
@@ -544,6 +672,14 @@
         .form-right{
             margin-top: 2.125rem;
         }
+        .footer{
+            .footer-left{
+                .form-sphere {
+                    bottom: -218%;
+                    left: -6%;
+                }
+            }
+        } 
     } 
 }
 
@@ -573,6 +709,10 @@
             .form-left-title {
                 h3{
                     margin-bottom: 5px;
+                }
+                .form-sphere {
+                    left: -9%;
+                    top: -74%;
                 }
             }
             .form-wrap{

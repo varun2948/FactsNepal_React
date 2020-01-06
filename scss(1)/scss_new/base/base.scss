@@ -94,6 +94,21 @@
     @include typo($font-family, 300, 1.5);
     color: $color-primary;
 }
+.circle{
+    position: absolute;
+    @include border-radius-circle(50%);
+}
+.red-gradient{
+    background-color:rgba($color: $color-red, $alpha: 0.1);
+}
+.pink-gradient{
+    background: linear-gradient(to bottom, $color-pink, $color-pinkgradient, $color-white);
+    opacity: 0.3;
+}
+.orange-gradient{
+    opacity: 0.2;
+    @include linear-gradient(180deg, $color-lightorange, $color-yellow);
+}
 // header
 
 .pdb-100{

@@ -1,864 +1,821 @@
-.banner-content {
-  color: $color-primary;
-  font-size: 1.25rem;
-  @include typo($font-family, 400, 1.5);
+/********************************/
+@media only screen and (max-width: $md-desktop)
+{
+    section {
+        padding: 0 80px;
+    }
 }
-.caption {
-  font-size: 0.875rem;
-  color: $color-grey;
-  @include typo($font-family, 400, 1.5);
+
+@media only screen and (max-width: $mb-xl)
+{
+    section {
+        padding: 0 50px;
+    }
 }
-.headline2 {
-  @include typo($font-family, 300, 2.813);
-  font-size: 2.063rem;
-  color: $color-primary;
+
+@media only screen and (max-width: $mb-sm)
+{
+    section {
+        padding: 0 30px;
+    }
 }
-.pdt-68 {
-  padding-top: 4.25rem !important;
+
+@media only screen and (min-width: $md-desktop)
+{
+    section {
+        padding: 0;
+    }
 }
-.pdb-68 {
-  padding-bottom: 4.25rem !important;
+
+.headline1{
+    @include typo($font-family, 600, 3.375);
+    font-size: 2.563rem;
+    color: $color-red;
 }
-.pdb-95 {
-  padding-bottom: 5.938rem !important;
+.headline2{
+    @include typo($font-family, 300, 2.813);
+    font-size: 2.063rem;
+    color: $color-primary;
 }
-.pdt-95 {
-  padding-top: 5.938rem !important;
+.headline3{
+    @include typo($font-family, 500, 2.063);
+    font-size: 1.563rem;
+    color: $color-primary;
 }
-.pdt-98 {
-  padding-top: 6.125rem !important;
+.headline4{
+    @include typo($font-family, 400, 1.5);
+    font-size: 1.313rem;
+    color: $color-red;
 }
-.pdb-98 {
-  padding-bottom: 6.125rem !important;
+.headline5{
+    @include typo($font-family, 400, 1.781);
+    font-size: 1.125rem;
+    color: $color-primary;
 }
-.pdb-119 {
-  padding-bottom: 7.438rem !important;
+.body-para{
+    @include typo($font-family, 300, 1.406);
+    font-size: .844rem;
+    color: $color-darkgrey;
 }
-.headline3 {
-  @include typo($font-family, 500, 2.063);
-  font-size: 1.563rem;
-  color: $color-primary;
+.body-para-second{
+    @include typo($font-family, 300, 1.406);
+    font-size: 1.031rem;
+    color: $color-primary;
 }
-.body-para {
-  @include typo($font-family, 300, 1.406);
-  font-size: 0.844rem;
-  color: $color-darkgrey;
+.caption{
+    @include typo($font-family, 400, 1.425);
+    font-size: .844rem;
+    color: $color-grey;
 }
-.body-para-second {
-  @include typo($font-family, 300, 1.406);
-  font-size: 1.031rem;
-  color: $color-primary;
+.sec-caption{
+    @include typo($font-family, 500, 1.5);
+    font-size: .938rem;
+    color: $color-red;
+    text-transform: uppercase;
 }
-.section-caption {
-  font-size: 1rem;
-  color: $color-red;
-  letter-spacing: 3px;
-  @include typo($font-family, 500, 1.5);
+.sub-caption{
+    @include typo($font-family, 400, 1.313);
+    font-size: .703rem;
+    color: $color-yellow;
+    text-transform: uppercase;
 }
-.sec-caption {
-  @include typo($font-family, 500, 1.5);
-  font-size: 0.938rem;
-  color: $color-red;
-  text-transform: uppercase;
+.sm-caption{
+    @include typo($font-family, 300, 1.406);
+    font-size: .703rem;
+    color: $color-grey;
 }
-.factsNepal-para {
-  font-size: 0.875rem;
-  color: $color-darkgrey;
-  @include typo($font-family, 300, 1.75);
+.name-caption{
+    font-size: .844rem;
+    @include typo($font-family, 700, 1.313);
+    color: $color-red;
 }
-.factsNepal-secpara {
-  font-size: 1rem;
-  color: $color-primary;
-  @include typo($font-family, 300, 1.5);
+.org-caption{
+    font-size: .75rem;
+    @include typo($font-family, 300, 1.5);
+    color: $color-primary;
+}
+.circle{
+    position: absolute;
+    @include border-radius-circle(50%);
+}
+.red-gradient{
+    background-color:rgba($color: $color-red, $alpha: 0.1);
+}
+.pink-gradient{
+    background: linear-gradient(to bottom, $color-pink, $color-pinkgradient, $color-white);
+    opacity: 0.3;
+}
+.orange-gradient{
+    opacity: 0.2;
+    @include linear-gradient(180deg, $color-lightorange, $color-yellow);
+}
+// header
+
+.pdb-100{
+    padding-bottom: 6.4rem !important;
+}
+.pdb-104{
+    padding-bottom: 6.5rem !important;
+}
+.pdt-88{
+    padding-top: 5.5rem !important;
+}
+.pdb-88{
+    padding-bottom: 5.5rem !important;
+}
+.pdt-81{
+   padding-top: 5.063rem !important;
+}
+.pdt-113{
+    padding-top: 7.063rem !important;
+}
+.pdb-134{
+    padding-bottom: 8.375rem !important;
+}
+// case
+.pdt-127{
+    padding-top: 7.969rem !important;
+}
+.pdb-142{
+    padding-bottom: 8.906rem !important;
+}
+.pdt-47{
+    padding-top: 2.953rem !important;
+}
+.pdt-117{
+    padding-top: 7.313rem !important;
+}
+
+// geographical
+.pdt-47{
+    padding-top: 2.953rem !important;
+}
+.pdb-47{
+    padding-bottom: 2.953rem !important;
+}
+
+// resources
+.pdt-150{
+    padding-top: 9.375rem !important;
+}
+.pdb-150{
+    padding-bottom: 9.375rem !important;
+}
+
+//tesimonials
+.pdt-91{
+    padding-top: 5.179rem !important;
+}
+.pdb-91{
+    padding-bottom: 5.179rem !important;
+}
+.pdt-116{
+    padding-top: 7.25rem !important;
+}
+
+//form
+.pdt-111{
+    padding-top: 6.938rem !important;
+}
+.pdb-50{
+    padding-bottom: 3.125rem !important;
+}
+
+// facts
+// grid-section
+.pdb-85{
+    padding-bottom: 5.313rem !important;
+}
+.pdt-54{
+    padding-top: 3.375rem !important;
+}
+.pdb-37{
+    padding-bottom: 2.313rem !important;
+}
+.pdt-60{
+    padding-top: 3.75rem !important;
+}
+.pdb-60{
+    padding-bottom: 3.75rem !important;
+}
+.pdt-132{
+    padding-top: 8.25rem !important;
+}
+.pdb-128{
+    padding-bottom: 8rem !important;
+}
+.pdt-92{
+    padding-top: 5.75rem !important;
+}
+.pdt-140{
+    padding-top: 8.813rem !important;
+}
+
+// R&D
+.pdt-126{
+    padding-top: 7.875rem !important;
+}
+.pdb-126{
+    padding-bottom: 7.875rem !important;
+}
+.pdt-148{
+    padding-top: 9.25rem !important;
+}
+.pdb-110{
+    padding-bottom: 6.875rem !important;
+}
+.pdb-119{
+    padding-bottom: 7.438rem !important;
+}
+
+//facts1
+.pdt-140{
+    padding-top: 8.813em !important;
+}
+.pdt-98{
+    padding-top: 6.125rem !important;
+}
+.pdb-98{
+    padding-bottom: 6.125rem !important;
+}
+.pdb-115{
+    padding-bottom: 7.188rem !important;
+}
+.pdb-70{
+    padding-bottom: 4.375rem !important;
+}
+.pdt-40{
+    padding-top: 2.5rem !important;
+}
+//projects
+.pdt-45{
+    padding-top: 2.813rem !important;
+}
+.pdt-75{
+    padding-top: 4.688rem !important;
+}
+.pdb-75{
+    padding-bottom: 4.688rem !important;
+}
+
+//story
+.pdt-95{
+    padding-top: 5.938rem !important;
+}
+.pdb-95{
+    padding-bottom: 5.938rem !important;
+}
+.pdt-68{
+    padding-top: 4.25rem !important;
+}
+.pdb-68{
+    padding-bottom: 4.25rem !important;
+}
+.pdb-80 {
+    padding-bottom: 5rem !important;
+}
+// contact
+.pdt-56{
+    padding-top: 3.5rem !important;
+}
+.pdb-52{
+    padding-bottom: 3.25rem !important;
+}
+
+@media only screen and (max-width: $tab-xl){
+    .headline1{
+        font-size: 1.625rem;
+    }
+    .headline2{
+        font-size: 1.325rem;
+    }
+    .headline3{
+        font-size: 1.125rem;
+    }
+    .headline4{
+        font-size: 1.1rem;
+    }
+    .headline5{
+        font-size: .938rem;
+        line-height: 1.5 !important;
+    }
+    .body-para{
+        font-size: .725rem;
+    }
+    .body-para-second{
+        font-size: .875rem;
+    }
+    .caption{
+        font-size: .725rem;
+    }
+    .sec-caption{
+        font-size: .85rem;
+    }
+    .sub-caption{
+        font-size: .58rem;
+    }
+    .sm-caption{
+        font-size: .58rem;
+    }
+    .name-caption{
+        font-size: .685rem;
+    }
+    .org-caption{
+        font-size: .58rem;
+    }
+    .pdt-148{
+        padding-top: 6.25rem !important;
+    }
+    .pdb-110{
+        padding-bottom: 5.875rem !important;
+    }
+    .pdb-134 {
+        padding-bottom: 6rem !important;
+    }
+    .pdt-113 {
+        padding-top: 5.063rem !important;
+    }
+    .pdb-85 {
+        padding-bottom: 4.5rem !important;
+    }
+    .pdt-81 {
+        padding-top: 5rem !important;
+    }
+    .pdb-104 {
+        padding-bottom: 5.5rem !important;
+    }
+    .pdb-142 {
+        padding-bottom: 7rem !important;
+    }
+    .pdt-127 {
+        padding-top: 6.325rem !important;
+    }
+    .pdt-117 {
+        padding-top: 6rem !important;
+    }
+    .pdt-150 {
+        padding-top: 6rem !important;
+    }
+    .pdt-150 {
+        padding-top: 6rem !important;
+    }
+    .pdb-119 {
+        padding-bottom: 5.438rem !important;
+    }
+    .pdb-104 {
+        padding-bottom: 4.5rem !important;
+    }
+    .pdt-116 {
+        padding-top: 5.25rem !important;
+    }
+    .pdb-126 {
+        padding-bottom: 5rem !important;
+    }
+    .pdt-126 {
+        padding-top: 5rem !important;
+    }
+    .pdb-128 {
+        padding-bottom: 5rem !important;
+    }
+    .pdt-132 {
+        padding-top: 6.25rem !important;
+    }
+    .pdt-92 {
+        padding-top: 4rem !important;
+    }
+    .pdt-45 {
+        padding-top: 1.5rem !important;
+    }
+    .pdb-50 {
+        padding-bottom: 2rem !important;
+    }
+    .pdt-75{
+        padding-top: 3.688rem !important;
+    }
+    .pdb-75{
+        padding-bottom: 3.688rem !important;
+    }
+    .pdb-80 {
+        padding-bottom: 4rem !important;
+    }
+    .pdt-95 {
+        padding-top: 4.938rem !important;
+    }
+    .pdb-95 {
+        padding-bottom: 4.938rem !important;
+    }
+    .pdb-98 {
+        padding-bottom: 5.125rem !important;
+    }
+    .pdt-98 {
+        padding-top: 5.125rem !important;
+    }
+    .pdb-68 {
+        padding-bottom: 3.25rem !important;
+    }
+    .pdt-68 {
+        padding-top: 3.25rem !important;
+    }
+    .pdt-140{
+        padding-top: 6.813rem !important;
+    }
+}
+
+@media only screen and (max-width: $mb-sm){
+    .headline1{
+        font-size: 1.5rem;
+    }
+    .headline2{
+        font-size: 1.25rem;
+    }
+    .headline3{
+        font-size: 1.125rem;
+    }
+    .headline4{
+        font-size: 1rem;
+    }
+    .headline5{
+        font-size: .938rem !important;
+        line-height: 1.5 !important;
+    }
+    .pdb-142 {
+        padding-bottom: 6rem !important;
+    }
+    .pdt-127 {
+        padding-top: 5.325rem !important;
+    }
+    .pdb-150 {
+        padding-bottom: 5.375rem !important;
+    }
+    .pdt-150 {
+        padding-top: 5.375rem !important;
+    }
+    .pdb-50 {
+        padding-bottom: 3rem !important;
+    }
+    .pdt-111 {
+        padding-top: 4.938rem !important;
+    }
+    .pdt-140{
+        padding-top: 4.813rem !important;
+    }
+}
+/********************************/
+
+.banner-content{
+    color: $color-primary;
+    font-size: 1.25rem;
+    @include typo($font-family, 400, 1.5);
+}
+/* .caption{
+    font-size: 0.875rem;
+    color: $color-grey;
+    @include typo($font-family, 400, 1.5);
+} */
+.section-caption{
+    font-size: 1rem;
+    color: $color-red;
+    letter-spacing: 3px;
+    @include typo($font-family, 500, 1.5);
+}
+.factsNepal-para{
+    font-size: 0.875rem;
+    color: $color-darkgrey;
+    @include typo($font-family, 300, 1.75);
+}
+.factsNepal-secpara{
+    font-size: 1rem;
+    color: $color-primary;
+    @include typo($font-family, 300, 1.5);
 }
 // h3
-.factsNepal-title {
-  font-size: 2rem;
-  color: $color-primary;
-  @include typo($font-family, 300, 1.5);
+.factsNepal-title{
+    font-size: 2rem;
+    color: $color-primary;
+    @include typo($font-family, 300, 1.5);
 }
 // h4
-.factsNepal-subtitle {
-  font-size: 1.375rem;
-  color: $color-red;
-  @include typo($font-family, 400, 1.5);
+.factsNepal-subtitle{
+    font-size: 1.375rem;
+    color: $color-red;
+    @include typo($font-family, 400, 1.5);
 }
-.factsNepal-sectitle {
-  font-size: 1.5rem;
-  color: $color-primary;
-  @include typo($font-family, 500, 1.5);
+.factsNepal-sectitle{
+    font-size: 1.5rem;
+    color: $color-primary;
+    @include typo($font-family, 500, 1.5);
 }
 
 
 /* less than 991px; */
-@media only screen and (max-width: $tab-xl) {
-  .banner-content {
-    font-size: 1rem;
-  }
-  .factsNepal-title {
-    font-size: 1.325rem;
-  }
-  .factsNepal-subtitle {
-    font-size: 1.125rem;
-  }
-  .factsNepal-sectitle {
-    font-size: 1.125rem;
-  }
-  .factsNepal-para {
-    font-size: 0.75rem;
-  }
-  .factsNepal-secpara {
-    font-size: 0.875rem;
-  }
-  .caption {
-    font-size: 0.75rem;
-  }
-  .pdb-98 {
-    padding-bottom: 5.125rem !important;
-  }
-  .section-caption {
-    font-size: 0.875rem;
-  }
-}
-
-/* less than 767px; */
-@media only screen and (max-width: $mb-xl) {
+@media only screen and (max-width: $tab-xl){
+    .banner-content{
+        font-size: 1rem;
+    } 
+    .factsNepal-title{
+        font-size: 1.325rem;
+    }
+    .factsNepal-subtitle{
+        font-size: 1.125rem;
+    }
+    .factsNepal-sectitle{
+        font-size: 1.125rem;
+    }
+    .factsNepal-para{
+        font-size: 0.75rem;
+    }
+    .factsNepal-secpara{
+        font-size: 0.875rem;
+    }
+    .section-caption{
+        font-size: 0.875rem;
+    }
 }
 
 /* less than 376px; */
-@media only screen and (max-width: $mb-xs) {
-  .banner-content {
-    font-size: 0.875rem;
-  }
+@media only screen and (max-width: $mb-xs){
+    .banner-content{
+        font-size: 0.875rem;
+    } 
 }
 
-.show {
-  display: block;
+.show{
+    display: block;
 }
-.pdb-62 {
-  padding-bottom: 3.25rem !important;
+.pdt-40{
+    padding-top: 2.5rem !important;
 }
-.pdb-80 {
-  padding-bottom: 5rem !important;
+.pdb-90{
+    padding-bottom: 5.625rem !important;
 }
-.pdb-25 {
-  padding-bottom: 1.563rem !important;
+.pdt-100{
+    padding-top: 6.25rem !important;
 }
-.pdt-40 {
-  padding-top: 2.5rem !important;
-}
-.pdb-90 {
-  padding-bottom: 5.625rem !important;
-}
-.pdt-100 {
-  padding-top: 6.25rem !important;
-}
-.pdt-110 {
-  padding-top: 6.875rem !important;
-}
-.pdb-110 {
-  padding-bottom: 6.875rem !important;
+.pdt-110{
+    padding-top: 6.875rem !important;
+}  
+
+h1,h3,h4{
+     line-height: 1.25 !important;
 }
 
-h1,
-h3,
-h4 {
-  line-height: 1.25 !important;
-}
 
 /* span */
-.span-10 {
-  font-size: 0.625rem !important;
+.span-10{
+    font-size: 0.625rem !important;
 }
-.span-12 {
-  font-size: 0.75rem !important;
+.span-12{
+    font-size: 0.75rem !important;
 }
-.span-14 {
-  font-size: 0.875rem !important;
+.span-14{
+    font-size: 0.875rem !important;
 }
-.span-16 {
-  font-size: 1rem !important;
+.span-16{
+    font-size: 1rem !important;
 }
-.span-18 {
-  font-size: 1.125rem !important;
+.span-18{
+    font-size: 1.125rem !important;
 }
-.span-20 {
-  font-size: 1.25rem !important;
+.span-20{
+    font-size: 1.25rem !important;
 }
 
 /* less than 376px; */
-@media only screen and (max-width: $mb-xs) {
-  /* h1 */
-  .banner-title {
+@media only screen and (max-width: $mb-xs){
+    /* h1 */
+   .banner-title{
     font-size: 1.5rem !important;
-  }
-  .h3-title {
-    font-size: 1.25rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.25rem;
-  }
-  .span-12 {
-    font-size: 0.475rem !important;
-  }
-  .span-14 {
-    font-size: 0.625rem !important;
-  }
-  .span-16 {
-    font-size: 0.75rem !important;
-  }
-  .span-18 {
-    font-size: 0.875rem !important;
-  }
-  .span-22 {
-    font-size: 1rem !important;
-  }
+    }
+    .h3-title{
+        font-size: 1.25rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.25rem;
+    }
+    .span-12{
+        font-size: 0.475rem !important;
+    }
+    .span-14{
+        font-size: 0.625rem !important;
+    }
+    .span-16{
+        font-size: 0.75rem !important;
+    }
+    .span-18{
+        font-size: 0.875rem !important;
+    }
+    .span-22{
+        font-size: 1rem !important;
+    }
+    
 }
 
 /* less than 575px; */
-@media only screen and (max-width: $mb-sm) {
-  /* h1 */
-  .banner-title {
+@media only screen and (max-width: $mb-sm){
+
+   /* h1 */
+   .banner-title{
     font-size: 1.5rem !important;
-  }
-  .h3-title {
-    font-size: 1.5rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.375rem;
-  }
-  .span-12 {
-    font-size: 0.625rem !important;
-  }
-  .span-14 {
-    font-size: 0.625rem !important;
-  }
-  .span-16 {
-    font-size: 0.75rem !important;
-  }
-  .span-18 {
-    font-size: 0.875rem !important;
-  }
-  .span-22 {
-    font-size: 1.125rem !important;
-  }
+    }
+    .h3-title{
+        font-size: 1.5rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.375rem;
+    }
+    .span-12{
+        font-size: 0.625rem !important;
+    }
+    .span-14{
+        font-size: 0.625rem !important;
+    }
+    .span-16{
+        font-size: 0.75rem !important;
+    }
+    .span-18{
+        font-size: 0.875rem !important;
+    }
+    .span-22{
+        font-size: 1.125rem !important;
+    }
+    
 }
 
 /* less than 376px; */
-@media only screen and (max-width: $mb-xs) {
-  /* h1 */
-  .banner-title {
-    font-size: 1.25rem !important;
-  }
-  .h3-title {
-    font-size: 1.25rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.125rem;
-  }
-  .span-12 {
-    font-size: 0.625rem !important;
-  }
-  .span-14 {
-    font-size: 0.75rem !important;
-  }
-  .span-16 {
-    font-size: 0.875rem !important;
-  }
-  .span-18 {
-    font-size: 1rem !important;
-  }
-  .span-22 {
-    font-size: 1rem !important;
-  }
-}
+@media only screen and (max-width: $mb-xs){
+
+    /* h1 */
+    .banner-title{
+     font-size: 1.25rem !important;
+     }
+     .h3-title{
+         font-size: 1.25rem !important;
+     }
+     .publicpoll-title{
+         font-size: 1.125rem;
+     }
+     .span-12{
+         font-size: 0.625rem !important;
+     }
+     .span-14{
+         font-size: 0.75rem !important;
+     }
+     .span-16{
+         font-size: 0.875rem !important;
+     }
+     .span-18{
+         font-size: 1rem !important;
+     }
+     .span-22{
+         font-size: 1rem !important;
+     }
+     
+ }
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
-@media only screen and (min-width: $mb-lg) {
-  /* h1 */
-  .banner-title {
-    font-size: 1.75rem !important;
-  }
-  .h3-title {
-    font-size: 1.5rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.375rem;
-  }
-  .span-12 {
-    font-size: 0.625rem !important;
-  }
-  .span-14 {
-    font-size: 0.75rem !important;
-  }
-  .span-16 {
-    font-size: 0.875rem !important;
-  }
-  .span-18 {
-    font-size: 1rem !important;
-  }
-  .span-22 {
-    font-size: 1.125rem !important;
-  }
+@media only screen and (min-width: $mb-lg){
+     /* h1 */
+     .banner-title{
+        font-size: 1.75rem !important;
+    }
+    .h3-title{
+        font-size: 1.5rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.375rem;
+    }
+    .span-12{
+        font-size: 0.625rem !important;
+    }
+    .span-14{
+        font-size: 0.75rem !important;
+    }
+    .span-16{
+        font-size: 0.875rem !important;
+    }
+    .span-18{
+        font-size: 1rem !important;
+    }
+    .span-22{
+        font-size: 1.125rem !important;
+    }
+    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: $md-tab) {
-  /* h1 */
-  .banner-title {
-    font-size: 1.5rem !important;
-  }
-  .h3-title {
-    font-size: 1.625rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.625rem;
-  }
-  .span-12 {
-    font-size: 0.75rem !important;
-  }
-  .span-14 {
-    font-size: 0.875rem !important;
-  }
-  .span-16 {
-    font-size: 1rem !important;
-  }
-  .span-18 {
-    font-size: 1.125rem !important;
-  }
-  .span-22 {
-    font-size: 1.125rem !important;
-  }
+    /* h1 */
+    .banner-title{
+        font-size: 1.5rem !important;
+    }
+    .h3-title{
+        font-size: 1.625rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.625rem;
+    }
+    .span-12{
+        font-size: 0.75rem !important;
+    }
+    .span-14{
+        font-size: 0.875rem !important;
+    }
+    .span-16{
+        font-size: 1rem !important;
+    }
+    .span-18{
+        font-size: 1.125rem !important;
+    }
+    .span-22{
+        font-size: 1.125rem !important;
+    }
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: $lg-tab) {
-  /* h1 */
-  .banner-title {
-    font-size: 2.5rem !important;
-  }
-  .h3-title {
-    font-size: 1.75rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.75rem;
-  }
-  .span-12 {
-    font-size: 0.75rem !important;
-  }
-  .span-14 {
-    font-size: 0.875rem !important;
-  }
-  .span-16 {
-    font-size: 1rem !important;
-  }
-  .span-18 {
-    font-size: 1.125rem !important;
-  }
-  .span-22 {
-    font-size: 1.375rem !important;
-  }
+    /* h1 */
+    .banner-title{
+        font-size: 2.5rem !important;
+    }
+    .h3-title{
+        font-size: 1.75rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.75rem;
+    }
+    .span-12{
+        font-size: 0.75rem !important;
+    }
+    .span-14{
+        font-size: 0.875rem !important;
+    }
+    .span-16{
+        font-size: 1rem !important;
+    }
+    .span-18{
+        font-size: 1.125rem !important;
+    }
+    .span-22{
+        font-size: 1.375rem !important;
+    }
+    
 }
 
 /* 1024px */
 @media only screen and (min-width: $ls-tab) {
-  /* h1 */
-  .banner-title {
-    font-size: 2.75rem !important;
-  }
-  .h3-title {
-    font-size: 1.875rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.875rem;
-  }
-  .span-12 {
-    font-size: 0.875rem !important;
-  }
-  .span-14 {
-    font-size: 1rem !important;
-  }
-  .span-16 {
-    font-size: 1.125rem !important;
-  }
-  .span-18 {
-    font-size: 1.25rem !important;
-  }
-  .span-22 {
-    font-size: 1.5rem !important;
-  }
-}
+    /* h1 */
+    .banner-title{
+        font-size: 2.75rem !important; 
+    }
+    .h3-title{
+        font-size: 1.875rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.875rem;
+    }
+    .span-12{
+        font-size: 0.875rem !important;
+    }
+    .span-14{
+        font-size: 1rem !important;
+    }
+    .span-16{
+        font-size: 1.125rem !important;
+    }
+    .span-18{
+        font-size: 1.25rem !important;
+    }
+    .span-22{
+        font-size: 1.5rem !important;
+    }
+}    
 
 /* 1440px and up */
 @media only screen and (min-width: $md-desktop) {
-  /* h1 */
-  .banner-title {
-    font-size: 2.75rem !important;
-  }
-  .h3-title {
-    font-size: 1.875rem !important;
-  }
-  .publicpoll-title {
-    font-size: 1.875rem;
-  }
-  .span-12 {
-    font-size: 0.875rem !important;
-  }
-  .span-14 {
-    font-size: 1rem !important;
-  }
-  .span-16 {
-    font-size: 1.125rem !important;
-  }
-  .span-18 {
-    font-size: 1.25rem !important;
-  }
-  .span-22 {
-    font-size: 1.5rem !important;
-  }
-}
-
-/* ************************************ */
-@media only screen and (max-width: $mb-sm) {
-  .pdb-25 {
-    padding-bottom: 0.625rem !important;
-  }
-  .pdb-20 {
-    padding-bottom: 0.5rem !important;
-  }
-  .pdt-100 {
-    padding-top: 3.25rem !important;
-  }
-  .mrt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdb-100 {
-    padding-bottom: 4.25rem !important;
-  }
-  .pdb-72 {
-    padding-bottom: 2.5rem !important;
-  }
-  .pdb-30 {
-    padding-bottom: 1.5rem !important;
-  }
-  .pdb-40 {
-    padding-bottom: 2rem !important;
-  }
-  .pdb-50 {
-    padding-bottom: 3.125rem !important;
-  }
-  .pdt-60 {
-    padding-top: 3.75rem !important;
-  }
-  .pdb-60 {
-    padding-bottom: 3.125rem !important;
-  }
-  .pdt-90 {
-    padding-top: 5rem !important;
-  }
-  .pdt-115 {
-    padding-top: 4.375rem !important;
-  }
-  .pdb-115 {
-    padding-bottom: 4.375rem !important;
-  }
-  .pdt-120 {
-    padding-top: 5.25rem !important;
-  }
-  .pdb-120 {
-    padding-bottom: 5.25rem !important;
-  }
-  .pdt-130 {
-    padding-top: 5rem !important;
-  }
-  .pdb-130 {
-    padding-bottom: 5rem !important;
-  }
-  .pdt-150 {
-    padding-top: 6.25rem !important;
-  }
-  .pdb-150 {
-    padding-bottom: 6.25rem !important;
-  }
-}
-
-/* mediaqueries for padding */
-@media only screen and (max-width: $mb-xs) {
-  .pdb-25 {
-    padding-bottom: 0.625rem !important;
-  }
-  .pdb-20 {
-    padding-bottom: 0.5rem !important;
-  }
-  .pdb-100 {
-    padding-bottom: 4.125rem !important;
-  }
-  .mrt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdt-100 {
-    padding-top: 3.25rem !important;
-  }
-  .pdb-72 {
-    padding-bottom: 2.25rem !important;
-  }
-  .pdb-30 {
-    padding-bottom: 1.25rem !important;
-  }
-  .pdb-40 {
-    padding-bottom: 1.75rem !important;
-  }
-  .pdb-50 {
-    padding-bottom: 2.125rem !important;
-  }
-  .pdt-60 {
-    padding-top: 2.75rem !important;
-  }
-  .pdb-60 {
-    padding-bottom: 2rem !important;
-  }
-  .pdt-90 {
-    padding-top: 3rem !important;
-  }
-  .pdt-115 {
-    padding-top: 3.375rem !important;
-  }
-  .pdb-115 {
-    padding-bottom: 3.375rem !important;
-  }
-  .pdt-120 {
-    padding-top: 4rem !important;
-  }
-  .pdb-120 {
-    padding-bottom: 4rem !important;
-  }
-  .pdt-130 {
-    padding-top: 5.25rem !important;
-  }
-  .pdb-130 {
-    padding-bottom: 5.25rem !important;
-  }
-  .pdt-150 {
-    padding-top: 6rem !important;
-  }
-  .pdb-150 {
-    padding-bottom: 6rem !important;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 576px and up) */
-@media only screen and (min-width: $mb-lg) {
-  .pdb-25 {
-    padding-bottom: 1rem !important;
-  }
-  .pdb-20 {
-    padding-bottom: 0.5rem !important;
-  }
-  .pdb-100 {
-    padding-bottom: 4.25rem !important;
-  }
-  .pdt-100 {
-    padding-top: 4.25rem !important;
-  }
-  .mrt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdb-72 {
-    padding-bottom: 2.5rem !important;
-  }
-  .pdb-30 {
-    padding-bottom: 1.5rem !important;
-  }
-  .pdb-40 {
-    padding-bottom: 2.125rem !important;
-  }
-  .pdb-50 {
-    padding-bottom: 2.5rem !important;
-  }
-  .pdt-60 {
-    padding-top: 3rem !important;
-  }
-  .pdb-60 {
-    padding-bottom: 3rem !important;
-  }
-  .pdt-90 {
-    padding-top: 5.625rem !important;
-  }
-  .pdt-115 {
-    padding-top: 5rem !important;
-  }
-  .pdb-115 {
-    padding-bottom: 5rem !important;
-  }
-  .pdt-120 {
-    padding-top: 5.875rem !important;
-  }
-  .pdb-120 {
-    padding-bottom: 5.875rem !important;
-  }
-  .pdt-130 {
-    padding-top: 6rem !important;
-  }
-  .pdb-130 {
-    padding-bottom: 6rem !important;
-  }
-  .pdt-150 {
-    padding-top: 6.875rem !important;
-  }
-  .pdb-150 {
-    padding-bottom: 6.875rem !important;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: $md-tab) {
-  .pdb-25 {
-    padding-bottom: 0.5rem !important;
-  }
-  .pdb-20 {
-    padding-bottom: 1rem !important;
-  }
-  .pdb-100 {
-    padding-bottom: 4.5rem !important;
-  }
-  .pdt-100 {
-    padding-top: 4.25rem !important;
-  }
-  .mrt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdb-72 {
-    padding-bottom: 3.5rem !important;
-  }
-  .pdb-30 {
-    padding-bottom: 1.875rem !important;
-  }
-  .pdb-40 {
-    padding-bottom: 2.5rem !important;
-  }
-  .pdb-50 {
-    padding-bottom: 3.125rem !important;
-  }
-  .pdt-60 {
-    padding-top: 3.75rem !important;
-  }
-  .pdb-60 {
-    padding-bottom: 3.75rem !important;
-  }
-  .pdt-90 {
-    padding-top: 3.625rem !important;
-  }
-  .pdt-115 {
-    padding-top: 5.625rem !important;
-  }
-  .pdb-115 {
-    padding-bottom: 5.625rem !important;
-  }
-  .pdt-120 {
-    padding-top: 5.25rem !important;
-  }
-  .pdb-120 {
-    padding-bottom: 6.25rem !important;
-  }
-  .pdt-130 {
-    padding-top: 6.875rem !important;
-  }
-  .pdb-130 {
-    padding-bottom: 6.875rem !important;
-  }
-  .pdt-150 {
-    padding-top: 7.25rem !important;
-  }
-  .pdb-150 {
-    padding-bottom: 7.25rem !important;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: $lg-tab) {
-  .pdb-25 {
-    padding-bottom: 1.563rem !important;
-  }
-  .pdb-20 {
-    padding-bottom: 1.25rem !important;
-  }
-  .pdb-100 {
-    padding-bottom: 4.5rem !important;
-  }
-  .mrt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdb-72 {
-    padding-bottom: 4.5rem !important;
-  }
-  .pdb-30 {
-    padding-bottom: 1.875rem !important;
-  }
-  .pdb-40 {
-    padding-bottom: 2.5rem !important;
-  }
-  .pdb-50 {
-    padding-bottom: 3.125rem !important;
-  }
-  .pdt-60 {
-    padding-top: 3.75rem !important;
-  }
-  .pdb-60 {
-    padding-bottom: 3.75rem !important;
-  }
-  .pdt-90 {
-    padding-top: 5.625rem !important;
-  }
-  .pdt-115 {
-    padding-top: 7.188rem !important;
-  }
-  .pdb-115 {
-    padding-bottom: 7.188rem !important;
-  }
-  .pdt-120 {
-    padding-top: 7.5rem !important;
-  }
-  .pdb-120 {
-    padding-bottom: 7.5rem !important;
-  }
-  .pdt-130 {
-    padding-top: 8.125rem !important;
-  }
-  .pdb-130 {
-    padding-bottom: 8.125rem !important;
-  }
-  .pdt-150 {
-    padding-top: 9.375rem !important;
-  }
-  .pdb-150 {
-    padding-bottom: 9.375rem !important;
-  }
-}
-
-/* 1024px */
-@media only screen and (min-width: $ls-tab) {
-  .pdb-25 {
-    padding-bottom: 1.563rem !important;
-  }
-  .pdb-20 {
-    padding-bottom: 1.25rem !important;
-  }
-  .pdb-100 {
-    padding-bottom: 5.25rem !important;
-  }
-  .pdt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .mrt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdb-72 {
-    padding-bottom: 4.5rem !important;
-  }
-  .pdb-30 {
-    padding-bottom: 1.875rem !important;
-  }
-  .pdb-40 {
-    padding-bottom: 2.5rem !important;
-  }
-  .pdb-50 {
-    padding-bottom: 3.125rem !important;
-  }
-  .pdt-60 {
-    padding-top: 3.75rem !important;
-  }
-  .pdb-60 {
-    padding-bottom: 3.75rem !important;
-  }
-  .pdt-90 {
-    padding-top: 5.625rem !important;
-  }
-  .pdt-115 {
-    padding-top: 7.188rem !important;
-  }
-  .pdb-115 {
-    padding-bottom: 7.188rem !important;
-  }
-  .pdt-120 {
-    padding-top: 7.5rem !important;
-  }
-  .pdb-120 {
-    padding-bottom: 7.5rem !important;
-  }
-  .pdt-130 {
-    padding-top: 8.125rem !important;
-  }
-  .pdb-130 {
-    padding-top: 8.125rem !important;
-  }
-  .pdt-150 {
-    padding-top: 9.375rem !important;
-  }
-  .pdb-150 {
-    padding-bottom: 9.375rem !important;
-  }
-}
-
-/* 1440px and up */
-@media only screen and (min-width: $md-desktop) {
-  .pdb-25 {
-    padding-bottom: 1.563rem !important;
-  }
-  .pdb-20 {
-    padding-bottom: 1.25rem !important;
-  }
-  .pdb-100 {
-    padding-bottom: 6.25rem !important;
-  }
-  .pdt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .mrt-100 {
-    padding-top: 6.25rem !important;
-  }
-  .pdb-72 {
-    padding-bottom: 4.5rem !important;
-  }
-  .pdb-30 {
-    padding-bottom: 1.875rem !important;
-  }
-  .pdb-40 {
-    padding-bottom: 2.5rem !important;
-  }
-  .pdb-50 {
-    padding-bottom: 3.125rem !important;
-  }
-  .pdt-60 {
-    padding-top: 3.75rem !important;
-  }
-  .pdb-60 {
-    padding-bottom: 3.75rem !important;
-  }
-  .pdt-90 {
-    padding-top: 5.625rem !important;
-  }
-  .pdt-115 {
-    padding-top: 7.188rem !important;
-  }
-  .pdb-115 {
-    padding-bottom: 7.188rem !important;
-  }
-  .pdt-120 {
-    padding-top: 7.5rem !important;
-  }
-  .pdb-120 {
-    padding-bottom: 7.5rem !important;
-  }
-  .pdt-130 {
-    padding-top: 8.125rem !important;
-  }
-  .pdt-150 {
-    padding-top: 9.375rem !important;
-  }
-  .pdb-150 {
-    padding-bottom: 9.375rem !important;
-  }
+    /* h1 */
+    .banner-title{
+        font-size: 2.75rem !important;
+    }
+    .h3-title{
+        font-size: 1.875rem !important;
+    }
+    .publicpoll-title{
+        font-size: 1.875rem;
+    }
+    .span-12{
+        font-size: 0.875rem !important;
+    }
+    .span-14{
+        font-size: 1rem !important;
+    }
+    .span-16{
+        font-size: 1.125rem !important;
+    }
+    .span-18{
+        font-size: 1.25rem !important;
+    }
+    .span-22{
+        font-size: 1.5rem !important;
+    }
 }

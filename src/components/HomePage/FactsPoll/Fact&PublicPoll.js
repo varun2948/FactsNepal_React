@@ -126,10 +126,13 @@ class FactsPublicPoll extends Component {
       <section className="general-info pdt-81 pdb-104">
         <div className="container">
           <div className="general-info-wrap">
+            <div className="circle red-gradient sphere1"></div>
+            <div className="circle pink-gradient sphere2"></div>
+            <div className="circle orange-gradient sphere3"></div>
+            <div className="circle orange-gradient sphere4"></div>
             <Fade bottom duration={1100} delay={500} distance={"50px"}>
               <div className="row">
                 <div className="col-12 col-md-7" id="fact-info-div">
-<<<<<<< HEAD
                   <div
                     className="fact-info-wrap"
                     ref={ref => {
@@ -137,10 +140,6 @@ class FactsPublicPoll extends Component {
                     }}
                   >
                     <h3 className="factsNepal-title">Fact of the day</h3>
-=======
-                  <div className="fact-info-wrap">
-                    <h3 className="headline2">Fact of the day</h3>
->>>>>>> 2944be73233fd32e7d507c2b8327b2844759b553
                     <Link
                       className="poll-link"
                       to={{

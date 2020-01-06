@@ -38,73 +38,29 @@ export default class StrategyContent extends Component {
           </div>
         </section>
 
-<<<<<<< HEAD
-        <div className="info-content service-third pdt-90 pdb-120">
+        <div className="info-content service-third pdt-148 pdb-110">
           <div className="container">
             <div className="content-wrap">
-              <div className="heading-wrap pdb-50">
-                <div className="span-center .pdb-40">
-                  <span className="title-info span-22">
-                    Data in its raw form is, in most cases, complex, vast and
-                    highly intricate.
-                  </span>
+              <div className="heading-wrap">
+                <div className="span-center">
+                    <h3 className="headline3">Data in its raw form is, in most cases, complex, vast and highly intricate.</h3>
                 </div>
-                <p className="para-title span-18">
-                  Quantitative data is usually served by numeric values on
-                  tables and charts, whereas qualitative findings tend to delve
-                  deeper and frequently encompasses textual information.
+                <p className="body-para-second">
+                    Quantitative data is usually served by numeric values on tables and charts, whereas qualitative findings tend to delve deeper and frequently encompasses textual information.
                 </p>
               </div>
               <div className="row">
-                <div className="col-12 col-md-6">
-                  <p className="col-para span-16">
-                    But the biggest problem about data is its presentation and
-                    communication with an audience. The sheer complexity and
-                    limited ways of presentation makes the communication of data
-                    rather challenging. This is where FACTS' expertise comes in.
-                  </p>
-                </div>
-                <div className="col-12 col-md-6">
-                  <p className="col-para span-16">
-                    Our team of researchers and designers are not only familiar
-                    with data presentation, but they have a vast experience in
-                    the same. We have been publishing data in the form of visual
-                    representations, better known as infographics, to present
-                    data in a form that is simple and easy to understand by the
-                    masses. We take data from our clients, pick out the
-                    important portions, ‘the juice’, and design simple,
-                    contextual and impactful infographics, for the general
-                    public as well as specific target audience of the client.
-                  </p>
-=======
-                <div className="info-content service-third pdt-148 pdb-110">
-                    <div className="container">
-                        <div className="content-wrap">
-                            <div className="heading-wrap">
-                                <div className="span-center">
-                                    <h3 className="headline3">Data in its raw form is, in most cases, complex, vast and highly intricate.</h3>
-                                </div>
-                                <p className="body-para-second">
-                                    Quantitative data is usually served by numeric values on tables and charts, whereas qualitative findings tend to delve deeper and frequently encompasses textual information.
-                                </p>
-                            </div>
-                            <div className="row">
-                                <div className="col-12 col-md-6">
-                                    <p className="para-width-first body-para">
-                                        But the biggest problem about data is its presentation and communication with an audience. The sheer complexity and limited ways of presentation makes the communication of data rather challenging. This is where FACTS' expertise comes in.
-                                </p>
-                                </div>
-                                <div className="col-12 col-md-6">
-                                    <p className="para-width-second body-para">
-                                        Our team of researchers and designers are not only familiar with data presentation, but they have a vast experience in the same. We have been publishing data in the form of visual representations, better known as infographics, to present data in a form that is simple and easy to understand by the masses. We take data from our clients, pick out the important portions, ‘the juice’, and design simple, contextual and impactful infographics, for the general public as well as specific target audience of the client.
-                                </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
->>>>>>> 2944be73233fd32e7d507c2b8327b2844759b553
-                </div>
-              </div>
+      <div className="col-12 col-md-6">
+        <p className="para-width-first body-para">
+            But the biggest problem about data is its presentation and communication with an audience. The sheer complexity and limited ways of presentation makes the communication of data rather challenging. This is where FACTS' expertise comes in.
+        </p>
+      </div>
+      <div className="col-12 col-md-6">
+          <p className="para-width-second body-para">
+              Our team of researchers and designers are not only familiar with data presentation, but they have a vast experience in the same. We have been publishing data in the form of visual representations, better known as infographics, to present data in a form that is simple and easy to understand by the masses. We take data from our clients, pick out the important portions, ‘the juice’, and design simple, contextual and impactful infographics, for the general public as well as specific target audience of the client.
+          </p>
+      </div>
+    </div>
             </div>
           </div>
         </div>
