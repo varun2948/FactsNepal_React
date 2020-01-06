@@ -6,6 +6,9 @@ const ParticleJsText = () => (
 
     <div className="banner-wrap">
         <div className="title-block">
+            <div className="circle orange-gradient sphere1"></div>
+            <div className="circle red-gradient sphere2"></div>
+            <div className="circle pink-gradient sphere3"></div>
             <div className="title-wrap">
                 <Fade bottom duration={1500} distance={"20px"}>
                     <h1 className="headline1">Offering total research solutions for your business requirements.</h1>

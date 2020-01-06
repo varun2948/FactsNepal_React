@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+import CaseStudyData from "./CaseStudyData";
 
 
 const headerData = {

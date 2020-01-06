@@ -1,0 +1,302 @@
+section{
+    .wrap{
+        h3{
+            margin-bottom: 1.875rem;
+        }
+    }
+}
+.intro-section{
+    .wrap{
+        padding: 2.569rem 1.875rem;
+        @include border-radius-circle(10px);
+        background: $color-lightpink;
+        p{
+            margin-bottom: 0 !important;
+            line-height: 1.938rem !important;
+        }
+        .body-para{
+            padding-top: 2rem;
+        }
+    }
+}
+
+.objective-section{ 
+    .wrap{
+        p{
+            margin-bottom: 0;
+            &.para{
+                padding: 2rem 0 1.425rem; 
+            }
+        }
+        .obj-lists{
+            ul{
+                li{
+                    @include flex;
+                    margin-bottom: 12px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    span{
+                        &:nth-child(1){
+                            margin-right: 10px;
+                            flex: 0 0 16px;
+                            max-width: 16px; 
+                        }
+                        img{
+                            padding-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.conclude-section{
+    .wrap{
+        ul{
+            li{
+                @include flex;
+                margin-bottom: 12px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                span{
+                    &:nth-child(1){
+                        margin-right: 15px;
+                        flex: 0 0 16px;
+                        max-width: 16px;
+                    }
+                    img{
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+        .btn-wrap{
+            @include flexcenter;
+            button{
+                @include typo($font-family, 500, 1.25);
+                @include button($color-red, $color-white);
+                @include border-radius-circle(5px);
+                @include border(1px, solid, $color-red);
+                font-size: 0.75rem;
+                padding: 10.5px 15.75px;
+                &:hover {
+                    background: lighten($color-red, 45%);
+                    box-shadow: 0px 15px 30px $btn-shadow;
+                }
+                span{
+                    display: inline-block;
+                    flex: 0 0 18px;
+                    max-width: 18px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.project-banner{
+    .proj-banner-wrap{
+        .col-wrap{
+            h1{
+                margin-bottom: 0 !important;
+                padding: .938rem 0 1.125rem;
+            }
+            h5{
+                 margin-bottom: 0 !important;
+                max-width: 450px;
+            }
+            figure{
+                @include flexcenter;
+                img{
+                    width: 165px;
+                    // width: 180px;
+                }
+            }
+        }
+    }
+}
+
+/* less than 991px; */
+@media only screen and (max-width: $tab-xl){
+    section{
+        .wrap {
+            h3 {
+                margin-bottom: 1.5rem;
+            }       
+        }
+    } 
+    .intro-section {
+        .wrap {
+            .body-para {
+                padding-top: 1rem;
+            }
+        }
+    }
+    .objective-section{
+        .wrap{
+            p{
+                &.para {
+                    padding: 1.125rem 0 0.875rem;
+                } 
+            }
+            .obj-lists{
+                ul{
+                    li{
+                        margin-bottom: 10px;
+                        span{
+                            &:nth-child(1){
+                                flex: 0 0 14px;
+                                max-width: 14px;
+                            }
+                            img{
+                                padding-top: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .conclude-section{
+        .wrap{
+            ul{
+                li{
+                    margin-bottom: 10px;
+                    span{
+                        &:nth-child(1){
+                            margin-right: 10px;
+                            flex: 0 0 14px;
+                            max-width: 14px;
+                        }
+                        img{
+                            padding-top: 2px;
+                        }
+                    }
+                }
+            }
+            .btn-wrap{
+                button{
+                    padding: 8.5px 12.5px;
+                    font-size: .625rem;
+                    span {
+                        flex: 0 0 16px;
+                        max-width: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .project-banner{
+        .proj-banner-wrap{
+            .col-wrap{
+                h1{
+                    padding: .5rem 0 .75rem;
+                }
+                figure{
+                    img{
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* less than 767px; */
+@media only screen and (max-width: $mb-xl){
+    .project-banner{
+        .proj-banner-wrap{
+            text-align: center;
+            .col-wrap{
+                h1{
+                    padding: .3rem 0 .5rem;
+                }
+                h5{
+                    margin: 0 auto;
+                }
+                figure{
+                    img{
+                        width: 110px;
+                    }
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    .conclude-section{
+        .wrap {
+            .btn-wrap {
+                button{
+                    padding: 6.5px 11.5px;
+                    span{
+                        flex: 0 0 14px;
+                        max-width: 14px;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+/* less than 575px; */
+@media only screen and (max-width: $mb-sm){
+    section{
+        .wrap{
+            h3{
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+    .intro-section{
+        .wrap{
+            h3{
+                margin-bottom: 2rem;
+            }
+            .body-para{
+                padding-top: 2.125rem;
+            }
+        }
+    }
+    .objective-section {
+        .wrap {
+            .factsNepal-para{
+                &.para {
+                    margin-top: 1.25rem;
+                }
+            }
+        }
+    }
+    .project-banner{
+        .proj-banner-wrap{
+            .col-wrap{
+                figure{
+                    img{
+                        width: 100px;
+                    }
+                }
+                h5{
+                    max-width: 350px;
+                }
+            }
+        }
+    }
+}
+
+/* less than 376px; */
+@media only screen and (max-width: $mb-xs){
+    .project-banner{
+        .proj-banner-wrap{
+            .col-wrap{
+                figure{
+                    img{
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+

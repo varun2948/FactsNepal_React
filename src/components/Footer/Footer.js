@@ -31,7 +31,7 @@ class Footer extends Component {
                 <Fade bottom duration={600} delay={400} distance={"0px"}>
                 <div className="circle sphere-gradient1 form-sphere"></div>
                   <div className="form-left-title">
-                    <h3 className="headline2">Ready to get the Facts?</h3>
+                    <div className="circle sphere-gradient1 form-sphere"></div><h3 className="headline2">Ready to get the Facts?</h3>
                     <span className="caption">Fill in this form or send us an e-mail.</span>
                   </div>
                 </Fade>

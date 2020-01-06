@@ -11,10 +11,14 @@ import Trusted from "../components/HomePage/Trusted/Trusted";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import NavBar from "../components/NavBar/NavBar";
-import Footer from "../components/HomePage/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 
 class HomePage extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
       <React.Fragment>
