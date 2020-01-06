@@ -47,7 +47,7 @@ export default class FactsPage extends Component {
       // response[0].data[0].home.data = categoryfacts;
 
       this.setState({
-        singlefacts: response[0].data[0]
+        singlefacts: response[0].data
       });
     });
     this.setState({
