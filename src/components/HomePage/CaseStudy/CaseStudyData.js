@@ -13,12 +13,16 @@ class CaseStudyData extends Component {
             return (
               // <React.Fragment>
               key % 2 != 0 ? (
-                <div className="case-study-wrap">
+                <div className="case-study-wrap pdt-117">
                   <div className="row">
                     <div className="col-md-6">
                       <div className="case-study-image">
                         <figure className="figure-case-img">
-                          <img src={data.image} alt="" />
+                            <img class="bg-case orange" src="./img/IMAGE-shape2.svg" />
+                            <img className="bg-case pink" src="./img/IMAGE-shape4.svg" />
+                            <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg" />
+                            <img className="bg-case sm-orange" src="./img/IMAGE-shape3.svg" />
+                            <img src={data.image} alt="" />
                         </figure>
                       </div>
                     </div>
@@ -62,7 +66,7 @@ class CaseStudyData extends Component {
                   </div>
                 </div>
               ) : (
-                <div className="case-study-wrap pdt-117">
+                <div className="case-study-wrap">
                   <div className="row">
                     <div className="order-2 order-sm-2 order-md-1 col-md-6">
                       <div className="case-study-content">
@@ -109,6 +113,10 @@ class CaseStudyData extends Component {
                     <div className="order-1 order-sm-1 order-md-2 col-md-6">
                       <div className="case-study-image">
                         <figure className="figure-case-img">
+                          <img class="bg-case orange" src="./img/IMAGE-shape2.svg" />
+                          <img className="bg-case pink" src="./img/IMAGE-shape4.svg" />
+                          <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg" />
+                          <img className="bg-case sm-orange" src="./img/IMAGE-shape3.svg" />
                           <img src={data.image} alt="" />
                         </figure>
                       </div>
