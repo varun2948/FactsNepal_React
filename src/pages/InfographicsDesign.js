@@ -12,14 +12,17 @@ export default class StrategyContent extends Component {
     return (
       <Fragment>
         <NavBar noBg={false} />
-        <section className="banner">
+        <section className="banner banner-rd banner-rd2">
+          <div className="circle orange-gradient sphere1"></div>
+          <div className="circle red-gradient sphere2"></div>
+          <div className="circle pink-gradient sphere3"></div>
           <div className="container">
             <div className="banner-content-wrap">
               <div className="row no-gutters">
                 <div className="col-md-6">
                   <div className="title-wrap">
                     <div className="title-center">
-                      <span className="span-subtitle span-16">
+                      <span className="sec-caption">
                         Infographics Design
                       </span>
                       <h3 className="factsNepal-title banner-heading">

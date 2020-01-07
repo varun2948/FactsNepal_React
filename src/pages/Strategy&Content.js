@@ -12,7 +12,10 @@ export default class StrategyContent extends Component {
     return (
       <Fragment>
         <NavBar noBg={false} />
-        <section className="banner">
+        <section className="banner banner-rd1">
+          <div className="circle orange-gradient sphere1"></div>
+          <div className="circle red-gradient sphere2"></div>
+          <div className="circle pink-gradient sphere3"></div>
           <div className="container">
             <div className="banner-content-wrap">
               <div className="row no-gutters">
@@ -63,8 +66,8 @@ export default class StrategyContent extends Component {
                 </div>
                 <div className="col-md-6">
                   <div className="lists-heading">
-                    <ul className="list-wrap">
-                      <li className="list-item body-para-second">
+                    <ul className="list-wrap body-para-second">
+                      <li className="list-item ">
                         <figure>
                           <img src="./img/idea.svg" alt="" />
                         </figure>
@@ -75,7 +78,7 @@ export default class StrategyContent extends Component {
 
                       <li className="list-item">
                         <figure>
-                          
+                          <img src="./img/undraw_agreement_aajr.svg" alt="" />
                         </figure>
                         <div>
                           <span>Mass Media & Public Relations</span>
@@ -84,7 +87,7 @@ export default class StrategyContent extends Component {
 
                       <li className="list-item">
                         <figure>
-
+                          <img src="./img/social-media.svg" alt="" />
                         </figure>
                         <div>
                           <span>Digital & Social Media</span>
