@@ -9,10 +9,7 @@ class Testimonials extends Component {
       testimonials: []
     };
   }
-  componentWillReceiveProps() {
-    console.log(this.refs.slick, "refsslick");
-    this.refs.slick.innerSlider.onWindowResized();
-  }
+
   componentDidMount() {
     Promise.all([
       axios({
