@@ -97,7 +97,7 @@ class PublicPollResult extends Component {
 
           <div className="banner-content bg-grey">
             <div className="container">
-              <div className="publicpoll-wrap mrt-100">
+              <div className="publicpoll-wrap pdt-120">
                 <div className="wrap-center">
                   <div className="title-wrap">
                     <span className="title-span span-14">

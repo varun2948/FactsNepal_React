@@ -7,8 +7,8 @@ class MobileAppDownloads extends Component {
   }
   render() {
     return (
-      <div
-        className={`tech-section pdt-130 pdb-120 ${
+      <section
+        className={`tech-section pdt-116 pdb-104 ${
           this.props.techBg ? "tech-bg" : ""
         }`}
       >
@@ -25,12 +25,14 @@ class MobileAppDownloads extends Component {
               <div className="col-md-6">
                 <div className="tech-section-right">
                   <div className="tech-section-right-content">
-                    <h3 className="factsNepal-title">
+                    <h3 className="headline2">
                       All the power of accurate and contextual data at your
                       fingertips.
                     </h3>
                     <div className="btn-wrap">
-                      <span className="caption">Available for your smartphone</span>
+                      <span className="caption">
+                        Available for your smartphone
+                      </span>
                       <div className="btn-content">
                         <a>
                           <img src="./img/app-store (1).svg" alt="app-store" />
@@ -49,7 +51,7 @@ class MobileAppDownloads extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

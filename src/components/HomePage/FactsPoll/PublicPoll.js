@@ -27,9 +27,9 @@ const PublicPoll = React.forwardRef((props, ref) => {
                   <TimeAgo date={publicPoll[0].publishedDate} />
                 </span>
                 {/* <span className="date-time">1 day ago</span> */}
-                <span className="btn-vote">
+                <button className="btn-vote">
                   {publicPoll[0].totalVotes} Votes
-                </span>
+                </button>
                 <div
                   className="grid-button"
                   style={{

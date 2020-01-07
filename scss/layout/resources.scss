@@ -1,34 +1,40 @@
 .resources-section{
-    padding: 0 80px;
     .resources-section-wrap{
         .resources-title{
             h3{
-                padding-bottom: 15px;
+                padding-bottom: .938rem;
+            }
+            p{
+                padding-bottom: 1.5rem;
             }
         }
         .resources-grid-content{
             .grid-container{
                 .grid-col{
+                    margin-bottom: 40px;
                     .grid-content-wrap{
                         .grid-image{        
                             img{
-                                max-width: 190px;
+                                width: 190px;
                             }
                         }
                         .grid-content{
-                            margin-top: 10px;
                             h4{
-                                padding-bottom: 5px;
+                                margin-top: 1.172rem;
                                 max-width: 200px;
+                                line-height: 1.875rem !important;
                             }
                             .para-center{
                                 p{
+                                    margin-top: .844rem;
                                     max-width: 275px;
                                 }
                             }
                         }
-                        .grid-button{  
-                            margin-top: 20px;                           
+                        .grid-button{ 
+                            position: absolute;
+                            bottom: 0;
+                            margin-top: 1rem;                           
                             button{
                                 @include typo($font-family, 400, 1.25);
                                 @include button($color-red, $color-white);
@@ -41,7 +47,7 @@
                                     background: lighten($color-red, 40%);
                                 }
                                 &:nth-child(1){
-                                    margin-right: 10px;
+                                    margin-right: 15px;
                                 }
                             }
                         }
@@ -55,11 +61,10 @@
 /* less than 991px; */
 @media only screen and (max-width: $tab-xl){
     .resources-section{
-        padding: 0 80px;
         .resources-section-wrap{
             .resources-title{
                 h3{
-                    padding-bottom: 5px;
+                    padding-bottom: 0.738rem;
                 }
             }
             .resources-grid-content{
@@ -68,7 +73,7 @@
                         .grid-content-wrap{
                             .grid-image{        
                                 img{
-                                    max-width: 150px;
+                                    width: 140px;
                                 }
                             }
                             .grid-content{
@@ -76,8 +81,7 @@
                                     max-width: 170px;
                                 }
                             }
-                            .grid-button{  
-                                margin-top: 20px;                           
+                            .grid-button{                           
                                 button{
                                     width: 70px;
                                     padding: 4px 0;
@@ -97,12 +101,12 @@
 /* less than 767px; */
 @media only screen and (max-width: $mb-xl){
     .resources-section{
-        padding: 0 50px;
         .resources-section-wrap{
             .resources-title{
                 text-align: center;
-                h3{
-                    padding-bottom: 0;
+                p{
+                    margin: 0 auto;
+                    max-width: 300px;
                 }
             }
             .resources-grid-content{
@@ -113,22 +117,25 @@
                             text-align: center;
                             .grid-image{        
                                 img{
-                                    max-width: 130px;
+                                    width: 130px;
                                 }
                             }
                             .grid-content{
                                 margin-top: 0;
                                 h4{
-                                    padding-bottom: 0;
+                                    margin-top: .3rem;
                                     max-width: 100%;
                                     text-align: center;
                                 }
                                 .para-center{
                                     @include flexcenter;
+                                    p{
+                                        margin-top: .3rem;
+                                    }
                                 }
                             }
                             .grid-button{  
-                                margin-top: 0; 
+                                margin-top: .875rem; 
                             }
                         }
                     }
@@ -141,7 +148,26 @@
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
     .resources-section{
-        padding: 0 30px;
+        .resources-section-wrap{
+            .resources-title{
+                p{
+                    max-width: 250px;
+                }
+            }
+            .resources-grid-content{
+                .grid-container {
+                    .grid-col {
+                        .grid-content-wrap {
+                            .grid-image{
+                                img{
+                                    width: 110px;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        }
     }
 }
 
@@ -149,6 +175,11 @@
 @media only screen and (max-width: $mb-xs){
     .resources-section{
         .resources-section-wrap{
+            .resources-title{
+                p{
+                    margin-bottom: .875rem;
+                }
+            } 
             .resources-grid-content{
                 .grid-container {
                     .grid-col{
@@ -169,7 +200,6 @@
 /* more than 1440px; */
 @media only screen and (min-width: $md-desktop){
     .resources-section{
-        padding: 0;
         .resources-section-wrap{
             .resources-grid-content{
                 .grid-container{

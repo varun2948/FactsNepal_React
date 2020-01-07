@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
-import axios from "axios";
 import Particles from "react-particles-js";
+import { Link } from "react-router-dom";
 
 class Services extends Component {
   state = {
@@ -22,12 +22,12 @@ class Services extends Component {
     const { services } = this.state;
     return (
       // <section className="services">
-      <div className="grid-section-whole pdb-120 pdt-115">
+      <section className="grid-section-whole pdt-113 pdb-134">
         <div className="container">
           <div className="grid-section">
-            <div className="grid-title-wrap">
-              <span className="section-caption">SERVICES</span>
-              <h3 className="factsNepal-title">
+            <div className="grid-title-wrap pdb-85">
+              <span className="sec-caption">SERVICES</span>
+              <h3 className="headline2">
                 Bridging information asymmetry through real, transparent data &
                 statistics
               </h3>
@@ -36,69 +36,113 @@ class Services extends Component {
               <div className="grid-container">
                 <div className="row">
                   <div className="col-md-4">
-                    <div className="grid-col">
-                      <figure className="fig">
-                        <img
-                          className="grid-img"
-                          src="./img/Services-icon-1.svg"
-                          alt="visual data"
-                        />
-                      </figure>
-                      <h4 className="factsNepal-subtitle">
-                        Research & <br /> Data Analysis
-                      </h4>
-                      <div className="para-center">
-                        <p className="factsNepal-para">
-                          Analyzing data in quantitative and qualitative
-                          Research
-                        </p>
+                    <Link
+                      to={{
+                        pathname: `/researchdata`
+                      }}
+                    >
+                      <div className="grid-col">
+                        <figure className="fig">
+                          <img
+                            className="bg-img bg-lg-img"
+                            src="./img/ICON-shape2.svg"
+                          />
+                          <img
+                            className="grid-img"
+                            src="./img/Services-icon-1.svg"
+                            alt="visual data"
+                          />
+                          <img
+                            className="bg-img bg-sm-img"
+                            src="./img/ICON-shape1.svg"
+                          />
+                        </figure>
+                        <h4 className="headline4">
+                          Research & <br></br> Data Analysis
+                        </h4>
+                        <div className="para-center">
+                          <p className="body-para">
+                            Analyzing data in quantitative and qualitative
+                            Research
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                   <div className="col-md-4">
-                    <div className="grid-col">
-                      <figure className="fig">
-                        <img
-                          className="grid-img"
-                          src="./img/Services-icon-2.svg"
-                          alt="file searcrhing"
-                        />
-                      </figure>
-                      <h4 className="factsNepal-subtitle">
-                        Strategy & <br /> Development
-                      </h4>
-                      <div className="para-center">
-                        <p className="factsNepal-para">
-                          Planning, creation, delivery and governance of content
-                        </p>
+                    <Link
+                      to={{
+                        pathname: `/strategycontent`
+                      }}
+                    >
+                      <div className="grid-col">
+                        <figure className="fig bg-alter">
+                          <img
+                            className="bg-img bg-lg-img"
+                            src="./img/ICON-shape2.svg"
+                          />
+                          <img
+                            className="grid-img"
+                            src="./img/Services-icon-2.svg"
+                            alt="file searcrhing"
+                          />
+                          <img
+                            className="bg-img bg-sm-img"
+                            src="./img/ICON-shape1.svg"
+                          />
+                        </figure>
+                        <h4 className="headline4">
+                          Strategy & <br></br> Development
+                        </h4>
+                        <div className="para-center">
+                          <p className="body-para">
+                            Planning, creation, delivery and governance of
+                            content
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                   <div className="col-md-4">
-                    <div className="grid-col mb-0">
-                      <figure className="fig">
-                        <img
-                          className="grid-img"
-                          src="./img/Services-icon-3.svg"
-                          alt="file searcrhing"
-                        />
-                      </figure>
-                      <h4 className="factsNepal-subtitle">
-                        Infographics <br /> Design
-                      </h4>
-                      <div className="para-center">
-                        <p className="factsNepal-para">
-                          Supplying you with relevant of information in graphic
-                        </p>
+                    <Link
+                      to={{
+                        pathname: `/infographics`
+                      }}
+                    >
+                      <div className="grid-col mb-0">
+                        <figure className="fig bg-alter-left">
+                          <img
+                            className="bg-img bg-lg-img"
+                            src="./img/ICON-shape2.svg"
+                          />
+                          <img
+                            className="grid-img"
+                            src="./img/Services-icon-3.svg"
+                            alt="file searcrhing"
+                          />
+                          <img
+                            className="bg-img bg-sm-img"
+                            src="./img/ICON-shape1.svg"
+                          ></img>
+                        </figure>
+                        <h4 className="headline4">
+                          Infographics <br></br> Design
+                        </h4>
+                        <div className="para-center">
+                          <p className="body-para">
+                            Supplying you with relevant of information in
+                            graphic
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       // </section>
     );
   }

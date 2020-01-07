@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import CaseStudyData from "./CaseStudyData";
 
-
 const headerData = {
   headers: {
     "Content-Type": "application/json",
@@ -42,7 +41,7 @@ class CaseStudy extends Component {
   render() {
     const { casestudy } = this.state;
     return (
-      <section className="case-study pdt-120 pdb-150">
+      <section className="case-study pdt-132 pdb-128">
         <div className="container">
           <CaseStudyData casestudy={casestudy} />
         </div>

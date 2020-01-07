@@ -1,0 +1,225 @@
+.banner{
+    @include linear-gradient(180deg, $color-stop1, $color-stop2);
+    &.contact-banner{
+        .banner-wrap{
+            padding-bottom: 0;
+            .title-block{
+                .title-wrap {
+                    .headline1 {
+                        margin-bottom: 1.125rem;
+                    }
+                    .headline5{
+                        margin-bottom: 0;
+                    }
+                }
+            } 
+        }
+    }
+    .banner-wrap{
+        padding-bottom: 1.688rem;
+        text-align: center;
+        .title-block{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            .sphere1{
+                width: 30px;
+                height: 30px;
+                right: 11%;
+                top: 30%;
+            }
+            .sphere2{
+                width: 67.5px;
+                height: 67.5px;
+                left: 14%;
+                top: 50%;
+            }
+            .sphere3{
+                width: 100px;
+                height: 100px;
+                left: 62%;
+                bottom: -29%;
+                z-index: -1;
+            }
+            .title-wrap{
+                max-width: 850px;
+                .headline1{
+                    margin-bottom: 1rem;
+                }
+                .headline5{
+                    margin-bottom: 4.375rem;
+                }
+            }
+        }
+        img{
+            width: 630px;
+        }
+        &.fact-banner-wrap{
+            padding-bottom: 0;
+            .title-block{
+                .title-wrap{
+                    .headline5{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: $md-desktop){
+    .banner{
+        padding: 0 80px;
+    }
+}
+
+@media only screen and (max-width: $desktop){
+    .banner{
+        .banner-wrap{
+            .title-block {
+                .sphere1 {
+                    right: -2%;
+                    top: 40%;
+                }
+                .sphere2{
+                    left: 3%;
+                }
+                .sphere3{
+                    left: 65%;
+                    bottom: -36%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $tab-xl){
+    .banner{
+        .banner-wrap{
+            img {
+                width: 570px;
+            }
+            .title-block{
+                .title-wrap {
+                    max-width: 500px;
+                }
+                .sphere1 {
+                    width: 24px;
+                    height: 24px;
+                }
+                .sphere2{
+                    width: 55px;
+                    height: 55px;
+                }
+                .sphere3{
+                    width: 90px;
+                    height: 90px;
+                    left: 66%;
+                    bottom: -40%;
+                }
+            } 
+        }
+    }
+}
+
+@media only screen and (max-width: $mb-xl){
+    .banner{
+        padding: 0 50px;
+        .banner-wrap{
+            .title-block{
+                .title-wrap {
+                    .headline5{
+                        margin-bottom: 4rem;
+                    }
+                }
+                .sphere1 {
+                    width: 24px;
+                    height: 24px;
+                    right: -5%;
+                }
+                .sphere2{
+                    width: 50px;
+                    height: 50px;
+                }
+                .sphere3{
+                    left: 70%;
+                }
+            } 
+        } 
+    }
+}
+
+@media only screen and (max-width: $mb-sm){
+    .banner{
+        .banner-wrap{
+            img  {
+                width: 450px;
+            }
+            .title-block{
+                .sphere1 {
+                    right: -1%;
+                }
+                .sphere3{
+                    left: 69%;
+                    bottom: -24%;
+                }
+            }
+        } 
+    }
+}
+
+@media only screen and (max-width: $mb-md){
+    .banner{
+        .banner-wrap{
+            .title-block{
+                .sphere1 {
+                    right: -6%;
+                }
+                .sphere2{
+                    left: 6%;
+                    top: 64%;
+                    width: 45px;
+                    height: 45px;
+                }
+                .sphere3{
+                    width: 80px;
+                    height: 80px;
+                    left: 66%;
+                    bottom: -34%;
+                }
+            }
+        } 
+    }
+}
+
+@media only screen and (max-width: $mb-xs){
+    .banner{
+        .banner-wrap{
+            .title-block{
+                .sphere3{
+                    bottom: -22%;
+                }
+                .sphere2{
+                    left: -5%;
+                    top: 67%;
+                }
+                .sphere1{
+                    width: 20px;
+                    height: 20px;
+                }
+                .title-wrap {
+                    .headline5{
+                        margin-bottom: 3rem;
+                    }
+                }
+            } 
+        } 
+    }
+}
+
+@media only screen and (min-width: $md-desktop){
+    .banner{
+        padding: 0;
+    }
+}
