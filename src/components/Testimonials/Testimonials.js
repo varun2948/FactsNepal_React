@@ -1,12 +1,40 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-
+import axios from "axios";
+import TestimonialsItem from "./TestimonialsItem";
 class Testimonials extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      testimonials: []
+    };
   }
-
+  componentWillReceiveProps() {
+    console.log(this.refs.slick, "refsslick");
+    this.refs.slick.innerSlider.onWindowResized();
+  }
+  componentDidMount() {
+    Promise.all([
+      axios({
+        method: "GET",
+        url: `${process.env.API_URL}api/testimonials`,
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json"
+        }
+      })
+    ]).then(response => {
+      console.log(response[0].data);
+      // const sliced2Collaborators = response[0].data.collaborators.slice(0, 2);
+      this.setState({
+        testimonials: response[0].data
+      });
+      // console.log(this.state.casestudy, "cs");
+    });
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 0);
+  }
   render() {
     var settings = {
       dots: true,
@@ -44,111 +72,41 @@ class Testimonials extends Component {
         }
       ]
     };
+    var settings1 = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+    const { testimonials } = this.state;
     return (
       <div className="testimonials-section pdt-91 pdb-91">
         <div className="container">
           <div className="testimonials-title">
             <span className="sec-caption">TESTIMONIALS</span>
-            <h3 className="headline2">
-              Meet a few of our happy partners
-            </h3>
+            <h3 className="headline2">Meet a few of our happy partners</h3>
           </div>
-          <div className="testimonials-content">
+          {/* <div className="testimonials-content">
             <div className="testimonials-content-center">
               <div className="silder testimonial-slider-content">
-                <Slider {...settings}>
-                  <div className="para-wrap">
-                    <h4 className="factsNepal-subtitle">
-                      Awesome! Superb team work and very professional.
-                      Shockingly accurate! Very fine Infographics, illustrations
-                      and videos. Work is really great, keep going!
-                    </h4>
-                    <img
-                      className="quote-img"
-                      src="./img/quote.svg"
-                      alt="quote"
-                    />
-                    <div className="span-testimonials-wrap">
-                      <span className="testimonial-name">
-                        Krishna Prasad Sharma
-                      </span>
-                      <span className="testimonial-position">
-                        CEO, Him Electronics
-                      </span>
-                    </div>
-                    <div className="testimonial-slider-item">
-                      <img src="./img/7client-cocacola.png" alt="cocacola" />
-                    </div>
-                  </div>
-                  <div className="para-wrap">
-                    <h4 className="factsNepal-subtitle">
-                      Awesome! Superb team work and very professional.
-                      Shockingly accurate! Very fine Infographics, illustrations
-                      and videos. Work is really great, keep going!
-                    </h4>
-                    <img
-                      className="quote-img"
-                      src="./img/quote.svg"
-                      alt="quote"
-                    />
-                    <div className="span-testimonials-wrap">
-                      <span className="testimonial-name">
-                        Shyam Prasad Thapa
-                      </span>
-                      <span className="testimonial-position">
-                        Managing Director, Roses Foundation
-                      </span>
-                    </div>
-                    <div className="testimonial-slider-item">
-                      <img src="./img/7client-cocacola.png" alt="cocacola" />
-                    </div>
-                  </div>
-                  <div className="para-wrap">
-                    <h4 className="factsNepal-subtitle">
-                      Awesome! Superb team work and very professional.
-                      Shockingly accurate! Very fine Infographics, illustrations
-                      and videos. Work is really great, keep going!
-                    </h4>
-                    <img
-                      className="quote-img"
-                      src="./img/quote.svg"
-                      alt="quote"
-                    />
-                    <div className="span-testimonials-wrap">
-                      <span className="testimonial-name">Kamal Kaki</span>
-                      <span className="testimonial-position">
-                        Founder, Fullbright International
-                      </span>
-                    </div>
-                    <div className="testimonial-slider-item">
-                      <img src="./img/7client-cocacola.png" alt="cocacola" />
-                    </div>
-                  </div>
-                  <div className="para-wrap">
-                    <h4 className="factsNepal-subtitle">
-                      Awesome! Superb team work and very professional.
-                      Shockingly accurate! Very fine Infographics, illustrations
-                      and videos. Work is really great, keep going!
-                    </h4>
-                    <img
-                      className="quote-img"
-                      src="./img/quote.svg"
-                      alt="quote"
-                    />
-                    <div className="span-testimonials-wrap">
-                      <span className="testimonial-name">Shruti Paudel</span>
-                      <span className="testimonial-position">
-                        CEO, Himalaya Construction Company
-                      </span>
-                    </div>
-                    <div className="testimonial-slider-item">
-                      <img src="./img/7client-cocacola.png" alt="cocacola" />
-                    </div>
-                  </div>
+                <Slider ref="slick" {...settings}>
+                  {testimonials &&
+                    testimonials.map((data, key) => {
+                      return <TestimonialsItem data={data} />;
+                    })}
                 </Slider>
               </div>
             </div>
-          </div>
+          </div> */}
+          {/* <div className="slider slider-for slider-content pdt-40"> */}
+          <Slider {...settings}>
+            {testimonials &&
+              testimonials.map((data, key) => {
+                return <TestimonialsItem data={data} />;
+              })}
+          </Slider>
+          {/* </Slider> */}
         </div>
       </div>
     );
