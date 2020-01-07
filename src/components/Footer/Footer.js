@@ -99,7 +99,7 @@ class Footer extends Component {
                     <span className="caption">
                       Available for your smartphone
                     </span>
-                    <div class="circle sphere-gradient3 form-sphere"></div>
+                    <div className="circle sphere-gradient3 form-sphere"></div>
                     <div className="btn-content">
                       <a>
                         <img src="./img/appstore.png" alt="appstore" />
@@ -142,10 +142,10 @@ class Footer extends Component {
           </div>
 
           <div className="footer">
-            <div class="row">
-              <div class="col-12 col-md-6">
+            <div className="row">
+              <div className="col-12 col-md-6">
                 <div className="footer-left">
-                  <div class="circle orange-gradient form-sphere"></div>
+                  <div className="circle orange-gradient form-sphere"></div>
                   <span className="copyright sm-caption">
                     © 2019
                     <span className="subtitle">
@@ -155,7 +155,7 @@ class Footer extends Component {
                   </span>
                 </div>
               </div>
-              <div class="col-12 offset-0 offset-md-1 col-md-5">
+              <div className="col-12 offset-0 offset-md-1 col-md-5">
                 <div className="footer-right">
                   <span className="site-design-title sm-caption">
                     Designed by <span className="site-design">NAXA</span>
