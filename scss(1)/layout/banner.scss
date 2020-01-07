@@ -1,5 +1,25 @@
 .banner{
     @include linear-gradient(180deg, $color-stop1, $color-stop2);
+    position: relative;
+    .sphere1{
+        width: 30px;
+        height: 30px;
+        right: 11%;
+        top: 30%;
+    }
+    .sphere2{
+        width: 67.5px;
+        height: 67.5px;
+        left: 14%;
+        top: 50%;
+    }
+    .sphere3{
+        width: 100px;
+        height: 100px;
+        left: 62%;
+        bottom: -29%;
+          z-index: -1;
+    }
     &.contact-banner{
         .banner-wrap{
             padding-bottom: 0;
@@ -21,26 +41,7 @@
         .title-block{
             display: flex;
             justify-content: center;
-            position: relative;
-            .sphere1{
-                width: 30px;
-                height: 30px;
-                right: 11%;
-                top: 30%;
-            }
-            .sphere2{
-                width: 67.5px;
-                height: 67.5px;
-                left: 14%;
-                top: 50%;
-            }
-            .sphere3{
-                width: 100px;
-                height: 100px;
-                left: 62%;
-                bottom: -29%;
-                z-index: -1;
-            }
+            
             .title-wrap{
                 max-width: 850px;
                 .headline1{
@@ -71,31 +72,144 @@
 @media only screen and (max-width: $md-desktop){
     .banner{
         padding: 0 80px;
+        &.banner-rd1{
+            .sphere1{
+                left: 14%;
+                top: -2%;
+            }
+            .sphere2{
+                left: 67%;
+                top: 14%;
+            }
+            .sphere3{
+                top: 62%;
+                left: 86%;
+            }
+        }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 82%;
+                    top: 65%;
+                }
+            }
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 7%;
+                top: 17%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+      
     }
 }
 
 @media only screen and (max-width: $desktop){
     .banner{
-        .banner-wrap{
-            .title-block {
-                .sphere1 {
-                    right: -2%;
-                    top: 40%;
-                }
-                .sphere2{
-                    left: 3%;
-                }
+        &.banner-rd1{
+            .sphere1{
+                left: 11%;
+                top: -4%;
+            }
+            .sphere2{
+                left: 70%;
+            }
+        }
+        &.banner-rd{
+            &.banner-rd2{
                 .sphere3{
-                    left: 65%;
-                    bottom: -36%;
+                    left: 80%;
+                    top: 65%;
                 }
             }
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 7%;
+                top: 17%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+        .sphere1 {
+            right: 5%;
+            top: 12%;
+        }
+        .sphere2{
+            left: 14%;
+            top: 16%;
+        }
+        .sphere3{
+            left: 60%;
+            top: 30%;
         }
     }
 }
 
 @media only screen and (max-width: $tab-xl){
     .banner{
+        &.banner-rd1{
+            .sphere1{
+                left: 18%;
+                top: -6%;
+            }
+            .sphere2{
+                left: 74%;
+                top: 10%;
+            }
+            .sphere3{
+                top: 59%;
+                left: 77%;
+            }
+        }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 77%;
+                    top: 62%;
+                }
+            }
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 10%;
+                top: 10%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+        .sphere1 {
+            width: 24px;
+            height: 24px;
+            right: 6%;
+            top: 9%;
+        }
+        .sphere2{
+            width: 55px;
+            height: 55px;
+            left: 12%;
+            top: 12%;
+        }
+        .sphere3{
+            width: 90px;
+            height: 90px;
+            left: 61%;
+            top: 24%;
+        }
         .banner-wrap{
             img {
                 width: 570px;
@@ -103,20 +217,6 @@
             .title-block{
                 .title-wrap {
                     max-width: 500px;
-                }
-                .sphere1 {
-                    width: 24px;
-                    height: 24px;
-                }
-                .sphere2{
-                    width: 55px;
-                    height: 55px;
-                }
-                .sphere3{
-                    width: 90px;
-                    height: 90px;
-                    left: 66%;
-                    bottom: -40%;
                 }
             } 
         }
@@ -126,24 +226,48 @@
 @media only screen and (max-width: $mb-xl){
     .banner{
         padding: 0 50px;
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 67%;
+                    top: 74%;
+                }
+            }
+            .sphere1{
+                right: 12%;
+                top: -7%;
+            }
+            .sphere2{
+                left: 26%;
+                top: -7%;
+            }
+            .sphere3{
+                left: 20%;
+                top: 60%;
+            }   
+        }
+        .sphere1 {
+            width: 24px;
+            height: 24px;
+            right: 7%;
+        }
+        .sphere2{
+            width: 50px;
+            height: 50px;
+            left: 6%;
+            top: 16%;
+        }
+        .sphere3{
+            left: 70%;
+            left: 62%;
+            top: 24%;
+        }
         .banner-wrap{
             .title-block{
                 .title-wrap {
                     .headline5{
                         margin-bottom: 4rem;
                     }
-                }
-                .sphere1 {
-                    width: 24px;
-                    height: 24px;
-                    right: -5%;
-                }
-                .sphere2{
-                    width: 50px;
-                    height: 50px;
-                }
-                .sphere3{
-                    left: 70%;
                 }
             } 
         } 
@@ -152,62 +276,93 @@
 
 @media only screen and (max-width: $mb-sm){
     .banner{
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 72%;
+                    top: 74%;
+                }
+            }
+            .sphere3{
+                left: 15%;
+                top: 58%;
+            }   
+        }
+        .sphere1 {
+            right: 8%;
+        }
+        .sphere3{
+            left: 69%;
+            bottom: -24%;
+            left: 64%;
+            top: 28%;
+        }
         .banner-wrap{
             img  {
                 width: 450px;
             }
-            .title-block{
-                .sphere1 {
-                    right: -1%;
-                }
-                .sphere3{
-                    left: 69%;
-                    bottom: -24%;
-                }
-            }
         } 
     }
 }
-
+ 
 @media only screen and (max-width: $mb-md){
     .banner{
-        .banner-wrap{
-            .title-block{
-                .sphere1 {
-                    right: -6%;
-                }
-                .sphere2{
-                    left: 6%;
-                    top: 64%;
-                    width: 45px;
-                    height: 45px;
-                }
-                .sphere3{
-                    width: 80px;
-                    height: 80px;
-                    left: 66%;
-                    bottom: -34%;
-                }
-            }
-        } 
+        &.banner-rd{
+            .sphere3{
+                left: 11%;
+                top: 60%;
+            }   
+        }
+        .sphere1 {
+            right: -6%;
+        }
+        .sphere2{
+            left: 6%;
+            top: 64%;
+            width: 45px;
+            height: 45px;
+        }
+        .sphere3{
+            width: 80px;
+            height: 80px;
+            left: 66%;
+            bottom: -34%;
+        }
     }
 }
 
 @media only screen and (max-width: $mb-xs){
     .banner{
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 60%;
+                    top: 74%;
+                }
+            }
+        }
+        .banner-rd1 {
+            .sphere3 {
+                top: 54%;
+                left: 65%;
+            }
+        }
+        .sphere3{
+            bottom: -22%;
+            left: 61%;
+            top: 32%;
+        }
+        .sphere2{
+            left: 6%;
+            top: 26%;
+        }
+        .sphere1{
+            width: 20px;
+            height: 20px;
+            right: 6%;
+        }
         .banner-wrap{
             .title-block{
-                .sphere3{
-                    bottom: -22%;
-                }
-                .sphere2{
-                    left: -5%;
-                    top: 67%;
-                }
-                .sphere1{
-                    width: 20px;
-                    height: 20px;
-                }
                 .title-wrap {
                     .headline5{
                         margin-bottom: 3rem;
@@ -221,5 +376,54 @@
 @media only screen and (min-width: $md-desktop){
     .banner{
         padding: 0;
+        .sphere1{
+            right: 6%;
+            top: 15%;
+        }
+        .sphere2{
+            width: 67.5px;
+            height: 67.5px;
+            left: 18%;
+            top: 20%;
+        }
+        .sphere3{
+            left: 59%;
+            top: 29%;
+        }
+        
+        &.banner-rd{
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 11%;
+                top: 17%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+        &.banner-rd1{
+            .sphere1{
+                left: 14%;
+                top: -2%;
+            }
+            .sphere2{
+                left: 67%;
+                top: 14%;
+            }
+            .sphere3{
+                top: 62%;
+                left: 85%;
+            }
+        }
+        &.banner-rd2{
+            .sphere3{
+                left: 79%;
+                top: 63%;
+            }
+        }
     }
 }
