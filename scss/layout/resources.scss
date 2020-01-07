@@ -11,6 +11,7 @@
         .resources-grid-content{
             .grid-container{
                 .grid-col{
+                    margin-bottom: 40px;
                     .grid-content-wrap{
                         .grid-image{        
                             img{
@@ -31,6 +32,8 @@
                             }
                         }
                         .grid-button{ 
+                            position: absolute;
+                            bottom: 0;
                             margin-top: 1rem;                           
                             button{
                                 @include typo($font-family, 400, 1.25);
