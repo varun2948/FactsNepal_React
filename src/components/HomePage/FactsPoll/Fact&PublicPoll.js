@@ -57,72 +57,9 @@ class FactsPublicPoll extends Component {
       state: { facts, factoftheday, publicPoll }
     } = this;
     var last = facts[facts.length - 1];
-    console.log(last);
-    // const {
-    //   state: { facts, publicPoll, pollResultApi, likeUpdated, pollUpdated },
-    //   handleLike,
-    //   pollOptionClick
-    // } = this;
-
-    // let description, question;
-
-    // if (facts[0] && facts[0].home && facts[0].home[0]) {
-    //   description = (
-
-    //     <Fact
-    //       fact={facts[0].home[0]}
-    //       handleLike={handleLike}
-    //       likeUpdated={facts[0].home[0].likeUpdated}
-    //     />
-    //   );
-    // } else {
-    //   description = <h2 style={{ color: "#b43046" }}>Loading...</h2>;
-    // }
-
-    // if (publicPoll.length > 0) {
-    //   question = (
-    //     <Question
-    //       pollQuestion={publicPoll[0]}
-    //       pollOptionClick={pollOptionClick}
-    //     />
-    //   );
-    // } else {
-    //   question = <h2 style={{ color: "#b43046" }}>Loading...</h2>;
-    // }
-    console.log(factoftheday.public_date, "publicPoll");
 
     const fact_date = moment(factoftheday.public_date, "YYYY-MM-DD");
-    console.log(this.childRef.current, "childref");
     return (
-      //     <section className="section-padding-y fact-poll">
-      //     <div className="container-fluid">
-      //       <div className="row">
-      //         <div className="col-md-7 col-lg-8 relative">
-      //           <Fade bottom duration={1400} delay={1000} distance={"50px"}>
-      //             <div className="factsod">
-      //               <div className="factsod__header">
-      //                 <h5>Facts Of The Day</h5>
-      //               </div>
-      //               <form>
-      //                 <div className="factsod__wrapper">
-      //                   <Link className="viewall no-decoration" to="/allfacts">
-      //                     <span>View All</span>
-      //                     <i className="la la-caret-right" />
-      //                   </Link>
-      //                   {description}
-      //                 </div>
-      //               </form>
-      //             </div>
-      //           </Fade>
-      //         </div>
-      //         <div className="col-md-5 col-lg-4 ">
-      //           {console.log(facts)}
-      //           {<FactList fact={facts[0]} handleLike={handleLike}
-      //             likeUpdated={facts} />}
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </section>
       <section className="general-info pdt-81 pdb-104">
         <div className="container">
           <div className="general-info-wrap">
