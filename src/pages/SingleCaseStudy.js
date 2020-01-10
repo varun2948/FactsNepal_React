@@ -102,7 +102,7 @@ class SingleCaseStudy extends Component {
                                 </div>
                                 <div className="col-6 col-sm-6 offset-sm-0 offset-md-1 col-md-5">
                                   <div className="collab-span name-caption">
-                                    <span>Alice KKerr-Wilson</span>
+                                    <span>Alice Kerr-Wilson</span>
                                     <span className="org-caption">
                                       Social Development Direct
                                     </span>

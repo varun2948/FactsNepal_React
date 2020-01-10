@@ -30,7 +30,11 @@ class About extends Component {
                 </div>
                 <div className="order-1 order-sm-1 order-md-2 col-md-7">
                   <div className="col-wrap">
-                    <figure>
+                    <figure className="right-img-sphere">
+                    <img className="bg-case orange" src="./img/IMAGE-shape2.svg"/>
+                    <img className="bg-case pink" src="./img/IMAGE-shape4.svg"/>
+                    <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg"/>
+                    <img className="bg-case sm-orange" src="./img/IMAGE-shape3.svg"/>
                       <img src="./img/our-team1.png" alt="" />
                     </figure>
                   </div>
