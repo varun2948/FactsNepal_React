@@ -1,476 +1,581 @@
-.banner {
-  @include linear-gradient(180deg, $color-stop1, $color-stop2);
-  position: relative;
-  .sphere1 {
-    width: 30px;
-    height: 30px;
-    right: 11%;
-    top: 30%;
-  }
-  .sphere2 {
-    width: 67.5px;
-    height: 67.5px;
-    left: 14%;
-    top: 50%;
-  }
-  .sphere3 {
-    width: 100px;
-    height: 100px;
-    left: 62%;
-    bottom: -29%;
-    z-index: -1;
-  }
-  &.contact-banner {
-    .banner-wrap {
-      padding-bottom: 0;
-      .title-block {
-        .title-wrap {
-          .headline1 {
-            margin-bottom: 1.125rem;
-          }
-          .headline5 {
-            margin-bottom: 0;
-          }
-        }
-      }
+.banner{
+    @include linear-gradient(180deg, $color-stop1, $color-stop2);
+    position: relative;
+    .sphere1{
+        width: 30px;
+        height: 30px;
+        right: 11%;
+        top: 30%;
     }
-  }
-  &.delievered-banner {
-    .banner-wrap {
-      min-height: calc(100vh - 54px);
-      @include flexcenter;
-      align-items: center;
-      .message-wrapper {
+    .sphere2{
+        width: 67.5px;
+        height: 67.5px;
+        left: 14%;
+        top: 50%;
+    }
+    .sphere3{
+        width: 100px;
+        height: 100px;
+        left: 62%;
+        bottom: -29%;
+        z-index: -1;
+    }
+    .sphere4{
+        width: 50px;
+        height: 50px;
+    }
+    &.contact-banner{
+        .banner-wrap{
+            padding-bottom: 0;
+            .title-block{
+                .title-wrap {
+                    .headline1 {
+                        margin-bottom: 1.125rem;
+                    }
+                    .headline5{
+                        margin-bottom: 0;
+                    }
+                }
+            } 
+        }
+    }
+    &.delievered-banner{
+        .banner-wrap{
+            min-height: calc(100vh - 54px);
+            @include flexcenter;
+            align-items: center;
+            .message-wrapper{
+            text-align: center;
+            background: darken($color-lightpink, 5%);
+            @include border-radius-circle(20px);
+            padding: 60px 100px;
+            .check-circle{
+                display: block;
+                &:before{
+                    content: "\f00c";
+                    font-family: 'FontAwesome';
+                    font-size: 40px;    
+                    @include border-radius-circle(50%);
+                    padding: 0.75rem;
+                    color: $color-red;
+                    background: linear-gradient(180deg, $color-formlabel, $color-borderpink);
+                
+                }
+            }
+            .message-box{
+                text-align: center;
+                margin-top: 3rem;
+                h4{
+                    font-weight: 500 !important;
+                    margin-bottom: 8px;
+                }
+            }
+            .ok-span{
+                text-transform: uppercase;
+                color: #ffffff;
+                margin-top: 2.5rem;
+                display: block;
+                font-size: 1.75rem;
+                font-weight: 700;
+                padding: .6rem 0;
+                background: $color-pink;
+                @include border-radius-circle(10px);
+                @include boxshadow(inset 0 0 2px $color-pinkgradient);
+
+            }
+        }
+        }
+        
+    }
+    .banner-wrap{
+        padding-bottom: 1.688rem;
         text-align: center;
-        background: darken($color-lightpink, 5%);
-        @include border-radius-circle(20px);
-        padding: 60px 100px;
-        .check-circle {
-          display: block;
-          &:before {
-            content: "\f00c";
-            font-family: "FontAwesome";
-            font-size: 40px;
-            @include border-radius-circle(50%);
-            padding: 0.75rem;
-            color: $color-red;
-            background: linear-gradient(
-              180deg,
-              $color-formlabel,
-              $color-borderpink
-            );
-          }
+        .title-block{
+            display: flex;
+            justify-content: center;
+            
+            .title-wrap{
+                max-width: 850px;
+                .headline1{
+                    margin-bottom: 1rem;
+                }
+                .headline5{
+                    margin-bottom: 4.375rem;
+                }
+            }
         }
-        .message-box {
-          text-align: center;
-          margin-top: 3rem;
-          h4 {
-            font-weight: 500 !important;
-            margin-bottom: 8px;
-          }
+        img{
+            width: 630px;
         }
-        .ok-span {
-          text-transform: uppercase;
-          color: #ffffff;
-          margin-top: 2.5rem;
-          display: block;
-          font-size: 1.75rem;
-          font-weight: 700;
-          padding: 0.6rem 0;
-          background: $color-pink;
-          @include border-radius-circle(10px);
-          @include boxshadow(inset 0 0 2px $color-pinkgradient);
+        &.fact-banner-wrap{
+            padding-bottom: 0;
+            .title-block{
+                .title-wrap{
+                    .headline5{
+                        margin-bottom: 0;
+                    }
+                }
+            }
         }
-      }
     }
-  }
-  .banner-wrap {
-    padding-bottom: 1.688rem;
-    text-align: center;
-    .title-block {
-      display: flex;
-      justify-content: center;
-
-      .title-wrap {
-        max-width: 850px;
-        .headline1 {
-          margin-bottom: 1rem;
-        }
-        .headline5 {
-          margin-bottom: 4.375rem;
-        }
-      }
-    }
-    img {
-      width: 630px;
-    }
-    &.fact-banner-wrap {
-      padding-bottom: 0;
-      .title-block {
-        .title-wrap {
-          .headline5 {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
+    
 }
 
-@media only screen and (max-width: $md-desktop) {
-  .banner {
-    padding: 0 80px;
-    &.banner-rd1 {
-      .sphere1 {
-        left: 14%;
-        top: -2%;
-      }
-      .sphere2 {
-        left: 67%;
-        top: 14%;
-      }
-      .sphere3 {
-        top: 62%;
-        left: 86%;
-      }
-    }
-    &.banner-rd {
-      &.banner-rd2 {
-        .sphere3 {
-          left: 82%;
-          top: 65%;
+@media only screen and (max-width: $md-desktop){
+    .banner{
+        padding: 0 80px;
+        &.banner-rd1{
+            .sphere1{
+                left: 14%;
+                top: -2%;
+            }
+            .sphere2{
+                left: 67%;
+                top: 14%;
+            }
+            .sphere3{
+                top: 62%;
+                left: 86%;
+            }
         }
-      }
-      .sphere1 {
-        right: 8%;
-        top: -8%;
-      }
-      .sphere2 {
-        left: 7%;
-        top: 17%;
-      }
-      .sphere3 {
-        left: 48%;
-        top: 47%;
-      }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 82%;
+                    top: 65%;
+                }
+            }
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 7%;
+                top: 17%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+        &.banner-facts{
+            .sphere1{
+                right: 3%;
+                top: -33%;
+            }
+            .sphere2{
+                left: 4%;
+                top: 15%;
+            }
+            .sphere3{
+                left: 68%;
+                top: 35%;
+            }
+            .sphere4{
+                left: 27%;
+                top: 28%;
+            }
+        }
+      
     }
-  }
 }
 
-@media only screen and (max-width: $desktop) {
-  .banner {
-    &.banner-rd1 {
-      .sphere1 {
-        left: 11%;
-        top: -4%;
-      }
-      .sphere2 {
-        left: 70%;
-      }
-    }
-    &.banner-rd {
-      &.banner-rd2 {
-        .sphere3 {
-          left: 80%;
-          top: 65%;
+@media only screen and (max-width: $desktop){
+    .banner{
+        &.banner-rd1{
+            .sphere1{
+                left: 11%;
+                top: -4%;
+            }
+            .sphere2{
+                left: 70%;
+            }
         }
-      }
-      .sphere1 {
-        right: 8%;
-        top: -8%;
-      }
-      .sphere2 {
-        left: 7%;
-        top: 17%;
-      }
-      .sphere3 {
-        left: 48%;
-        top: 47%;
-      }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 80%;
+                    top: 65%;
+                }
+            }
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 7%;
+                top: 17%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+        .sphere1 {
+            right: 5%;
+            top: 12%;
+        }
+        .sphere2{
+            left: 14%;
+            top: 16%;
+        }
+        .sphere3{
+            left: 60%;
+            top: 30%;
+        }
     }
-    .sphere1 {
-      right: 5%;
-      top: 12%;
-    }
-    .sphere2 {
-      left: 14%;
-      top: 16%;
-    }
-    .sphere3 {
-      left: 60%;
-      top: 30%;
-    }
-  }
 }
 
-@media only screen and (max-width: $tab-xl) {
-  .banner {
-    &.banner-rd1 {
-      .sphere1 {
-        left: 18%;
-        top: -6%;
-      }
-      .sphere2 {
-        left: 74%;
-        top: 10%;
-      }
-      .sphere3 {
-        top: 59%;
-        left: 77%;
-      }
-    }
-    &.banner-rd {
-      &.banner-rd2 {
-        .sphere3 {
-          left: 77%;
-          top: 62%;
+@media only screen and (max-width: $ls-tab){
+    .banner{
+        &.banner-facts{
+            .sphere1{
+                right: 3%;
+                top: 12%;
+            }
+            .sphere2{
+                left: 4%;
+                top: 15%;
+            }
+            .sphere3{
+                left: 76%;
+                top: 33%;
+            }
+            .sphere4{
+                left: 18%;
+            }
         }
-      }
-      .sphere1 {
-        right: 8%;
-        top: -8%;
-      }
-      .sphere2 {
-        left: 10%;
-        top: 10%;
-      }
-      .sphere3 {
-        left: 48%;
-        top: 47%;
-      }
     }
-    .sphere1 {
-      width: 24px;
-      height: 24px;
-      right: 6%;
-      top: 9%;
-    }
-    .sphere2 {
-      width: 55px;
-      height: 55px;
-      left: 12%;
-      top: 12%;
-    }
-    .sphere3 {
-      width: 90px;
-      height: 90px;
-      left: 61%;
-      top: 24%;
-    }
-    .banner-wrap {
-      img {
-        width: 570px;
-      }
-      .title-block {
-        .title-wrap {
-          max-width: 500px;
-        }
-      }
-    }
-  }
 }
 
-@media only screen and (max-width: $mb-xl) {
-  .banner {
-    padding: 0 50px;
-    &.banner-rd {
-      &.banner-rd2 {
-        .sphere3 {
-          left: 67%;
-          top: 74%;
+@media only screen and (max-width: $tab-xl){
+    .banner{
+        &.banner-facts{
+            .sphere1{
+                right: 4%;
+                top: -35%;
+            }
+            .sphere2{
+                left: 4%;
+                top: 12%;
+            }
+            .sphere3{
+                left: 71%;
+                top: 25%;
+            }
+            .sphere4{
+                left: 25%;
+                top: 25%;
+            }
         }
-      }
-      .sphere1 {
-        right: 12%;
-        top: -7%;
-      }
-      .sphere2 {
-        left: 26%;
-        top: -7%;
-      }
-      .sphere3 {
-        left: 20%;
-        top: 60%;
-      }
-    }
-    .sphere1 {
-      width: 24px;
-      height: 24px;
-      right: 7%;
-    }
-    .sphere2 {
-      width: 50px;
-      height: 50px;
-      left: 6%;
-      top: 16%;
-    }
-    .sphere3 {
-      left: 70%;
-      left: 62%;
-      top: 24%;
-    }
-    .banner-wrap {
-      .title-block {
-        .title-wrap {
-          .headline5 {
-            margin-bottom: 4rem;
-          }
+        &.banner-rd1{
+            .sphere1{
+                left: 18%;
+                top: -6%;
+            }
+            .sphere2{
+                left: 74%;
+                top: 10%;
+            }
+            .sphere3{
+                top: 59%;
+                left: 77%;
+            }
         }
-      }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 77%;
+                    top: 62%;
+                }
+            }
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 10%;
+                top: 10%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+        .sphere1 {
+            width: 24px;
+            height: 24px;
+            right: 6%;
+            top: 9%;
+        }
+        .sphere2{
+            width: 55px;
+            height: 55px;
+            left: 12%;
+            top: 12%;
+        }
+        .sphere3{
+            width: 90px;
+            height: 90px;
+            left: 61%;
+            top: 24%;
+        }
+        .banner-wrap{
+            img {
+                width: 570px;
+            }
+            .title-block{
+                .title-wrap {
+                    max-width: 500px;
+                }
+            } 
+        }
     }
-  }
 }
 
-@media only screen and (max-width: $mb-sm) {
-  .banner {
-    &.banner-rd {
-      &.banner-rd2 {
-        .sphere3 {
-          left: 72%;
-          top: 74%;
+@media only screen and (max-width: $mb-xl){
+    .banner{
+        padding: 0 50px;
+        &.banner-facts{
+            .sphere4{
+                left: 19%;
+                top: 20%;
+            }
         }
-      }
-      .sphere3 {
-        left: 15%;
-        top: 58%;
-      }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 67%;
+                    top: 74%;
+                }
+            }
+            .sphere1{
+                right: 12%;
+                top: -7%;
+            }
+            .sphere2{
+                left: 26%;
+                top: -7%;
+            }
+            .sphere3{
+                left: 20%;
+                top: 60%;
+            }   
+        }
+        .sphere1 {
+            width: 24px;
+            height: 24px;
+            right: 7%;
+        }
+        .sphere2{
+            width: 50px;
+            height: 50px;
+            left: 6%;
+            top: 16%;
+        }
+        .sphere3{
+            left: 70%;
+            left: 62%;
+            top: 24%;
+        }
+        .banner-wrap{
+            .title-block{
+                .title-wrap {
+                    .headline5{
+                        margin-bottom: 4rem;
+                    }
+                }
+            } 
+        } 
     }
-    .sphere1 {
-      right: 8%;
-    }
-    .sphere3 {
-      left: 69%;
-      bottom: -24%;
-      left: 64%;
-      top: 28%;
-    }
-    .banner-wrap {
-      img {
-        width: 450px;
-      }
-    }
-  }
 }
 
-@media only screen and (max-width: $mb-md) {
-  .banner {
-    &.banner-rd {
-      .sphere3 {
-        left: 11%;
-        top: 60%;
-      }
+@media only screen and (max-width: $mb-sm){
+    .banner{
+        &.banner-facts{
+            .sphere2{
+                left: 6%;
+                top: -17%;
+            }
+        }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 72%;
+                    top: 74%;
+                }
+            }
+            .sphere3{
+                left: 15%;
+                top: 58%;
+            }   
+        }
+        .sphere1 {
+            right: 8%;
+        }
+        .sphere3{
+            left: 69%;
+            bottom: -24%;
+            left: 64%;
+            top: 28%;
+        }
+        .banner-wrap{
+            img  {
+                width: 450px;
+            }
+        } 
     }
-    .sphere1 {
-      right: -6%;
+}
+ 
+@media only screen and (max-width: $mb-md){
+    .banner{
+        &.banner-rd{
+            .sphere3{
+                left: 11%;
+                top: 60%;
+            }   
+        }
+        .sphere1 {
+            right: -6%;
+        }
+        .sphere2{
+            left: 6%;
+            top: 64%;
+            width: 45px;
+            height: 45px;
+        }
+        .sphere3{
+            width: 80px;
+            height: 80px;
+            left: 66%;
+            bottom: -34%;
+        }
     }
-    .sphere2 {
-      left: 6%;
-      top: 64%;
-      width: 45px;
-      height: 45px;
-    }
-    .sphere3 {
-      width: 80px;
-      height: 80px;
-      left: 66%;
-      bottom: -34%;
-    }
-  }
 }
 
-@media only screen and (max-width: $mb-xs) {
-  .banner {
-    &.banner-rd {
-      &.banner-rd2 {
-        .sphere3 {
-          left: 60%;
-          top: 74%;
+@media only screen and (max-width: $mb-xs){
+    .banner{
+        &.banner-facts{
+            .sphere2{
+                top: -25%;
+            }
+            .sphere3 {
+                left: 66%;
+                top: 37%;
+            }
+            .sphere4{
+                left: 13%;
+            }
         }
-      }
-    }
-    .banner-rd1 {
-      .sphere3 {
-        top: 54%;
-        left: 65%;
-      }
-    }
-    .sphere3 {
-      bottom: -22%;
-      left: 61%;
-      top: 32%;
-    }
-    .sphere2 {
-      left: 6%;
-      top: 26%;
-    }
-    .sphere1 {
-      width: 20px;
-      height: 20px;
-      right: 6%;
-    }
-    .banner-wrap {
-      .title-block {
-        .title-wrap {
-          .headline5 {
-            margin-bottom: 3rem;
-          }
+        &.banner-rd{
+            &.banner-rd2{
+                .sphere3{
+                    left: 60%;
+                    top: 74%;
+                }
+            }
         }
-      }
+        .banner-rd1 {
+            .sphere3 {
+                top: 54%;
+                left: 65%;
+            }
+        }
+        .sphere3{
+            bottom: -22%;
+            left: 61%;
+            top: 32%;
+        }
+        .sphere2{
+            left: 6%;
+            top: 26%;
+        }
+        .sphere1{
+            width: 20px;
+            height: 20px;
+            right: 6%;
+        }
+        .banner-wrap{
+            .title-block{
+                .title-wrap {
+                    .headline5{
+                        margin-bottom: 3rem;
+                    }
+                }
+            } 
+        } 
     }
-  }
 }
 
-@media only screen and (min-width: $md-desktop) {
-  .banner {
-    padding: 0;
-    .sphere1 {
-      right: 6%;
-      top: 15%;
+@media only screen and (min-width: $md-desktop){
+    .banner{
+        padding: 0;
+        .sphere1{
+            right: 6%;
+            top: 15%;
+        }
+        .sphere2{
+            width: 67.5px;
+            height: 67.5px;
+            left: 18%;
+            top: 20%;
+        }
+        .sphere3{
+            left: 59%;
+            top: 29%;
+        }
+        
+        &.banner-rd{
+            .sphere1{
+                right: 8%;
+                top: -8%;
+            }
+            .sphere2{
+                left: 11%;
+                top: 17%;
+            }
+            .sphere3{
+                left: 48%;
+                top: 47%;
+            }   
+        }
+        &.banner-rd1{
+            .sphere1{
+                left: 14%;
+                top: -2%;
+            }
+            .sphere2{
+                left: 67%;
+                top: 14%;
+            }
+            .sphere3{
+                top: 62%;
+                left: 85%;
+            }
+        }
+        &.banner-rd2{
+            .sphere3{
+                left: 79%;
+                top: 63%;
+            }
+        }
+        &.banner-facts{
+            .sphere1{
+                right: 3%;
+                top: -33%;
+            }
+            .sphere2{
+                left: 4%;
+                top: 15%;
+            }
+            .sphere3{
+                left: 68%;
+                top: 35%;
+            }
+            .sphere4{
+                left: 27%;
+                top: 28%;
+            }
+        }
     }
-    .sphere2 {
-      width: 67.5px;
-      height: 67.5px;
-      left: 18%;
-      top: 20%;
-    }
-    .sphere3 {
-      left: 59%;
-      top: 29%;
-    }
-
-    &.banner-rd {
-      .sphere1 {
-        right: 8%;
-        top: -8%;
-      }
-      .sphere2 {
-        left: 11%;
-        top: 17%;
-      }
-      .sphere3 {
-        left: 48%;
-        top: 47%;
-      }
-    }
-    &.banner-rd1 {
-      .sphere1 {
-        left: 14%;
-        top: -2%;
-      }
-      .sphere2 {
-        left: 67%;
-        top: 14%;
-      }
-      .sphere3 {
-        top: 62%;
-        left: 85%;
-      }
-    }
-    &.banner-rd2 {
-      .sphere3 {
-        left: 79%;
-        top: 63%;
-      }
-    }
-  }
 }
