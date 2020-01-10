@@ -413,8 +413,8 @@
 /* less than 991px; */
 @media only screen and (max-width: $tab-xl){ /* form */
     .form-bg{
-        padding-left: 100px;
-        padding-right: 70px;
+        padding-left: 60px;
+        padding-right: 60px;
     }
     .form-section{
         &.contact-form {
@@ -522,6 +522,13 @@
 /* less than 767px; */
 @media only screen and (max-width: $mb-xl){ 
     .form-section{
+        &.contact-form{
+            .footer{
+                .footer-right{
+                    @include flex_start;
+                }
+            } 
+        } 
         .form-left{
             .form-left-title {
                 h3{
@@ -608,18 +615,18 @@
                     margin-right: 10px;
                     &:nth-child(1){
                         figure{
-                            width: 35px;
-                            height: 35px;
+                            width: 30px;
+                            height: 30px;
                             img{
-                                width: 8px;
+                                width: 7px;
                             }
                         }
                     }
                     figure{
-                        width: 35px;
-                        height: 35px;
+                        width: 30px;
+                        height: 30px;
                         img{
-                            width: 16px;
+                            width: 14px;
                         }
                     }
                 }
@@ -752,18 +759,18 @@
                     margin-right: 8px;
                     &:nth-child(1){
                         figure{
-                            width: 30px;
-                            height: 30px;
+                            width: 25px;
+                            height: 25px;
                             img{
                                 width: 7px;
                             }
                         }
                     }
                     figure{
-                        width: 30px;
-                        height: 30px;
+                        width: 25px;
+                        height: 25px;
                         img{
-                            width: 14px;
+                            width: 12px;
                         }
                     }
                 }
