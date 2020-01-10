@@ -46,7 +46,11 @@ class SingleCaseStudy extends Component {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="case-study-image">
-                        <figure className="figure-case-img">
+                        <figure className="figure-case-img left-img-sphere">
+                        <img className="bg-case-front orange" src="./img/IMAGE-shape2.svg"/>
+                        <img className="bg-case-front pink" src="./img/IMAGE-shape4.svg"/>
+                        <img className="bg-case-front sm-pink" src="./img/IMAGE-shape1.svg"/>
+                        <img className="bg-case-front sm-orange" src="./img/IMAGE-shape3.svg"/>
                           <img src={casestudy[0].image} alt="" />
                         </figure>
                       </div>
@@ -54,34 +58,34 @@ class SingleCaseStudy extends Component {
                     <div className="col-md-6">
                       <div className="case-study-content">
                         <div className="case-study-content-wrap">
-                          <span className="date-time">
+                          <span className="sub-caption">
                             <Moment
                               date={casestudy[0].issued_date}
                               format="Do MMMM YYYY"
                             />
                           </span>
-                          <h3 className="factsNepal-title">
+                          <h3 className="headline2 proj-headline">
                             {casestudy[0].title}
                           </h3>
-                          <div className="collab-group">
-                            <span className="title">Collaborators</span>
+                          <div className="collab-group pdt-45 pdb-50">
+                            <span className="sm-caption">Collaborators</span>
                             <div className="collab-row">
                               <div className="row">
                                 <div className="col-6 col-sm-6 col-md-5">
-                                  <div className="collab-span">
+                                  <div className="collab-span name-caption">
                                     <span>Geeta Pradhan</span>
                                     <span>Ratna Shrestha</span>
                                     <span>Abhina Adhikari</span>
-                                    <span className="collab-org">
+                                    <span className="org-caption">
                                       VSO Nepal
                                     </span>
                                   </div>
                                 </div>
                                 <div className="col-6 col-sm-6 offset-sm-0 offset-md-1 col-md-5">
-                                  <div className="collab-span">
+                                  <div className="collab-span name-caption">
                                     <span>Prabodh Acharya</span>
                                     <span>Nabin Rawal</span>
-                                    <span className="collab-org">
+                                    <span className="org-caption">
                                       FACTS Research & Analytics
                                     </span>
                                   </div>
@@ -91,15 +95,15 @@ class SingleCaseStudy extends Component {
                             <div className="collab-row">
                               <div className="row">
                                 <div className="col-6 col-sm-6 col-md-5">
-                                  <div className="collab-span">
+                                  <div className="collab-span name-caption">
                                     <span>Nwabisa Shai</span>
-                                    <span className="collab-org">SAMRC</span>
+                                    <span className="org-caption">SAMRC</span>
                                   </div>
                                 </div>
                                 <div className="col-6 col-sm-6 offset-sm-0 offset-md-1 col-md-5">
-                                  <div className="collab-span">
+                                  <div className="collab-span name-caption">
                                     <span>Alice Kerr-Wilson</span>
-                                    <span className="collab-org">
+                                    <span className="org-caption">
                                       Social Development Direct
                                     </span>
                                   </div>
@@ -124,17 +128,17 @@ class SingleCaseStudy extends Component {
                 </div>
               </div>
             </section>
-            <section className="intro-section">
+            <section className="intro-section pdt-88">
               <div className="container">
                 <div className="wrap">
-                  <h3 className="factsNepal-sectitle">Introduction</h3>
+                  <h3 className="headline3">Introduction</h3>
                   {/* {casestudy[0].introduction} */}
-                  <p className="factsNepal-secpara">
+                  <p className="body-para-second">
                     Traditional family structure is grounded in patriarchal
                     values of male dominance over women and respect for elders
                     in Nepal.
                   </p>
-                  <p className="factsNepal-para">
+                  <p className="body-para">
                     Women and girls are disadvantaged by discriminatory
                     traditional practices. Male migration is a dominant source
                     of employment and livelihoods. Remittances play an important
@@ -147,10 +151,10 @@ class SingleCaseStudy extends Component {
               </div>
             </section>
 
-            <section className="objective-section">
+            <section className="objective-section pdt-75">
               <div className="container">
                 <div className="wrap">
-                  <h3 className="factsNepal-sectitle">
+                  <h3 className="headline3">
                     Aim of the presentation
                   </h3>
                   {/* <div
@@ -158,13 +162,13 @@ class SingleCaseStudy extends Component {
                       __html: casestudy[0].aims_topic
                     }}
                   ></div> */}
-                  <p className="factsNepal-para">
+                  <p className="body-para">
                     To share the preliminary findings from the formative
                     research conducted among communities engaged in migrant
                     labour in Baglung district of Nepal.{" "}
                   </p>
-                  <p className="factsNepal-para para">The study explored:</p>
-                  <div className="obj-lists">
+                  <p className="body-para para">The study explored:</p>
+                  <div className="obj-lists body-para">
                     <ul>
                       <li>
                         <span>
@@ -195,13 +199,13 @@ class SingleCaseStudy extends Component {
                 </div>
               </div>
             </section>
-            <section className="conclude-section">
+            <section className="conclude-section pdt-75">
               <div className="container">
                 <div className="wrap">
-                  <h3 className="factsNepal-sectitle">
+                  <h3 className="headline3">
                     Discussion, Conclusion and Recommendation
                   </h3>
-                  <ul>
+                  <ul className="body-para">
                     <li>
                       <span>
                         <img src="./img/24px (check-circle).svg" alt="" />
@@ -239,7 +243,7 @@ class SingleCaseStudy extends Component {
                       </span>
                     </li>
                   </ul>
-                  <div className="btn-wrap">
+                  <div className="btn-wrap pdt-75 pdb-104">
                     <form method="get" action={casestudy[0].file_url}>
                       <button type="submit">
                         <span>

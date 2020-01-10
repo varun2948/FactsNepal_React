@@ -12,6 +12,10 @@ class MobileAppDownloads extends Component {
           this.props.techBg ? "tech-bg" : ""
         }`}
       >
+         <img className="bg-case orange" src="./img/IMAGE-shape2.svg"/>
+          <img className="bg-case pink" src="./img/IMAGE-shape4.svg"/>
+          <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg"/>
+          <img className="bg-case sm-orange" src="./img/IMAGE-shape3.svg"/>
         <div className="container">
           <div className="tech-section-wrap">
             <div className="row no-gutters">

@@ -118,12 +118,25 @@
             }
         }
     }
-    
 }
 
 @media only screen and (max-width: $md-desktop){
     .banner{
         padding: 0 80px;
+        .sphere1{
+            right: 6%;
+            top: 15%;
+        }
+        .sphere2{
+            width: 67.5px;
+            height: 67.5px;
+            left: 18%;
+            top: 20%;
+        }
+        .sphere3{
+            left: 59%;
+            top: 29%;
+        }
         &.banner-rd1{
             .sphere1{
                 left: 14%;
@@ -436,7 +449,7 @@
             }   
         }
         .sphere1 {
-            right: -6%;
+            right: 6%;
         }
         .sphere2{
             left: 6%;

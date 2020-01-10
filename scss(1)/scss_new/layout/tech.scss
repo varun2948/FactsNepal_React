@@ -1,14 +1,37 @@
 .tech-section{
-    background-image: url('../img/IMAGE-shape4.svg'), url('../img/IMAGE-shape2.svg'), url('../img/IMAGE-shape1.svg'), url('../img/IMAGE-shape3.svg');
-    background-position: 28% 23%, 13% 76%,;
-    background-size: 330px, 280px, 20px, 20px;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    position: relative;
+    .bg-case{
+        position: absolute;
+        z-index: -1;
+        &.orange{
+            width: 280px;
+            left: 13%;
+            top: 76%;
+        }
+        &.pink{
+            width: 330px;
+            left: 28%;
+            top: 23%;
+        }
+        &.sm-orange,  &.sm-pink{
+            width: 20px;
+        }
+        &.sm-pink{
+            left: 13%;
+            top: 75%;
+        }
+        &.sm-orange{
+            left: 40%;
+            top: 17%;
+        }
+    }
     .tech-section-wrap{
         .tech-section-left{
             .img-center{
                 img{
                     width: 436px;
                 }
+                
             }
         }
         .tech-section-right{
@@ -92,8 +115,29 @@
 /* less than 767px; */
 @media only screen and (max-width: $mb-xl){
     .tech-section{
-        background-position: 62% 14%, 36% 52%, 32% 62%, 69% 12%;
-        background-size: 238px, 220px, 17px, 17px;
+        .bg-case{
+            &.orange{
+                width: 220px;
+                left: 25%;
+                top: 36%;
+            }
+            &.pink{
+                width: 238px;
+                left: 43%;
+                top: 8%;
+            }
+            &.sm-orange,  &.sm-pink{
+                width: 17px;
+            }
+            &.sm-pink{
+                left: 32%;
+                top: 62%;
+            }
+            &.sm-orange{
+                left: 69%;
+                top: 12%;
+            }
+        }
         .tech-section-wrap{
             .tech-section-left{
                 .img-center{
@@ -101,28 +145,7 @@
                     img{
                         width: 320px;
                     }
-                    .bg-case{
-                        &.orange{
-                            bottom: 7%;
-                            left: 14%;
-                            width: 180px;
-                        }   
-                        &.pink{
-                            top: -4%;
-                            right: 14%;
-                            width: 220px;
-                        }
-                        &.sm-orange{
-                            top: 4%;
-                            right: 17%;
-                            width: 18px;
-                        }
-                        &.sm-pink{
-                            bottom: 15%;
-                            left: 20%;
-                            width: 16px;
-                        }
-                    }
+                   
                 }
             }
             .tech-section-right{
@@ -162,34 +185,27 @@
 /* less than 575px; */
 @media only screen and (max-width: $mb-sm){
     .tech-section{
-        background-position: 72% 12%, 31% 52%, 26% 62%, 79% 12%;
-        background-size: 250px, 230px, 16px, 16px;
-        .tech-section-wrap{
-            .tech-section-left{
-                .img-center{
-                    .bg-case{
-                        &.orange{
-                            bottom: 4%;
-                            left: 17%;
-                            width: 160px;
-                        }   
-                        &.pink{
-                            top: -2%;
-                            right: 12%;
-                            width: 220px;
-                        }
-                        &.sm-orange{
-                            top: 7%;
-                            right: 15%;
-                            width: 16px;
-                        }
-                        &.sm-pink{
-                            bottom: 13%;
-                            left: 20%;
-                            width: 16px;
-                        }
-                    }
-                }
+        .bg-case{
+            &.orange{
+                width: 200px;
+                left: 20%;
+                top: 37%;
+            }
+            &.pink{
+                width: 230px;
+                left: 41%;
+                top: 8%;
+            }
+            &.sm-orange,  &.sm-pink{
+                width: 16px;
+            }
+            &.sm-pink{
+                left: 26%;
+                top:59%;
+            }
+            &.sm-orange{
+                left: 79%;
+                top: 12%;
             }
         }
     }
@@ -198,30 +214,72 @@
 /* less than 376px; */
 @media only screen and (max-width: $mb-xs){
     .tech-section {
-        background-position: 76% 16%, 24% 48%, 20% 55%, 84% 15%;
-        background-size: 200px, 170px, 16px, 16px;
-        .tech-section-wrap{
-            .tech-section-left{
-                .img-center{
-                   img{
-                       width: 250px;
-                   } 
-                }
+        .bg-case{
+            &.orange{
+                width: 170px;
+                left: 11%;
+                top: 38%;
+            }
+            &.pink{
+                width: 200px;
+                left: 34%;
+                top: 8%;
+            }
+            &.sm-orange,  &.sm-pink{
+                width: 16px;
+            }
+            &.sm-pink{
+                left: 20%;
+                top: 57%;
+            }
+            &.sm-orange{
+                left: 82%;
+                top: 15%;
             }
         }
-    } 
-}
+        .tech-section-left{
+            .img-center{
+                img{
+                    width: 250px;
+                } 
+            }
+        }
+    }
+} 
+
 
 @media only screen and (min-width: $md-tab){
     .tech-section{
-        background-position: 40% 23%, 14% 76%, 16% 78%, 53% 16%;
-        background-size: 244px, 220px, 18px, 18px;
+        .bg-case{
+            &.orange{
+                width: 220px;
+                left: 16%;
+                top: 50%;
+            }
+            &.pink{
+                width: 230px;
+                left: 28%;
+                top: 10%;
+            }
+            &.sm-orange,  &.sm-pink{
+                width: 18px;
+            }
+            &.sm-pink{
+                left: 18%;
+                top: 74%;
+            }
+            &.sm-orange{
+                left: 51%;
+                top: 15%;
+            }
+        }
         .tech-section-wrap{
             .tech-section-left{
                 .img-center{
                     img{
                         width: 380px;
                     }
+                    
                 }
             }
             .tech-section-right{
@@ -237,8 +295,30 @@
 
 @media only screen and (min-width: $lg-tab){
     .tech-section{
-        background-position: 32% 22%, 12% 75%, 12% 75%, 45% 16%;
-        background-size: 280px, 250px, 20px, 20px;
+        
+        .bg-case{
+            &.orange{
+                width: 250px;
+                left: 8%;
+                top: 46%;
+            }
+            &.pink{
+                width: 280px;
+                left: 23%;
+                top: 13%;
+            }
+            &.sm-orange,  &.sm-pink{
+                width: 20px;
+            }
+            &.sm-pink{
+                left:12%;
+                top: 73%;
+            }
+            &.sm-orange{
+                left: 45%;
+                top: 16%;
+            }
+        }
         .tech-section-wrap{
             .tech-section-left{
                 .img-center{
@@ -260,14 +340,36 @@
 
 @media only screen and (min-width: $desktop){
     .tech-section{
-        background-position: 28% 20%, 10% 76%, 10% 75%, 42% 15%;
-        background-size: 325px, 280px, 20px, 20px;
+        .bg-case{
+            &.orange{
+                width: 280px;
+                left: 7%;
+                top: 49%;
+            }
+            &.pink{
+                width: 325px;
+                left: 19%;
+                top: 12%;
+            }
+            &.sm-orange,  &.sm-pink{
+                width: 20px;
+            }
+            &.sm-pink{
+                left:10%;
+                top: 75%;
+            }
+            &.sm-orange{
+                left: 40%;
+                top: 15%;
+            }
+        }
         .tech-section-wrap{
             .tech-section-left{
                 .img-center{
                     img{
                         width: 436px;
                     }
+                   
                 }
             }
             .tech-section-right {
@@ -284,14 +386,38 @@
 
 @media only screen and (min-width: $md-desktop){
     .tech-section{
-        background-position: 28% 23%, 13% 76%, 13% 75%, 40% 17%;
-        background-size: 330px, 280px, 20px, 20px;
+        .bg-case{
+            position: absolute;
+            z-index: -1;
+            &.orange{
+                width: 280px;
+                left: 11%;
+                top: 48%;
+            }
+            &.pink{
+                width: 330px;
+                left: 21%;
+                top: 14%;
+            }
+            &.sm-orange,  &.sm-pink{
+                width: 20px;
+            }
+            &.sm-pink{
+                left: 14%;
+                top: 74%;
+            }
+            &.sm-orange{
+                left: 39%;
+                top: 17%;
+            }
+        }
         .tech-section-wrap{
             .tech-section-left{
                 .img-center{
                     img{
                         width: 436px;
                     }
+                   
                 }
             }
         }

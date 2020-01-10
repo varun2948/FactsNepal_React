@@ -17,7 +17,7 @@ class CaseStudyData extends Component {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="case-study-image">
-                        <figure className="figure-case-img">
+                        <figure className="figure-case-img left-img-sphere">
                             <img class="bg-case orange" src="./img/IMAGE-shape2.svg" />
                             <img className="bg-case pink" src="./img/IMAGE-shape4.svg" />
                             <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg" />
@@ -112,7 +112,7 @@ class CaseStudyData extends Component {
 
                     <div className="order-1 order-sm-1 order-md-2 col-md-6">
                       <div className="case-study-image">
-                        <figure className="figure-case-img">
+                        <figure className="figure-case-img right-img-sphere">
                           <img class="bg-case orange" src="./img/IMAGE-shape2.svg" />
                           <img className="bg-case pink" src="./img/IMAGE-shape4.svg" />
                           <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg" />
