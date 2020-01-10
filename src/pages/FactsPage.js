@@ -13,7 +13,6 @@ import TimeAgo from "react-timeago";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-import Fact from "../components/HomePage/Fact/Fact";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
 

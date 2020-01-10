@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import FormSucessAlert from "../FormSucessAlert/FormSucessAlert";
 
 class FeedbackForm extends Component {
   constructor(props) {
@@ -50,6 +51,16 @@ class FeedbackForm extends Component {
   render() {
     return (
       <div>
+        {/* <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+        >
+          Launch demo modal
+        </button> */}
+        {/* <FormSucessAlert /> */}
+
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <input
@@ -116,6 +127,18 @@ class FeedbackForm extends Component {
             Send
           </button>
         </form>
+        <div
+          class="modal fade"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <FormSucessAlert />
+          </div>
+        </div>
       </div>
     );
   }
