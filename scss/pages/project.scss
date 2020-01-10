@@ -98,6 +98,36 @@ section{
 }
 
 .project-banner{
+    .proj-sphere1{
+        width: 58px;
+        height: 58px;
+        top: -28%;
+        left: 3%;
+    }
+    .proj-sphere2{
+        width: 96px;
+        height: 96px;
+        right: 35%;
+        bottom: 20%;
+    }
+    .proj-sphere3{
+        width: 24px;
+        height: 24px;
+        left: 55%;
+        top: -39%;
+    }
+    .proj-sphere4{
+        width: 53px;
+        height: 53px;
+        right: 23%;
+        bottom: -4%;
+    }
+    .proj-sphere5{
+        width: 68px;
+        height: 68px;
+        bottom: -12%;
+        left: 27%;
+    }
     .proj-banner-wrap{
         .col-wrap{
             h1{
@@ -115,6 +145,69 @@ section{
                     // width: 180px;
                 }
             }
+        }
+    }
+}
+
+/* less than  1440px; */
+@media only screen and (max-width: $md-desktop){
+    .project-banner{
+        .proj-sphere1{
+            top: -28%;
+            left: 3%;
+        }
+        .proj-sphere2{
+            right: 34%;
+            bottom: -3%;
+        }
+        .proj-sphere3{
+            left: 55%;
+            top: -39%;
+        }
+        .proj-sphere4{
+            right: 21%;
+            bottom: -5%;
+        }
+        .proj-sphere5{
+            bottom: -12%;
+            left: 27%;
+        }
+    }
+}
+
+/* less than  1200px; */
+@media only screen and (max-width: $desktop){
+    .project-banner{
+        .proj-sphere4{
+            right: 20%;
+            bottom: -2%;
+        }
+        .proj-sphere2{
+            right: 33%;
+            bottom: 15%;
+        }
+        .proj-sphere3{
+            left: 58%;
+        }
+    }
+}
+
+/* less than  1024px; */
+@media only screen and (max-width: $ls-tab){
+    .project-banner{
+        .proj-sphere4{
+            right: 19%;
+            bottom: 15%;
+        }
+        .proj-sphere2{
+            right: 35%;
+        }
+        .proj-sphere3{
+            left: 50%;
+        }
+        .proj-sphere5{
+            bottom: 2%;
+            left: 19%;
         }
     }
 }
@@ -190,6 +283,33 @@ section{
         }
     }
     .project-banner{
+        .proj-sphere1{
+            width: 48px;
+            height: 48px;
+        }
+        .proj-sphere4{
+            right: 20%;
+            bottom: 10%;
+            width: 43px;
+            height: 43px;
+        }
+        .proj-sphere2{
+            right: 35%;
+            width: 86px;
+            height: 86px;
+        }
+        .proj-sphere3{
+            left: 48%;
+            top: -42%;
+            width: 20px;
+            height: 20px;
+        }
+        .proj-sphere5{
+            bottom: 2%;
+            left: 19%;
+            width: 58px;
+            height: 58px;
+        }
         .proj-banner-wrap{
             .col-wrap{
                 h1{
@@ -208,6 +328,26 @@ section{
 /* less than 767px; */
 @media only screen and (max-width: $mb-xl){
     .project-banner{
+        .proj-sphere1{
+            top: -19%;
+            left: 8%;
+        }
+        .proj-sphere4{
+            right: 40%;
+            bottom: 51%;
+        }
+        .proj-sphere2{
+            right: 55%;
+            bottom: 47%;
+        }
+        .proj-sphere3{
+            left: 77%;
+            top: -25%;
+        }
+        .proj-sphere5{
+            bottom: -1%;
+            left: 55%;
+        }
         .proj-banner-wrap{
             text-align: center;
             .col-wrap{
@@ -270,6 +410,9 @@ section{
         }
     }
     .project-banner{
+        .proj-sphere4{
+            right: 37%;
+        }
         .proj-banner-wrap{
             .col-wrap{
                 figure{
@@ -288,6 +431,28 @@ section{
 /* less than 376px; */
 @media only screen and (max-width: $mb-xs){
     .project-banner{
+        .proj-sphere1{
+            top: -26%;
+            left: 10%;
+            width: 38px;
+            height: 38px;
+        }
+        .proj-sphere4{
+           bottom: 60%;
+        }
+        .proj-sphere2{
+            bottom: 62%;
+            width: 66px;
+            height: 66px;
+            
+        }
+        .proj-sphere3{
+            top: -34%;
+        }
+        .proj-sphere5{
+            bottom: -1%;
+            left: 55%;
+        }
         .proj-banner-wrap{
             .col-wrap{
                 figure{

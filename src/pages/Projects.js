@@ -57,6 +57,11 @@ class Projects extends Component {
       <React.Fragment>
         <NavBar noBg={false} />
         <section className="banner project-banner">
+        <div class="circle pink-gradient proj-sphere1"></div>
+            <div className="circle pink-gradient lg-pink-grad proj-sphere2"></div>
+            <div className="circle orange-gradient proj-sphere3"></div>
+            <div className="circle lightorange-gradient proj-sphere4"></div>
+            <div className="circle lightred-gradient proj-sphere5"></div>
           <div className="container">
             <div className="proj-banner-wrap">
               <div className="row">

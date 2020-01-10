@@ -101,6 +101,9 @@
 .red-gradient{
     background-color:rgba($color: $color-red, $alpha: 0.07);
 }
+.lightred-gradient{
+    background-color:rgba($color: $color-red, $alpha: 0.05);
+}
 .pink-gradient{
     background: linear-gradient(to bottom, $color-pink, $color-pinkgradient, $color-white);
     opacity: 0.3;
@@ -113,6 +116,7 @@
     opacity: 0.15;
     @include linear-gradient(180deg, $color-lightorange, $color-yellow);
 }
+
 // header
 
 .pdb-100{
@@ -282,8 +286,11 @@
 .pdt-56{
     padding-top: 3.5rem !important;
 }
-.pdb-52{
-    padding-bottom: 3.25rem !important;
+.pdb-62{
+    padding-bottom: 3.875rem !important;
+}
+.pdt-26{
+    padding-top: 1.625rem !important;
 }
 
 @media only screen and (max-width: $tab-xl){
