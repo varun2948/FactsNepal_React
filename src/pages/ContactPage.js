@@ -257,74 +257,102 @@ class ContactPage extends Component {
     );
 
     return (
-      <div>
-        <section className="map-holder">
-          <div className="container-fluid">
-            <div className="custom-container">
-              <div className="map-holder__inner">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14131.428516947946!2d85.3429673!3d27.6908103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x857b4d5307df8061!2sFacts+Research+and+Analytics!5e0!3m2!1sen!2snp!4v1555475561046!5m2!1sen!2snp"
-                  width="600"
-                  height="450"
-                  frameBorder="0"
-                  style={{ border: 0 }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="contact-form">
-          <div className="container">
-            <div className="contact-form__inner">
-              <div className="row no-gutters">
-                <div className="col-md-8 form-holder">
-                  <div className="contact-form__right">
-                    <div className="form-group">
-                      <label htmlFor="sel1">Type of Enquiry</label>
-                      <select
-                        className="form-control"
-                        id="sel1"
-                        onChange={this.Enquiry_HandleChange}
-                      >
-                        <option value="General">General Enquiry</option>
-                        <option value="Business">Business Enquiry</option>
-                        <option value="Carrer">Career</option> Enquiry
-                      </select>
+            <section className="form-section contact-form">
+                <div className="container">
+                    <div className="form-bg pdt-56 pdb-62">
+                        <div className="row">
+                            <div className="col-12 col-md-6">
+                                <div className="form-left">
+                                    <div className="form-left-title">
+                                        <h3 className="headline2">Ready to get the Facts?</h3>
+                                        <span className="caption">Fill in this form or send us an e-mail.</span>
+                                    </div>
+                                    <div className="form-wrap">
+                                        <form>
+                                            <div className="form-group">
+                                                <input type="text" name="name" id="inputname" className="form-control" placeholder="" required />
+                                                <label for="inputname">Name</label>
+                                                <span className="border-span"></span>
+                                            </div>
+
+                                            <div className="form-group">
+                                                <input type="text" name="email" id="inputemail"  className="form-control" placeholder="" required />
+                                                <label for="inputemail">Email</label>
+                                                <span className="border-span"></span>
+                                            </div>
+                                            
+                                            <div className="form-group">
+                                                <input type="tel" name="phone" id="inputphone" className="form-control" placeholder="" required />
+                                                <label for="inputphone">Phone</label>
+                                                <span className="border-span"></span>
+                                            </div>
+
+                                            <div className="form-group">
+                                                <input type="text" name="proj-details" id="inputtext" className="form-control" placeholder="" required />
+                                                <label for="inputtext">Project Details</label>
+                                                <span className="border-span"></span>
+                                            </div>
+                                            <button type="submit" className="btn">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 offset-0 offset-md-1 col-md-5">
+                                <div className="form-right">
+                                    <div className="form-right-title">
+                                        <h3 className="headline2">Contact</h3>
+                                    </div>
+                                    <div className="form-address">
+                                        <ul className="addr-list">
+                                            <li className="addr">
+                                                <span><img src="./img/24px (2).svg" alt=""/></span><span className="caption">8973 NPC 678, 394-Radha Mohan Marga Minbhawan Kharibot, Kathmandu, Nepal</span>
+                                            </li>
+
+                                            <li className="addr">
+                                                <span><img src="./img/24px.svg" alt=""/></span><span className="caption">+977-1-4469924</span>
+                                            </li>
+
+                                            <li className="addr">
+                                                <span><img src="./img/24px (1).svg" alt=""/></span> <span><a href="#" className="caption">info@factsnepal.com</a></span>
+                                            </li>
+                                        </ul>
+                                    
+                                    </div>
+                                    <div className="form-btn-wrap">
+                                        <span className="caption">Available for your smartphone</span>
+                                        <div className="btn-content">
+                                            <a><img src="./img/appstore.png" alt="appstore"/></a>
+                                            <a><img src="./img/googleplay.png" alt="googleplay"/></a>
+                                        </div>
+                                    </div>
+                                    <div className="social-icon-wrap">
+                                        <a href="#"><figure><img src="./img/Social-media-icon (4).svg" alt=""/></figure></a>
+                                        <a href="#"><figure><img src="./img/Social-media-icon (1).svg" alt=""/></figure></a>
+                                        <a href="#"><figure><img src="./img/Social-media-icon (2).svg" alt=""/></figure></a>
+                                        <a href="#"><figure><img src="./img/Social-media-icon (5).svg" alt=""/></figure></a>
+                                        <a href="#"><figure><img src="./img/Social-media-icon (3).svg" alt=""/></figure></a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
                     </div>
 
-                    {this.state.enquiry_selectValue === "General"
-                      ? general_form
-                      : this.state.enquiry_selectValue === "Business"
-                      ? business_form
-                      : carrer_form}
-                  </div>
+                    <div className="footer">
+                        <div className="row">
+                            <div className="col-12 col-md-6">
+                                <div className="footer-left">
+                                    <span className="copyright sm-caption">© 2019<span className="subtitle"> FACTS Research & Analytics.</span></span>
+                                </div>
+                            </div>
+                            <div className="col-12 offset-0 offset-md-1 col-md-5">
+                                <div className="footer-right">
+                                    <span className="site-design-title sm-caption">Designed by <span className="site-design">NAXA</span></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-md-4 rbg">
-                  <div className="contact-form__left">
-                    <h4 className="textcontact">Contact Information</h4>
-                    <div className="location contact-form__items  relative textcontact">
-                      394-Radha Mohan Marga <br />
-                      Minbhawan Kharibot <br />
-                      kathmandu, Nepal <br />
-                    </div>
-                    <div className="phone contact-form__items relative  textcontact">
-                      +977-1-4469924
-                    </div>
-                    <div className="email contact-form__items relative textcontact">
-                      info@factsnepal.com
-                    </div>
-                    <div className="contact-form__socialshare relative textcontact">
-                      <i className="la la-facebook-square" />
-                      <i className="la la-twitter-square" />
-                      <i className="la la-linkedin-square" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+            </section>
     );
   }
 }

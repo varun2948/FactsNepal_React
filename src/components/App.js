@@ -20,6 +20,7 @@ import Footer from "../components/Footer/Footer";
 import PublicPollResult from "../pages/PublicPollResult";
 import Projects from "../pages/Projects";
 import About from "../pages/About";
+import ContactPage from "../pages/ContactPage";
 import Contact from "../pages/Contact";
 import SingleCaseStudy from "../pages/SingleCaseStudy";
 
@@ -48,6 +49,7 @@ class App extends Component {
             <Route path="/publicpollresult/:id" component={PublicPollResult} />
             <Route path="/projects" component={Projects} />
             <Route path="/about" component={About} />
+            <Route path="/contactpage" component={ContactPage} />
             <Route path="/contact" component={Contact} />
             <Route path="/casestudy/:id" component={SingleCaseStudy} />
             {/* <Route path="/works" component={WorksPage} /> */}
