@@ -19,6 +19,7 @@ class About extends Component {
               <div className="row">
                 <div className="order-2 order-sm-2 order-md-1 col-md-5">
                   <div className="col-wrap-center">
+                  <div className="circle red-gradient about-sphere"></div>
                     <div className="col-wrap">
                       <span className="sec-caption">About</span>
                       <h3 className="headline2">
@@ -30,7 +31,7 @@ class About extends Component {
                 </div>
                 <div className="order-1 order-sm-1 order-md-2 col-md-7">
                   <div className="col-wrap">
-                    <figure className="right-img-sphere">
+                    <figure className="figure-case-img right-img-sphere">
                     <img className="bg-case orange" src="./img/IMAGE-shape2.svg"/>
                     <img className="bg-case pink" src="./img/IMAGE-shape4.svg"/>
                     <img className="bg-case sm-pink" src="./img/IMAGE-shape1.svg"/>
