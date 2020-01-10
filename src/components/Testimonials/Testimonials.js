@@ -69,13 +69,7 @@ class Testimonials extends Component {
         }
       ]
     };
-    var settings1 = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
+
     const { testimonials } = this.state;
     return (
       <div className="testimonials-section pdt-91 pdb-91">

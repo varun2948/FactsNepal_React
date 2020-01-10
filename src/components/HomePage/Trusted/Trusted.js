@@ -1,16 +1,45 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import axios from "axios";
 
 export default class Trusted extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      trusted: [],
+      slider_length: ""
+    };
+  }
+
+  componentDidMount() {
+    Promise.all([
+      axios({
+        method: "GET",
+        url: `${process.env.API_URL}api/slider_list`,
+        headers: {
+          "content-type": "application/json",
+          Accept: "application/json"
+        }
+      })
+    ]).then(response => {
+      // const sliced2Collaborators = response[0].data.collaborators.slice(0, 2);
+      const slider_length =
+        response[0].data.length > 5 ? 5 : response[0].data.length;
+      this.setState({
+        trusted: response[0].data,
+        slider_length: slider_length
+      });
+      // console.log(this.state.casestudy, "cs");
+    });
+  }
   render() {
     var settings = {
       dots: true,
       infinite: true,
       autoplay: true,
-      arrows: false,
       speed: 2000,
-      autoplaySpeed: 2000,
-      slidesToShow: 5,
+      autoplaySpeed: 5000,
+      slidesToShow: this.state.slider_length,
       slidesToScroll: 1,
       initialSlide: 0,
       responsive: [
@@ -40,6 +69,7 @@ export default class Trusted extends Component {
         }
       ]
     };
+    const { trusted, slider } = this.state;
     return (
       <section
         className={`${
@@ -51,12 +81,18 @@ export default class Trusted extends Component {
           <div className="slider pdb-115">
             <div className="slider-image-container">
               <Slider {...settings}>
-                <div className="slider-img-item img-scale00">
-                  <figure>
-                    <img src="./img/1client-ekantipur.png" alt="" />
-                  </figure>
-                </div>
-                <div className="slider-img-item">
+                {trusted &&
+                  trusted.map((data, key) => {
+                    return (
+                      <div className="slider-img-item ">
+                        <figure>
+                          <img src={data.image} alt="" />
+                        </figure>
+                      </div>
+                    );
+                  })}
+
+                {/* <div className="slider-img-item">
                   <figure>
                     <img src="./img/2client-restless.png" alt="" />
                   </figure>
@@ -80,7 +116,7 @@ export default class Trusted extends Component {
                   <figure>
                     <img src="./img/7client-cocacola.png" alt="" />
                   </figure>
-                </div>
+                </div> */}
               </Slider>
             </div>
           </div>

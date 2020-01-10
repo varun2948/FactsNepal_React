@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import PublicPoll from "./PublicPoll";
 import Moment from "react-moment";
 var moment = require("moment");
+import Particles from "react-particles-js";
 
 const headerData = {
   headers: {
